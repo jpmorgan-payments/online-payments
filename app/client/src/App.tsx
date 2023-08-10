@@ -6,13 +6,8 @@ import { ModalsProvider } from '@mantine/modals';
 
 import { Layout } from 'components';
 import {
-  AccountsPage,
-  CasesPage,
-  DebitCardsPage,
   NotFoundErrorPage,
-  OnboardingPage,
   OverviewPage,
-  RecipientsPage,
   TransactionsPage,
 } from 'pages';
 
@@ -46,12 +41,7 @@ const App = () => {
               <Routes>
                 <Route path="*" element={<NotFoundErrorPage />} />
                 <Route path="overview" element={<OverviewPage />} />
-                <Route path="onboarding" element={<OnboardingPage />} />
-                <Route path="accounts" element={<AccountsPage />} />
-                <Route path="recipients" element={<RecipientsPage />} />
                 <Route path="transactions" element={<TransactionsPage />} />
-                <Route path="debit-cards" element={<DebitCardsPage />} />
-                <Route path="cases" element={<CasesPage />} />
                 <Route path="/" element={<Navigate replace to="/overview" />} />
               </Routes>
             </Layout>
