@@ -1,12 +1,12 @@
 {
-  "name": "embedded-banking",
+  "name": "online-payments",
   "version": "0.1.0",
   "private": true,
-  "description": "Our goal is to demonstrate how embedded banking APIs could be integrated",
+  "description": "Our goal is to demonstrate how online-payments APIs could be integrated",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jpmorganchase/embedded-banking.git"
+    "url": "git+https://github.com/jpmorganchase/online-payments.git"
   },
   "dependencies": {
     "dotenv": "^16.0.0",
@@ -14,7 +14,7 @@
     "typescript": "^5.1.3"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=16"
   },
   "devDependencies": {
     "concurrently": "7.0.0",
