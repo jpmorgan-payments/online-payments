@@ -8,7 +8,7 @@ import { Layout } from 'components';
 import {
   NotFoundErrorPage,
   OverviewPage,
-  TransactionsPage,
+  PaymentsPage,
 } from 'pages';
 
 import { themes } from 'themes';
@@ -41,7 +41,7 @@ const App = () => {
               <Routes>
                 <Route path="*" element={<NotFoundErrorPage />} />
                 <Route path="overview" element={<OverviewPage />} />
-                <Route path="transactions" element={<TransactionsPage />} />
+                <Route path="payments" element={<PaymentsPage />} />
                 <Route path="/" element={<Navigate replace to="/overview" />} />
               </Routes>
             </Layout>

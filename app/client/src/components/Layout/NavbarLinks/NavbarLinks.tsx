@@ -1,25 +1,15 @@
 import { Link, LinkProps, useMatch, useResolvedPath } from 'react-router-dom';
 import { UnstyledButton } from '@mantine/core';
 import {
-  IconCreditCard,
-  IconHelp,
   IconExchange,
-  IconUserPlus,
-  IconZoomMoney,
   IconHome,
-  IconUsers,
 } from '@tabler/icons';
 
 import useStyles from './NavbarLinks.styles';
 
 const links = [
   { link: 'overview', label: 'Overview', icon: IconHome },
-  { link: 'onboarding', label: 'Onboarding Clients', icon: IconUserPlus },
-  { link: 'accounts', label: 'Managing Accounts', icon: IconZoomMoney },
-  { link: 'recipients', label: 'Managing Recipients', icon: IconUsers },
-  { link: 'transactions', label: 'Moving Money', icon: IconExchange },
-  { link: 'debit-cards', label: 'Managing Debit Cards', icon: IconCreditCard },
-  { link: 'cases', label: 'Getting Support', icon: IconHelp },
+  { link: 'payments', label: 'Make a payment', icon: IconExchange },
 ];
 
 const NavbarLink = ({ children, to, ...props }: LinkProps) => {

@@ -2,15 +2,12 @@ import { useMemo } from 'react';
 import {
   Box,
   Button,
-  Grid,
   Group,
   NumberInput,
   Select,
   SimpleGrid,
-  Title,
 } from '@mantine/core';
 import { useForm, yupResolver } from '@mantine/form';
-
 import { ValuesTable, Panel, MyDatePicker } from 'components';
 import { useAccounts, useAccountBalanceList } from 'features/Accounts/hooks';
 import { useRecipients } from 'features/Recipients/hooks';
@@ -19,7 +16,7 @@ import { validationSchema } from './utils/validationSchema';
 import { convertToTransactionRequest } from './utils/convertToTransactionRequest';
 import { transactionCreateResponseMock } from 'mocks';
 
-export const CreateTransactionForm = () => {
+export const CreatePaymentForm = () => {
   // Initialize the form using the default values defined in validationSchema
   const form = useForm({
     initialValues: validationSchema.cast({}),
