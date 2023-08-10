@@ -108,9 +108,9 @@ export const CreatePaymentForm = () => {
 
   return (
     <Panel
-      title="Create Transaction"
+      title="Create a Payment"
       apiCallType="POST"
-      apiEndpoint="/transactions"
+      apiEndpoint="/payments"
       requestBody={transactionRequest}
       responseBody={transactionCreateResponseMock}
     >
