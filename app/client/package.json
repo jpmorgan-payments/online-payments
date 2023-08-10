@@ -39,7 +39,7 @@
     "test": "vitest watch",
     "test:no-watch": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "generate-api-models": "rm -rf ./src/generated-api-models && yarn openapi --exportSchemas true --exportServices false --exportCore false --input ./online-payments-specification.yml --output ./src/generated-api-models",
+    "generate-api-models": "rm -rf ./src/generated-api-models && yarn openapi --exportSchemas true --exportServices false --exportCore false --input ./online-payments-specification.yaml --output ./src/generated-api-models",
     "postinstall": "yarn run generate-api-models"
   },
   "eslintConfig": {
