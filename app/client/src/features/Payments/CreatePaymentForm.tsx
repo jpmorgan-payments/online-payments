@@ -71,7 +71,7 @@ export const CreatePaymentForm = () => {
           form.values.recipientId.substring(
             0,
             form.values.recipientId.length - 1,
-          ),
+          ),  
       ),
     [form.values.recipientId, recipients],
   );
