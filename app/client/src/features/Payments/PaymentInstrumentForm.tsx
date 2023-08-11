@@ -63,7 +63,7 @@ export const PaymentInstrumentForm = ({ onSelect, onSubmit }: PaymentInstrumentF
     <form onSubmit={paymentInstrumentForm.onSubmit(onSubmit)}>
       <section>
         <Title order={2} mb="sm">
-          What kind of business do you run?
+          What kind of payment instrument do you want to use?
         </Title>
         <SimpleGrid cols={2} breakpoints={[{ maxWidth: 'xs', cols: 1 }]}>
           <Box>
