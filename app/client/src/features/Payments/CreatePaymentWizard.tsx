@@ -39,7 +39,6 @@ export const CreatePaymentWizard = () => {
         return;
       default:
         console.log('default')
-        console.log(paymentInstrument);
         return;
     }      
   };
