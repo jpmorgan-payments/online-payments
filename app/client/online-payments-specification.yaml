@@ -2762,15 +2762,6 @@ components:
           value: "998482157632"
         Approved Auth CIT Onetime Stored:
           value: "998482157632"
-    requestId:
-      name: "Request-Id"
-      in: "header"
-      required: true
-      schema:
-        type: "string"
-        example: "10cc0270-7bed-11e9-a188-1763956dd7f6"
-        maxLength: 40
-      description: "Merchant identifier for the request. The value must be unique."
     requestIdentifier:
       name: "requestIdentifier"
       in: "query"
