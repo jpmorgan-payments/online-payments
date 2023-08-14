@@ -16,7 +16,7 @@ import { convertToPaymentRequest } from './utils/convertToPaymentRequest';
 import { useMerchants } from './hooks/useMerchants';
 import { usePaymentMethod } from './hooks/usePaymentMethod';
 import { paymentCreateResponseMock } from 'mocks/paymentCreateResponse.mock';
-import { useAccountHolder } from './hooks';
+import { useAccountHolder, useShipTo } from './hooks';
 import { paymentInstrument } from './utils/models';
 
 export const CreatePaymentForm = () => {
@@ -29,6 +29,7 @@ export const CreatePaymentForm = () => {
   const merchantData = useMerchants();
   const paymentMethodData = usePaymentMethod();
   const accountHolderData = useAccountHolder();
+  const shipToData = useShipTo();
 
   const merchantSelectData = merchantData?.map((merchant, index) => {
     return {
@@ -39,25 +40,35 @@ export const CreatePaymentForm = () => {
     };
   });
 
-  const accountHolderSelectData = accountHolderData?.map((accountHolder, index) => {
-    return {
-      key: index,
-      value: JSON.stringify(accountHolder),
-      label:
-      accountHolder.referenceId + ' - ' + accountHolder.fullName,
-    };
-  });
+  const accountHolderSelectData = accountHolderData?.map(
+    (accountHolder, index) => {
+      return {
+        key: index,
+        value: JSON.stringify(accountHolder),
+        label: accountHolder.referenceId + ' - ' + accountHolder.fullName,
+      };
+    },
+  );
 
   const paymentMethodSelectData = paymentMethodData?.map(
     (paymentMethod, index) => {
       return {
         key: index,
         value: JSON.stringify(paymentMethod),
-        label:
-        paymentMethod.card ? paymentMethod.card.accountNumber.replace(/\d(?=\d{4})/g, '*') : '',
+        label: paymentMethod.card
+          ? paymentMethod.card.accountNumber.replace(/\d(?=\d{4})/g, '*')
+          : '',
       };
     },
   );
+
+  const shipToSelectData = shipToData?.map((shipTo, index) => {
+    return {
+      key: index,
+      value: JSON.stringify(shipTo),
+      label: shipTo.shippingAddress?.line1,
+    };
+  });
 
   const selectedMerchant = useMemo(
     () =>
@@ -67,15 +78,16 @@ export const CreatePaymentForm = () => {
     [form.values.merchantId, merchantData],
   );
 
-
   const onSubmit = () => null;
 
   const paymentRequest = useMemo(
     () =>
       convertToPaymentRequest(
         form.values,
-        paymentInstrument[form.values.paymentInstrument as keyof typeof paymentInstrument],
-        selectedMerchant
+        paymentInstrument[
+          form.values.paymentInstrument as keyof typeof paymentInstrument
+        ],
+        selectedMerchant,
       ),
     [form.values],
   );
@@ -124,16 +136,28 @@ export const CreatePaymentForm = () => {
             nothingFound="No payment methods"
             {...form.getInputProps('paymentMethod')}
           />
-          {form.values.paymentInstrument === paymentInstrument['Approved Auth CIT Onetime Stored'] && (
-            <Select
-              label="Select Account Holder"
-              description="Card owner properties"
-              placeholder="Choose Account Holder"
-              required
-              data={accountHolderSelectData}
-              nothingFound="No account holders"
-              {...form.getInputProps('referenceId')}
-            />
+          {form.values.paymentInstrument ===
+            paymentInstrument['Approved Auth CIT Onetime Stored'] && (
+            <>
+              <Select
+                label="Select Account Holder"
+                description="Card owner properties"
+                placeholder="Choose Account Holder"
+                required
+                data={accountHolderSelectData}
+                nothingFound="No account holders"
+                {...form.getInputProps('referenceId')}
+              />
+              <Select
+                label="Select Shipping Address"
+                description="Shipping Address"
+                placeholder="Choose Shipping Address"
+                required
+                data={shipToSelectData}
+                nothingFound="No shipping address"
+                {...form.getInputProps('shipTo')}
+              />
+            </>
           )}
           <NumberInput
             label="Amount"

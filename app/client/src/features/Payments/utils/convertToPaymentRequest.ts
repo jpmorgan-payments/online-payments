@@ -1,8 +1,5 @@
 import type { InferType } from 'yup';
-import type {
-  merchant,
-  payment,
-} from 'generated-api-models';
+import type { merchant, payment } from 'generated-api-models';
 import type { validationSchema } from './validationSchema';
 import { paymentInstrument } from './models';
 
@@ -36,6 +33,7 @@ export function convertToPaymentRequest(
     paymentInstrument['Approved Auth CIT Onetime Stored']
   ) {
     defaultResponse.accountHolder = JSON.parse(values.referenceId);
+    defaultResponse.shipTo = JSON.parse(values.shipTo);
   }
   return defaultResponse;
 }
