@@ -16,9 +16,13 @@ import { convertToPaymentRequest } from './utils/convertToPaymentRequest';
 import { useMerchants } from './hooks/useMerchants';
 import { usePaymentMethod } from './hooks/usePaymentMethod';
 import { paymentCreateResponseMock } from 'mocks/paymentCreateResponse.mock';
+import { useAccountHolder } from './hooks';
 
-const PAYMENT_INSTRUMENTS = ['Approved Auth Basic'];
-//, 'Approved Auth MIT Subsequent Stored', ' Approved Auth CIT Onetime Stored']
+const PAYMENT_INSTRUMENTS = [
+  'Approved Auth Basic',
+  'Approved Auth CIT Onetime Stored',
+];
+//, ' Approved Auth CIT Onetime Stored']
 export const CreatePaymentForm = () => {
   // Initialize the form using the default values defined in validationSchema
   const form = useForm({
@@ -28,6 +32,7 @@ export const CreatePaymentForm = () => {
 
   const merchantData = useMerchants();
   const paymentMethodData = usePaymentMethod();
+  const accountHolderData = useAccountHolder();
 
   const merchantSelectData = merchantData?.map((merchant, index) => {
     return {
@@ -38,36 +43,45 @@ export const CreatePaymentForm = () => {
     };
   });
 
-  const paymentMethodSelectData = paymentMethodData?.map((paymentMethod, index) => {
-    if(paymentMethod.card){
-      return {
-        key: index,
-        value: paymentMethod.card.accountNumber,
-        label: paymentMethod.card.accountNumber.replace(
-          /\d(?=\d{4})/g,
-          '*',
-        )
-      };
-    }
+  const accountHolderSelectData = accountHolderData?.map((accountHolder, index) => {
     return {
       key: index,
-      value: '',
-      label: ''
-    }
+      value: accountHolder.referenceId + '',
+      label:
+      accountHolder.referenceId + ' - ' + accountHolder.fullName,
+    };
   });
+
+  const paymentMethodSelectData = paymentMethodData?.map(
+    (paymentMethod, index) => {
+      if (paymentMethod.card) {
+        return {
+          key: index,
+          value: paymentMethod.card.accountNumber,
+          label: paymentMethod.card.accountNumber.replace(/\d(?=\d{4})/g, '*'),
+        };
+      }
+      return {
+        key: index,
+        value: '',
+        label: '',
+      };
+    },
+  );
 
   const selectedMerchant = useMemo(
     () =>
       merchantData.find(
-        (merchant) => merchant.merchantId=== form.values.merchantId,
+        (merchant) => merchant.merchantId === form.values.merchantId,
       ),
     [form.values.merchantId, merchantData],
   );
 
   const selectedPaymentMethod = useMemo(
     () =>
-    paymentMethodData.find(
-        (paymentMethod) => paymentMethod.card?.accountNumber === form.values.paymentId,
+      paymentMethodData.find(
+        (paymentMethod) =>
+          paymentMethod.card?.accountNumber === form.values.paymentId,
       ),
     [form.values.paymentId, merchantData],
   );
@@ -75,7 +89,12 @@ export const CreatePaymentForm = () => {
   const onSubmit = () => null;
 
   const paymentRequest = useMemo(
-    () => convertToPaymentRequest(form.values, selectedMerchant, selectedPaymentMethod),
+    () =>
+      convertToPaymentRequest(
+        form.values,
+        selectedMerchant,
+        selectedPaymentMethod,
+      ),
     [form.values],
   );
 
@@ -123,6 +142,17 @@ export const CreatePaymentForm = () => {
             nothingFound="No payment methods"
             {...form.getInputProps('paymentId')}
           />
+          {form.values.paymentInstrument === PAYMENT_INSTRUMENTS[1] && (
+            <Select
+              label="Select Account Holder"
+              description="Card owner properties"
+              placeholder="Choose Account Holder"
+              required
+              data={accountHolderSelectData}
+              nothingFound="No account holders"
+              {...form.getInputProps('referenceId')}
+            />
+          )}
           <NumberInput
             label="Amount"
             description="Amount for payment"
