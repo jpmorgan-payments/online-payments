@@ -9,14 +9,14 @@ import {
 } from '@mantine/core';
 import { useForm, yupResolver } from '@mantine/form';
 
-import { ValuesTable, Panel } from 'components';
+import { Panel } from 'components';
 import { validationSchema } from './utils/validationSchema';
 
 import { transactionCreateResponseMock } from 'mocks';
 import { convertToPaymentRequest } from './utils/convertToPaymentRequest';
+import { useMerchants } from './hooks/useMerchants';
 
-
-const PAYMENT_INSTRUMENTS = ['Approved Auth Basic']
+const PAYMENT_INSTRUMENTS = ['Approved Auth Basic'];
 //, 'Approved Auth MIT Subsequent Stored', ' Approved Auth CIT Onetime Stored']
 export const CreatePaymentForm = () => {
   // Initialize the form using the default values defined in validationSchema
@@ -25,13 +25,33 @@ export const CreatePaymentForm = () => {
     validate: yupResolver(validationSchema),
   });
 
+  const merchantData = useMerchants();
+
+  const merchantSelectData = merchantData?.map((merchant, index) => {
+    return {
+      key: index,
+      value: merchant.merchantId,
+      label:
+        merchant.merchantId + ' - ' + merchant.merchantSoftware.companyName,
+    };
+  });
+
+  const selectedMerchant = useMemo(
+    () => 
+      merchantData.find(
+        (merchant) =>
+          merchant.merchantId === form.values.merchantId,
+      ),
+    [form.values.merchantId, merchantData],
+  );
+
+
   const onSubmit = () => null;
 
   const paymentRequest = useMemo(
-    () => convertToPaymentRequest(form.values, undefined, undefined),
+    () => convertToPaymentRequest(form.values, selectedMerchant, undefined),
     [form.values],
   );
-
 
   return (
     <Panel
@@ -59,6 +79,15 @@ export const CreatePaymentForm = () => {
             defaultValue={PAYMENT_INSTRUMENTS[0]}
             {...form.getInputProps('paymentMethod')}
           />
+          <Select
+            label="Select Merchant"
+            description="Information about the merchant"
+            placeholder="Choose Merchant"
+            required
+            data={merchantSelectData}
+            nothingFound="No merchants"
+            {...form.getInputProps('merchantId')}
+          />
           <NumberInput
             label="Amount"
             description="Amount for payment"
@@ -74,7 +103,6 @@ export const CreatePaymentForm = () => {
             }
             {...form.getInputProps('amount')}
           />
-
         </SimpleGrid>
         <Group mt="xl" position="right">
           <Button type="submit">Review & Submit</Button>
