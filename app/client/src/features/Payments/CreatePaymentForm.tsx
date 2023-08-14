@@ -12,9 +12,10 @@ import { useForm, yupResolver } from '@mantine/form';
 import { Panel } from 'components';
 import { validationSchema } from './utils/validationSchema';
 
-import { transactionCreateResponseMock } from 'mocks';
 import { convertToPaymentRequest } from './utils/convertToPaymentRequest';
 import { useMerchants } from './hooks/useMerchants';
+import { usePaymentMethod } from './hooks/usePaymentMethod';
+import { paymentCreateResponseMock } from 'mocks/paymentCreateResponse.mock';
 
 const PAYMENT_INSTRUMENTS = ['Approved Auth Basic'];
 //, 'Approved Auth MIT Subsequent Stored', ' Approved Auth CIT Onetime Stored']
@@ -26,30 +27,55 @@ export const CreatePaymentForm = () => {
   });
 
   const merchantData = useMerchants();
+  const paymentMethodData = usePaymentMethod();
 
   const merchantSelectData = merchantData?.map((merchant, index) => {
     return {
       key: index,
-      value: merchant.merchantId,
+      value: merchant.merchantId + '',
       label:
         merchant.merchantId + ' - ' + merchant.merchantSoftware.companyName,
     };
   });
 
+  const paymentMethodSelectData = paymentMethodData?.map((paymentMethod, index) => {
+    if(paymentMethod.card){
+      return {
+        key: index,
+        value: paymentMethod.card.accountNumber,
+        label: paymentMethod.card.accountNumber.replace(
+          /\d(?=\d{4})/g,
+          '*',
+        )
+      };
+    }
+    return {
+      key: index,
+      value: '',
+      label: ''
+    }
+  });
+
   const selectedMerchant = useMemo(
-    () => 
+    () =>
       merchantData.find(
-        (merchant) =>
-          merchant.merchantId === form.values.merchantId,
+        (merchant) => merchant.merchantId=== form.values.merchantId,
       ),
     [form.values.merchantId, merchantData],
   );
 
+  const selectedPaymentMethod = useMemo(
+    () =>
+    paymentMethodData.find(
+        (paymentMethod) => paymentMethod.card?.accountNumber === form.values.paymentId,
+      ),
+    [form.values.paymentId, merchantData],
+  );
 
   const onSubmit = () => null;
 
   const paymentRequest = useMemo(
-    () => convertToPaymentRequest(form.values, selectedMerchant, undefined),
+    () => convertToPaymentRequest(form.values, selectedMerchant, selectedPaymentMethod),
     [form.values],
   );
 
@@ -59,7 +85,7 @@ export const CreatePaymentForm = () => {
       apiCallType="POST"
       apiEndpoint="/payments"
       requestBody={paymentRequest}
-      responseBody={transactionCreateResponseMock}
+      responseBody={paymentCreateResponseMock}
     >
       <form onSubmit={form.onSubmit(onSubmit)}>
         <SimpleGrid
@@ -87,6 +113,15 @@ export const CreatePaymentForm = () => {
             data={merchantSelectData}
             nothingFound="No merchants"
             {...form.getInputProps('merchantId')}
+          />
+          <Select
+            label="Select Payment Method"
+            description="Information about the payment type"
+            placeholder="Choose Payment Method"
+            required
+            data={paymentMethodSelectData}
+            nothingFound="No payment methods"
+            {...form.getInputProps('paymentId')}
           />
           <NumberInput
             label="Amount"
