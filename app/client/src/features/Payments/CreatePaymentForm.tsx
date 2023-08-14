@@ -97,13 +97,13 @@ export const CreatePaymentForm = () => {
           ]}
         >
           <Select
-            label="Select Payment Method"
-            description="Payment Method"
-            placeholder="Choose Payment Method"
+            label="Select Payment Instrument"
+            description="Payment Instrument"
+            placeholder="Choose Payment Instrument"
             required
             data={PAYMENT_INSTRUMENTS}
             defaultValue={PAYMENT_INSTRUMENTS[0]}
-            {...form.getInputProps('paymentMethod')}
+            {...form.getInputProps('paymentInstrument')}
           />
           <Select
             label="Select Merchant"
