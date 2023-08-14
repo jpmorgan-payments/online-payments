@@ -17,12 +17,8 @@ import { useMerchants } from './hooks/useMerchants';
 import { usePaymentMethod } from './hooks/usePaymentMethod';
 import { paymentCreateResponseMock } from 'mocks/paymentCreateResponse.mock';
 import { useAccountHolder } from './hooks';
+import { paymentInstrument } from './utils/models';
 
-const PAYMENT_INSTRUMENTS = [
-  'Approved Auth Basic',
-  'Approved Auth CIT Onetime Stored',
-];
-//, ' Approved Auth CIT Onetime Stored']
 export const CreatePaymentForm = () => {
   // Initialize the form using the default values defined in validationSchema
   const form = useForm({
@@ -46,7 +42,7 @@ export const CreatePaymentForm = () => {
   const accountHolderSelectData = accountHolderData?.map((accountHolder, index) => {
     return {
       key: index,
-      value: accountHolder.referenceId + '',
+      value: JSON.stringify(accountHolder),
       label:
       accountHolder.referenceId + ' - ' + accountHolder.fullName,
     };
@@ -54,17 +50,11 @@ export const CreatePaymentForm = () => {
 
   const paymentMethodSelectData = paymentMethodData?.map(
     (paymentMethod, index) => {
-      if (paymentMethod.card) {
-        return {
-          key: index,
-          value: paymentMethod.card.accountNumber,
-          label: paymentMethod.card.accountNumber.replace(/\d(?=\d{4})/g, '*'),
-        };
-      }
       return {
         key: index,
-        value: '',
-        label: '',
+        value: JSON.stringify(paymentMethod),
+        label:
+        paymentMethod.card ? paymentMethod.card.accountNumber.replace(/\d(?=\d{4})/g, '*') : '',
       };
     },
   );
@@ -77,14 +67,6 @@ export const CreatePaymentForm = () => {
     [form.values.merchantId, merchantData],
   );
 
-  const selectedPaymentMethod = useMemo(
-    () =>
-      paymentMethodData.find(
-        (paymentMethod) =>
-          paymentMethod.card?.accountNumber === form.values.paymentId,
-      ),
-    [form.values.paymentId, merchantData],
-  );
 
   const onSubmit = () => null;
 
@@ -92,8 +74,8 @@ export const CreatePaymentForm = () => {
     () =>
       convertToPaymentRequest(
         form.values,
-        selectedMerchant,
-        selectedPaymentMethod,
+        paymentInstrument[form.values.paymentInstrument as keyof typeof paymentInstrument],
+        selectedMerchant
       ),
     [form.values],
   );
@@ -120,8 +102,8 @@ export const CreatePaymentForm = () => {
             description="Payment Instrument"
             placeholder="Choose Payment Instrument"
             required
-            data={PAYMENT_INSTRUMENTS}
-            defaultValue={PAYMENT_INSTRUMENTS[0]}
+            data={Object.values(paymentInstrument)}
+            defaultValue={paymentInstrument['Approved Auth Basic']}
             {...form.getInputProps('paymentInstrument')}
           />
           <Select
@@ -140,9 +122,9 @@ export const CreatePaymentForm = () => {
             required
             data={paymentMethodSelectData}
             nothingFound="No payment methods"
-            {...form.getInputProps('paymentId')}
+            {...form.getInputProps('paymentMethod')}
           />
-          {form.values.paymentInstrument === PAYMENT_INSTRUMENTS[1] && (
+          {form.values.paymentInstrument === paymentInstrument['Approved Auth CIT Onetime Stored'] && (
             <Select
               label="Select Account Holder"
               description="Card owner properties"
