@@ -1,8 +1,6 @@
 
 # Online Payments showcase app
 
-
-
 You can:
 
 - Spin-up a sample application with UI that demonstrates the main use case for each endpoint. For example, making a payment.
@@ -12,12 +10,12 @@ You can:
 
 There are two main directories for you to access:
 
-- `/app` for the showcase UI and server experience.
+- `/app` for the showcase UI.
 - `/postman` for the Postman Collection.
 
 ### Application (App)
 
-A TS/JS application with a client and server used to demonstrate how to integrate with our APIs on frontend applications.
+A TS/JS application with a client used to demonstrate how to integrate with our APIs on frontend applications.
 
 All your actions on this application are served by mock data included in the app codebase.
 
@@ -38,13 +36,10 @@ Such capabilities include:
 
 Check out the [features](./app/client/src/features/) directory to explore the the components and hooks that explore these features.
 
-### [API-Server](./app/server/)
-
-If you would like to hit the API's using your own credentials you will need to run this codebase following the instructions within the readme. This code allows you to hit JP Morgan UAT APIs.
 
 ## Run the Showcase Application locally
 
-Install and run a TS/JS application with a client and server used to demonstrate how to integrate with our APIs on frontend applications.
+Install and run a TS/JS application with a client used to demonstrate how to integrate with our APIs on frontend applications.
 
 ### Install and serve the app
 
