@@ -15,11 +15,9 @@ import { validationSchema } from './utils/validationSchema';
 import { convertToPaymentRequest } from './utils/convertToPaymentRequest';
 import { useMerchants } from './hooks/useMerchants';
 import { usePaymentMethod } from './hooks/usePaymentMethod';
-import { paymentCreateResponseMock } from 'mocks/paymentCreateResponse.mock';
-import { useAccountHolder, useShipTo } from './hooks';
-import { paymentInstrument } from './utils/models';
+import { paymentAuthorizeResponseMock } from 'mocks/paymentAuthorizeResponse.mock';
 
-export const CreatePaymentForm = () => {
+export const AuthorizePaymentForm = () => {
   // Initialize the form using the default values defined in validationSchema
   const form = useForm({
     initialValues: validationSchema.cast({}),
@@ -28,8 +26,6 @@ export const CreatePaymentForm = () => {
 
   const merchantData = useMerchants();
   const paymentMethodData = usePaymentMethod();
-  const accountHolderData = useAccountHolder();
-  const shipToData = useShipTo();
 
   const merchantSelectData = merchantData?.map((merchant, index) => {
     return {
@@ -40,15 +36,6 @@ export const CreatePaymentForm = () => {
     };
   });
 
-  const accountHolderSelectData = accountHolderData?.map(
-    (accountHolder, index) => {
-      return {
-        key: index,
-        value: JSON.stringify(accountHolder),
-        label: accountHolder.referenceId + ' - ' + accountHolder.fullName,
-      };
-    },
-  );
 
   const paymentMethodSelectData = paymentMethodData?.map(
     (paymentMethod, index) => {
@@ -62,14 +49,6 @@ export const CreatePaymentForm = () => {
     },
   );
 
-  const shipToSelectData = shipToData?.map((shipTo, index) => {
-    return {
-      key: index,
-      value: JSON.stringify(shipTo),
-      label: shipTo.shippingAddress?.line1,
-    };
-  });
-
   const selectedMerchant = useMemo(
     () =>
       merchantData.find(
@@ -81,24 +60,17 @@ export const CreatePaymentForm = () => {
   const onSubmit = () => null;
 
   const paymentRequest = useMemo(
-    () =>
-      convertToPaymentRequest(
-        form.values,
-        paymentInstrument[
-          form.values.paymentInstrument as keyof typeof paymentInstrument
-        ],
-        selectedMerchant,
-      ),
+    () => convertToPaymentRequest(form.values, selectedMerchant),
     [form.values],
   );
 
   return (
     <Panel
-      title="Create a Payment"
+      title="Authorize a Payment"
       apiCallType="POST"
       apiEndpoint="/payments"
       requestBody={paymentRequest}
-      responseBody={paymentCreateResponseMock}
+      responseBody={paymentAuthorizeResponseMock}
     >
       <form onSubmit={form.onSubmit(onSubmit)}>
         <SimpleGrid
@@ -109,15 +81,6 @@ export const CreatePaymentForm = () => {
             { minWidth: 'xl', cols: 2 },
           ]}
         >
-          <Select
-            label="Select Payment Instrument"
-            description="Payment Instrument"
-            placeholder="Choose Payment Instrument"
-            required
-            data={Object.values(paymentInstrument)}
-            defaultValue={paymentInstrument['Approved Auth Basic']}
-            {...form.getInputProps('paymentInstrument')}
-          />
           <Select
             label="Select Merchant"
             description="Information about the merchant"
@@ -136,29 +99,6 @@ export const CreatePaymentForm = () => {
             nothingFound="No payment methods"
             {...form.getInputProps('paymentMethod')}
           />
-          {form.values.paymentInstrument ===
-            paymentInstrument['Approved Auth CIT Onetime Stored'] && (
-            <>
-              <Select
-                label="Select Account Holder"
-                description="Card owner properties"
-                placeholder="Choose Account Holder"
-                required
-                data={accountHolderSelectData}
-                nothingFound="No account holders"
-                {...form.getInputProps('referenceId')}
-              />
-              <Select
-                label="Select Shipping Address"
-                description="Shipping Address"
-                placeholder="Choose Shipping Address"
-                required
-                data={shipToSelectData}
-                nothingFound="No shipping address"
-                {...form.getInputProps('shipTo')}
-              />
-            </>
-          )}
           <NumberInput
             label="Amount"
             description="Amount for payment"

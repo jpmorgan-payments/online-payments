@@ -1,15 +1,12 @@
 import { Link, LinkProps, useMatch, useResolvedPath } from 'react-router-dom';
 import { UnstyledButton } from '@mantine/core';
-import {
-  IconExchange,
-  IconHome,
-} from '@tabler/icons';
+import { IconExchange, IconHome } from '@tabler/icons';
 
 import useStyles from './NavbarLinks.styles';
 
 const links = [
   { link: 'overview', label: 'Overview', icon: IconHome },
-  { link: 'payments', label: 'Make a payment', icon: IconExchange },
+  { link: 'payments', label: 'Authorize a payment', icon: IconExchange },
 ];
 
 const NavbarLink = ({ children, to, ...props }: LinkProps) => {

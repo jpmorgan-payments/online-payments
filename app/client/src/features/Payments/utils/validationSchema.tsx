@@ -1,5 +1,4 @@
 import * as yup from 'yup';
-import { paymentInstrument } from './models';
 
 const validationSchema = yup.object({
   amount: yup.string().default('').required(),
@@ -18,10 +17,6 @@ const validationSchema = yup.object({
         },
       }),
     )
-    .required(),
-  paymentInstrument: yup
-    .string()
-    .default(paymentInstrument['Approved Auth Basic'])
     .required(),
   referenceId: yup
     .string()
