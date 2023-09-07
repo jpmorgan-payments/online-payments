@@ -1,1 +1,1 @@
-export { CreatePaymentForm } from './CreatePaymentForm';
+export { AuthorizePaymentForm } from './AuthorizePaymentForm';

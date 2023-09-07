@@ -1,7 +1,6 @@
 import type { InferType } from 'yup';
 import type { merchant, payment } from 'generated-api-models';
 import type { validationSchema } from './validationSchema';
-import { paymentInstrument } from './models';
 
 const defaultMerchant = {
   merchantId: '',
@@ -14,7 +13,6 @@ const defaultMerchant = {
 
 export function convertToPaymentRequest(
   values: InferType<typeof validationSchema>,
-  paymentInstrumentValue: paymentInstrument,
   merchant?: merchant,
 ) {
   const { merchantId, ...merchantRequest } = merchant || defaultMerchant;
@@ -28,12 +26,5 @@ export function convertToPaymentRequest(
     accountOnFile: 'NOT_STORED',
     isAmountFinal: true,
   } as payment;
-  if (
-    paymentInstrumentValue ===
-    paymentInstrument['Approved Auth CIT Onetime Stored']
-  ) {
-    defaultResponse.accountHolder = JSON.parse(values.referenceId);
-    defaultResponse.shipTo = JSON.parse(values.shipTo);
-  }
   return defaultResponse;
 }
