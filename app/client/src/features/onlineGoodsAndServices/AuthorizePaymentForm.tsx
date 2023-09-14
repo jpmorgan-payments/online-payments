@@ -36,7 +36,6 @@ export const AuthorizePaymentForm = () => {
     };
   });
 
-
   const paymentMethodSelectData = paymentMethodData?.map(
     (paymentMethod, index) => {
       return {
@@ -74,7 +73,7 @@ export const AuthorizePaymentForm = () => {
     >
       <form onSubmit={form.onSubmit(onSubmit)}>
         <SimpleGrid
-          cols={1}
+          cols={0}
           breakpoints={[
             { minWidth: 'md', cols: 2 },
             { minWidth: 'lg', cols: 1 },

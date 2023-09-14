@@ -1,9 +1,9 @@
 import { Badge } from '@mantine/core';
 import { PageWrapper } from 'components/PageWrapper/PageWrapper';
 import { GITHUB_REPO } from 'data/constants';
-import { AuthorizePaymentForm } from 'features/Payments';
+import { AuthorizePaymentForm } from 'features/onlineGoodsAndServices';
 
-export const PaymentsPage = () => {
+export const OnlineGoodsAndServicesPage = () => {
   return (
     <PageWrapper
       title="Authorize a payment"
