@@ -1,1 +1,1 @@
-export { AuthorizePaymentForm } from './AuthorizePaymentForm';
+export { OnlineGoodsAndServicesPanel } from './OnlineGoodsAndServicesPanel';
