@@ -6,7 +6,11 @@ import useStyles from './NavbarLinks.styles';
 
 const links = [
   { link: 'overview', label: 'Overview', icon: IconHome },
-  { link: 'payments', label: 'Authorize a payment', icon: IconExchange },
+  {
+    link: 'onlineGoodsServices',
+    label: 'Online goods and services',
+    icon: IconExchange,
+  },
 ];
 
 const NavbarLink = ({ children, to, ...props }: LinkProps) => {

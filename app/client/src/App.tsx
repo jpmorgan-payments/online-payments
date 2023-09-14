@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { MantineProvider } from '@mantine/core';
@@ -8,7 +8,7 @@ import { Layout } from 'components';
 import {
   NotFoundErrorPage,
   OverviewPage,
-  PaymentsPage,
+  OnlineGoodsAndServicesPage,
 } from 'pages';
 
 import { themes } from 'themes';
@@ -41,7 +41,10 @@ const App = () => {
               <Routes>
                 <Route path="*" element={<NotFoundErrorPage />} />
                 <Route path="overview" element={<OverviewPage />} />
-                <Route path="payments" element={<PaymentsPage />} />
+                <Route
+                  path="onlineGoodsServices"
+                  element={<OnlineGoodsAndServicesPage />}
+                />
                 <Route path="/" element={<Navigate replace to="/overview" />} />
               </Routes>
             </Layout>
