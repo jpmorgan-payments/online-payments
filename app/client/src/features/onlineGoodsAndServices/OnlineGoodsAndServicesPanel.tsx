@@ -1,14 +1,16 @@
-import { Container, SimpleGrid } from '@mantine/core';
+import { Grid } from '@mantine/core';
 import { AuthorizePaymentForm } from './AuthorizePaymentForm';
 import { PaymentTransactionTable } from './PaymentTransactionTable';
 
 export const OnlineGoodsAndServicesPanel = () => {
   return (
-    <Container>
-      <SimpleGrid cols={2} spacing="md">
+    <Grid>
+      <Grid.Col span={4}>
         <AuthorizePaymentForm />
+      </Grid.Col>
+      <Grid.Col span={'auto'}>
         <PaymentTransactionTable />
-      </SimpleGrid>
-    </Container>
+      </Grid.Col>
+    </Grid>
   );
 };

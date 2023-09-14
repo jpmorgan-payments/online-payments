@@ -1,25 +1,41 @@
 import { Text } from '@mantine/core';
 import { Panel, TableWithJsonDisplay } from 'components';
+import { usePaymentResponse } from './hooks/usePaymentResponse';
 
 export const PaymentTransactionTable = () => {
+  const transactionData = usePaymentResponse();
+
   const ths = (
     <tr>
-      <th>Label</th>
-      <th>Account Number</th>
-      <th>State</th>
+      <th>Transaction ID</th>
+      <th>Request ID</th>
+      <th>Transaction State</th>
+      <th>Amount</th>
     </tr>
   );
 
+  const rows = transactionData.map((item, index) => (
+    <tr key={index}>
+      <td>{item.transactionId}</td>
+      <td>{item.requestId}</td>
+      <td>{item.transactionState}</td>
+      <td>{item.amount}</td>
+    </tr>
+  ));
+
   return (
-    <Panel title="List of Accounts" apiCallType="GET" apiEndpoint="/accounts">
-      <Text>
-        You can use this call to return a list of all accounts for a user.
-      </Text>
-      <Text>
-        The response does not contain any balance information for any of the
-        returned accounts.
-      </Text>
-      <TableWithJsonDisplay ths={ths} apiEndpoint="/accounts" json={{}} />
+    <Panel
+      title="List of Payment Transactions"
+      apiCallType="GET"
+      apiEndpoint="/payments/{id}"
+    >
+      <Text>You can use this call to return a specific transaction</Text>
+      <TableWithJsonDisplay
+        ths={ths}
+        apiEndpoint="/payments/{id}"
+        json={transactionData}
+        rows={rows}
+      />
     </Panel>
   );
 };
