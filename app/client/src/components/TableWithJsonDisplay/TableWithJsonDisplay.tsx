@@ -1,18 +1,6 @@
-import {
-  Badge,
-  Box,
-  BoxProps,
-  Button,
-  Code,
-  Group,
-  Modal,
-  ScrollArea,
-  Skeleton,
-  Table,
-} from '@mantine/core';
-import { Prism } from '@mantine/prism';
+import { Box, BoxProps, ScrollArea, Skeleton, Table } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconEye } from '@tabler/icons';
+import { JsonModal } from 'components/JsonModal/JsonModal';
 
 interface TableWithJsonDisplayProps extends BoxProps {
   ths: JSX.Element;
@@ -35,45 +23,7 @@ export const TableWithJsonDisplay = ({
   const [opened, { open, close }] = useDisclosure(false);
   return (
     <>
-      {json || isLoading ? (
-        <>
-          <Modal
-            opened={opened}
-            onClose={close}
-            size="xl"
-            title={
-              <Group spacing={4} align="center">
-                <Badge variant="filled" color="green" radius="xs">
-                  GET
-                </Badge>
-                <Code sx={{ backgroundColor: 'unset' }}>{apiEndpoint}</Code>
-              </Group>
-            }
-          >
-            <Prism
-              language="json"
-              styles={{ line: { width: 'unset' } }}
-              radius={0}
-            >
-              {JSON.stringify(json, null, 4)}
-            </Prism>
-          </Modal>
-          <Group position="right" mb={4}>
-            <Button
-              size="xs"
-              compact
-              leftIcon={<IconEye size={16} />}
-              variant="subtle"
-              color="gray"
-              onClick={open}
-              loading={isLoading}
-              disabled={isLoading}
-            >
-              View JSON
-            </Button>
-          </Group>
-        </>
-      ) : null}
+      <JsonModal json={json} apiEndpoint={apiEndpoint} />
       <Box {...rest} style={{ position: 'relative' }}>
         <ScrollArea offsetScrollbars type="auto">
           <Table striped withColumnBorders withBorder>

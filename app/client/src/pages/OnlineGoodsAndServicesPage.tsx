@@ -6,7 +6,7 @@ import { OnlineGoodsAndServicesPanel } from 'features/onlineGoodsAndServices';
 export const OnlineGoodsAndServicesPage = () => {
   return (
     <PageWrapper
-      title="Authorize a payment"
+      title="Online Goods and Services"
       apiEndpoint="/payments"
       githubLink={`${GITHUB_REPO}/tree/main/app/client/src/features/Payments`}
     >

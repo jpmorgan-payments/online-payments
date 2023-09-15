@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import {
   Button,
   Group,
@@ -11,7 +12,8 @@ import { Panel } from 'components';
 import { validationSchema } from './utils/validationSchema';
 import { useMerchants } from './hooks/useMerchants';
 import { usePaymentMethod } from './hooks/usePaymentMethod';
-
+import { paymentAuthorizeResponseMock } from 'mocks/paymentAuthorizeResponse.mock';
+import { convertToPaymentRequest } from './utils/convertToPaymentRequest';
 export const AuthorizePaymentForm = () => {
   // Initialize the form using the default values defined in validationSchema
   const form = useForm({
@@ -43,6 +45,19 @@ export const AuthorizePaymentForm = () => {
     },
   );
 
+  const selectedMerchant = useMemo(
+    () =>
+      merchantData.find(
+        (merchant) => merchant.merchantId === form.values.merchantId,
+      ),
+    [form.values.merchantId, merchantData],
+  );
+
+  const paymentRequest = useMemo(
+    () => convertToPaymentRequest(form.values, selectedMerchant),
+    [form.values],
+  );
+
   const onSubmit = () => null;
 
   return (
@@ -50,12 +65,14 @@ export const AuthorizePaymentForm = () => {
       title="Authorize a Payment"
       apiCallType="POST"
       apiEndpoint="/payments"
+      requestBody={paymentRequest}
+      responseBody={paymentAuthorizeResponseMock}
     >
       <form onSubmit={form.onSubmit(onSubmit)}>
         <SimpleGrid
-          cols={0}
+          cols={1}
           breakpoints={[
-            { minWidth: 'md', cols: 1 },
+            { minWidth: 'md', cols: 2 },
             { minWidth: 'lg', cols: 1 },
             { minWidth: 'xl', cols: 1 },
           ]}
