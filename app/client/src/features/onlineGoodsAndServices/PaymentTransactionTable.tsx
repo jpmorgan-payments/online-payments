@@ -16,6 +16,7 @@ export const PaymentTransactionTable = ({
     </tr>
   );
 
+  console.log(transactionData);
   const rows = transactionData.map((item, index) => (
     <tr key={index}>
       <td>{item.transactionId}</td>

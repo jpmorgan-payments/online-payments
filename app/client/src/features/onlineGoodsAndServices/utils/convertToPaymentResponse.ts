@@ -8,7 +8,10 @@ export function convertToPaymentResponse(
   values: InferType<typeof validationSchema>,
   merchant?: merchant,
 ) {
-  const defaultResponse: paymentResponse = paymentAuthorizeResponseMock;
+  //Deep copy object (https://developer.mozilla.org/en-US/docs/Glossary/Deep_copy)
+  const defaultResponse: paymentResponse = JSON.parse(
+    JSON.stringify(paymentAuthorizeResponseMock),
+  );
   if (merchant) defaultResponse.merchant = merchant;
   defaultResponse.amount = Number(values.amount);
   defaultResponse.paymentMethodType = JSON.parse(values.paymentMethod);

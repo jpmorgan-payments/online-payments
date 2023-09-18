@@ -1,17 +1,20 @@
-import { Grid, SimpleGrid } from '@mantine/core';
+import { SimpleGrid } from '@mantine/core';
 import { AuthorizePaymentForm } from './AuthorizePaymentForm';
 import { PaymentTransactionTable } from './PaymentTransactionTable';
 import { useState } from 'react';
-import { usePaymentResponse } from './hooks/usePaymentResponse';
 import type { paymentResponse } from 'generated-api-models';
+import { paymentAuthorizeResponseListMock } from 'mocks/paymentAuthorizeResponseList.mock';
 
 export const OnlineGoodsAndServicesPanel = () => {
-  const mockedTransactionData = usePaymentResponse();
-
-  const [transactionData, setTransactionData] = useState(mockedTransactionData);
+  const [transactionData, setTransactionData] = useState<paymentResponse[]>(
+    paymentAuthorizeResponseListMock,
+  );
 
   const addNewTransaction = (newTransaction: paymentResponse) => {
-    setTransactionData([newTransaction, ...transactionData]);
+    setTransactionData((prevTransactionData) => [
+      ...prevTransactionData,
+      newTransaction,
+    ]);
   };
   return (
     <SimpleGrid>
