@@ -14,7 +14,12 @@ import { useMerchants } from './hooks/useMerchants';
 import { usePaymentMethod } from './hooks/usePaymentMethod';
 import { paymentAuthorizeResponseMock } from 'mocks/paymentAuthorizeResponse.mock';
 import { convertToPaymentRequest } from './utils/convertToPaymentRequest';
-export const AuthorizePaymentForm = () => {
+import type { paymentResponse } from 'generated-api-models';
+export const AuthorizePaymentForm = ({
+  addNewTransaction,
+}: {
+  addNewTransaction: (data: paymentResponse) => void;
+}) => {
   // Initialize the form using the default values defined in validationSchema
   const form = useForm({
     initialValues: validationSchema.cast({}),
@@ -58,7 +63,9 @@ export const AuthorizePaymentForm = () => {
     [form.values],
   );
 
-  const onSubmit = () => null;
+  const onSubmit = () => {
+    addNewTransaction(paymentAuthorizeResponseMock[0]);
+  };
 
   return (
     <Panel

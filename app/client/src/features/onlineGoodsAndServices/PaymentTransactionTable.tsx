@@ -1,10 +1,12 @@
 import { Text } from '@mantine/core';
 import { Panel, TableWithJsonDisplay } from 'components';
-import { usePaymentResponse } from './hooks/usePaymentResponse';
+import type { paymentResponse } from 'generated-api-models';
 
-export const PaymentTransactionTable = () => {
-  const transactionData = usePaymentResponse();
-
+export const PaymentTransactionTable = ({
+  transactionData,
+}: {
+  transactionData: paymentResponse[];
+}) => {
   const ths = (
     <tr>
       <th>Transaction ID</th>
