@@ -1,5 +1,5 @@
 import { SimpleGrid } from '@mantine/core';
-import { AuthorizePaymentForm } from './AuthorizePaymentForm';
+import { AuthorizePaymentForm } from './AuthorizeAPayment/AuthorizePaymentForm';
 import { PaymentTransactionTable } from './PaymentTransactionTable';
 import { useState } from 'react';
 import type { paymentResponse } from 'generated-api-models';
@@ -12,8 +12,8 @@ export const OnlineGoodsAndServicesPanel = () => {
 
   const addNewTransaction = (newTransaction: paymentResponse) => {
     setTransactionData((prevTransactionData) => [
-      ...prevTransactionData,
       newTransaction,
+      ...prevTransactionData,
     ]);
   };
   return (

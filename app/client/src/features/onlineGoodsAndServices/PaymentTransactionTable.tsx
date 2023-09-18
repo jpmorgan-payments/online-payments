@@ -20,6 +20,7 @@ export const PaymentTransactionTable = ({
     <tr key={index}>
       <td>{item.transactionId}</td>
       <td>{item.requestId}</td>
+      <td>{item.transactionDate}</td>
       <td>{item.transactionState}</td>
       <td>{item.amount}</td>
     </tr>
