@@ -1,15 +1,6 @@
 import type { InferType } from 'yup';
 import type { merchant, payment } from 'generated-api-models';
-import type { validationSchema } from './validationSchema';
-
-const defaultMerchant = {
-  merchantId: '',
-  merchantSoftware: {
-    companyName: ' ',
-    productName: ' ',
-    version: ' ',
-  },
-};
+import { defaultMerchant, type validationSchema } from './validationSchema';
 
 export function convertToPaymentRequest(
   values: InferType<typeof validationSchema>,
