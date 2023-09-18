@@ -4,5 +4,5 @@ import { paymentAuthorizeResponseMock } from 'mocks/paymentAuthorizeResponse.moc
 export function usePaymentResponse(): paymentResponse[] {
 
 
-  return paymentAuthorizeResponseMock;
+  return [paymentAuthorizeResponseMock];
 }

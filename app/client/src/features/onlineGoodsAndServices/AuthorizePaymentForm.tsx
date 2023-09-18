@@ -15,6 +15,7 @@ import { usePaymentMethod } from './hooks/usePaymentMethod';
 import { paymentAuthorizeResponseMock } from 'mocks/paymentAuthorizeResponse.mock';
 import { convertToPaymentRequest } from './utils/convertToPaymentRequest';
 import type { paymentResponse } from 'generated-api-models';
+import { convertToPaymentResponse } from './utils/convertToPaymentResponse';
 export const AuthorizePaymentForm = ({
   addNewTransaction,
 }: {
@@ -63,8 +64,13 @@ export const AuthorizePaymentForm = ({
     [form.values],
   );
 
+  const paymentResponse = useMemo(
+    () => convertToPaymentResponse(form.values, selectedMerchant),
+    [form.values],
+  );
+
   const onSubmit = () => {
-    addNewTransaction(paymentAuthorizeResponseMock[0]);
+    addNewTransaction(paymentResponse);
   };
 
   return (
@@ -73,7 +79,7 @@ export const AuthorizePaymentForm = ({
       apiCallType="POST"
       apiEndpoint="/payments"
       requestBody={paymentRequest}
-      responseBody={paymentAuthorizeResponseMock}
+      responseBody={paymentResponse}
     >
       <form onSubmit={form.onSubmit(onSubmit)}>
         <SimpleGrid

@@ -52,4 +52,12 @@ const validationSchema = yup.object({
     .required(),
 });
 
-export { validationSchema };
+const defaultMerchant = {
+  merchantId: '',
+  merchantSoftware: {
+    companyName: ' ',
+    productName: ' ',
+    version: ' ',
+  },
+};
+export { validationSchema, defaultMerchant };
