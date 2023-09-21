@@ -1,4 +1,4 @@
-import axios, { AxiosError } from 'axios';
+import axios from 'axios';
 import { API_URL } from 'data/constants';
 import type { paymentResponse } from 'generated-api-models';
 
@@ -8,5 +8,5 @@ export const useGetPayment = async (
   const response = await axios.get<paymentResponse>(
     `${API_URL}/api/payments/${transactionId}`,
   );
-  return response.data as paymentResponse;
+  return response.data;
 };

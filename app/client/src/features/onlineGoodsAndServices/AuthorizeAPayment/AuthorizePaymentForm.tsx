@@ -13,10 +13,9 @@ import { validationSchema } from './utils/validationSchema';
 import { useMerchants } from '../hooks/useMerchants';
 import { usePaymentMethod } from '../hooks/usePaymentMethod';
 import { convertToPaymentRequest } from './utils/convertToPaymentRequest';
-import type { payment, paymentResponse } from 'generated-api-models';
 import { convertToPaymentResponse } from './utils/convertToPaymentResponse';
 import { IconDatabase } from '@tabler/icons';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useQueryClient } from '@tanstack/react-query';
 import { useCreatePayment } from '../hooks';
 
 enum formStatesEnum {

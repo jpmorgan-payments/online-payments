@@ -2,13 +2,16 @@ import { Text } from '@mantine/core';
 import { useQueries } from '@tanstack/react-query';
 import { Panel, TableWithJsonDisplay } from 'components';
 import { useGetPayment } from './hooks/useGetPayment';
+import { paymentAuthorizeResponseListMock } from 'mocks/paymentAuthorizeResponseList.mock';
+import { paymentResponse } from 'generated-api-models';
 
 export const PaymentTransactionTable = ({
   transactionIds,
 }: {
   transactionIds: string[];
 }) => {
-  let rows = undefined;
+  const initialTransactions: paymentResponse[] =
+    paymentAuthorizeResponseListMock;
 
   const transactions = useQueries({
     queries: transactionIds.map((id) => {
@@ -21,16 +24,22 @@ export const PaymentTransactionTable = ({
 
   const isLoading = transactions.some((query) => query.isLoading);
 
+  const createRow = (rowData: paymentResponse) => (
+    <tr key={rowData.transactionId} onClick={() => console.log('hello')}>
+      <td>{rowData.transactionId}</td>
+      <td>{rowData.requestId}</td>
+      <td>{rowData.transactionDate}</td>
+      <td>{rowData.transactionState}</td>
+      <td>{rowData.amount}</td>
+    </tr>
+  );
+
+  const rows = initialTransactions.map((transaction) => createRow(transaction));
+
   if (!isLoading) {
-    rows = transactions.map(({ data }) => (
-      <tr key={data?.transactionId}>
-        <td>{data?.transactionId}</td>
-        <td>{data?.requestId}</td>
-        <td>{data?.transactionDate}</td>
-        <td>{data?.transactionState}</td>
-        <td>{data?.amount}</td>
-      </tr>
-    ));
+    transactions.map(({ data }) => {
+      data && rows.push(createRow(data));
+    });
   }
 
   const ths = (
