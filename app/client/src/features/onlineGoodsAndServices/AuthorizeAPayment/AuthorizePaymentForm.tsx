@@ -37,14 +37,14 @@ export const AuthorizePaymentForm = ({
   const [formState, setFormState] = useState<formStatesEnum>(
     formStatesEnum.INITIAL,
   );
+
+  const merchantData = useMerchants();
+  const paymentMethodData = usePaymentMethod();
   // Initialize the form using the default values defined in validationSchema
   const form = useForm({
     initialValues: validationSchema.cast({}),
     validate: yupResolver(validationSchema),
   });
-
-  const merchantData = useMerchants();
-  const paymentMethodData = usePaymentMethod();
 
   const merchantSelectData = merchantData?.map((merchant, index) => {
     return {
@@ -88,7 +88,6 @@ export const AuthorizePaymentForm = ({
   const { mutate: createPayment } = useCreatePayment();
 
   const onSubmit = () => {
-    //addNewTransaction(paymentResponse);
     setFormState(formStatesEnum.LOADING);
     createPayment(
       {
@@ -110,11 +109,7 @@ export const AuthorizePaymentForm = ({
 
   const resetForm = () => {
     form.reset();
-    form.clearErrors();
-    form.resetDirty();
-    form.resetTouched();
     setFormState(formStatesEnum.INITIAL);
-    console.log('here');
   };
 
   const renderFormButton = () => {
