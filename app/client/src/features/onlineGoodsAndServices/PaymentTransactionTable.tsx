@@ -1,12 +1,38 @@
 import { Text } from '@mantine/core';
+import { useQueries } from '@tanstack/react-query';
 import { Panel, TableWithJsonDisplay } from 'components';
-import type { paymentResponse } from 'generated-api-models';
+import { useGetPayment } from './hooks/useGetPayment';
 
 export const PaymentTransactionTable = ({
-  transactionData,
+  transactionIds,
 }: {
-  transactionData: paymentResponse[];
+  transactionIds: string[];
 }) => {
+  let rows = undefined;
+
+  const transactions = useQueries({
+    queries: transactionIds.map((id) => {
+      return {
+        queryKey: ['payments', id],
+        queryFn: () => useGetPayment(id),
+      };
+    }),
+  });
+
+  const isLoading = transactions.some((query) => query.isLoading);
+
+  if (!isLoading) {
+    rows = transactions.map(({ data }) => (
+      <tr key={data?.transactionId}>
+        <td>{data?.transactionId}</td>
+        <td>{data?.requestId}</td>
+        <td>{data?.transactionDate}</td>
+        <td>{data?.transactionState}</td>
+        <td>{data?.amount}</td>
+      </tr>
+    ));
+  }
+
   const ths = (
     <tr>
       <th>Transaction ID</th>
@@ -15,16 +41,6 @@ export const PaymentTransactionTable = ({
       <th>Amount</th>
     </tr>
   );
-
-  const rows = transactionData.map((item, index) => (
-    <tr key={index}>
-      <td>{item.transactionId}</td>
-      <td>{item.requestId}</td>
-      <td>{item.transactionDate}</td>
-      <td>{item.transactionState}</td>
-      <td>{item.amount}</td>
-    </tr>
-  ));
 
   return (
     <Panel
@@ -36,7 +52,6 @@ export const PaymentTransactionTable = ({
       <TableWithJsonDisplay
         ths={ths}
         apiEndpoint="/payments/{id}"
-        json={transactionData}
         rows={rows}
       />
     </Panel>

@@ -12,6 +12,7 @@
     "@mantine/prism": "^6.0.4",
     "@tabler/icons": "^1.83.1",
     "@tanstack/react-query": "^4.29.7",
+    "@tanstack/react-query-devtools": "^4.35.3",
     "@types/jest": "^28.1.7",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.17",

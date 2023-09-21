@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { MantineProvider } from '@mantine/core';
 import { ModalsProvider } from '@mantine/modals';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 import { Layout } from 'components';
 import {
@@ -51,6 +52,7 @@ const App = () => {
           </BrowserRouter>
         </ModalsProvider>
       </MantineProvider>
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 };

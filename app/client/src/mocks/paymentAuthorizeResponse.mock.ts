@@ -41,13 +41,4 @@ export const paymentAuthorizeResponseMock: paymentResponse = {
   remainingRefundableAmount: 1234,
   remainingAuthAmount: 1234,
   hostReferenceId: 'NjKmDGcGYAJ6wsedRnMCj4',
-  merchant: {
-    merchantId: '17904369',
-    merchantSoftware: {
-      companyName: 'Payment Company',
-      productName: 'Application Name',
-      version: '1.235',
-    },
-    merchantCategoryCode: '4899',
-  },
 } as paymentResponse;

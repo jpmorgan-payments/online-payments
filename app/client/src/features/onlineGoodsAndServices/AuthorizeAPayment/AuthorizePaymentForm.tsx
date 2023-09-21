@@ -13,21 +13,29 @@ import { validationSchema } from './utils/validationSchema';
 import { useMerchants } from '../hooks/useMerchants';
 import { usePaymentMethod } from '../hooks/usePaymentMethod';
 import { convertToPaymentRequest } from './utils/convertToPaymentRequest';
-import type { paymentResponse } from 'generated-api-models';
+import type { payment, paymentResponse } from 'generated-api-models';
 import { convertToPaymentResponse } from './utils/convertToPaymentResponse';
-import { PaymentResponsePanel } from './PaymentResponsePanel';
+import { IconDatabase } from '@tabler/icons';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useCreatePayment } from '../hooks';
 
 enum formStatesEnum {
-  'SUBMITTED',
-  'NEW',
+  LOADING = 'Making a payment',
+  INITIAL = 'Review & Submit',
+  COMPLETE = 'Payment Created. Create another one now',
 }
+
 export const AuthorizePaymentForm = ({
-  addNewTransaction,
+  transactionIds,
+  setTransactionIds,
 }: {
-  addNewTransaction: (data: paymentResponse) => void;
+  transactionIds: string[];
+  setTransactionIds: (transactionId: string[]) => void;
 }) => {
+  const queryClient = useQueryClient();
+
   const [formState, setFormState] = useState<formStatesEnum>(
-    formStatesEnum.NEW,
+    formStatesEnum.INITIAL,
   );
   // Initialize the form using the default values defined in validationSchema
   const form = useForm({
@@ -77,74 +85,114 @@ export const AuthorizePaymentForm = ({
     [form.values],
   );
 
+  const { mutate: createPayment } = useCreatePayment();
+
   const onSubmit = () => {
-    addNewTransaction(paymentResponse);
-    setFormState(formStatesEnum.SUBMITTED);
+    //addNewTransaction(paymentResponse);
+    setFormState(formStatesEnum.LOADING);
+    createPayment(
+      {
+        payment: paymentRequest,
+        merchantId: form.values.merchantId,
+        requestId: crypto.randomUUID(),
+      },
+      {
+        onSuccess: (data) => {
+          queryClient.setQueryData(['payments', data.requestId], data);
+          setTransactionIds([...transactionIds, data.requestId]);
+        },
+        onSettled: () => {
+          setFormState(formStatesEnum.COMPLETE);
+        },
+      },
+    );
+  };
+
+  const resetForm = () => {
+    form.reset();
+    form.clearErrors();
+    form.resetDirty();
+    form.resetTouched();
+    setFormState(formStatesEnum.INITIAL);
+    console.log('here');
+  };
+
+  const renderFormButton = () => {
+    switch (formState) {
+      case formStatesEnum.LOADING:
+        return (
+          <Button leftIcon={<IconDatabase size="1rem" />} loading>
+            {formState}
+          </Button>
+        );
+      case formStatesEnum.COMPLETE:
+        return (
+          <Button color="green" onClick={resetForm}>
+            {formState}
+          </Button>
+        );
+      default:
+        return <Button type="submit">{formState}</Button>;
+    }
   };
 
   return (
-    <>
-      {formState === formStatesEnum.NEW ? (
-        <Panel
-          title="Authorize a Payment"
-          apiCallType="POST"
-          apiEndpoint="/payments"
-          requestBody={paymentRequest}
-          responseBody={paymentResponse}
+    <Panel
+      title="Authorize a Payment"
+      apiCallType="POST"
+      apiEndpoint="/payments"
+      requestBody={paymentRequest}
+      responseBody={paymentResponse}
+    >
+      <form onSubmit={form.onSubmit(onSubmit)}>
+        <SimpleGrid
+          cols={1}
+          breakpoints={[
+            { minWidth: 'md', cols: 2 },
+            { minWidth: 'lg', cols: 1 },
+            { minWidth: 'xl', cols: 1 },
+          ]}
         >
-          <form onSubmit={form.onSubmit(onSubmit)}>
-            <SimpleGrid
-              cols={1}
-              breakpoints={[
-                { minWidth: 'md', cols: 2 },
-                { minWidth: 'lg', cols: 1 },
-                { minWidth: 'xl', cols: 1 },
-              ]}
-            >
-              <Stack>
-                <Select
-                  label="Select Merchant"
-                  description="Information about the merchant"
-                  placeholder="Choose Merchant"
-                  required
-                  data={merchantSelectData}
-                  nothingFound="No merchants"
-                  {...form.getInputProps('merchantId')}
-                />
-                <Select
-                  label="Select Payment Method"
-                  description="Information about the payment type"
-                  placeholder="Choose Payment Method"
-                  required
-                  data={paymentMethodSelectData}
-                  nothingFound="No payment methods"
-                  {...form.getInputProps('paymentMethod')}
-                />
-                <NumberInput
-                  label="Amount"
-                  description="Amount for payment"
-                  icon="$"
-                  required
-                  min={0}
-                  precision={2}
-                  parser={(value) => value?.replace(/(,*)/g, '')}
-                  formatter={(value = '') =>
-                    !Number.isNaN(parseFloat(value))
-                      ? `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-                      : ''
-                  }
-                  {...form.getInputProps('amount')}
-                />
-                <Group mt="xl" position="right">
-                  <Button type="submit">Review & Submit</Button>
-                </Group>
-              </Stack>
-            </SimpleGrid>
-          </form>
-        </Panel>
-      ) : (
-        <PaymentResponsePanel />
-      )}
-    </>
+          <Stack>
+            <Select
+              label="Select Merchant"
+              description="Information about the merchant"
+              placeholder="Choose Merchant"
+              required
+              data={merchantSelectData}
+              nothingFound="No merchants"
+              {...form.getInputProps('merchantId')}
+            />
+            <Select
+              label="Select Payment Method"
+              description="Information about the payment type"
+              placeholder="Choose Payment Method"
+              required
+              data={paymentMethodSelectData}
+              nothingFound="No payment methods"
+              {...form.getInputProps('paymentMethod')}
+            />
+            <NumberInput
+              label="Amount"
+              description="Amount for payment"
+              icon="$"
+              required
+              min={0}
+              precision={2}
+              parser={(value) => value?.replace(/(,*)/g, '')}
+              formatter={(value = '') =>
+                !Number.isNaN(parseFloat(value))
+                  ? `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                  : ''
+              }
+              {...form.getInputProps('amount')}
+            />
+            <Group mt="xl" position="right">
+              {renderFormButton()}
+            </Group>
+          </Stack>
+        </SimpleGrid>
+      </form>
+    </Panel>
   );
 };
