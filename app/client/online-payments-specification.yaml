@@ -1,7 +1,4 @@
 openapi: '3.0.1'
-
-security:
-  - bearerAuth: []
 info:
   title: 'Merchant Payments API'
   description: 'Payments API for processing consumer payments'
@@ -2869,10 +2866,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/messages'
 components:
-  securitySchemes:
-    bearerAuth:
-      type: http
-      scheme: bearer
   parameters:
     authorization:
       name: 'Authorization'
