@@ -1,17 +1,15 @@
 import { SimpleGrid } from '@mantine/core';
 import { AuthorizePaymentForm } from './AuthorizeAPayment/AuthorizePaymentForm';
 import { PaymentTransactionTable } from './PaymentTransactionTable';
-import { useState } from 'react';
+import { transactionManagementType } from 'shared.types';
 
-export const OnlineGoodsAndServicesPanel = () => {
-  const [transactionIds, setTransactionIds] = useState<string[]>([]);
+export const OnlineGoodsAndServicesPanel = (
+  props: transactionManagementType,
+) => {
   return (
     <SimpleGrid>
-      <AuthorizePaymentForm
-        transactionIds={transactionIds}
-        setTransactionIds={setTransactionIds}
-      />
-      <PaymentTransactionTable transactionIds={transactionIds} />
+      <AuthorizePaymentForm {...props} />
+      <PaymentTransactionTable {...props} />
     </SimpleGrid>
   );
 };

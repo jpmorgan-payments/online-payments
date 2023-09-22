@@ -6,12 +6,11 @@ import { paymentAuthorizeResponseListMock } from 'mocks/paymentAuthorizeResponse
 import { paymentResponse } from 'generated-api-models';
 import { useState } from 'react';
 import { IconEye } from '@tabler/icons';
+import { transactionManagementType } from 'shared.types';
 
 export const PaymentTransactionTable = ({
   transactionIds,
-}: {
-  transactionIds: string[];
-}) => {
+}: transactionManagementType) => {
   const initialTransactions: paymentResponse[] =
     paymentAuthorizeResponseListMock;
 
