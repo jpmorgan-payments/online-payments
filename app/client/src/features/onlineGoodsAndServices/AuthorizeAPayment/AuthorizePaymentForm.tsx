@@ -21,7 +21,7 @@ import { useCreatePayment } from '../hooks';
 enum formStatesEnum {
   LOADING = 'Making a payment',
   INITIAL = 'Review & Submit',
-  COMPLETE = 'Payment Created. Create another one now',
+  COMPLETE = 'Payment Created! Create another ',
 }
 
 export const AuthorizePaymentForm = ({
@@ -121,7 +121,7 @@ export const AuthorizePaymentForm = ({
         );
       case formStatesEnum.COMPLETE:
         return (
-          <Button color="green" onClick={resetForm}>
+          <Button color="green.8" onClick={resetForm}>
             {formState}
           </Button>
         );

@@ -4,6 +4,8 @@ import { JsonModal, Panel, TableWithJsonDisplay } from 'components';
 import { useGetPayment } from './hooks/useGetPayment';
 import { paymentAuthorizeResponseListMock } from 'mocks/paymentAuthorizeResponseList.mock';
 import { paymentResponse } from 'generated-api-models';
+import { useState } from 'react';
+import { IconEye } from '@tabler/icons';
 
 export const PaymentTransactionTable = ({
   transactionIds,
@@ -12,6 +14,9 @@ export const PaymentTransactionTable = ({
 }) => {
   const initialTransactions: paymentResponse[] =
     paymentAuthorizeResponseListMock;
+
+  const [modalOpen, setModalState] = useState<boolean>(false);
+  const [modalValue, setModalValue] = useState({});
 
   const transactions = useQueries({
     queries: transactionIds.map((id) => {
@@ -24,12 +29,15 @@ export const PaymentTransactionTable = ({
 
   const isLoading = transactions.some((query) => query.isLoading);
 
+  const handleModalOpen = (rowData: paymentResponse) => {
+    setModalValue(rowData);
+    setModalState(true);
+  };
   const createRow = (rowData: paymentResponse) => (
     <tr key={rowData.transactionId}>
-      <JsonModal
-        json={rowData}
-        apiEndpoint={`/payments/${rowData.transactionId}`}
-      />
+      <td>
+        <IconEye size={16} onClick={() => handleModalOpen(rowData)} />
+      </td>
       <td>{rowData.transactionId}</td>
       <td>{rowData.requestId}</td>
       <td>{rowData.transactionDate}</td>
@@ -65,7 +73,12 @@ export const PaymentTransactionTable = ({
       apiEndpoint="/payments/{id}"
     >
       <Text>You can use this call to return a specific transaction</Text>
-
+      <JsonModal
+        json={modalValue}
+        modalOpen={modalOpen}
+        setModalState={setModalState}
+        apiEndpoint={`/payments/{id}`}
+      />
       <TableWithJsonDisplay ths={ths} rows={rows} />
     </Panel>
   );

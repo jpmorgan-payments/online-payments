@@ -6,16 +6,21 @@ import { IconEye } from '@tabler/icons';
 interface JsonModalProps {
   json?: object;
   apiEndpoint?: string;
+  modalOpen: boolean;
+  setModalState: (state: boolean) => void;
 }
 
-export const JsonModal = ({ json, apiEndpoint }: JsonModalProps) => {
-  const [opened, { open, close }] = useDisclosure(false);
-
+export const JsonModal = ({
+  json,
+  apiEndpoint,
+  modalOpen,
+  setModalState,
+}: JsonModalProps) => {
   return (
     <>
       <Modal
-        opened={opened}
-        onClose={close}
+        opened={modalOpen}
+        onClose={() => setModalState(false)}
         size="xl"
         title={
           <Group spacing={4} align="center">
@@ -30,11 +35,6 @@ export const JsonModal = ({ json, apiEndpoint }: JsonModalProps) => {
           {JSON.stringify(json, null, 4)}
         </Prism>
       </Modal>
-      <Group position="center" >
-        <Button size="xs" compact variant="subtle" color="gray" onClick={open}>
-          <IconEye size={16} />
-        </Button>
-      </Group>
     </>
   );
 };
