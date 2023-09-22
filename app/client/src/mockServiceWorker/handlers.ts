@@ -1,12 +1,10 @@
 import { rest } from 'msw';
-
 import { API_URL } from 'data/constants';
 import { paymentAuthorizeResponseMock } from 'mocks/paymentAuthorizeResponse.mock';
-import type {
-  merchant,
-  payment,
-  paymentResponse,
-} from '../generated-api-models/index';
+import type { payment } from '../generated-api-models/index';
+import { manipulateJsonResponse } from './utils';
+
+const previousPayments = new Map();
 export const handlers = [
   // Match create payment requests and update response to match
   rest.post(`${API_URL}/api/payments`, async (req, res, ctx) => {
@@ -15,22 +13,30 @@ export const handlers = [
     const requestId = req.headers.get('request-id') as string;
     const merchantId = req.headers.get('merchant-id') as string;
 
-    // Bit of a hack to get merchant ID updated as it's read-only
-    const updatedMerchant = {
-      merchantId: merchantId,
-    } as merchant;
-    Object.assign(updatedMerchant, merchant);
-
-    const response = paymentAuthorizeResponseMock as paymentResponse;
-    response.requestId = requestId;
-    response.transactionId = crypto.randomUUID();
-    response.merchant = updatedMerchant;
-    response.amount = amount;
-    response.paymentMethodType = paymentMethodType;
-    response.transactionDate = new Date().toISOString();
+    const response = manipulateJsonResponse({
+      merchantId,
+      merchant,
+      requestId,
+      amount,
+      paymentMethodType,
+    });
+    previousPayments.set(requestId, response);
     return res(ctx.json(response));
   }),
   rest.get(`${API_URL}/api/payments/*`, async (req, res, ctx) => {
-    return res(ctx.json(paymentAuthorizeResponseMock));
+    const { 0: requestId } = req.params;
+    const response = previousPayments.get(requestId);
+    console.log(response);
+    if (response) {
+      return res(ctx.json(response));
+    }
+    return res(
+      ctx.status(404),
+      ctx.json({
+        responseStatus: 'ERROR',
+        responseCode: 'NOT_FOUND',
+        responseMessage: 'Transaction was not found',
+      }),
+    );
   }),
 ];
