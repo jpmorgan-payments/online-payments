@@ -25,7 +25,6 @@ export const handlers = [
   rest.get(`${API_URL}/api/payments/*`, async (req, res, ctx) => {
     const { 0: requestId } = req.params;
     const response = previousPayments.get(requestId);
-    console.log(response);
     if (response) {
       return res(ctx.json(response));
     }
