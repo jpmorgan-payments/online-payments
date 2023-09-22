@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import {
   Button,
   Group,
@@ -10,25 +10,40 @@ import {
 import { useForm, yupResolver } from '@mantine/form';
 import { Panel } from 'components';
 import { validationSchema } from './utils/validationSchema';
-import { useMerchants } from './hooks/useMerchants';
-import { usePaymentMethod } from './hooks/usePaymentMethod';
-import { paymentAuthorizeResponseMock } from 'mocks/paymentAuthorizeResponse.mock';
+import { useMerchants } from '../hooks/useMerchants';
+import { usePaymentMethod } from '../hooks/usePaymentMethod';
 import { convertToPaymentRequest } from './utils/convertToPaymentRequest';
-import type { paymentResponse } from 'generated-api-models';
 import { convertToPaymentResponse } from './utils/convertToPaymentResponse';
+import { IconDatabase } from '@tabler/icons';
+import { useQueryClient } from '@tanstack/react-query';
+import { useCreatePayment } from '../hooks';
+
+enum formStatesEnum {
+  LOADING = 'Making a payment',
+  INITIAL = 'Review & Submit',
+  COMPLETE = 'Payment Created! Create another ',
+}
+
 export const AuthorizePaymentForm = ({
-  addNewTransaction,
+  transactionIds,
+  setTransactionIds,
 }: {
-  addNewTransaction: (data: paymentResponse) => void;
+  transactionIds: string[];
+  setTransactionIds: (transactionId: string[]) => void;
 }) => {
+  const queryClient = useQueryClient();
+
+  const [formState, setFormState] = useState<formStatesEnum>(
+    formStatesEnum.INITIAL,
+  );
+
+  const merchantData = useMerchants();
+  const paymentMethodData = usePaymentMethod();
   // Initialize the form using the default values defined in validationSchema
   const form = useForm({
     initialValues: validationSchema.cast({}),
     validate: yupResolver(validationSchema),
   });
-
-  const merchantData = useMerchants();
-  const paymentMethodData = usePaymentMethod();
 
   const merchantSelectData = merchantData?.map((merchant, index) => {
     return {
@@ -69,8 +84,50 @@ export const AuthorizePaymentForm = ({
     [form.values],
   );
 
+  const { mutate: createPayment } = useCreatePayment();
+
   const onSubmit = () => {
-    addNewTransaction(paymentResponse);
+    setFormState(formStatesEnum.LOADING);
+    createPayment(
+      {
+        payment: paymentRequest,
+        merchantId: form.values.merchantId,
+        requestId: crypto.randomUUID(),
+      },
+      {
+        onSuccess: (data) => {
+          queryClient.setQueryData(['payments', data.requestId], data);
+          setTransactionIds([...transactionIds, data.requestId]);
+        },
+        onSettled: () => {
+          setFormState(formStatesEnum.COMPLETE);
+        },
+      },
+    );
+  };
+
+  const resetForm = () => {
+    form.reset();
+    setFormState(formStatesEnum.INITIAL);
+  };
+
+  const renderFormButton = () => {
+    switch (formState) {
+      case formStatesEnum.LOADING:
+        return (
+          <Button leftIcon={<IconDatabase size="1rem" />} loading>
+            {formState}
+          </Button>
+        );
+      case formStatesEnum.COMPLETE:
+        return (
+          <Button color="green.8" onClick={resetForm}>
+            {formState}
+          </Button>
+        );
+      default:
+        return <Button type="submit">{formState}</Button>;
+    }
   };
 
   return (
@@ -125,7 +182,7 @@ export const AuthorizePaymentForm = ({
               {...form.getInputProps('amount')}
             />
             <Group mt="xl" position="right">
-              <Button type="submit">Review & Submit</Button>
+              {renderFormButton()}
             </Group>
           </Stack>
         </SimpleGrid>

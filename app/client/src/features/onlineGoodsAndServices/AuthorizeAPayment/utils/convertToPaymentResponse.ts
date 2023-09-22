@@ -17,5 +17,6 @@ export function convertToPaymentResponse(
   defaultResponse.paymentMethodType = JSON.parse(values.paymentMethod);
   defaultResponse.requestId = crypto.randomUUID();
   defaultResponse.transactionId = crypto.randomUUID();
+  defaultResponse.transactionDate = new Date().toISOString();
   return defaultResponse;
 }

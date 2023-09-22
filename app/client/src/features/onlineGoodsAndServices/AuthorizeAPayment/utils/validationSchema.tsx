@@ -18,38 +18,6 @@ const validationSchema = yup.object({
       }),
     )
     .required(),
-  referenceId: yup
-    .string()
-    .default(
-      JSON.stringify({
-        referenceId: '',
-        fullName: '',
-        email: '',
-        IPAddress: '',
-        billingAddress: {
-          line1: '',
-          line2: '',
-          city: '',
-          state: '',
-          postalCode: '',
-        },
-      }),
-    )
-    .required(),
-  shipTo: yup
-    .string()
-    .default(
-      JSON.stringify({
-        shippingAddress: {
-          line1: '',
-          line2: '',
-          city: '',
-          state: '',
-          postalCode: '',
-        },
-      }),
-    )
-    .required(),
 });
 
 const defaultMerchant = {
