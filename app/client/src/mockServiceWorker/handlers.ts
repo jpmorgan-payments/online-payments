@@ -1,6 +1,5 @@
 import { rest } from 'msw';
 import { API_URL } from 'data/constants';
-import { paymentAuthorizeResponseMock } from 'mocks/paymentAuthorizeResponse.mock';
 import type { payment } from '../generated-api-models/index';
 import { manipulateJsonResponse } from './utils';
 
