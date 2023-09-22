@@ -1,4 +1,4 @@
-import { Text } from '@mantine/core';
+import { Button, Text } from '@mantine/core';
 import { useQueries } from '@tanstack/react-query';
 import { JsonModal, Panel, TableWithJsonDisplay } from 'components';
 import { useGetPayment } from './hooks/useGetPayment';
@@ -37,7 +37,13 @@ export const PaymentTransactionTable = ({
   const createRow = (rowData: paymentResponse) => (
     <tr key={rowData.transactionId}>
       <td>
-        <IconEye size={16} onClick={() => handleModalOpen(rowData)} />
+        <Button
+          onClick={() => handleModalOpen(rowData)}
+          compact
+          variant="default"
+        >
+          <IconEye size={16} />
+        </Button>
       </td>
       <td>{rowData.transactionId}</td>
       <td>{rowData.requestId}</td>
