@@ -22,6 +22,7 @@ const queryClient = new QueryClient({
 
 const App = () => {
   const [themeName, setThemeName] = useState<string>(Object.keys(themes)[0]);
+  const [transactionIds, setTransactionIds] = useState<string[]>([]);
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -44,7 +45,12 @@ const App = () => {
                 <Route path="overview" element={<OverviewPage />} />
                 <Route
                   path="onlineGoodsServices"
-                  element={<OnlineGoodsAndServicesPage />}
+                  element={
+                    <OnlineGoodsAndServicesPage
+                      transactionIds={transactionIds}
+                      setTransactionIds={setTransactionIds}
+                    />
+                  }
                 />
                 <Route path="/" element={<Navigate replace to="/overview" />} />
               </Routes>

@@ -17,6 +17,7 @@ import { convertToPaymentResponse } from './utils/convertToPaymentResponse';
 import { IconDatabase } from '@tabler/icons';
 import { useQueryClient } from '@tanstack/react-query';
 import { useCreatePayment } from '../hooks';
+import { transactionManagementType } from 'shared.types';
 
 enum formStatesEnum {
   LOADING = 'Making a payment',
@@ -27,10 +28,7 @@ enum formStatesEnum {
 export const AuthorizePaymentForm = ({
   transactionIds,
   setTransactionIds,
-}: {
-  transactionIds: string[];
-  setTransactionIds: (transactionId: string[]) => void;
-}) => {
+}: transactionManagementType) => {
   const queryClient = useQueryClient();
 
   const [formState, setFormState] = useState<formStatesEnum>(

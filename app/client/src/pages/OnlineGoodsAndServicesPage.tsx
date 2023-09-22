@@ -2,8 +2,11 @@ import { Badge } from '@mantine/core';
 import { PageWrapper } from 'components/PageWrapper/PageWrapper';
 import { GITHUB_REPO } from 'data/constants';
 import { OnlineGoodsAndServicesPanel } from 'features/onlineGoodsAndServices';
+import { transactionManagementType } from 'shared.types';
 
-export const OnlineGoodsAndServicesPage = () => {
+export const OnlineGoodsAndServicesPage = (
+  props: transactionManagementType,
+) => {
   return (
     <PageWrapper
       title="Online Goods and Services"
@@ -14,7 +17,7 @@ export const OnlineGoodsAndServicesPage = () => {
         To make a payment in Online Payments, you send a{' '}
         <Badge>POST /payments</Badge> request.
       </div>
-      <OnlineGoodsAndServicesPanel />
+      <OnlineGoodsAndServicesPanel {...props} />
     </PageWrapper>
   );
 };
