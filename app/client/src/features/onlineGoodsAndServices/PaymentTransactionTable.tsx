@@ -33,6 +33,7 @@ export const PaymentTransactionTable = ({
     setModalValue(rowData);
     setModalState(true);
   };
+
   const createRow = (rowData: paymentResponse) => (
     <tr key={rowData.transactionId}>
       <td>
@@ -50,7 +51,7 @@ export const PaymentTransactionTable = ({
 
   if (!isLoading) {
     transactions.map(({ data }) => {
-      data && rows.push(createRow(data));
+      data && rows.unshift(createRow(data));
     });
   }
 
