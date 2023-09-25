@@ -1,9 +1,9 @@
-import { Button, SimpleGrid, Text } from '@mantine/core';
+import { Button, Group, SimpleGrid, Text } from '@mantine/core';
 import { useQueries } from '@tanstack/react-query';
 import { JsonModal, Panel, TableWithJsonDisplay } from 'components';
 import { useGetPayment } from './hooks/useGetPayment';
 import { paymentAuthorizeResponseListMock } from 'mocks/paymentAuthorizeResponseList.mock';
-import { paymentResponse } from 'generated-api-models';
+import { paymentResponse, transactionState } from 'generated-api-models';
 import { useState } from 'react';
 import { IconEye } from '@tabler/icons';
 import { transactionManagementType } from 'shared.types';
@@ -33,13 +33,30 @@ export const PaymentTransactionTable = ({
     setModalState(true);
   };
 
-  const displayPaymentActions = () => {
+  const displayPaymentActions = (transactionState: transactionState) => {
     return (
-      <SimpleGrid cols={3}>
-        <Button compact>Capture</Button>
-        <Button compact>Void</Button>
-        <Button compact>Refund</Button>
-      </SimpleGrid>
+      <Group grow>
+        <Button compact disabled={transactionState !== 'PENDING'}>
+          Verify
+        </Button>
+        <Button compact disabled={transactionState !== 'AUTHORIZED'}>
+          Capture
+        </Button>
+        <Button
+          compact
+          disabled={['AUTHORIZED', 'PENDING'].includes(transactionState)}
+        >
+          Void
+        </Button>
+        <Button
+          compact
+          disabled={['CLOSED', 'ERROR', 'DECLINED', 'VOIDED'].includes(
+            transactionState,
+          )}
+        >
+          Refund
+        </Button>
+      </Group>
     );
   };
   const createRow = (rowData: paymentResponse) => (
@@ -54,11 +71,10 @@ export const PaymentTransactionTable = ({
         </Button>
       </td>
       <td>{rowData.transactionId}</td>
-      <td>{rowData.requestId}</td>
       <td>{rowData.transactionDate}</td>
       <td>{rowData.transactionState}</td>
-      <td>{rowData.amount}</td>
-      <td>{displayPaymentActions()}</td>
+      {}
+      <td>{displayPaymentActions(rowData.transactionState)}</td>
     </tr>
   );
 
@@ -74,10 +90,8 @@ export const PaymentTransactionTable = ({
     <tr>
       <th></th>
       <th>Transaction ID</th>
-      <th>Request ID</th>
       <th>Transaction Date</th>
       <th>Transaction State</th>
-      <th>Amount</th>
       <th>Actions</th>
     </tr>
   );
