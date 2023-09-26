@@ -1,12 +1,14 @@
-import { Button, Group, SimpleGrid, Text } from '@mantine/core';
+import { Button, Group, Text } from '@mantine/core';
 import { useQueries } from '@tanstack/react-query';
 import { JsonModal, Panel, TableWithJsonDisplay } from 'components';
 import { useGetPayment } from './hooks/useGetPayment';
 import { paymentAuthorizeResponseListMock } from 'mocks/paymentAuthorizeResponseList.mock';
-import { paymentResponse, transactionState } from 'generated-api-models';
+import { paymentResponse } from 'generated-api-models';
 import { useState } from 'react';
 import { IconEye } from '@tabler/icons';
 import { transactionManagementType } from 'shared.types';
+import { FormModal } from './FormModal';
+import { formModalType } from './types';
 
 export const PaymentTransactionTable = ({
   transactionIds,
@@ -15,7 +17,10 @@ export const PaymentTransactionTable = ({
     paymentAuthorizeResponseListMock;
 
   const [modalOpen, setModalState] = useState<boolean>(false);
-  const [modalValue, setModalValue] = useState({});
+  const [formModalOpen, setFormModalState] = useState<boolean>(false);
+
+  const [formModalData, setFormModalData] = useState<formModalType>({});
+  const [jsonModalValue, setJsonModalValue] = useState({});
 
   const transactions = useQueries({
     queries: transactionIds.map((id) => {
@@ -29,31 +34,23 @@ export const PaymentTransactionTable = ({
   const isLoading = transactions.some((query) => query.isLoading);
 
   const handleModalOpen = (rowData: paymentResponse) => {
-    setModalValue(rowData);
+    setJsonModalValue(rowData);
     setModalState(true);
   };
 
-  const displayPaymentActions = (transactionState: transactionState) => {
+  const displayPaymentActions = () => {
     return (
       <Group grow>
-        <Button compact disabled={transactionState !== 'PENDING'}>
+        <Button compact disabled>
           Verify
         </Button>
-        <Button compact disabled={transactionState !== 'AUTHORIZED'}>
+        <Button compact disabled>
           Capture
         </Button>
-        <Button
-          compact
-          disabled={['AUTHORIZED', 'PENDING'].includes(transactionState)}
-        >
+        <Button compact disabled>
           Void
         </Button>
-        <Button
-          compact
-          disabled={['CLOSED', 'ERROR', 'DECLINED', 'VOIDED'].includes(
-            transactionState,
-          )}
-        >
+        <Button compact disabled>
           Refund
         </Button>
       </Group>
@@ -74,7 +71,7 @@ export const PaymentTransactionTable = ({
       <td>{rowData.transactionDate}</td>
       <td>{rowData.transactionState}</td>
       {}
-      <td>{displayPaymentActions(rowData.transactionState)}</td>
+      <td>{displayPaymentActions()}</td>
     </tr>
   );
 
@@ -103,8 +100,13 @@ export const PaymentTransactionTable = ({
       apiEndpoint="/payments/{id}"
     >
       <Text>You can use this call to return a specific transaction</Text>
+      <FormModal
+        modalOpened={formModalOpen}
+        setModalOpened={setFormModalState}
+        data={formModalData}
+      />
       <JsonModal
-        json={modalValue}
+        json={jsonModalValue}
         modalOpen={modalOpen}
         setModalState={setModalState}
         apiEndpoint={`/payments/{id}`}
