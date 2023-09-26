@@ -1,4 +1,4 @@
-import { Button, Text } from '@mantine/core';
+import { Button, Group, Text } from '@mantine/core';
 import { useQueries } from '@tanstack/react-query';
 import { JsonModal, Panel, TableWithJsonDisplay } from 'components';
 import { useGetPayment } from './hooks/useGetPayment';
@@ -7,6 +7,8 @@ import { paymentResponse } from 'generated-api-models';
 import { useState } from 'react';
 import { IconEye } from '@tabler/icons';
 import { transactionManagementType } from 'shared.types';
+import { FormModal } from './FormModal';
+import { formModalType } from './types';
 
 export const PaymentTransactionTable = ({
   transactionIds,
@@ -15,7 +17,10 @@ export const PaymentTransactionTable = ({
     paymentAuthorizeResponseListMock;
 
   const [modalOpen, setModalState] = useState<boolean>(false);
-  const [modalValue, setModalValue] = useState({});
+  const [formModalOpen, setFormModalState] = useState<boolean>(false);
+
+  const [formModalData, setFormModalData] = useState<formModalType>({});
+  const [jsonModalValue, setJsonModalValue] = useState({});
 
   const transactions = useQueries({
     queries: transactionIds.map((id) => {
@@ -29,10 +34,28 @@ export const PaymentTransactionTable = ({
   const isLoading = transactions.some((query) => query.isLoading);
 
   const handleModalOpen = (rowData: paymentResponse) => {
-    setModalValue(rowData);
+    setJsonModalValue(rowData);
     setModalState(true);
   };
 
+  const displayPaymentActions = () => {
+    return (
+      <Group grow>
+        <Button compact disabled>
+          Verify
+        </Button>
+        <Button compact disabled>
+          Capture
+        </Button>
+        <Button compact disabled>
+          Void
+        </Button>
+        <Button compact disabled>
+          Refund
+        </Button>
+      </Group>
+    );
+  };
   const createRow = (rowData: paymentResponse) => (
     <tr key={rowData.transactionId}>
       <td>
@@ -45,10 +68,9 @@ export const PaymentTransactionTable = ({
         </Button>
       </td>
       <td>{rowData.transactionId}</td>
-      <td>{rowData.requestId}</td>
       <td>{rowData.transactionDate}</td>
       <td>{rowData.transactionState}</td>
-      <td>{rowData.amount}</td>
+      <td>{displayPaymentActions()}</td>
     </tr>
   );
 
@@ -64,11 +86,9 @@ export const PaymentTransactionTable = ({
     <tr>
       <th></th>
       <th>Transaction ID</th>
-      <th>Request ID</th>
       <th>Transaction Date</th>
       <th>Transaction State</th>
-
-      <th>Amount</th>
+      <th>Actions</th>
     </tr>
   );
 
@@ -79,8 +99,13 @@ export const PaymentTransactionTable = ({
       apiEndpoint="/payments/{id}"
     >
       <Text>You can use this call to return a specific transaction</Text>
+      <FormModal
+        modalOpened={formModalOpen}
+        setModalOpened={setFormModalState}
+        data={formModalData}
+      />
       <JsonModal
-        json={modalValue}
+        json={jsonModalValue}
         modalOpen={modalOpen}
         setModalState={setModalState}
         apiEndpoint={`/payments/{id}`}
