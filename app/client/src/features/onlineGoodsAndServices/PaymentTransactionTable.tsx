@@ -70,7 +70,6 @@ export const PaymentTransactionTable = ({
       <td>{rowData.transactionId}</td>
       <td>{rowData.transactionDate}</td>
       <td>{rowData.transactionState}</td>
-      {}
       <td>{displayPaymentActions()}</td>
     </tr>
   );
