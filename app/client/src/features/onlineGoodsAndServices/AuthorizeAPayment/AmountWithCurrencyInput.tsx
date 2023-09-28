@@ -4,7 +4,6 @@ import { InferType } from 'yup';
 import { validationSchema } from './utils/validationSchema';
 import { currency } from 'generated-api-models';
 import { useState } from 'react';
-import { IconChevronDown } from '@tabler/icons';
 
 export const AmountWithCurrencyInput = ({
   form,

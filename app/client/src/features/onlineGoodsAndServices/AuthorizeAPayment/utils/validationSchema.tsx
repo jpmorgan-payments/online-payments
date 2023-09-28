@@ -3,11 +3,7 @@ import * as yup from 'yup';
 
 const validationSchema = yup.object({
   amount: yup.number().default(10).required(),
-  captureMethod: yup
-    .mixed()
-    .oneOf(Object.values(captureMethod))
-    .default(captureMethod.NOW)
-    .required(),
+  captureMethod: yup.mixed().oneOf(Object.values(captureMethod)).required(),
   paymentMethod: yup
     .string()
     .default(

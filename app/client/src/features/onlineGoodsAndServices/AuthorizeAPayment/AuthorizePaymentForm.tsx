@@ -90,7 +90,7 @@ export const AuthorizePaymentForm = ({
 
   const resetForm = () => {
     form.reset();
-    setFormState(formStatesEnum.INITIAL);
+    //setFormState(formStatesEnum.INITIAL);
   };
 
   const renderFormButton = () => {
@@ -101,14 +101,12 @@ export const AuthorizePaymentForm = ({
             {formState}
           </Button>
         );
-      case formStatesEnum.COMPLETE:
+      default:
         return (
           <Button color="green.8" onClick={resetForm}>
             {formState}
           </Button>
         );
-      default:
-        return <Button type="submit">{formState}</Button>;
     }
   };
 
@@ -151,12 +149,19 @@ export const AuthorizePaymentForm = ({
               label="Is amount final?"
               {...form.getInputProps('isAmountFinal')}
             />
-            <Group mt="xl" position="right">
-              {renderFormButton()}
-            </Group>
+            {formState === formStatesEnum.INITIAL && (
+              <Group mt="xl" position="right">
+                <Button type="submit">{formState}</Button>;
+              </Group>
+            )}
           </Stack>
         </SimpleGrid>
       </form>
+      {formState !== formStatesEnum.INITIAL && (
+        <Group mt="xl" position="right">
+          {renderFormButton()}
+        </Group>
+      )}
     </Panel>
   );
 };
