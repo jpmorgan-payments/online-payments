@@ -7,8 +7,14 @@ const previousPayments = new Map();
 export const handlers = [
   // Match create payment requests and update response to match
   rest.post(`${API_URL}/api/payments`, async (req, res, ctx) => {
-    const { amount, paymentMethodType, merchant, currency, captureMethod, isAmountFinal } =
-      (await req.json()) as payment;
+    const {
+      amount,
+      paymentMethodType,
+      merchant,
+      currency,
+      captureMethod,
+      isAmountFinal,
+    } = (await req.json()) as payment;
     const requestId = req.headers.get('request-id') as string;
     const merchantId = req.headers.get('merchant-id') as string;
 
@@ -20,13 +26,16 @@ export const handlers = [
       paymentMethodType,
       currency,
       captureMethod,
-      isAmountFinal
+      isAmountFinal,
     });
-    previousPayments.set(requestId, response);
+    previousPayments.set(response.transactionId, response);
     return res(ctx.json(response));
   }),
   rest.get(`${API_URL}/api/payments/*`, async (req, res, ctx) => {
     const { 0: requestId } = req.params;
+    console.log(requestId);
+    console.log(req.params);
+    console.log(previousPayments);
     const response = previousPayments.get(requestId);
     if (response) {
       return res(ctx.json(response));

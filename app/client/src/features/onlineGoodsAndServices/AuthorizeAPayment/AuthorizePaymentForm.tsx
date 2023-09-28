@@ -1,11 +1,16 @@
 import { useMemo, useState } from 'react';
 import {
+  Alert,
   Button,
   Checkbox,
+  Container,
   Group,
+  LoadingOverlay,
   Select,
   SimpleGrid,
+  Space,
   Stack,
+  Text,
 } from '@mantine/core';
 import { useForm, yupResolver } from '@mantine/form';
 import { Panel } from 'components';
@@ -13,7 +18,7 @@ import { validationSchema } from './utils/validationSchema';
 import { usePaymentMethod } from '../hooks/usePaymentMethod';
 import { convertToPaymentRequest } from './utils/convertToPaymentRequest';
 import { convertToPaymentResponse } from './utils/convertToPaymentResponse';
-import { IconDatabase } from '@tabler/icons';
+import { IconAlertCircle, IconDatabase } from '@tabler/icons';
 import { useQueryClient } from '@tanstack/react-query';
 import { useCreatePayment } from '../hooks';
 import { transactionManagementType } from 'shared.types';
@@ -24,7 +29,7 @@ import { captureMethod, currency } from 'generated-api-models';
 enum formStatesEnum {
   LOADING = 'Making a payment',
   INITIAL = 'Review & Submit',
-  COMPLETE = 'Payment Created! Create another ',
+  COMPLETE = 'Create another payment',
 }
 
 export const AuthorizePaymentForm = ({
@@ -32,7 +37,6 @@ export const AuthorizePaymentForm = ({
   setTransactionIds,
 }: transactionManagementType) => {
   const queryClient = useQueryClient();
-
   const [formState, setFormState] = useState<formStatesEnum>(
     formStatesEnum.INITIAL,
   );
@@ -90,24 +94,7 @@ export const AuthorizePaymentForm = ({
 
   const resetForm = () => {
     form.reset();
-    //setFormState(formStatesEnum.INITIAL);
-  };
-
-  const renderFormButton = () => {
-    switch (formState) {
-      case formStatesEnum.LOADING:
-        return (
-          <Button leftIcon={<IconDatabase size="1rem" />} loading>
-            {formState}
-          </Button>
-        );
-      default:
-        return (
-          <Button color="green.8" onClick={resetForm}>
-            {formState}
-          </Button>
-        );
-    }
+    setFormState(formStatesEnum.INITIAL);
   };
 
   return (
@@ -118,50 +105,65 @@ export const AuthorizePaymentForm = ({
       requestBody={paymentRequest}
       responseBody={paymentResponse}
     >
-      <form onSubmit={form.onSubmit(handleSubmit)}>
-        <SimpleGrid
-          cols={1}
-          breakpoints={[
-            { minWidth: 'md', cols: 2 },
-            { minWidth: 'lg', cols: 1 },
-            { minWidth: 'xl', cols: 1 },
-          ]}
-        >
-          <Stack>
-            <Select
-              label="Select Capture Method"
-              placeholder="Choose Capture Method"
-              required
-              data={Object.keys(captureMethod)}
-              {...form.getInputProps('captureMethod')}
+      <Container pos="relative">
+        {formState !== formStatesEnum.COMPLETE ? (
+          <form onSubmit={form.onSubmit(handleSubmit)}>
+            <LoadingOverlay
+              visible={formState === formStatesEnum.LOADING}
+              overlayBlur={2}
             />
-            <Select
-              label="Select Payment Method"
-              description="Information about the payment type"
-              placeholder="Choose Payment Method"
-              required
-              data={paymentMethodSelectData}
-              nothingFound="No payment methods"
-              {...form.getInputProps('paymentMethod')}
-            />
-            <AmountWithCurrencyInput form={form} />
-            <Checkbox
-              label="Is amount final?"
-              {...form.getInputProps('isAmountFinal')}
-            />
-            {formState === formStatesEnum.INITIAL && (
-              <Group mt="xl" position="right">
-                <Button type="submit">{formState}</Button>;
-              </Group>
-            )}
-          </Stack>
-        </SimpleGrid>
-      </form>
-      {formState !== formStatesEnum.INITIAL && (
-        <Group mt="xl" position="right">
-          {renderFormButton()}
-        </Group>
-      )}
+            <SimpleGrid
+              cols={1}
+              breakpoints={[
+                { minWidth: 'md', cols: 2 },
+                { minWidth: 'lg', cols: 1 },
+                { minWidth: 'xl', cols: 1 },
+              ]}
+            >
+              <Stack>
+                <Select
+                  label="Select Capture Method"
+                  placeholder="Choose Capture Method"
+                  required
+                  data={Object.keys(captureMethod)}
+                  {...form.getInputProps('captureMethod')}
+                />
+                <Select
+                  label="Select Payment Method"
+                  description="Information about the payment type"
+                  placeholder="Choose Payment Method"
+                  required
+                  data={paymentMethodSelectData}
+                  nothingFound="No payment methods"
+                  {...form.getInputProps('paymentMethod')}
+                />
+                <AmountWithCurrencyInput form={form} />
+                <Checkbox
+                  label="Is amount final?"
+                  {...form.getInputProps('isAmountFinal')}
+                />
+                <Group mt="xl" position="right">
+                  <Button type="submit">{formState}</Button>
+                </Group>
+              </Stack>
+            </SimpleGrid>
+          </form>
+        ) : (
+          <Alert
+            icon={<IconAlertCircle size="1rem" />}
+            title={<Text fz="lg">Payment successfully created!</Text>}
+            color="green"
+          >
+            <Text fz="md">
+              You're payment request has been successful. Check out the table
+              below to see further actions.
+            </Text>
+            <Space h="md" />
+
+            <Button onClick={resetForm}>{formState}</Button>
+          </Alert>
+        )}
+      </Container>
     </Panel>
   );
 };
