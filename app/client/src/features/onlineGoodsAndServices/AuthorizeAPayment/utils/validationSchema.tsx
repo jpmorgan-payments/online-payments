@@ -2,7 +2,6 @@ import * as yup from 'yup';
 
 const validationSchema = yup.object({
   amount: yup.string().default('').required(),
-  merchantId: yup.string().default('').required(),
   paymentMethod: yup
     .string()
     .default(
@@ -20,12 +19,4 @@ const validationSchema = yup.object({
     .required(),
 });
 
-const defaultMerchant = {
-  merchantId: '',
-  merchantSoftware: {
-    companyName: ' ',
-    productName: ' ',
-    version: ' ',
-  },
-};
-export { validationSchema, defaultMerchant };
+export { validationSchema };

@@ -10,7 +10,6 @@ import {
 import { useForm, yupResolver } from '@mantine/form';
 import { Panel } from 'components';
 import { validationSchema } from './utils/validationSchema';
-import { useMerchants } from '../hooks/useMerchants';
 import { usePaymentMethod } from '../hooks/usePaymentMethod';
 import { convertToPaymentRequest } from './utils/convertToPaymentRequest';
 import { convertToPaymentResponse } from './utils/convertToPaymentResponse';
@@ -35,21 +34,11 @@ export const AuthorizePaymentForm = ({
     formStatesEnum.INITIAL,
   );
 
-  const merchantData = useMerchants();
   const paymentMethodData = usePaymentMethod();
   // Initialize the form using the default values defined in validationSchema
   const form = useForm({
     initialValues: validationSchema.cast({}),
     validate: yupResolver(validationSchema),
-  });
-
-  const merchantSelectData = merchantData?.map((merchant, index) => {
-    return {
-      key: index,
-      value: merchant.merchantId + '',
-      label:
-        merchant.merchantId + ' - ' + merchant.merchantSoftware.companyName,
-    };
   });
 
   const paymentMethodSelectData = paymentMethodData?.map(
@@ -64,21 +53,13 @@ export const AuthorizePaymentForm = ({
     },
   );
 
-  const selectedMerchant = useMemo(
-    () =>
-      merchantData.find(
-        (merchant) => merchant.merchantId === form.values.merchantId,
-      ),
-    [form.values.merchantId, merchantData],
-  );
-
   const paymentRequest = useMemo(
-    () => convertToPaymentRequest(form.values, selectedMerchant),
+    () => convertToPaymentRequest(form.values),
     [form.values],
   );
 
   const paymentResponse = useMemo(
-    () => convertToPaymentResponse(form.values, selectedMerchant),
+    () => convertToPaymentResponse(form.values),
     [form.values],
   );
 
@@ -89,7 +70,7 @@ export const AuthorizePaymentForm = ({
     createPayment(
       {
         payment: paymentRequest,
-        merchantId: form.values.merchantId,
+        merchantId: '998482157632',
         requestId: crypto.randomUUID(),
       },
       {
@@ -146,15 +127,6 @@ export const AuthorizePaymentForm = ({
           ]}
         >
           <Stack>
-            <Select
-              label="Select Merchant"
-              description="Information about the merchant"
-              placeholder="Choose Merchant"
-              required
-              data={merchantSelectData}
-              nothingFound="No merchants"
-              {...form.getInputProps('merchantId')}
-            />
             <Select
               label="Select Payment Method"
               description="Information about the payment type"
