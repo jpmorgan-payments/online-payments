@@ -3,21 +3,29 @@ import { UseFormReturnType } from '@mantine/form';
 import { InferType } from 'yup';
 import { validationSchema } from './utils/validationSchema';
 import { currency } from 'generated-api-models';
+import { useState } from 'react';
+import { IconChevronDown } from '@tabler/icons';
 
 export const AmountWithCurrencyInput = ({
   form,
 }: {
   form: UseFormReturnType<InferType<typeof validationSchema>>;
 }) => {
+  const [searchValue, onSearchChange] = useState('');
+
   return (
     <Group spacing={0}>
       <Input.Label>Amount</Input.Label>
       <Select
         data={Object.keys(currency)}
         {...form.getInputProps('currency')}
+        onSearchChange={onSearchChange}
+        searchValue={searchValue}
+        searchable
       />
       <NumberInput
         required
+        hideControls
         min={0}
         precision={2}
         parser={(value) => value?.replace(/(,*)/g, '')}

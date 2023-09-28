@@ -6,8 +6,8 @@ export function convertToPaymentRequest(
   values: InferType<typeof validationSchema>,
 ) {
   const defaultResponse: payment = {
-    captureMethod: 'NOW',
-    amount: Number(values.amount),
+    captureMethod: values.captureMethod,
+    amount: values.amount,
     currency: values.currency,
     paymentMethodType: JSON.parse(values.paymentMethod),
     initiatorType: 'CARDHOLDER',

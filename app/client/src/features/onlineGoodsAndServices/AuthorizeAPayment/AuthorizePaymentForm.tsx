@@ -12,6 +12,7 @@ import { useCreatePayment } from '../hooks';
 import { transactionManagementType } from 'shared.types';
 import { AmountWithCurrencyInput } from './AmountWithCurrencyInput';
 import { InferType } from 'yup';
+import { captureMethod } from 'generated-api-models';
 
 enum formStatesEnum {
   LOADING = 'Making a payment',
@@ -122,6 +123,13 @@ export const AuthorizePaymentForm = ({
           ]}
         >
           <Stack>
+            <Select
+              label="Select Capture Method"
+              placeholder="Choose Capture Method"
+              required
+              data={Object.keys(captureMethod)}
+              {...form.getInputProps('captureMethod')}
+            />
             <Select
               label="Select Payment Method"
               description="Information about the payment type"

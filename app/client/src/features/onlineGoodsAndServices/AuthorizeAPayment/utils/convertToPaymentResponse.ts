@@ -11,11 +11,12 @@ export function convertToPaymentResponse(
   const defaultResponse: paymentResponse = JSON.parse(
     JSON.stringify(paymentAuthorizeResponseMock),
   );
-  defaultResponse.amount = Number(values.amount);
+  defaultResponse.amount = values.amount;
   defaultResponse.paymentMethodType = JSON.parse(values.paymentMethod);
   defaultResponse.requestId = crypto.randomUUID();
   defaultResponse.transactionId = crypto.randomUUID();
   defaultResponse.transactionDate = new Date().toISOString();
   defaultResponse.currency = values.currency;
+  defaultResponse.captureMethod = values.captureMethod;
   return defaultResponse;
 }
