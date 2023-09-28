@@ -12,7 +12,7 @@ export function convertToPaymentRequest(
     paymentMethodType: JSON.parse(values.paymentMethod),
     initiatorType: 'CARDHOLDER',
     accountOnFile: 'NOT_STORED',
-    isAmountFinal: true,
+    isAmountFinal: values.isAmountFinal,
     merchant: {
       merchantSoftware: {
         companyName: 'Payment Company',

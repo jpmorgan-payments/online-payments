@@ -18,5 +18,6 @@ export function convertToPaymentResponse(
   defaultResponse.transactionDate = new Date().toISOString();
   defaultResponse.currency = values.currency;
   defaultResponse.captureMethod = values.captureMethod;
+  defaultResponse.isAmountFinal = values.isAmountFinal;
   return defaultResponse;
 }

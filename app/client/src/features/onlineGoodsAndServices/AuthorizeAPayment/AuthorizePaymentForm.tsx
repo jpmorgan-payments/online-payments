@@ -1,5 +1,12 @@
 import { useMemo, useState } from 'react';
-import { Button, Group, Select, SimpleGrid, Stack } from '@mantine/core';
+import {
+  Button,
+  Checkbox,
+  Group,
+  Select,
+  SimpleGrid,
+  Stack,
+} from '@mantine/core';
 import { useForm, yupResolver } from '@mantine/form';
 import { Panel } from 'components';
 import { validationSchema } from './utils/validationSchema';
@@ -12,7 +19,7 @@ import { useCreatePayment } from '../hooks';
 import { transactionManagementType } from 'shared.types';
 import { AmountWithCurrencyInput } from './AmountWithCurrencyInput';
 import { InferType } from 'yup';
-import { captureMethod } from 'generated-api-models';
+import { captureMethod, currency } from 'generated-api-models';
 
 enum formStatesEnum {
   LOADING = 'Making a payment',
@@ -61,7 +68,7 @@ export const AuthorizePaymentForm = ({
 
   const { mutate: createPayment } = useCreatePayment();
 
-  const onSubmit = () => {
+  const handleSubmit = () => {
     setFormState(formStatesEnum.LOADING);
     createPayment(
       {
@@ -113,7 +120,7 @@ export const AuthorizePaymentForm = ({
       requestBody={paymentRequest}
       responseBody={paymentResponse}
     >
-      <form onSubmit={form.onSubmit(onSubmit)}>
+      <form onSubmit={form.onSubmit(handleSubmit)}>
         <SimpleGrid
           cols={1}
           breakpoints={[
@@ -140,6 +147,10 @@ export const AuthorizePaymentForm = ({
               {...form.getInputProps('paymentMethod')}
             />
             <AmountWithCurrencyInput form={form} />
+            <Checkbox
+              label="Is amount final?"
+              {...form.getInputProps('isAmountFinal')}
+            />
             <Group mt="xl" position="right">
               {renderFormButton()}
             </Group>

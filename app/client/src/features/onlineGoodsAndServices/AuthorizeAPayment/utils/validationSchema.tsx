@@ -1,4 +1,4 @@
-import { captureMethod, currency } from 'generated-api-models';
+import { captureMethod, currency, isAmountFinal } from 'generated-api-models';
 import * as yup from 'yup';
 
 const validationSchema = yup.object({
@@ -6,7 +6,8 @@ const validationSchema = yup.object({
   captureMethod: yup
     .mixed()
     .oneOf(Object.values(captureMethod))
-    .default(captureMethod.NOW),
+    .default(captureMethod.NOW)
+    .required(),
   paymentMethod: yup
     .string()
     .default(
@@ -22,7 +23,12 @@ const validationSchema = yup.object({
       }),
     )
     .required(),
-  currency: yup.mixed().oneOf(Object.values(currency)).default(currency.USD),
+  currency: yup
+    .mixed()
+    .oneOf(Object.values(currency))
+    .default(currency.USD)
+    .required(),
+  isAmountFinal: yup.boolean().default(false),
 });
 
 export { validationSchema };
