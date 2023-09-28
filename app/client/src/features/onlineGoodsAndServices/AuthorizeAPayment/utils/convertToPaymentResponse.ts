@@ -1,5 +1,5 @@
 import type { InferType } from 'yup';
-import type { merchant, paymentResponse } from 'generated-api-models';
+import type { paymentResponse } from 'generated-api-models';
 import type { validationSchema } from './validationSchema';
 import { paymentAuthorizeResponseMock } from 'mocks/paymentAuthorizeResponse.mock';
 
@@ -16,5 +16,6 @@ export function convertToPaymentResponse(
   defaultResponse.requestId = crypto.randomUUID();
   defaultResponse.transactionId = crypto.randomUUID();
   defaultResponse.transactionDate = new Date().toISOString();
+  defaultResponse.currency = values.currency;
   return defaultResponse;
 }

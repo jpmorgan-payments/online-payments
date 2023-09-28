@@ -1,12 +1,5 @@
 import { useMemo, useState } from 'react';
-import {
-  Button,
-  Group,
-  NumberInput,
-  Select,
-  SimpleGrid,
-  Stack,
-} from '@mantine/core';
+import { Button, Group, Select, SimpleGrid, Stack } from '@mantine/core';
 import { useForm, yupResolver } from '@mantine/form';
 import { Panel } from 'components';
 import { validationSchema } from './utils/validationSchema';
@@ -17,6 +10,8 @@ import { IconDatabase } from '@tabler/icons';
 import { useQueryClient } from '@tanstack/react-query';
 import { useCreatePayment } from '../hooks';
 import { transactionManagementType } from 'shared.types';
+import { AmountWithCurrencyInput } from './AmountWithCurrencyInput';
+import { InferType } from 'yup';
 
 enum formStatesEnum {
   LOADING = 'Making a payment',
@@ -36,7 +31,7 @@ export const AuthorizePaymentForm = ({
 
   const paymentMethodData = usePaymentMethod();
   // Initialize the form using the default values defined in validationSchema
-  const form = useForm({
+  const form = useForm<InferType<typeof validationSchema>>({
     initialValues: validationSchema.cast({}),
     validate: yupResolver(validationSchema),
   });
@@ -136,21 +131,7 @@ export const AuthorizePaymentForm = ({
               nothingFound="No payment methods"
               {...form.getInputProps('paymentMethod')}
             />
-            <NumberInput
-              label="Amount"
-              description="Amount for payment"
-              icon="$"
-              required
-              min={0}
-              precision={2}
-              parser={(value) => value?.replace(/(,*)/g, '')}
-              formatter={(value = '') =>
-                !Number.isNaN(parseFloat(value))
-                  ? `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-                  : ''
-              }
-              {...form.getInputProps('amount')}
-            />
+            <AmountWithCurrencyInput form={form} />
             <Group mt="xl" position="right">
               {renderFormButton()}
             </Group>

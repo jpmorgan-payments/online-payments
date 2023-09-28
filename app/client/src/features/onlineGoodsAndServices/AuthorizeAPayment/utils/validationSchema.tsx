@@ -1,3 +1,4 @@
+import { currency } from 'generated-api-models';
 import * as yup from 'yup';
 
 const validationSchema = yup.object({
@@ -17,6 +18,7 @@ const validationSchema = yup.object({
       }),
     )
     .required(),
+  currency: yup.mixed().oneOf(Object.values(currency)).default(currency.USD),
 });
 
 export { validationSchema };

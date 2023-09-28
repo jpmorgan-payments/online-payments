@@ -8,7 +8,7 @@ export function convertToPaymentRequest(
   const defaultResponse: payment = {
     captureMethod: 'NOW',
     amount: Number(values.amount),
-    currency: 'USD',
+    currency: values.currency,
     paymentMethodType: JSON.parse(values.paymentMethod),
     initiatorType: 'CARDHOLDER',
     accountOnFile: 'NOT_STORED',

@@ -1,4 +1,5 @@
 import {
+  currency,
   merchant,
   paymentMethodType,
   paymentResponse,
@@ -11,6 +12,7 @@ interface manipulateJsonResponseProps {
   requestId: string;
   amount: number;
   paymentMethodType: paymentMethodType;
+  currency: currency;
 }
 export const manipulateJsonResponse = ({
   merchantId,
@@ -18,6 +20,7 @@ export const manipulateJsonResponse = ({
   requestId,
   amount,
   paymentMethodType,
+  currency,
 }: manipulateJsonResponseProps) => {
   // Bit of a hack to get merchant ID updated as it's read-only
   const updatedMerchant = {
@@ -32,5 +35,6 @@ export const manipulateJsonResponse = ({
   response.amount = amount;
   response.paymentMethodType = paymentMethodType;
   response.transactionDate = new Date().toISOString();
+  response.currency = currency;
   return response;
 };
