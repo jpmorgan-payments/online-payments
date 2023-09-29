@@ -1,21 +1,26 @@
 import type { InferType } from 'yup';
-import type { merchant, payment } from 'generated-api-models';
-import { defaultMerchant, type validationSchema } from './validationSchema';
+import type { payment } from 'generated-api-models';
+import { type validationSchema } from './validationSchema';
 
 export function convertToPaymentRequest(
   values: InferType<typeof validationSchema>,
-  merchant?: merchant,
 ) {
-  const { merchantId, ...merchantRequest } = merchant || defaultMerchant;
   const defaultResponse: payment = {
-    captureMethod: 'NOW',
-    amount: Number(values.amount),
-    currency: 'USD',
-    merchant: merchantRequest,
+    captureMethod: values.captureMethod,
+    amount: values.amount,
+    currency: values.currency,
     paymentMethodType: JSON.parse(values.paymentMethod),
-    initiatorType: 'CARDHOLDER',
+    initiatorType: values.initiatorType,
     accountOnFile: 'NOT_STORED',
-    isAmountFinal: true,
+    isAmountFinal: values.isAmountFinal,
+    merchant: {
+      merchantSoftware: {
+        companyName: 'Payment Company',
+        productName: 'Application Name',
+        version: '1.235',
+      },
+      merchantCategoryCode: '4899',
+    },
   } as payment;
   return defaultResponse;
 }

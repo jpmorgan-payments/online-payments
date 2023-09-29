@@ -11,4 +11,24 @@ export const paymentMethodMock: paymentMethodType[] = [
       isBillPayment: true,
     },
   },
+  {
+    card: {
+      accountNumber: '4012000033330123',
+      expiry: {
+        month: 6,
+        year: 2029,
+      },
+      isBillPayment: true,
+    },
+  },
+  {
+    card: {
+      accountNumber: '4012000033330673',
+      expiry: {
+        month: 9,
+        year: 2029,
+      },
+      isBillPayment: true,
+    },
+  },
 ] as paymentMethodType[];

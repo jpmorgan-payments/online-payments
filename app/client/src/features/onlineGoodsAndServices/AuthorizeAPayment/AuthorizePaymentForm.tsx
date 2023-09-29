@@ -1,28 +1,35 @@
 import { useMemo, useState } from 'react';
 import {
+  Alert,
   Button,
+  Checkbox,
+  Container,
   Group,
-  NumberInput,
+  LoadingOverlay,
   Select,
   SimpleGrid,
+  Space,
   Stack,
+  Text,
 } from '@mantine/core';
 import { useForm, yupResolver } from '@mantine/form';
 import { Panel } from 'components';
 import { validationSchema } from './utils/validationSchema';
-import { useMerchants } from '../hooks/useMerchants';
 import { usePaymentMethod } from '../hooks/usePaymentMethod';
 import { convertToPaymentRequest } from './utils/convertToPaymentRequest';
 import { convertToPaymentResponse } from './utils/convertToPaymentResponse';
-import { IconDatabase } from '@tabler/icons';
+import { IconAlertCircle, IconDatabase } from '@tabler/icons';
 import { useQueryClient } from '@tanstack/react-query';
 import { useCreatePayment } from '../hooks';
 import { transactionManagementType } from 'shared.types';
+import { AmountWithCurrencyInput } from './AmountWithCurrencyInput';
+import { InferType } from 'yup';
+import { captureMethod, currency, initiatorType } from 'generated-api-models';
 
 enum formStatesEnum {
   LOADING = 'Making a payment',
   INITIAL = 'Review & Submit',
-  COMPLETE = 'Payment Created! Create another ',
+  COMPLETE = 'Create another payment',
 }
 
 export const AuthorizePaymentForm = ({
@@ -30,26 +37,15 @@ export const AuthorizePaymentForm = ({
   setTransactionIds,
 }: transactionManagementType) => {
   const queryClient = useQueryClient();
-
   const [formState, setFormState] = useState<formStatesEnum>(
     formStatesEnum.INITIAL,
   );
 
-  const merchantData = useMerchants();
   const paymentMethodData = usePaymentMethod();
   // Initialize the form using the default values defined in validationSchema
-  const form = useForm({
+  const form = useForm<InferType<typeof validationSchema>>({
     initialValues: validationSchema.cast({}),
     validate: yupResolver(validationSchema),
-  });
-
-  const merchantSelectData = merchantData?.map((merchant, index) => {
-    return {
-      key: index,
-      value: merchant.merchantId + '',
-      label:
-        merchant.merchantId + ' - ' + merchant.merchantSoftware.companyName,
-    };
   });
 
   const paymentMethodSelectData = paymentMethodData?.map(
@@ -64,32 +60,24 @@ export const AuthorizePaymentForm = ({
     },
   );
 
-  const selectedMerchant = useMemo(
-    () =>
-      merchantData.find(
-        (merchant) => merchant.merchantId === form.values.merchantId,
-      ),
-    [form.values.merchantId, merchantData],
-  );
-
   const paymentRequest = useMemo(
-    () => convertToPaymentRequest(form.values, selectedMerchant),
+    () => convertToPaymentRequest(form.values),
     [form.values],
   );
 
   const paymentResponse = useMemo(
-    () => convertToPaymentResponse(form.values, selectedMerchant),
+    () => convertToPaymentResponse(form.values),
     [form.values],
   );
 
   const { mutate: createPayment } = useCreatePayment();
 
-  const onSubmit = () => {
+  const handleSubmit = () => {
     setFormState(formStatesEnum.LOADING);
     createPayment(
       {
         payment: paymentRequest,
-        merchantId: form.values.merchantId,
+        merchantId: '998482157632',
         requestId: crypto.randomUUID(),
       },
       {
@@ -109,25 +97,6 @@ export const AuthorizePaymentForm = ({
     setFormState(formStatesEnum.INITIAL);
   };
 
-  const renderFormButton = () => {
-    switch (formState) {
-      case formStatesEnum.LOADING:
-        return (
-          <Button leftIcon={<IconDatabase size="1rem" />} loading>
-            {formState}
-          </Button>
-        );
-      case formStatesEnum.COMPLETE:
-        return (
-          <Button color="green.8" onClick={resetForm}>
-            {formState}
-          </Button>
-        );
-      default:
-        return <Button type="submit">{formState}</Button>;
-    }
-  };
-
   return (
     <Panel
       title="Authorize a Payment"
@@ -136,55 +105,72 @@ export const AuthorizePaymentForm = ({
       requestBody={paymentRequest}
       responseBody={paymentResponse}
     >
-      <form onSubmit={form.onSubmit(onSubmit)}>
-        <SimpleGrid
-          cols={1}
-          breakpoints={[
-            { minWidth: 'md', cols: 2 },
-            { minWidth: 'lg', cols: 1 },
-            { minWidth: 'xl', cols: 1 },
-          ]}
-        >
-          <Stack>
-            <Select
-              label="Select Merchant"
-              description="Information about the merchant"
-              placeholder="Choose Merchant"
-              required
-              data={merchantSelectData}
-              nothingFound="No merchants"
-              {...form.getInputProps('merchantId')}
+      <Container pos="relative">
+        {formState !== formStatesEnum.COMPLETE ? (
+          <form onSubmit={form.onSubmit(handleSubmit)}>
+            <LoadingOverlay
+              visible={formState === formStatesEnum.LOADING}
+              overlayBlur={2}
             />
-            <Select
-              label="Select Payment Method"
-              description="Information about the payment type"
-              placeholder="Choose Payment Method"
-              required
-              data={paymentMethodSelectData}
-              nothingFound="No payment methods"
-              {...form.getInputProps('paymentMethod')}
-            />
-            <NumberInput
-              label="Amount"
-              description="Amount for payment"
-              icon="$"
-              required
-              min={0}
-              precision={2}
-              parser={(value) => value?.replace(/(,*)/g, '')}
-              formatter={(value = '') =>
-                !Number.isNaN(parseFloat(value))
-                  ? `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-                  : ''
-              }
-              {...form.getInputProps('amount')}
-            />
-            <Group mt="xl" position="right">
-              {renderFormButton()}
-            </Group>
-          </Stack>
-        </SimpleGrid>
-      </form>
+            <SimpleGrid
+              cols={1}
+              breakpoints={[
+                { minWidth: 'md', cols: 2 },
+                { minWidth: 'lg', cols: 1 },
+                { minWidth: 'xl', cols: 1 },
+              ]}
+            >
+              <Stack>
+                <Select
+                  label="Select Capture Method"
+                  placeholder="Choose Capture Method"
+                  required
+                  data={Object.keys(captureMethod)}
+                  {...form.getInputProps('captureMethod')}
+                />
+                <Select
+                  label="Select Payment Method"
+                  description="Information about the payment type"
+                  placeholder="Choose Payment Method"
+                  required
+                  data={paymentMethodSelectData}
+                  {...form.getInputProps('paymentMethod')}
+                />
+                <Select
+                  label="Select Initiator Type"
+                  description="Describes the initiator of the transaction for the stored credential framework (MIT/CIT)"
+                  placeholder="Choose Initiator type"
+                  required
+                  data={Object.keys(initiatorType)}
+                  {...form.getInputProps('initiatorType')}
+                />
+                <AmountWithCurrencyInput form={form} />
+                <Checkbox
+                  label="Is amount final?"
+                  {...form.getInputProps('isAmountFinal')}
+                />
+                <Group mt="xl" position="right">
+                  <Button type="submit">{formState}</Button>
+                </Group>
+              </Stack>
+            </SimpleGrid>
+          </form>
+        ) : (
+          <Alert
+            icon={<IconAlertCircle size="1rem" />}
+            title={<Text fz="lg">Payment successfully created!</Text>}
+            color="green"
+          >
+            <Text fz="md">
+              You're payment request has been successful. Check out the table
+              below to see further actions.
+            </Text>
+            <Space h="md" />
+
+            <Button onClick={resetForm}>{formState}</Button>
+          </Alert>
+        )}
+      </Container>
     </Panel>
   );
 };

@@ -1,8 +1,18 @@
+import {
+  captureMethod,
+  currency,
+  initiatorType,
+  isAmountFinal,
+} from 'generated-api-models';
 import * as yup from 'yup';
 
 const validationSchema = yup.object({
-  amount: yup.string().default('').required(),
-  merchantId: yup.string().default('').required(),
+  amount: yup.number().default(10).required(),
+  captureMethod: yup
+    .mixed()
+    .oneOf(Object.values(captureMethod))
+    .default(captureMethod.NOW)
+    .required(),
   paymentMethod: yup
     .string()
     .default(
@@ -18,14 +28,17 @@ const validationSchema = yup.object({
       }),
     )
     .required(),
+  currency: yup
+    .mixed()
+    .oneOf(Object.values(currency))
+    .default(currency.USD)
+    .required(),
+  isAmountFinal: yup.boolean().default(false),
+  initiatorType: yup
+    .mixed()
+    .oneOf(Object.values(initiatorType))
+    .default(initiatorType.CARDHOLDER)
+    .required(),
 });
 
-const defaultMerchant = {
-  merchantId: '',
-  merchantSoftware: {
-    companyName: ' ',
-    productName: ' ',
-    version: ' ',
-  },
-};
-export { validationSchema, defaultMerchant };
+export { validationSchema };

@@ -56,23 +56,36 @@ export const PaymentTransactionTable = ({
       </Group>
     );
   };
-  const createRow = (rowData: paymentResponse) => (
-    <tr key={rowData.transactionId}>
-      <td>
-        <Button
-          onClick={() => handleModalOpen(rowData)}
-          compact
-          variant="default"
-        >
-          <IconEye size={16} />
-        </Button>
-      </td>
-      <td>{rowData.transactionId}</td>
-      <td>{rowData.transactionDate}</td>
-      <td>{rowData.transactionState}</td>
-      <td>{displayPaymentActions()}</td>
-    </tr>
-  );
+
+  const checkIfRecentDate = (date: string) => {
+    return new Date().getTime() - new Date(date).getTime() < 1 * 60 * 1000;
+  };
+
+  const createRow = (rowData: paymentResponse) => {
+    const isNew =
+      rowData.transactionDate && checkIfRecentDate(rowData.transactionDate);
+
+    return (
+      <tr
+        key={rowData.transactionId}
+        style={{ background: isNew ? '#EBFBEE' : '' }}
+      >
+        <td>
+          <Button
+            onClick={() => handleModalOpen(rowData)}
+            compact
+            variant="default"
+          >
+            <IconEye size={16} />
+          </Button>
+        </td>
+        <td>{rowData.transactionId}</td>
+        <td>{rowData.transactionDate}</td>
+        <td>{rowData.transactionState}</td>
+        <td>{displayPaymentActions()}</td>
+      </tr>
+    );
+  };
 
   const rows = initialTransactions.map((transaction) => createRow(transaction));
 
