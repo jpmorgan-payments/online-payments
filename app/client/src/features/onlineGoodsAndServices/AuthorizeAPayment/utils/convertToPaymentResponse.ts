@@ -19,5 +19,6 @@ export function convertToPaymentResponse(
   defaultResponse.currency = values.currency;
   defaultResponse.captureMethod = values.captureMethod;
   defaultResponse.isAmountFinal = values.isAmountFinal;
+  defaultResponse.initiatorType = values.initiatorType;
   return defaultResponse;
 }

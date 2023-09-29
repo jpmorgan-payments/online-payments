@@ -1,4 +1,9 @@
-import { captureMethod, currency, isAmountFinal } from 'generated-api-models';
+import {
+  captureMethod,
+  currency,
+  initiatorType,
+  isAmountFinal,
+} from 'generated-api-models';
 import * as yup from 'yup';
 
 const validationSchema = yup.object({
@@ -29,6 +34,11 @@ const validationSchema = yup.object({
     .default(currency.USD)
     .required(),
   isAmountFinal: yup.boolean().default(false),
+  initiatorType: yup
+    .mixed()
+    .oneOf(Object.values(initiatorType))
+    .default(initiatorType.CARDHOLDER)
+    .required(),
 });
 
 export { validationSchema };

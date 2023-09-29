@@ -14,6 +14,7 @@ export const handlers = [
       currency,
       captureMethod,
       isAmountFinal,
+      initiatorType,
     } = (await req.json()) as payment;
     const requestId = req.headers.get('request-id') as string;
     const merchantId = req.headers.get('merchant-id') as string;
@@ -27,6 +28,7 @@ export const handlers = [
       currency,
       captureMethod,
       isAmountFinal,
+      initiatorType,
     });
     previousPayments.set(response.transactionId, response);
     return res(ctx.json(response));

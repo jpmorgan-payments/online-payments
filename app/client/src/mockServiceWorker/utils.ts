@@ -1,6 +1,7 @@
 import {
   captureMethod,
   currency,
+  initiatorType,
   isAmountFinal,
   merchant,
   paymentMethodType,
@@ -17,6 +18,7 @@ interface manipulateJsonResponseProps {
   currency: currency;
   captureMethod?: captureMethod;
   isAmountFinal?: isAmountFinal;
+  initiatorType?: initiatorType;
 }
 export const manipulateJsonResponse = ({
   merchantId,
@@ -27,6 +29,7 @@ export const manipulateJsonResponse = ({
   currency,
   captureMethod,
   isAmountFinal,
+  initiatorType,
 }: manipulateJsonResponseProps) => {
   // Bit of a hack to get merchant ID updated as it's read-only
   const updatedMerchant = {
@@ -42,6 +45,7 @@ export const manipulateJsonResponse = ({
   response.paymentMethodType = paymentMethodType;
   response.transactionDate = new Date().toISOString();
   response.currency = currency;
+  if (initiatorType) response.initiatorType = initiatorType;
   if (isAmountFinal) response.isAmountFinal = isAmountFinal;
   if (captureMethod) response.captureMethod = captureMethod;
 

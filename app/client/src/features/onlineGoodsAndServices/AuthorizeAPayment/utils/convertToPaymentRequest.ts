@@ -10,7 +10,7 @@ export function convertToPaymentRequest(
     amount: values.amount,
     currency: values.currency,
     paymentMethodType: JSON.parse(values.paymentMethod),
-    initiatorType: 'CARDHOLDER',
+    initiatorType: values.initiatorType,
     accountOnFile: 'NOT_STORED',
     isAmountFinal: values.isAmountFinal,
     merchant: {

@@ -24,7 +24,7 @@ import { useCreatePayment } from '../hooks';
 import { transactionManagementType } from 'shared.types';
 import { AmountWithCurrencyInput } from './AmountWithCurrencyInput';
 import { InferType } from 'yup';
-import { captureMethod, currency } from 'generated-api-models';
+import { captureMethod, currency, initiatorType } from 'generated-api-models';
 
 enum formStatesEnum {
   LOADING = 'Making a payment',
@@ -134,8 +134,15 @@ export const AuthorizePaymentForm = ({
                   placeholder="Choose Payment Method"
                   required
                   data={paymentMethodSelectData}
-                  nothingFound="No payment methods"
                   {...form.getInputProps('paymentMethod')}
+                />
+                <Select
+                  label="Select Initiator Type"
+                  description="Describes the initiator of the transaction for the stored credential framework (MIT/CIT)"
+                  placeholder="Choose Initiator type"
+                  required
+                  data={Object.keys(initiatorType)}
+                  {...form.getInputProps('initiatorType')}
                 />
                 <AmountWithCurrencyInput form={form} />
                 <Checkbox
