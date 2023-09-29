@@ -1,4 +1,4 @@
-import { Group, Input, NumberInput, Select } from '@mantine/core';
+import { Flex, Group, Input, NumberInput, Select, Space } from '@mantine/core';
 import { UseFormReturnType } from '@mantine/form';
 import { InferType } from 'yup';
 import { validationSchema } from './utils/validationSchema';
@@ -13,28 +13,30 @@ export const AmountWithCurrencyInput = ({
   const [searchValue, onSearchChange] = useState('');
 
   return (
-    <Group spacing={0}>
-      <Input.Label>Amount</Input.Label>
-      <Select
-        data={Object.keys(currency)}
-        {...form.getInputProps('currency')}
-        onSearchChange={onSearchChange}
-        searchValue={searchValue}
-        searchable
-      />
-      <NumberInput
-        required
-        hideControls
-        min={0}
-        precision={2}
-        parser={(value) => value?.replace(/(,*)/g, '')}
-        formatter={(value = '') =>
-          !Number.isNaN(parseFloat(value))
-            ? `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-            : ''
-        }
-        {...form.getInputProps('amount')}
-      />
-    </Group>
+    <>
+      <Input.Label>Enter payment amount and currency: </Input.Label>
+      <Flex gap={'sm'}>
+        <Select
+          data={Object.keys(currency)}
+          {...form.getInputProps('currency')}
+          onSearchChange={onSearchChange}
+          searchValue={searchValue}
+          searchable
+        />
+        <NumberInput
+          required
+          hideControls
+          min={0}
+          precision={2}
+          parser={(value) => value?.replace(/(,*)/g, '')}
+          formatter={(value = '') =>
+            !Number.isNaN(parseFloat(value))
+              ? `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+              : ''
+          }
+          {...form.getInputProps('amount')}
+        />
+      </Flex>
+    </>
   );
 };
