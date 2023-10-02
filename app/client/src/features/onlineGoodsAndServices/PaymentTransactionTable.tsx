@@ -42,9 +42,6 @@ export const PaymentTransactionTable = ({
     return (
       <Group grow>
         <Button compact disabled>
-          Verify
-        </Button>
-        <Button compact disabled>
           Capture
         </Button>
         <Button compact disabled>
