@@ -2,7 +2,7 @@
 
 # Online Payments showcase app
 
-The Online Payments API allows you to accept web payments across a variety of regions and countries. Various of methods of payment methods are supported depending on your business and how your customers expect to pay. We will be adding more use cases so you can get an idea of how to use these flexible APIs to meet your specific business needs.
+The Online Payments API allows you to accept web payments across a variety of regions and countries. Various payment methods are supported depending on your business and how your customers expect to pay. We will be adding more use cases so you can get an idea of how to use these flexible APIs to meet your specific business needs.
 
 You can:
 
@@ -39,7 +39,6 @@ Such capabilities include:
 
 Check out the [features](./app/client/src/features/) directory to explore the the components and hooks that explore these features.
 
-
 ## Run the Showcase Application locally
 
 Install and run a TS/JS application with a client used to demonstrate how to integrate with our APIs on frontend applications.
@@ -69,4 +68,3 @@ yarn start
 4. Open a browser and navigate to the locally deployed app using the URL provided in the command line. Usually `localhost:3000`.
 
 You have deployed the showcase Embedded Banking app. Follow the onscreen instructions to explore the banking functionality available.
-
