@@ -54,7 +54,7 @@ export const AuthorizePaymentForm = ({
         key: index,
         value: JSON.stringify(paymentMethod),
         label: paymentMethod.card
-          ? paymentMethod.card.accountNumber.replace(/\d(?=\d{4})/g, '*')
+          ? `Account Number - ${ paymentMethod.card.accountNumber}`
           : '',
       };
     },
@@ -130,7 +130,7 @@ export const AuthorizePaymentForm = ({
                 />
                 <Select
                   label="Select Account"
-                  description="Identifies a unique occurrence of a payment account."
+                  description="Identifies a unique occurrence of a payment account.                  "
                   placeholder="Choose account"
                   required
                   data={paymentMethodSelectData}
