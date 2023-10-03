@@ -76,7 +76,7 @@ import {
       return response;
   
     case captureMethod.NOW:
-      response.transactionState = transactionState.AUTHORIZED;
+      response.transactionState = transactionState.CLOSED;
       response.approvalCode = "tst484";
       response.captureMethod = captureMethod.NOW;
       response.paymentRequest = createPaymentRequestObject(amount, "CAPTURED", paymentRequest.paymentRequestStatus.CLOSED, true);
