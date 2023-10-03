@@ -37,11 +37,11 @@ export const manipulateJsonResponse = ({
   } as merchant;
   Object.assign(updatedMerchant, merchant);
 
-  const response = paymentAuthorizeResponseMock as paymentResponse;
+  let response = paymentAuthorizeResponseMock as paymentResponse;
   response.requestId = requestId;
   response.transactionId = crypto.randomUUID();
   response.merchant = updatedMerchant;
-  response.amount = amount;
+  response = updateAmountDetails(response, amount);
   response.paymentMethodType = paymentMethodType;
   response.transactionDate = new Date().toISOString();
   response.currency = currency;
@@ -51,3 +51,16 @@ export const manipulateJsonResponse = ({
 
   return response;
 };
+
+
+const updateAmountDetails=(response: paymentResponse, amount: number) => {
+  response.amount = amount;
+  response.remainingAuthAmount = amount;
+  response.remainingRefundableAmount = amount;
+
+  const paymentAuthorizations = response.paymentRequest?.authorizations;
+  if (paymentAuthorizations && paymentAuthorizations.length > 0) {
+    paymentAuthorizations[0].amount = amount;
+  }
+  return response;
+}

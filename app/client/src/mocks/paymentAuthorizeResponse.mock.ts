@@ -1,53 +1,66 @@
 import type { paymentResponse } from 'generated-api-models';
 
-export const paymentAuthorizeResponseMock: paymentResponse = {
-  transactionId: 'cdf62f90-6440-496f-817c-c05dd3b7b01a',
-  requestId: '5e720ee0-0192-4f7f-82d9-6248096832a0',
-  transactionState: 'VOIDED',
-  responseStatus: 'SUCCESS',
-  responseCode: 'APPROVED',
-  responseMessage: 'Transaction approved by Issuer',
+export const paymentAuthorizeResponseMock: paymentResponse =   {
+  transactionId: "7f6ab144-2d67-4c3d-ba10-58baa2bbfad3",
+  requestId: "6a3ce185-a156-48c7-99a6-39fee8020bb5",
+  transactionState: 'AUTHORIZED',
+  responseStatus: "SUCCESS",
+  responseCode: "APPROVED",
+  responseMessage: "Transaction approved by Issuer",
   paymentMethodType: {
     card: {
-      expiry: {
-        month: 5,
-        year: 2027,
-      },
-      cardType: 'VI',
-      cardTypeName: 'VISA',
+      accountNumber: "4112346356224113",
+      cardType: "VI",
+      cardTypeName: "VISA",
       isBillPayment: true,
-      maskedAccountNumber: '411234XXXXXX4113',
+      maskedAccountNumber: "411234XXXXXX4113",
       cardTypeIndicators: {
-        issuanceCountryCode: 'USA',
+        issuanceCountryCode: "USA",
         isDurbinRegulated: false,
-        cardProductTypes: ['PINLESS_DEBIT'],
+        cardProductTypes: [
+          "COMMERCIAL",
+          "PINLESS_DEBIT"
+        ]
       },
       networkResponse: {
-        addressVerificationResult: 'NOT_REQUESTED',
-        addressVerificationResultCode: '',
-        cardVerificationResultCode: '',
+        addressVerificationResult: "NOT_REQUESTED",
+        networkTransactionId: "013272692163671",
+        paymentAccountReference: "Q1J4Z28RKA1EBL470G9XYG90R5D3E"
       },
-    },
+    }
   },
-  captureMethod: 'NOW',
-  isCapture: true,
-  initiatorType: 'CARDHOLDER',
-  accountOnFile: 'NOT_STORED',
-  transactionDate: '2022-05-04T16:04:27.027Z',
-  approvalCode: 'tst269',
-  hostMessage: 'Approved',
-  amount: 1234,
-  currency: 'USD',
-  remainingRefundableAmount: 1234,
-  remainingAuthAmount: 1234,
-  hostReferenceId: 'NjKmDGcGYAJ6wsedRnMCj4',
+  captureMethod: "DELAYED",
+  captureTime: "2023-09-29T20:14:32.105Z",
+  initiatorType: "CARDHOLDER",
+  accountOnFile: "NOT_STORED",
+  isVoid: false,
+  transactionDate: "2023-09-29T19:14:32.105Z",
+  approvalCode: "tst303",
+  hostMessage: "Approved",
+  isAmountFinal: false,
+  amount: 10,
+  currency: "USD",
+  remainingAuthAmount: 10,
+  hostReferenceId: "50ONBgm2t6FSGzoC3Ncyl1",
   merchant: {
-    merchantId: '998482157632',
+    merchantId: "000017904371",
     merchantSoftware: {
-      companyName: 'Payment Company',
-      productName: 'Application Name',
-      version: '1.235',
+      companyName: "Payment Company",
+      productName: "Application Name",
+      version: "1.235"
     },
-    merchantCategoryCode: '4899',
+    merchantCategoryCode: "4899"
   },
+  paymentRequest: {
+    paymentRequestId: "7f6ab144-2d67-4c3d-ba10-58baa2bbfad3",
+    paymentRequestStatus: "PENDING",
+    authorizations: [
+      {
+        authorizationId: "7f6ab144-2d67-4c3d-ba10-58baa2bbfad3",
+        amount: 10,
+        transactionStatusCode: "AUTHORIZED",
+        authorizationType: "INITIAL"
+      }
+    ]
+  }
 } as paymentResponse;
