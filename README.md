@@ -1,9 +1,12 @@
+[Link to deployed version of this app](https://www.online-payments-dev.com)
 
 # Online Payments showcase app
 
+The Online Payments API allows you to accept web payments across a variety of regions and countries. Various of methods of payment methods are supported depending on your business and how your customers expect to pay. We will be adding more use cases so you can get an idea of how to use these flexible APIs to meet your specific business needs.
+
 You can:
 
-- Spin-up a sample application with UI that demonstrates the main use case for each endpoint. For example, making a payment.
+- Spin-up a sample application with UI that demonstrates the main use case for each endpoint. For example, authorizing a payment.
 - Explore the API resources using a Postman Collection.
 
 ## What's included in this repo?
