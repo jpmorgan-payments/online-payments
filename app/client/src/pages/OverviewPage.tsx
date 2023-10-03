@@ -6,7 +6,7 @@ export const OverviewPage = () => {
   return (
     <PageWrapper title="Online Payments Showcase">
       <Text>
-        The Online Payments API allows you to accept web payments across a variety of regions and countries. Various of methods of payment methods are supported depending on your business and how your customers expect to pay. We will be adding more use cases so you can get an idea of how to use these flexible APIs to meet your specific business needs.
+        The Online Payments API allows you to accept web payments across a variety of regions and countries. Various payment methods are supported depending on your business and how your customers expect to pay. We will be adding more use cases so you can get an idea of how to use these flexible APIs to meet your specific business needs.
       </Text>
       <Title order={2} mt="xs">
         In this showcase
