@@ -1,7 +1,7 @@
 import { rest } from 'msw';
 import { API_URL } from 'data/constants';
 import type { payment } from '../generated-api-models/index';
-import { manipulateJsonResponse } from './utils';
+import { createPaymentResponse } from 'data/createPaymentResponse';
 
 const previousPayments = new Map();
 export const handlers = [
@@ -19,7 +19,7 @@ export const handlers = [
     const requestId = req.headers.get('request-id') as string;
     const merchantId = req.headers.get('merchant-id') as string;
 
-    const response = manipulateJsonResponse({
+    const response = createPaymentResponse({
       merchantId,
       merchant,
       requestId,

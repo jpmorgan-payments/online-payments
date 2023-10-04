@@ -36,11 +36,18 @@ export const OverviewPage = () => {
         </List.Item>
       </List>
       <Text>
-        You can also take a closer look at this application's code at the{' '}
+        You can also take a closer look at this application's code on the{' '}
         <Anchor href={GITHUB_REPO} target="_blank" color="blue">
           GitHub repository
         </Anchor>
         .
+      </Text>
+      <Text>
+        You can get started now by visiting our {' '}
+        <Anchor href={'/onlineGoodsServices'} color="blue">
+        online goods and services
+        </Anchor>
+        {' '}section. This mimics how we could use the Online Payments API to make a payment from a website.
       </Text>
       <Title order={2} mt="xs">
         Authentication

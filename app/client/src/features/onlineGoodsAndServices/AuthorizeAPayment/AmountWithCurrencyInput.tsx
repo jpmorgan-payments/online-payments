@@ -27,13 +27,6 @@ export const AmountWithCurrencyInput = ({
           required
           hideControls
           min={0}
-          precision={2}
-          parser={(value) => value?.replace(/(,*)/g, '')}
-          formatter={(value = '') =>
-            !Number.isNaN(parseFloat(value))
-              ? `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-              : ''
-          }
           {...form.getInputProps('amount')}
         />
       </Flex>
