@@ -38,18 +38,25 @@ export const PaymentTransactionTable = ({
     setModalState(true);
   };
 
-  const handleFormModalOpen = (rowData: paymentResponse, formType: formTypes) => {
+  const handleFormModalOpen = (
+    rowData: paymentResponse,
+    formType: formTypes,
+  ) => {
     setFormModalData({
       formData: rowData,
-      formType:formType
+      formType: formType,
     });
     setFormModalState(true);
-  }
+  };
 
   const displayPaymentActions = (rowData: paymentResponse) => {
     return (
       <Group grow>
-        <Button compact disabled={rowData.transactionState !== transactionState.AUTHORIZED} onClick={()=> handleFormModalOpen(rowData,formTypes.CAPTURE)}>
+        <Button
+          compact
+          disabled={rowData.transactionState !== transactionState.AUTHORIZED}
+          onClick={() => handleFormModalOpen(rowData, formTypes.CAPTURE)}
+        >
           Capture
         </Button>
         <Button compact disabled>
