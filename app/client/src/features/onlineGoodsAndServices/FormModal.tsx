@@ -1,8 +1,8 @@
 import { Modal } from '@mantine/core';
 import { formModalType, formTypes } from './types';
-import { Panel } from 'components';
 import { CaptureAPaymentForm } from './CaptureAPayment/CaptureAPaymentForm';
 import { paymentResponse } from 'generated-api-models';
+import { CaptureAPaymentPanel } from './CaptureAPayment/CaptureAPaymentPanel';
 
 type formModalProps = {
   data: formModalType;
@@ -17,10 +17,10 @@ export const FormModal = ({
 }: formModalProps) => {
   const { formData, formType } = data;
 
-  const renderForm = (data: paymentResponse) => {
+  const renderPanel = (data: paymentResponse) => {
     switch (formType) {
       case formTypes.CAPTURE:
-        return <CaptureAPaymentForm data={data} />;
+        return <CaptureAPaymentPanel data={data} />;
       case formTypes.REFUND:
         return <CaptureAPaymentForm data={data} />;
       case formTypes.VOID:
@@ -30,15 +30,8 @@ export const FormModal = ({
     }
   };
   return (
-    <Modal opened={modalOpened} onClose={() => setModalOpened(false)}>
-      <Panel
-        title={`${formType} a Payment`}
-        apiCallType="POST"
-        apiEndpoint="/payments"
-        requestBody={formData}
-      >
-        {formData && renderForm(formData)}
-      </Panel>
+    <Modal opened={modalOpened} onClose={() => setModalOpened(false)} size="xl">
+      {formData && renderPanel(formData)}
     </Modal>
   );
 };

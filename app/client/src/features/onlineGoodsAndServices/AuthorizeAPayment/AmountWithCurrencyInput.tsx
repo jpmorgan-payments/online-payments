@@ -1,4 +1,4 @@
-import { Flex, Group, Input, NumberInput, Select, Space } from '@mantine/core';
+import { Flex, Input, NumberInput, Select } from '@mantine/core';
 import { UseFormReturnType } from '@mantine/form';
 import { InferType } from 'yup';
 import { validationSchema } from './utils/validationSchema';
@@ -19,6 +19,7 @@ export const AmountWithCurrencyInput = ({
         <Select
           data={Object.keys(currency)}
           {...form.getInputProps('currency')}
+          aria-label="currency selection"
           onSearchChange={onSearchChange}
           searchValue={searchValue}
           searchable
@@ -26,6 +27,7 @@ export const AmountWithCurrencyInput = ({
         <NumberInput
           required
           hideControls
+          aria-label="Amount to be sent"
           min={0}
           {...form.getInputProps('amount')}
         />

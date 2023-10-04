@@ -30,14 +30,14 @@ export const handlers = [
       isAmountFinal,
       initiatorType,
     });
-    previousPayments.set(response.transactionId, response);
+    previousPayments.set(response.transactionId, JSON.stringify(response));
     return res(ctx.json(response));
   }),
   rest.get(`${API_URL}/api/payments/*`, async (req, res, ctx) => {
-    const { 0: requestId } = req.params;
-    const response = previousPayments.get(requestId);
+    const { 0: transactionId } = req.params;
+    const response = previousPayments.get(transactionId);
     if (response) {
-      return res(ctx.json(response));
+      return res(ctx.json(JSON.parse(response)));
     }
     return res(
       ctx.status(404),
