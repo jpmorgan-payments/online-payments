@@ -25,6 +25,7 @@ import { transactionManagementType } from 'shared.types';
 import { AmountWithCurrencyInput } from './AmountWithCurrencyInput';
 import { InferType } from 'yup';
 import { captureMethod, initiatorType } from 'generated-api-models';
+import { MERCHANT_ID } from 'data/constants';
 
 enum formStatesEnum {
   LOADING = 'Making a payment',
@@ -54,7 +55,7 @@ export const AuthorizePaymentForm = ({
         key: index,
         value: JSON.stringify(paymentMethod),
         label: paymentMethod.card
-          ? paymentMethod.card.accountNumber.replace(/\d(?=\d{4})/g, '*')
+          ? `Account Number - ${ paymentMethod.card.accountNumber}`
           : '',
       };
     },
@@ -77,7 +78,7 @@ export const AuthorizePaymentForm = ({
     createPayment(
       {
         payment: paymentRequest,
-        merchantId: '998482157632',
+        merchantId: MERCHANT_ID,
         requestId: crypto.randomUUID(),
       },
       {
@@ -130,7 +131,7 @@ export const AuthorizePaymentForm = ({
                 />
                 <Select
                   label="Select Account"
-                  description="Identifies a unique occurrence of a payment account."
+                  description="Identifies a unique occurrence of a payment account.                  "
                   placeholder="Choose account"
                   required
                   data={paymentMethodSelectData}

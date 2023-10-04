@@ -1,24 +1,22 @@
 import type { InferType } from 'yup';
-import type { paymentResponse } from 'generated-api-models';
 import type { validationSchema } from './validationSchema';
-import { paymentAuthorizeResponseMock } from 'mocks/paymentAuthorizeResponse.mock';
+import { createPaymentResponse } from 'data/createPaymentResponse';
+import { MERCHANT, MERCHANT_ID } from 'data/constants';
 
 // This data would be returned from your payment post request. We are mocking it out for showcase purposes.
 export function convertToPaymentResponse(
   values: InferType<typeof validationSchema>,
 ) {
-  //Deep copy object (https://developer.mozilla.org/en-US/docs/Glossary/Deep_copy)
-  const defaultResponse: paymentResponse = JSON.parse(
-    JSON.stringify(paymentAuthorizeResponseMock),
-  );
-  defaultResponse.amount = values.amount;
-  defaultResponse.paymentMethodType = JSON.parse(values.paymentMethod);
-  defaultResponse.requestId = crypto.randomUUID();
-  defaultResponse.transactionId = crypto.randomUUID();
-  defaultResponse.transactionDate = new Date().toISOString();
-  defaultResponse.currency = values.currency;
-  defaultResponse.captureMethod = values.captureMethod;
-  defaultResponse.isAmountFinal = values.isAmountFinal;
-  defaultResponse.initiatorType = values.initiatorType;
-  return defaultResponse;
+ return  createPaymentResponse({
+    merchantId: MERCHANT_ID,
+    merchant: MERCHANT,
+    requestId: crypto.randomUUID(),
+    amount: values.amount,
+    paymentMethodType: JSON.parse(values.paymentMethod),
+    currency: values.currency,
+    captureMethod: values.captureMethod,
+    isAmountFinal: values.isAmountFinal,
+    initiatorType: values.initiatorType
+
+  });
 }
