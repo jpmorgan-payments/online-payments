@@ -1,6 +1,7 @@
 import type { InferType } from 'yup';
 import type { payment } from 'generated-api-models';
 import { type validationSchema } from './validationSchema';
+import { MERCHANT } from 'data/constants';
 
 export function convertToPaymentRequest(
   values: InferType<typeof validationSchema>,
@@ -13,14 +14,7 @@ export function convertToPaymentRequest(
     initiatorType: values.initiatorType,
     accountOnFile: 'NOT_STORED',
     isAmountFinal: values.isAmountFinal,
-    merchant: {
-      merchantSoftware: {
-        companyName: 'Payment Company',
-        productName: 'Application Name',
-        version: '1.235',
-      },
-      merchantCategoryCode: '4899',
-    },
+    merchant: MERCHANT,
   } as payment;
   return defaultResponse;
 }
