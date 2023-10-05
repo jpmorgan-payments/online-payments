@@ -55,7 +55,7 @@ export const AuthorizePaymentForm = ({
         key: index,
         value: JSON.stringify(paymentMethod),
         label: paymentMethod.card
-          ? `Account Number - ${ paymentMethod.card.accountNumber}`
+          ? `Account Number - ${paymentMethod.card.accountNumber}`
           : '',
       };
     },
@@ -83,8 +83,8 @@ export const AuthorizePaymentForm = ({
       },
       {
         onSuccess: (data) => {
-          queryClient.setQueryData(['payments', data.requestId], data);
-          setTransactionIds([...transactionIds, data.requestId]);
+          queryClient.setQueryData(['payments', data.transactionId], data);
+          setTransactionIds([...transactionIds, data.transactionId]);
         },
         onSettled: () => {
           setFormState(formStatesEnum.COMPLETE);
