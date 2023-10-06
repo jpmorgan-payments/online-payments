@@ -38,6 +38,7 @@ type formValuesType = {
 const convertToCaptureRequest = (values: formValuesType): captureRequest => {
   return {
     captureMethod: values.captureMethod,
+    amount: values.amount,
   };
 };
 
@@ -57,7 +58,7 @@ export const CaptureAPaymentPanel = ({
   const form = useForm({
     initialValues: {
       amount: data.amount,
-      captureMethod: data.captureMethod,
+      captureMethod: captureMethod.NOW,
       captureType: captureTypeEnum.FULL.valueOf(),
     },
   });

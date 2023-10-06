@@ -144,7 +144,7 @@ export const AuthorizePaymentForm = ({
                 <AmountWithCurrencyInput form={form} />
                 <Checkbox
                   label="Is amount final?"
-                  {...form.getInputProps('isAmountFinal')}
+                  {...form.getInputProps('isAmountFinal', { type: 'checkbox' })}
                 />
                 <Group mt="xl" position="right">
                   <Button type="submit">{formState}</Button>

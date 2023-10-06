@@ -1,8 +1,4 @@
-import {
-  captureMethod,
-  currency,
-  initiatorType,
-} from 'generated-api-models';
+import { captureMethod, currency, initiatorType } from 'generated-api-models';
 import * as yup from 'yup';
 
 const validationSchema = yup.object({
@@ -15,7 +11,7 @@ const validationSchema = yup.object({
   paymentMethod: yup
     .string()
     .default(
-      JSON.stringify(  {
+      JSON.stringify({
         card: {
           accountNumber: '4012000033330026',
           expiry: {
@@ -24,7 +20,7 @@ const validationSchema = yup.object({
           },
           isBillPayment: true,
         },
-      },),
+      }),
     )
     .required(),
   currency: yup
@@ -32,7 +28,7 @@ const validationSchema = yup.object({
     .oneOf(Object.values(currency))
     .default(currency.USD)
     .required(),
-  isAmountFinal: yup.boolean().default(false),
+  isAmountFinal: yup.boolean().default(true),
   initiatorType: yup
     .mixed()
     .oneOf(Object.values(initiatorType))
