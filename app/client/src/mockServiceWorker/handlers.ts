@@ -1,6 +1,6 @@
 import { rest } from 'msw';
 import { API_URL } from 'data/constants';
-import type { payment } from '../generated-api-models/index';
+import type { captureRequest, payment } from '../generated-api-models/index';
 import { createPaymentResponse } from 'data/createPaymentResponse';
 
 const previousPayments = new Map();
@@ -33,8 +33,8 @@ export const handlers = [
     previousPayments.set(response.transactionId, JSON.stringify(response));
     return res(ctx.json(response));
   }),
-  rest.get(`${API_URL}/api/payments/*`, async (req, res, ctx) => {
-    const { 0: transactionId } = req.params;
+  rest.get(`${API_URL}/api/payments/:transactionId`, async (req, res, ctx) => {
+    const { transactionId } = req.params;
     const response = previousPayments.get(transactionId);
     if (response) {
       return res(ctx.json(JSON.parse(response)));
@@ -48,4 +48,17 @@ export const handlers = [
       }),
     );
   }),
+  rest.post(
+    `${API_URL}/api/payments/:transactionId/captures`,
+    async (req, res, ctx) => {
+      const { captureMethod } = (await req.json()) as captureRequest;
+      const requestId = req.headers.get('request-id') as string;
+      const merchantId = req.headers.get('merchant-id') as string;
+      const { transactionId } = req.params;
+
+      console.log(transactionId);
+
+      return res(ctx.json(transactionId));
+    },
+  ),
 ];

@@ -1,6 +1,5 @@
 import { Modal } from '@mantine/core';
 import { formModalType, formTypes } from './types';
-import { CaptureAPaymentForm } from './CaptureAPayment/CaptureAPaymentForm';
 import { paymentResponse } from 'generated-api-models';
 import { CaptureAPaymentPanel } from './CaptureAPayment/CaptureAPaymentPanel';
 
@@ -22,11 +21,11 @@ export const FormModal = ({
       case formTypes.CAPTURE:
         return <CaptureAPaymentPanel data={data} />;
       case formTypes.REFUND:
-        return <CaptureAPaymentForm data={data} />;
+        return;
       case formTypes.VOID:
-        return <CaptureAPaymentForm data={data} />;
+        return;
       default:
-        return <CaptureAPaymentForm data={data} />;
+        return;
     }
   };
   return (
