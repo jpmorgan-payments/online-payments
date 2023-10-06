@@ -1,6 +1,6 @@
 import { rest } from 'msw';
 import { API_URL } from 'data/constants';
-import type { captureRequest, payment } from '../generated-api-models/index';
+import { transactionState, type captureRequest, type payment } from '../generated-api-models/index';
 import { createPaymentResponse } from 'data/createPaymentResponse';
 
 const previousPayments = new Map();
@@ -51,14 +51,27 @@ export const handlers = [
   rest.post(
     `${API_URL}/api/payments/:transactionId/captures`,
     async (req, res, ctx) => {
-      const { captureMethod } = (await req.json()) as captureRequest;
       const requestId = req.headers.get('request-id') as string;
       const merchantId = req.headers.get('merchant-id') as string;
       const { transactionId } = req.params;
 
-      console.log(transactionId);
-
-      return res(ctx.json(transactionId));
+      const response = previousPayments.get(transactionId);
+      if (response) {
+        console.log(response);
+        const responseObject = JSON.parse(response);
+        responseObject.requestId = requestId;
+        responseObject.merchantId = merchantId;
+        responseObject.transactionState = transactionState.CLOSED;
+        return res(ctx.json(responseObject));
+      }
+      return res(
+        ctx.status(404),
+        ctx.json({
+          responseStatus: 'ERROR',
+          responseCode: 'NOT_FOUND',
+          responseMessage: 'Transaction was not found',
+        }),
+      );
     },
   ),
 ];
