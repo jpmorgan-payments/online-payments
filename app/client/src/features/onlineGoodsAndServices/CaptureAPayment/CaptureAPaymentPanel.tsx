@@ -24,6 +24,12 @@ enum formStatesEnum {
   COMPLETE = 'Close',
 }
 
+enum captureTypeEnum {
+  FULL = 'Full',
+  PARTIAL = 'Partial',
+  MULTI_CAPTURE = 'Multi-Capture',
+}
+
 type formValuesType = {
   captureMethod?: captureMethod;
   amount?: number;
@@ -52,6 +58,7 @@ export const CaptureAPaymentPanel = ({
     initialValues: {
       amount: data.amount,
       captureMethod: data.captureMethod,
+      captureType: captureTypeEnum.FULL.valueOf(),
     },
   });
 
@@ -105,15 +112,21 @@ export const CaptureAPaymentPanel = ({
             overlayBlur={2}
           />
           <Select
-            data={Object.keys(captureMethod)}
+            data={Object.values(captureTypeEnum)}
+            label="Select the capture type"
+            {...form.getInputProps('captureType')}
+            withAsterisk
+          />
+          <Select
+            data={Object.values(captureMethod)}
             label="Capture Method"
             {...form.getInputProps('captureMethod')}
-            withAsterisk
             readOnly
           />
-          {data.captureMethod === captureMethod.NOW && (
+          {form.values.captureType !== captureTypeEnum.FULL && (
             <NumberInput
               hideControls
+              label="Enter capture amount"
               min={0}
               {...form.getInputProps('amount')}
             />

@@ -8,7 +8,7 @@ import { createPaymentRequestObject } from './createPaymentRequest';
 export const createCaptureResponse = (
   transaction: paymentResponse,
 ): paymentResponse => {
-  const response = transaction;
+  const response = JSON.parse(JSON.stringify(transaction));
 
   response.transactionState = transactionState.CLOSED;
   response.captureTime = new Date().toISOString();

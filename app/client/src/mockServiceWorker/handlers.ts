@@ -1,6 +1,6 @@
 import { rest } from 'msw';
 import { API_URL } from 'data/constants';
-import { transactionState, type payment, paymentResponse } from '../generated-api-models/index';
+import { type payment, paymentResponse } from '../generated-api-models/index';
 import { createPaymentResponse } from 'data/createPaymentResponse';
 import { paymentAuthorizeResponseListMock } from 'mocks/paymentAuthorizeResponseList.mock';
 import { createCaptureResponse } from 'data/createCaptureResponse';
@@ -9,7 +9,6 @@ import { createCaptureResponse } from 'data/createCaptureResponse';
 const previousPaymentsMock: paymentResponse[] = paymentAuthorizeResponseListMock;
 const previousPayments = new Map();
 previousPaymentsMock.map(payment => previousPayments.set(payment.transactionId, JSON.stringify(payment)));
-console.log('here')
 export const handlers = [
   // Match create payment requests and update response to match
   rest.post(`${API_URL}/api/payments`, async (req, res, ctx) => {
