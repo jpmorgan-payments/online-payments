@@ -29,7 +29,11 @@ export const FormModal = ({
     }
   };
   return (
-    <Modal opened={modalOpened} onClose={() => setModalOpened(false)} size="xl">
+    <Modal
+      opened={modalOpened}
+      onClose={() => setModalOpened(false)}
+      size="auto"
+    >
       {formData && renderPanel(formData)}
     </Modal>
   );

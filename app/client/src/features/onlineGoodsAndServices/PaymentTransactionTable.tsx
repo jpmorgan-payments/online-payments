@@ -8,7 +8,7 @@ import { IconEye } from '@tabler/icons';
 import { transactionManagementType } from 'shared.types';
 import { FormModal } from './FormModal';
 import { formModalType, formTypes } from './types';
-import { ActionButton } from 'components/ActionButton';
+import { ActionButton } from 'components/';
 
 export const PaymentTransactionTable = ({
   transactionIds,

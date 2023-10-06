@@ -1,4 +1,4 @@
-import { Panel } from 'components';
+import { Panel, SuccessAlert } from 'components';
 import { useForm } from '@mantine/form';
 import {
   captureMethod,
@@ -16,6 +16,7 @@ import { useState, useMemo } from 'react';
 import { useCapturePayment } from '../hooks/useCapturePayment';
 import { MERCHANT_ID } from 'data/constants';
 import { useQueryClient } from '@tanstack/react-query';
+import { createCaptureResponse } from 'data/createCaptureResponse';
 
 enum formStatesEnum {
   LOADING = 'Capturing Payment',
@@ -36,7 +37,7 @@ const convertToCaptureRequest = (values: formValuesType): captureRequest => {
 
 export const CaptureAPaymentPanel = ({ data }: { data: paymentResponse }) => {
   const [formState, setFormState] = useState<formStatesEnum>(
-    formStatesEnum.LOADING,
+    formStatesEnum.INITIAL,
   );
   const queryClient = useQueryClient();
 
@@ -51,6 +52,10 @@ export const CaptureAPaymentPanel = ({ data }: { data: paymentResponse }) => {
 
   const captureRequest = useMemo(
     () => convertToCaptureRequest(form.values),
+    [form.values],
+  );
+  const captureResponse = useMemo(
+    () => createCaptureResponse(data),
     [form.values],
   );
   const handleSubmit = () => {
@@ -73,12 +78,17 @@ export const CaptureAPaymentPanel = ({ data }: { data: paymentResponse }) => {
     );
   };
 
+  const resetForm = () => {
+    form.reset();
+    setFormState(formStatesEnum.INITIAL);
+  };
   return (
     <Panel
       title="Capture a Payment"
       apiCallType="POST"
       apiEndpoint="/payments/{id}/captures"
       requestBody={captureRequest}
+      responseBody={captureResponse}
     >
       {formState !== formStatesEnum.COMPLETE && (
         <form onSubmit={form.onSubmit(handleSubmit)}>
@@ -105,6 +115,14 @@ export const CaptureAPaymentPanel = ({ data }: { data: paymentResponse }) => {
             <Button type="submit">{formState}</Button>
           </Group>
         </form>
+      )}
+      {formState === formStatesEnum.COMPLETE && (
+        <SuccessAlert
+          title="Capture Successful"
+          successText="Hello"
+          buttonText={formState}
+          resetForm={resetForm}
+        />
       )}
     </Panel>
   );

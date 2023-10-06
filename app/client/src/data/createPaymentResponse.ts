@@ -8,10 +8,9 @@ import {
   paymentResponse,
   transactionState,
   paymentRequest,
-  paymentAuth,
-  paymentCapture,
 } from 'generated-api-models';
 import { paymentAuthorizeResponseMock } from 'mocks/paymentAuthorizeResponse.mock';
+import { createPaymentRequestObject } from './createPaymentRequest';
 
 interface manipulateJsonResponseProps {
   merchantId: string;
@@ -105,36 +104,6 @@ const updateBasedOnCaptureMethod = (
   }
 };
 
-const createCapturesArray = (amount: number): paymentCapture[] => {
-  return [
-    {
-      captureId: crypto.randomUUID(),
-      amount: amount,
-      transactionStatusCode: 'CLOSED',
-      captureRemainingRefundableAmount: amount,
-    },
-  ];
-};
-const createPaymentRequestObject = (
-  amount: number,
-  transactionStatusCode: string,
-  paymentRequestStatus: paymentRequest.paymentRequestStatus,
-  isCaptures: boolean,
-) => {
-  return {
-    paymentRequestId: crypto.randomUUID(),
-    paymentRequestStatus: paymentRequestStatus,
-    authorizations: [
-      {
-        authorizationId: crypto.randomUUID(),
-        amount: amount,
-        transactionStatusCode: transactionStatusCode,
-        authorizationType: paymentAuth.authorizationType.INITIAL,
-      },
-    ],
-    captures: isCaptures ? createCapturesArray(amount) : undefined,
-  };
-};
 const updateAmountDetails = (response: paymentResponse, amount: number) => {
   response.amount = amount;
   response.remainingAuthAmount = amount;

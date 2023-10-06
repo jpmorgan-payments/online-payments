@@ -3,6 +3,7 @@ import { API_URL } from 'data/constants';
 import { transactionState, type payment, paymentResponse } from '../generated-api-models/index';
 import { createPaymentResponse } from 'data/createPaymentResponse';
 import { paymentAuthorizeResponseListMock } from 'mocks/paymentAuthorizeResponseList.mock';
+import { createCaptureResponse } from 'data/createCaptureResponse';
 
 
 const previousPaymentsMock: paymentResponse[] = paymentAuthorizeResponseListMock;
@@ -56,16 +57,11 @@ export const handlers = [
   rest.post(
     `${API_URL}/api/payments/:transactionId/captures`,
     async (req, res, ctx) => {
-      const requestId = req.headers.get('request-id') as string;
-      const merchantId = req.headers.get('merchant-id') as string;
       const { transactionId } = req.params;
 
       const response = previousPayments.get(transactionId);
       if (response) {
-        const responseObject = JSON.parse(response);
-        responseObject.requestId = requestId;
-        responseObject.merchantId = merchantId;
-        responseObject.transactionState = transactionState.CLOSED;
+        const responseObject = createCaptureResponse(JSON.parse(response))
         previousPayments.set(transactionId, JSON.stringify(responseObject));
         return res(ctx.json(responseObject));
       }
