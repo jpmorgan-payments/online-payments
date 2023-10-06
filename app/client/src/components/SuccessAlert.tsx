@@ -21,7 +21,6 @@ export const SuccessAlert = ({
   >
     <Text fz="md">{successText}</Text>
     <Space h="md" />
-
     <Button onClick={resetForm}>{buttonText}</Button>
   </Alert>
 );

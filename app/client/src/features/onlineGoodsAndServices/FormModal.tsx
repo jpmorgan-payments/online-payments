@@ -19,7 +19,9 @@ export const FormModal = ({
   const renderPanel = (data: paymentResponse) => {
     switch (formType) {
       case formTypes.CAPTURE:
-        return <CaptureAPaymentPanel data={data} />;
+        return (
+          <CaptureAPaymentPanel data={data} setModalOpened={setModalOpened} />
+        );
       case formTypes.REFUND:
         return;
       case formTypes.VOID:

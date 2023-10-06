@@ -21,7 +21,7 @@ import { createCaptureResponse } from 'data/createCaptureResponse';
 enum formStatesEnum {
   LOADING = 'Capturing Payment',
   INITIAL = 'Capture Payment',
-  COMPLETE = 'Continue',
+  COMPLETE = 'Close',
 }
 
 type formValuesType = {
@@ -35,7 +35,14 @@ const convertToCaptureRequest = (values: formValuesType): captureRequest => {
   };
 };
 
-export const CaptureAPaymentPanel = ({ data }: { data: paymentResponse }) => {
+type CaptureAPaymentPanelProps = {
+  data: paymentResponse;
+  setModalOpened: (value: boolean) => void;
+};
+export const CaptureAPaymentPanel = ({
+  data,
+  setModalOpened,
+}: CaptureAPaymentPanelProps) => {
   const [formState, setFormState] = useState<formStatesEnum>(
     formStatesEnum.INITIAL,
   );
@@ -81,6 +88,7 @@ export const CaptureAPaymentPanel = ({ data }: { data: paymentResponse }) => {
   const resetForm = () => {
     form.reset();
     setFormState(formStatesEnum.INITIAL);
+    setModalOpened(false);
   };
   return (
     <Panel
@@ -119,7 +127,7 @@ export const CaptureAPaymentPanel = ({ data }: { data: paymentResponse }) => {
       {formState === formStatesEnum.COMPLETE && (
         <SuccessAlert
           title="Capture Successful"
-          successText="Hello"
+          successText="You have captured your payment. Check out the table below to see updated JSON."
           buttonText={formState}
           resetForm={resetForm}
         />
