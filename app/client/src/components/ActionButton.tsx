@@ -16,7 +16,7 @@ export const ActionButton = ({
     return (
       <Tooltip label={toolTipText}>
         <span>
-          <Button compact disabled={disabled} onClick={onClick} fullWidth>
+          <Button compact disabled={disabled} onClick={onClick}>
             {text}
           </Button>
         </span>
@@ -24,7 +24,7 @@ export const ActionButton = ({
     );
   } else {
     return (
-      <Button compact disabled={disabled} onClick={onClick} fullWidth>
+      <Button compact disabled={disabled} onClick={onClick}>
         {text}
       </Button>
     );

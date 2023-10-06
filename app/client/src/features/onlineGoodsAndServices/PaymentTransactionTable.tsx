@@ -1,4 +1,4 @@
-import { Button, Group, Text } from '@mantine/core';
+import { Button, Flex, Text } from '@mantine/core';
 import { useQueries } from '@tanstack/react-query';
 import { JsonModal, Panel, TableWithJsonDisplay } from 'components';
 import { useGetPayment } from './hooks/useGetPayment';
@@ -48,7 +48,7 @@ export const PaymentTransactionTable = ({
 
   const displayPaymentActions = (rowData: paymentResponse) => {
     return (
-      <Group grow>
+      <Flex gap="md" wrap={'wrap'}>
         <ActionButton
           disabled={rowData.transactionState !== transactionState.AUTHORIZED}
           onClick={() => handleFormModalOpen(rowData, formTypes.CAPTURE)}
@@ -69,7 +69,7 @@ export const PaymentTransactionTable = ({
           text={formTypes.REFUND}
           toolTipText="Feature coming soon"
         />
-      </Group>
+      </Flex>
     );
   };
 
