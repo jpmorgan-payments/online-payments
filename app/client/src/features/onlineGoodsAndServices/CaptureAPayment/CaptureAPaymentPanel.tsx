@@ -4,8 +4,22 @@ import { captureMethod, paymentResponse } from 'generated-api-models';
 import { NumberInput, Select, Group, Button } from '@mantine/core';
 import { captureRequestFullMock } from 'mocks/captures/captureRequest.mock';
 import { useState } from 'react';
+import { useCapturePayment } from '../hooks/useCapturePayment';
+import { MERCHANT_ID } from 'data/constants';
+import { useQueryClient } from '@tanstack/react-query';
+
+enum formStatesEnum {
+  LOADING = 'Capturing Payment',
+  INITIAL = 'Capture Payment',
+  COMPLETE = 'Continue',
+}
 
 export const CaptureAPaymentPanel = ({ data }: { data: paymentResponse }) => {
+  const [formState, setFormState] = useState<formStatesEnum>(
+    formStatesEnum.INITIAL,
+  );
+  const queryClient = useQueryClient();
+
   const form = useForm({
     initialValues: {
       amount: data.amount,
@@ -13,10 +27,28 @@ export const CaptureAPaymentPanel = ({ data }: { data: paymentResponse }) => {
     },
   });
 
-  let requestBody = captureRequestFullMock;
+  const { mutate: capturePayment } = useCapturePayment();
+
+  let captureRequest = captureRequestFullMock;
 
   const handleSubmit = () => {
-    console.log(form.values);
+    setFormState(formStatesEnum.LOADING);
+    capturePayment(
+      {
+        capture: captureRequest,
+        merchantId: MERCHANT_ID,
+        requestId: crypto.randomUUID(),
+        transactionId: data.transactionId,
+      },
+      {
+        onSuccess: (data) => {
+          queryClient.setQueryData(['payments', data.transactionId], data);
+        },
+        onSettled: () => {
+          setFormState(formStatesEnum.COMPLETE);
+        },
+      },
+    );
   };
 
   return (
@@ -24,9 +56,9 @@ export const CaptureAPaymentPanel = ({ data }: { data: paymentResponse }) => {
       title="Capture a Payment"
       apiCallType="POST"
       apiEndpoint="/payments/{id}/captures"
-      requestBody={requestBody}
+      requestBody={captureRequest}
     >
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={form.onSubmit(handleSubmit)}>
         <Select
           data={Object.keys(captureMethod)}
           label="Capture Method"
@@ -39,7 +71,7 @@ export const CaptureAPaymentPanel = ({ data }: { data: paymentResponse }) => {
         )}
 
         <Group mt="xl" position="right">
-          <Button type="submit">Submit</Button>
+          <Button type="submit">{formState}</Button>
         </Group>
       </form>
     </Panel>
