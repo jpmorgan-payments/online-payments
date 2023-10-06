@@ -9,6 +9,7 @@ import { IconEye } from '@tabler/icons';
 import { transactionManagementType } from 'shared.types';
 import { FormModal } from './FormModal';
 import { formModalType, formTypes } from './types';
+import { JsxElement } from 'typescript';
 
 export const PaymentTransactionTable = ({
   transactionIds,
@@ -99,8 +100,7 @@ export const PaymentTransactionTable = ({
     );
   };
 
-  const rows = initialTransactions.map((transaction) => createRow(transaction));
-
+  let rows: JSX.Element[] = [];
   if (!isLoading) {
     transactions.map(({ data }) => {
       data && rows.unshift(createRow(data));

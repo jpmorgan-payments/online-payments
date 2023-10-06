@@ -1,9 +1,14 @@
 import { rest } from 'msw';
 import { API_URL } from 'data/constants';
-import { transactionState, type captureRequest, type payment } from '../generated-api-models/index';
+import { transactionState, type payment, paymentResponse } from '../generated-api-models/index';
 import { createPaymentResponse } from 'data/createPaymentResponse';
+import { paymentAuthorizeResponseListMock } from 'mocks/paymentAuthorizeResponseList.mock';
 
+
+const previousPaymentsMock: paymentResponse[] = paymentAuthorizeResponseListMock;
 const previousPayments = new Map();
+previousPaymentsMock.map(payment => previousPayments.set(payment.transactionId, JSON.stringify(payment)));
+console.log('here')
 export const handlers = [
   // Match create payment requests and update response to match
   rest.post(`${API_URL}/api/payments`, async (req, res, ctx) => {
@@ -57,11 +62,11 @@ export const handlers = [
 
       const response = previousPayments.get(transactionId);
       if (response) {
-        console.log(response);
         const responseObject = JSON.parse(response);
         responseObject.requestId = requestId;
         responseObject.merchantId = merchantId;
         responseObject.transactionState = transactionState.CLOSED;
+        previousPayments.set(transactionId, JSON.stringify(responseObject));
         return res(ctx.json(responseObject));
       }
       return res(

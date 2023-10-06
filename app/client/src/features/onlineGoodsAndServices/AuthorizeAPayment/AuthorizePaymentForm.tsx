@@ -18,7 +18,7 @@ import { validationSchema } from './utils/validationSchema';
 import { usePaymentMethod } from '../hooks/usePaymentMethod';
 import { convertToPaymentRequest } from './utils/convertToPaymentRequest';
 import { convertToPaymentResponse } from './utils/convertToPaymentResponse';
-import { IconAlertCircle, IconDatabase } from '@tabler/icons';
+import { IconAlertCircle } from '@tabler/icons';
 import { useQueryClient } from '@tanstack/react-query';
 import { useCreatePayment } from '../hooks';
 import { transactionManagementType } from 'shared.types';
