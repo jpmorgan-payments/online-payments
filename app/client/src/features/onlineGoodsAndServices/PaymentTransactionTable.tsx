@@ -1,4 +1,4 @@
-import { Button, Group, Text } from '@mantine/core';
+import { Button, Group, Text, Tooltip } from '@mantine/core';
 import { useQueries } from '@tanstack/react-query';
 import { JsonModal, Panel, TableWithJsonDisplay } from 'components';
 import { useGetPayment } from './hooks/useGetPayment';
@@ -9,7 +9,7 @@ import { IconEye } from '@tabler/icons';
 import { transactionManagementType } from 'shared.types';
 import { FormModal } from './FormModal';
 import { formModalType, formTypes } from './types';
-import { JsxElement } from 'typescript';
+import { ActionButton } from 'components/ActionButton';
 
 export const PaymentTransactionTable = ({
   transactionIds,
@@ -53,19 +53,26 @@ export const PaymentTransactionTable = ({
   const displayPaymentActions = (rowData: paymentResponse) => {
     return (
       <Group grow>
-        <Button
-          compact
+        <ActionButton
           disabled={rowData.transactionState !== transactionState.AUTHORIZED}
           onClick={() => handleFormModalOpen(rowData, formTypes.CAPTURE)}
-        >
-          Capture
-        </Button>
-        <Button compact disabled>
-          Void
-        </Button>
-        <Button compact disabled>
-          Refund
-        </Button>
+          text="Capture"
+          toolTipText={
+            rowData.transactionState !== transactionState.AUTHORIZED
+              ? 'Capture only available on authorized requests'
+              : undefined
+          }
+        />
+        <ActionButton
+          disabled={true}
+          text="Void"
+          toolTipText="Feature coming soon"
+        />
+        <ActionButton
+          disabled={true}
+          text="Refund"
+          toolTipText="Feature coming soon"
+        />
       </Group>
     );
   };
