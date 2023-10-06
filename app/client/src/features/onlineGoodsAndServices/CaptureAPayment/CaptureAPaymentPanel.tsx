@@ -32,13 +32,19 @@ enum captureTypeEnum {
 
 type formValuesType = {
   captureMethod?: captureMethod;
+  captureType?: string;
   amount?: number;
 };
 
 const convertToCaptureRequest = (values: formValuesType): captureRequest => {
+  if (values.captureType !== captureTypeEnum.FULL) {
+    return {
+      captureMethod: values.captureMethod,
+      amount: values.amount,
+    };
+  }
   return {
     captureMethod: values.captureMethod,
-    amount: values.amount,
   };
 };
 
@@ -59,7 +65,7 @@ export const CaptureAPaymentPanel = ({
     initialValues: {
       amount: data.amount,
       captureMethod: captureMethod.NOW,
-      captureType: captureTypeEnum.FULL.valueOf(),
+      captureType: captureTypeEnum.FULL,
     },
   });
 
