@@ -1,9 +1,13 @@
 import { Panel } from 'components';
 import { useForm } from '@mantine/form';
-import { captureMethod, paymentResponse } from 'generated-api-models';
+import {
+  captureMethod,
+  captureRequest,
+  paymentResponse,
+} from 'generated-api-models';
 import { NumberInput, Select, Group, Button } from '@mantine/core';
 import { captureRequestFullMock } from 'mocks/captures/captureRequest.mock';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useCapturePayment } from '../hooks/useCapturePayment';
 import { MERCHANT_ID } from 'data/constants';
 import { useQueryClient } from '@tanstack/react-query';
@@ -13,6 +17,17 @@ enum formStatesEnum {
   INITIAL = 'Capture Payment',
   COMPLETE = 'Continue',
 }
+
+type formValuesType = {
+  captureMethod?: captureMethod;
+  amount?: number;
+};
+
+const convertToCaptureRequest = (values: formValuesType): captureRequest => {
+  return {
+    captureMethod: values.captureMethod,
+  };
+};
 
 export const CaptureAPaymentPanel = ({ data }: { data: paymentResponse }) => {
   const [formState, setFormState] = useState<formStatesEnum>(
@@ -29,8 +44,10 @@ export const CaptureAPaymentPanel = ({ data }: { data: paymentResponse }) => {
 
   const { mutate: capturePayment } = useCapturePayment();
 
-  let captureRequest = captureRequestFullMock;
-
+  const captureRequest = useMemo(
+    () => convertToCaptureRequest(form.values),
+    [form.values],
+  );
   const handleSubmit = () => {
     setFormState(formStatesEnum.LOADING);
     capturePayment(
