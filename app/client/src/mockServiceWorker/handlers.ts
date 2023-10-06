@@ -1,9 +1,14 @@
 import { rest } from 'msw';
 import { API_URL } from 'data/constants';
-import type { payment } from '../generated-api-models/index';
+import { type payment, paymentResponse } from '../generated-api-models/index';
 import { createPaymentResponse } from 'data/createPaymentResponse';
+import { paymentAuthorizeResponseListMock } from 'mocks/paymentAuthorizeResponseList.mock';
+import { createCaptureResponse } from 'data/createCaptureResponse';
 
+
+const previousPaymentsMock: paymentResponse[] = paymentAuthorizeResponseListMock;
 const previousPayments = new Map();
+previousPaymentsMock.map(payment => previousPayments.set(payment.transactionId, JSON.stringify(payment)));
 export const handlers = [
   // Match create payment requests and update response to match
   rest.post(`${API_URL}/api/payments`, async (req, res, ctx) => {
@@ -33,8 +38,8 @@ export const handlers = [
     previousPayments.set(response.transactionId, JSON.stringify(response));
     return res(ctx.json(response));
   }),
-  rest.get(`${API_URL}/api/payments/*`, async (req, res, ctx) => {
-    const { 0: transactionId } = req.params;
+  rest.get(`${API_URL}/api/payments/:transactionId`, async (req, res, ctx) => {
+    const { transactionId } = req.params;
     const response = previousPayments.get(transactionId);
     if (response) {
       return res(ctx.json(JSON.parse(response)));
@@ -48,4 +53,25 @@ export const handlers = [
       }),
     );
   }),
+  rest.post(
+    `${API_URL}/api/payments/:transactionId/captures`,
+    async (req, res, ctx) => {
+      const { transactionId } = req.params;
+
+      const response = previousPayments.get(transactionId);
+      if (response) {
+        const responseObject = createCaptureResponse(JSON.parse(response))
+        previousPayments.set(transactionId, JSON.stringify(responseObject));
+        return res(ctx.json(responseObject));
+      }
+      return res(
+        ctx.status(404),
+        ctx.json({
+          responseStatus: 'ERROR',
+          responseCode: 'NOT_FOUND',
+          responseMessage: 'Transaction was not found',
+        }),
+      );
+    },
+  ),
 ];

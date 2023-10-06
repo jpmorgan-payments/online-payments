@@ -1,21 +1,18 @@
-import { Button, Group, Text } from '@mantine/core';
+import { Button, Flex, Text } from '@mantine/core';
 import { useQueries } from '@tanstack/react-query';
 import { JsonModal, Panel, TableWithJsonDisplay } from 'components';
 import { useGetPayment } from './hooks/useGetPayment';
-import { paymentAuthorizeResponseListMock } from 'mocks/paymentAuthorizeResponseList.mock';
-import { paymentResponse } from 'generated-api-models';
+import { paymentResponse, transactionState } from 'generated-api-models';
 import { useState } from 'react';
 import { IconEye } from '@tabler/icons';
 import { transactionManagementType } from 'shared.types';
 import { FormModal } from './FormModal';
-import { formModalType } from './types';
+import { formModalType, formTypes } from './types';
+import { ActionButton } from 'components/';
 
 export const PaymentTransactionTable = ({
   transactionIds,
 }: transactionManagementType) => {
-  const initialTransactions: paymentResponse[] =
-    paymentAuthorizeResponseListMock;
-
   const [modalOpen, setModalState] = useState<boolean>(false);
   const [formModalOpen, setFormModalState] = useState<boolean>(false);
 
@@ -38,19 +35,41 @@ export const PaymentTransactionTable = ({
     setModalState(true);
   };
 
-  const displayPaymentActions = () => {
+  const handleFormModalOpen = (
+    rowData: paymentResponse,
+    formType: formTypes,
+  ) => {
+    setFormModalData({
+      formData: rowData,
+      formType: formType,
+    });
+    setFormModalState(true);
+  };
+
+  const displayPaymentActions = (rowData: paymentResponse) => {
     return (
-      <Group grow>
-        <Button compact disabled>
-          Capture
-        </Button>
-        <Button compact disabled>
-          Void
-        </Button>
-        <Button compact disabled>
-          Refund
-        </Button>
-      </Group>
+      <Flex gap="md" wrap={'wrap'}>
+        <ActionButton
+          disabled={rowData.transactionState !== transactionState.AUTHORIZED}
+          onClick={() => handleFormModalOpen(rowData, formTypes.CAPTURE)}
+          text={formTypes.CAPTURE}
+          toolTipText={
+            rowData.transactionState !== transactionState.AUTHORIZED
+              ? 'Capture only available on authorized requests'
+              : undefined
+          }
+        />
+        <ActionButton
+          disabled={true}
+          text={formTypes.VOID}
+          toolTipText="Feature coming soon"
+        />
+        <ActionButton
+          disabled={true}
+          text={formTypes.REFUND}
+          toolTipText="Feature coming soon"
+        />
+      </Flex>
     );
   };
 
@@ -79,13 +98,12 @@ export const PaymentTransactionTable = ({
         <td>{rowData.transactionId}</td>
         <td>{rowData.transactionDate}</td>
         <td>{rowData.transactionState}</td>
-        <td>{displayPaymentActions()}</td>
+        <td>{displayPaymentActions(rowData)}</td>
       </tr>
     );
   };
 
-  const rows = initialTransactions.map((transaction) => createRow(transaction));
-
+  let rows: JSX.Element[] = [];
   if (!isLoading) {
     transactions.map(({ data }) => {
       data && rows.unshift(createRow(data));

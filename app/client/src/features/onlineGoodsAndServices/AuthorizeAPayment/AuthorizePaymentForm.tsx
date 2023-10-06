@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react';
 import {
-  Alert,
   Button,
   Checkbox,
   Container,
@@ -8,17 +7,14 @@ import {
   LoadingOverlay,
   Select,
   SimpleGrid,
-  Space,
   Stack,
-  Text,
 } from '@mantine/core';
 import { useForm, yupResolver } from '@mantine/form';
-import { Panel } from 'components';
+import { Panel, SuccessAlert } from 'components';
 import { validationSchema } from './utils/validationSchema';
 import { usePaymentMethod } from '../hooks/usePaymentMethod';
 import { convertToPaymentRequest } from './utils/convertToPaymentRequest';
 import { convertToPaymentResponse } from './utils/convertToPaymentResponse';
-import { IconAlertCircle, IconDatabase } from '@tabler/icons';
 import { useQueryClient } from '@tanstack/react-query';
 import { useCreatePayment } from '../hooks';
 import { transactionManagementType } from 'shared.types';
@@ -148,7 +144,7 @@ export const AuthorizePaymentForm = ({
                 <AmountWithCurrencyInput form={form} />
                 <Checkbox
                   label="Is amount final?"
-                  {...form.getInputProps('isAmountFinal')}
+                  {...form.getInputProps('isAmountFinal', { type: 'checkbox' })}
                 />
                 <Group mt="xl" position="right">
                   <Button type="submit">{formState}</Button>
@@ -157,19 +153,14 @@ export const AuthorizePaymentForm = ({
             </SimpleGrid>
           </form>
         ) : (
-          <Alert
-            icon={<IconAlertCircle size="1rem" />}
-            title={<Text fz="lg">Payment successfully created!</Text>}
-            color="green"
-          >
-            <Text fz="md">
-              You're payment request has been successful. Check out the table
-              below to see further actions.
-            </Text>
-            <Space h="md" />
-
-            <Button onClick={resetForm}>{formState}</Button>
-          </Alert>
+          <SuccessAlert
+            title="Payment successfully created!"
+            successText={
+              "You're payment request has been successful. Check out the table below to see further actions."
+            }
+            buttonText={formState}
+            resetForm={resetForm}
+          />
         )}
       </Container>
     </Panel>
