@@ -1,8 +1,7 @@
-import { Button, Group, Text, Tooltip } from '@mantine/core';
+import { Button, Group, Text } from '@mantine/core';
 import { useQueries } from '@tanstack/react-query';
 import { JsonModal, Panel, TableWithJsonDisplay } from 'components';
 import { useGetPayment } from './hooks/useGetPayment';
-import { paymentAuthorizeResponseListMock } from 'mocks/paymentAuthorizeResponseList.mock';
 import { paymentResponse, transactionState } from 'generated-api-models';
 import { useState } from 'react';
 import { IconEye } from '@tabler/icons';
@@ -14,9 +13,6 @@ import { ActionButton } from 'components/ActionButton';
 export const PaymentTransactionTable = ({
   transactionIds,
 }: transactionManagementType) => {
-  const initialTransactions: paymentResponse[] =
-    paymentAuthorizeResponseListMock;
-
   const [modalOpen, setModalState] = useState<boolean>(false);
   const [formModalOpen, setFormModalState] = useState<boolean>(false);
 
@@ -56,7 +52,7 @@ export const PaymentTransactionTable = ({
         <ActionButton
           disabled={rowData.transactionState !== transactionState.AUTHORIZED}
           onClick={() => handleFormModalOpen(rowData, formTypes.CAPTURE)}
-          text="Capture"
+          text={formTypes.CAPTURE}
           toolTipText={
             rowData.transactionState !== transactionState.AUTHORIZED
               ? 'Capture only available on authorized requests'
@@ -65,12 +61,12 @@ export const PaymentTransactionTable = ({
         />
         <ActionButton
           disabled={true}
-          text="Void"
+          text={formTypes.VOID}
           toolTipText="Feature coming soon"
         />
         <ActionButton
           disabled={true}
-          text="Refund"
+          text={formTypes.REFUND}
           toolTipText="Feature coming soon"
         />
       </Group>
