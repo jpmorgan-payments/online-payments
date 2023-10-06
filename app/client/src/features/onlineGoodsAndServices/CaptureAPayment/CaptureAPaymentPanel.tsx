@@ -5,8 +5,13 @@ import {
   captureRequest,
   paymentResponse,
 } from 'generated-api-models';
-import { NumberInput, Select, Group, Button } from '@mantine/core';
-import { captureRequestFullMock } from 'mocks/captures/captureRequest.mock';
+import {
+  NumberInput,
+  Select,
+  Group,
+  Button,
+  LoadingOverlay,
+} from '@mantine/core';
 import { useState, useMemo } from 'react';
 import { useCapturePayment } from '../hooks/useCapturePayment';
 import { MERCHANT_ID } from 'data/constants';
@@ -31,7 +36,7 @@ const convertToCaptureRequest = (values: formValuesType): captureRequest => {
 
 export const CaptureAPaymentPanel = ({ data }: { data: paymentResponse }) => {
   const [formState, setFormState] = useState<formStatesEnum>(
-    formStatesEnum.INITIAL,
+    formStatesEnum.LOADING,
   );
   const queryClient = useQueryClient();
 
@@ -75,22 +80,32 @@ export const CaptureAPaymentPanel = ({ data }: { data: paymentResponse }) => {
       apiEndpoint="/payments/{id}/captures"
       requestBody={captureRequest}
     >
-      <form onSubmit={form.onSubmit(handleSubmit)}>
-        <Select
-          data={Object.keys(captureMethod)}
-          label="Capture Method"
-          {...form.getInputProps('captureMethod')}
-          withAsterisk
-          readOnly
-        />
-        {data.captureMethod === captureMethod.NOW && (
-          <NumberInput hideControls min={0} {...form.getInputProps('amount')} />
-        )}
+      {formState !== formStatesEnum.COMPLETE && (
+        <form onSubmit={form.onSubmit(handleSubmit)}>
+          <LoadingOverlay
+            visible={formState === formStatesEnum.LOADING}
+            overlayBlur={2}
+          />
+          <Select
+            data={Object.keys(captureMethod)}
+            label="Capture Method"
+            {...form.getInputProps('captureMethod')}
+            withAsterisk
+            readOnly
+          />
+          {data.captureMethod === captureMethod.NOW && (
+            <NumberInput
+              hideControls
+              min={0}
+              {...form.getInputProps('amount')}
+            />
+          )}
 
-        <Group mt="xl" position="right">
-          <Button type="submit">{formState}</Button>
-        </Group>
-      </form>
+          <Group mt="xl" position="right">
+            <Button type="submit">{formState}</Button>
+          </Group>
+        </form>
+      )}
     </Panel>
   );
 };
