@@ -4,6 +4,7 @@ import {
   captureMethod,
   captureRequest,
   paymentResponse,
+  refund,
 } from 'generated-api-models';
 import {
   NumberInput,
@@ -14,33 +15,47 @@ import {
 } from '@mantine/core';
 import { useState, useMemo } from 'react';
 import { useCapturePayment } from '../hooks/useCapturePayment';
-import { MERCHANT_ID } from 'data/constants';
+import { MERCHANT, MERCHANT_ID } from 'data/constants';
 import { useQueryClient } from '@tanstack/react-query';
 import { createCaptureResponse } from 'data/createCaptureResponse';
 
-enum formStatesEnum {
-  LOADING = 'Capturing Payment',
-  INITIAL = 'Capture Payment',
-  COMPLETE = 'Close',
-}
-
-enum captureTypeEnum {
+enum refundTypeEnum {
   FULL = 'Full',
   PARTIAL = 'Partial',
   MULTI_CAPTURE = 'Multi-Capture',
 }
 
+enum formStatesEnum {
+  LOADING = 'Processing Refund',
+  INITIAL = 'Create Refund',
+  COMPLETE = 'Close',
+}
 type formValuesType = {
-  captureMethod?: captureMethod;
-  captureType?: string;
+  refundType?: refundTypeEnum;
   amount?: number;
-  multiCaptureRecordCount?: number;
 };
 
 type RefundAPaymentPanelProps = {
   data: paymentResponse;
   setModalOpened: (value: boolean) => void;
 };
+
+const convertToRefundRequest = (
+  values: formValuesType,
+  data: paymentResponse,
+): refund => {
+  return {
+    merchant: data.merchant || MERCHANT,
+    amount: values.amount || data.amount,
+    currency: data.currency,
+    paymentMethodType: {
+      transactionReference: {
+        transactionReferenceId: data.transactionId,
+      },
+    },
+  };
+};
+
 export const RefundAPaymentPanel = ({
   data,
   setModalOpened,
@@ -51,7 +66,16 @@ export const RefundAPaymentPanel = ({
   const queryClient = useQueryClient();
 
   const form = useForm({
-    initialValues: {},
+    initialValues: {
+      refundType: refundTypeEnum.FULL,
+      amount: data.amount,
+    },
+    validate: {
+      amount: (value) =>
+        value && value > 0 && data.amount && data.amount - value >= 0
+          ? null
+          : `You can't refund more than the original amount (${data.amount})`,
+    },
   });
 
   const resetForm = () => {
@@ -60,15 +84,38 @@ export const RefundAPaymentPanel = ({
     setModalOpened(false);
   };
 
+  const refundRequest = useMemo(
+    () => convertToRefundRequest(form.values, data),
+    [form.values],
+  );
+
   return (
-    <Panel title="Create a refund" apiCallType="POST" apiEndpoint="/refunds">
+    <Panel
+      title="Create a refund"
+      apiCallType="POST"
+      apiEndpoint="/refunds"
+      requestBody={refundRequest}
+    >
       {formState !== formStatesEnum.COMPLETE && (
         <form onSubmit={form.onSubmit(() => console.log('here'))}>
           <LoadingOverlay
             visible={formState === formStatesEnum.LOADING}
             overlayBlur={2}
           />
-
+          <Select
+            data={Object.values(refundTypeEnum)}
+            label="Select the refund type"
+            {...form.getInputProps('refundType')}
+            withAsterisk
+          />
+          {form.values.refundType !== refundTypeEnum.FULL && (
+            <NumberInput
+              label="Enter refund amount"
+              withAsterisk
+              hideControls
+              {...form.getInputProps('amount')}
+            />
+          )}
           <Group mt="xl" position="right">
             <Button type="submit">{formState}</Button>
           </Group>
