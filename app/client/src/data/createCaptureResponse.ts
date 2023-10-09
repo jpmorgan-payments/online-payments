@@ -46,22 +46,30 @@ export const createCaptureResponse = (
   capture: captureRequest,
 ): paymentResponse => {
   const response = JSON.parse(JSON.stringify(transaction)) as paymentResponse;
+  const paymentAmount = capture.amount
+    ? capture.amount
+    : transaction.amount || 0;
+  const calculatedRemainingAuthAmount = response.totalAuthorizedAmount
+    ? response.totalAuthorizedAmount - paymentAmount
+    : 0;
   response.captureMethod = captureMethod.NOW;
   response.transactionState = transactionState.CLOSED;
   response.captureTime = new Date().toISOString();
+  response.remainingAuthAmount =
+    calculatedRemainingAuthAmount > 0 ? calculatedRemainingAuthAmount : 0;
   if (capture.multiCapture) {
     response.multiCapture = capture.multiCapture;
     response.paymentRequest = handleMultiCapture(capture, transaction);
   } else {
     response.paymentRequest = createPaymentRequestObject(
-      capture.amount ? capture.amount : transaction.amount || 0,
+      paymentAmount,
       'CAPTURED',
       paymentRequest.paymentRequestStatus.CLOSED,
       true,
       transaction.amount || 0,
     );
   }
-  response.amount = capture.amount ? capture.amount : transaction.amount || 0;
+  response.amount = paymentAmount;
 
   return response;
 };
