@@ -10,13 +10,10 @@ import {
   createPaymentRequestObject,
 } from './createPaymentRequest';
 
-//We meed
 const handleMultiCapture = (
   capture: captureRequest,
   transaction: paymentResponse,
 ) => {
-  //update captures array
-
   // If we have captures length greater than zero then we update rather than create new
   if (
     transaction.paymentRequest?.captures &&
@@ -24,9 +21,13 @@ const handleMultiCapture = (
   ) {
     const tempObject = transaction.paymentRequest;
     tempObject.captures?.push(createNewCapturesObject(capture.amount || 0));
+    //Check if we are on final capture
     if (capture.multiCapture?.isFinalCapture) {
       tempObject.paymentRequestStatus =
         paymentRequest.paymentRequestStatus.CLOSED;
+      if (tempObject.authorizations && tempObject.authorizations.length > 0) {
+        tempObject.authorizations[0].transactionStatusCode = 'CAPTURED';
+      }
     }
     return tempObject;
   } else {
@@ -40,9 +41,6 @@ const handleMultiCapture = (
   }
 };
 
-const calculateRemainingAuthAmount = () => {
-  //update remainingAuth
-};
 export const createCaptureResponse = (
   transaction: paymentResponse,
   capture: captureRequest,
