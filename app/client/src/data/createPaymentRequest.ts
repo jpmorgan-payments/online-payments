@@ -9,6 +9,7 @@ export const createPaymentRequestObject = (
   transactionStatusCode: string,
   paymentRequestStatus: paymentRequest.paymentRequestStatus,
   isCaptures: boolean,
+  authorizationsAmount: number = amount,
 ) => {
   return {
     paymentRequestId: crypto.randomUUID(),
@@ -16,7 +17,7 @@ export const createPaymentRequestObject = (
     authorizations: [
       {
         authorizationId: crypto.randomUUID(),
-        amount: amount,
+        amount: authorizationsAmount,
         transactionStatusCode: transactionStatusCode,
         authorizationType: paymentAuth.authorizationType.INITIAL,
       },

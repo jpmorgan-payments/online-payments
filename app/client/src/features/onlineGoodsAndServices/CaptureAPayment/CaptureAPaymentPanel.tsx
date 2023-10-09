@@ -76,7 +76,7 @@ export const CaptureAPaymentPanel = ({
     [form.values],
   );
   const captureResponse = useMemo(
-    () => createCaptureResponse(data),
+    () => createCaptureResponse(data, captureRequest),
     [form.values],
   );
   const handleSubmit = () => {

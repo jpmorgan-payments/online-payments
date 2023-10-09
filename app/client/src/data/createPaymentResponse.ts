@@ -108,5 +108,6 @@ const updateAmountDetails = (response: paymentResponse, amount: number) => {
   response.amount = amount;
   response.remainingAuthAmount = amount;
   response.remainingRefundableAmount = amount;
+  response.totalAuthorizedAmount = amount;
   return response;
 };
