@@ -2,6 +2,7 @@ import { Modal } from '@mantine/core';
 import { formModalType, formTypes } from './types';
 import { paymentResponse } from 'generated-api-models';
 import { CaptureAPaymentPanel } from './CaptureAPayment/CaptureAPaymentPanel';
+import { RefundAPaymentPanel } from './RefundAPayment/RefundAPaymentPanel';
 
 type formModalProps = {
   data: formModalType;
@@ -23,7 +24,9 @@ export const FormModal = ({
           <CaptureAPaymentPanel data={data} setModalOpened={setModalOpened} />
         );
       case formTypes.REFUND:
-        return;
+        return (
+          <RefundAPaymentPanel data={data} setModalOpened={setModalOpened} />
+        );
       case formTypes.VOID:
         return;
       default:

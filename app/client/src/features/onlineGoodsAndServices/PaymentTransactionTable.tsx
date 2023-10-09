@@ -65,9 +65,20 @@ export const PaymentTransactionTable = ({
           toolTipText="Feature coming soon"
         />
         <ActionButton
-          disabled={true}
           text={formTypes.REFUND}
-          toolTipText="Feature coming soon"
+          disabled={
+            ![transactionState.CLOSED, transactionState.COMPLETED].includes(
+              rowData.transactionState,
+            )
+          }
+          onClick={() => handleFormModalOpen(rowData, formTypes.REFUND)}
+          toolTipText={
+            ![transactionState.CLOSED, transactionState.COMPLETED].includes(
+              rowData.transactionState,
+            )
+              ? 'Refund only available on closed or completed requests'
+              : undefined
+          }
         />
       </Flex>
     );
