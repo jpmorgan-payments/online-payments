@@ -9,6 +9,7 @@ export const createPaymentRequestObject = (
   transactionStatusCode: string,
   paymentRequestStatus: paymentRequest.paymentRequestStatus,
   isCaptures: boolean,
+  authorizationsAmount: number = amount,
 ) => {
   return {
     paymentRequestId: crypto.randomUUID(),
@@ -16,7 +17,7 @@ export const createPaymentRequestObject = (
     authorizations: [
       {
         authorizationId: crypto.randomUUID(),
-        amount: amount,
+        amount: authorizationsAmount,
         transactionStatusCode: transactionStatusCode,
         authorizationType: paymentAuth.authorizationType.INITIAL,
       },
@@ -26,12 +27,14 @@ export const createPaymentRequestObject = (
 };
 
 const createCapturesArray = (amount: number): paymentCapture[] => {
-  return [
-    {
-      captureId: crypto.randomUUID(),
-      amount: amount,
-      transactionStatusCode: 'CLOSED',
-      captureRemainingRefundableAmount: amount,
-    },
-  ];
+  return [createNewCapturesObject(amount)];
+};
+
+export const createNewCapturesObject = (amount: number): paymentCapture => {
+  return {
+    captureId: crypto.randomUUID(),
+    amount: amount,
+    transactionStatusCode: 'CLOSED',
+    captureRemainingRefundableAmount: amount,
+  };
 };

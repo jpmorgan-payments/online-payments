@@ -1,6 +1,6 @@
 import { rest } from 'msw';
 import { API_URL } from 'data/constants';
-import { type payment, paymentResponse } from '../generated-api-models/index';
+import { type payment, paymentResponse, captureRequest } from '../generated-api-models/index';
 import { createPaymentResponse } from 'data/createPaymentResponse';
 import { paymentAuthorizeResponseListMock } from 'mocks/paymentAuthorizeResponseList.mock';
 import { createCaptureResponse } from 'data/createCaptureResponse';
@@ -57,10 +57,10 @@ export const handlers = [
     `${API_URL}/api/payments/:transactionId/captures`,
     async (req, res, ctx) => {
       const { transactionId } = req.params;
-
+      const requestBody = (await req.json()) as captureRequest;
       const response = previousPayments.get(transactionId);
       if (response) {
-        const responseObject = createCaptureResponse(JSON.parse(response))
+        const responseObject = createCaptureResponse(JSON.parse(response), requestBody)
         previousPayments.set(transactionId, JSON.stringify(responseObject));
         return res(ctx.json(responseObject));
       }

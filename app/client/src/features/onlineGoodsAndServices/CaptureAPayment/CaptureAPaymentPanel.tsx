@@ -34,13 +34,25 @@ type formValuesType = {
   captureMethod?: captureMethod;
   captureType?: string;
   amount?: number;
+  multiCaptureRecordCount?: number;
 };
 
 const convertToCaptureRequest = (values: formValuesType): captureRequest => {
-  if (values.captureType !== captureTypeEnum.FULL) {
+  if (values.captureType === captureTypeEnum.PARTIAL) {
     return {
       captureMethod: values.captureMethod,
       amount: values.amount,
+    };
+  }
+  if (values.captureType === captureTypeEnum.MULTI_CAPTURE) {
+    return {
+      captureMethod: values.captureMethod,
+      amount: values.amount,
+      multiCapture: {
+        multiCaptureSequenceNumber: '1',
+        multiCaptureRecordCount: values.multiCaptureRecordCount,
+        isFinalCapture: false,
+      },
     };
   }
   return {
@@ -66,6 +78,7 @@ export const CaptureAPaymentPanel = ({
       amount: data.amount,
       captureMethod: captureMethod.NOW,
       captureType: captureTypeEnum.FULL,
+      multiCaptureRecordCount: 2,
     },
   });
 
@@ -76,17 +89,18 @@ export const CaptureAPaymentPanel = ({
     [form.values],
   );
   const captureResponse = useMemo(
-    () => createCaptureResponse(data),
+    () => createCaptureResponse(data, captureRequest),
     [form.values],
   );
-  const handleSubmit = () => {
-    setFormState(formStatesEnum.LOADING);
+
+  const submitCapture = (multiCaptureSequenceNumber?: number) => {
     capturePayment(
       {
         capture: captureRequest,
         merchantId: MERCHANT_ID,
         requestId: crypto.randomUUID(),
         transactionId: data.transactionId,
+        multiCaptureSequenceNumber: multiCaptureSequenceNumber,
       },
       {
         onSuccess: (data) => {
@@ -97,6 +111,19 @@ export const CaptureAPaymentPanel = ({
         },
       },
     );
+  };
+  const handleSubmit = () => {
+    setFormState(formStatesEnum.LOADING);
+    //As this is multi capture we need to send the request multiple times with differing sequence numbers
+    if (form.values.captureType === captureTypeEnum.MULTI_CAPTURE) {
+      [...Array(form.values.multiCaptureRecordCount)].forEach(
+        (_, multiCaptureSequenceNumber) => {
+          submitCapture(multiCaptureSequenceNumber);
+        },
+      );
+    } else {
+      submitCapture();
+    }
   };
 
   const resetForm = () => {
@@ -136,6 +163,15 @@ export const CaptureAPaymentPanel = ({
               label="Enter capture amount"
               min={0}
               {...form.getInputProps('amount')}
+            />
+          )}
+
+          {form.values.captureType === captureTypeEnum.MULTI_CAPTURE && (
+            <NumberInput
+              hideControls
+              label="Enter total number of shipments to fulfill the order"
+              min={0}
+              {...form.getInputProps('multiCaptureRecordCount')}
             />
           )}
 
