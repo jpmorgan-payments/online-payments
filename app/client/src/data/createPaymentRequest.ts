@@ -27,12 +27,14 @@ export const createPaymentRequestObject = (
 };
 
 const createCapturesArray = (amount: number): paymentCapture[] => {
-  return [
-    {
-      captureId: crypto.randomUUID(),
-      amount: amount,
-      transactionStatusCode: 'CLOSED',
-      captureRemainingRefundableAmount: amount,
-    },
-  ];
+  return [createNewCapturesObject(amount)];
+};
+
+export const createNewCapturesObject = (amount: number): paymentCapture => {
+  return {
+    captureId: crypto.randomUUID(),
+    amount: amount,
+    transactionStatusCode: 'CLOSED',
+    captureRemainingRefundableAmount: amount,
+  };
 };

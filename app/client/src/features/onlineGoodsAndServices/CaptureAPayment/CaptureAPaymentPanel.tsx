@@ -92,14 +92,15 @@ export const CaptureAPaymentPanel = ({
     () => createCaptureResponse(data, captureRequest),
     [form.values],
   );
-  const handleSubmit = () => {
-    setFormState(formStatesEnum.LOADING);
+
+  const submitCapture = (multiCaptureSequenceNumber?: number) => {
     capturePayment(
       {
         capture: captureRequest,
         merchantId: MERCHANT_ID,
         requestId: crypto.randomUUID(),
         transactionId: data.transactionId,
+        multiCaptureSequenceNumber: multiCaptureSequenceNumber,
       },
       {
         onSuccess: (data) => {
@@ -110,6 +111,19 @@ export const CaptureAPaymentPanel = ({
         },
       },
     );
+  };
+  const handleSubmit = () => {
+    setFormState(formStatesEnum.LOADING);
+    //As this is multi capture we need to send the request multiple times with differing sequence numbers
+    if (form.values.captureType === captureTypeEnum.MULTI_CAPTURE) {
+      [...Array(form.values.multiCaptureRecordCount)].forEach(
+        (_, multiCaptureSequenceNumber) => {
+          submitCapture(multiCaptureSequenceNumber);
+        },
+      );
+    } else {
+      submitCapture();
+    }
   };
 
   const resetForm = () => {
