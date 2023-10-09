@@ -25,8 +25,3 @@ export const createCaptureResponse = (
   );
   return response;
 };
-
-/**
- *  Captures amount - amount, capturesamount, captures remaining refundable amount
- * Original amount - totalAuthorized, authorizations.amount
- */
