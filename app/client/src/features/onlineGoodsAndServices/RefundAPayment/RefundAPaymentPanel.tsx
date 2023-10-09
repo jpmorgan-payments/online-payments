@@ -1,11 +1,6 @@
 import { Panel, SuccessAlert } from 'components';
 import { useForm } from '@mantine/form';
-import {
-  captureMethod,
-  captureRequest,
-  paymentResponse,
-  refund,
-} from 'generated-api-models';
+import { paymentResponse, refund } from 'generated-api-models';
 import {
   NumberInput,
   Select,
@@ -14,10 +9,9 @@ import {
   LoadingOverlay,
 } from '@mantine/core';
 import { useState, useMemo } from 'react';
-import { useCapturePayment } from '../hooks/useCapturePayment';
-import { MERCHANT, MERCHANT_ID } from 'data/constants';
+import { MERCHANT } from 'data/constants';
 import { useQueryClient } from '@tanstack/react-query';
-import { createCaptureResponse } from 'data/createCaptureResponse';
+import { createRefundResponse } from 'data/createRefundResponse';
 
 enum refundTypeEnum {
   FULL = 'Full',
@@ -88,6 +82,10 @@ export const RefundAPaymentPanel = ({
     () => convertToRefundRequest(form.values, data),
     [form.values],
   );
+  const refundResponse = useMemo(
+    () => createRefundResponse(refundRequest, data),
+    [form.values],
+  );
 
   return (
     <Panel
@@ -95,6 +93,7 @@ export const RefundAPaymentPanel = ({
       apiCallType="POST"
       apiEndpoint="/refunds"
       requestBody={refundRequest}
+      responseBody={refundResponse}
     >
       {formState !== formStatesEnum.COMPLETE && (
         <form onSubmit={form.onSubmit(() => console.log('here'))}>
