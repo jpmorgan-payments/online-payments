@@ -17,9 +17,11 @@ import { useCapturePayment } from '../hooks/useCapturePayment';
 import { MERCHANT_ID } from 'data/constants';
 import { useQueryClient } from '@tanstack/react-query';
 import { createCaptureResponse } from 'data/createCaptureResponse';
+import { MultiCaptureLoader } from './MultiCaptureLoader';
 
 enum formStatesEnum {
   LOADING = 'Capturing Payment',
+  LOADING_MULTI = 'loading',
   INITIAL = 'Capture Payment',
   COMPLETE = 'Close',
 }
@@ -113,15 +115,17 @@ export const CaptureAPaymentPanel = ({
     );
   };
   const handleSubmit = () => {
-    setFormState(formStatesEnum.LOADING);
     //As this is multi capture we need to send the request multiple times with differing sequence numbers
     if (form.values.captureType === captureTypeEnum.MULTI_CAPTURE) {
+      setFormState(formStatesEnum.LOADING_MULTI);
       [...Array(form.values.multiCaptureRecordCount)].forEach(
         (_, multiCaptureSequenceNumber) => {
           submitCapture(multiCaptureSequenceNumber);
         },
       );
     } else {
+      setFormState(formStatesEnum.LOADING);
+
       submitCapture();
     }
   };
@@ -144,6 +148,15 @@ export const CaptureAPaymentPanel = ({
           <LoadingOverlay
             visible={formState === formStatesEnum.LOADING}
             overlayBlur={2}
+          />
+          <LoadingOverlay
+            visible={formState === formStatesEnum.LOADING_MULTI}
+            overlayBlur={2}
+            loader={
+              <MultiCaptureLoader
+                requestCount={form.values.multiCaptureRecordCount}
+              />
+            }
           />
           <Select
             data={Object.values(captureTypeEnum)}
