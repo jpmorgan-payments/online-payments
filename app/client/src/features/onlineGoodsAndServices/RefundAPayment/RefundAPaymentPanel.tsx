@@ -17,7 +17,6 @@ import { useRefundPayment } from '../hooks';
 enum refundTypeEnum {
   FULL = 'Full',
   PARTIAL = 'Partial',
-  MULTI_CAPTURE = 'Multi-Capture',
 }
 
 enum formStatesEnum {
@@ -109,12 +108,7 @@ export const RefundAPaymentPanel = ({
   };
   const handleSubmit = () => {
     setFormState(formStatesEnum.LOADING);
-    //As this is multi capture we need to send the request multiple times with differing sequence numbers
-    if (form.values.refundType === refundTypeEnum.MULTI_CAPTURE) {
-      //todo
-    } else {
-      submitRefund();
-    }
+    submitRefund();
   };
 
   return (
