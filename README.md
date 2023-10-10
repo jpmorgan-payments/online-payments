@@ -25,19 +25,25 @@ All your actions on this application are served by mock data included in the app
 ### Postman Collection
 
 Get straight to the API endpoints in action, make calls and see responses.
-To use the Postman collection, import the collection file to Postman and follow the included setup instructions to access all possible calls to the Embedded Banking API. You will need certificates to run these calls.
+To use the Postman collection, import the collection file to Postman and follow the included setup instructions to access all possible calls to the Online Payments API. You will need certificates to run these calls.
 
 ## Included in the App project folders
 
 ### [Client](./app/client/)
 
-This is the core UI application written in TS/JS with the React framework. This application illustrates the various capabilities of Embedded Banking, using mocked responses stored within the codebase.
+This is the core UI application written in TS/JS with the React framework. This application illustrates the various capabilities of Online Payments API, using mocked responses stored within the codebase.
 
-Such capabilities include:
+We have created capabilities for all Online Goods and Services using our API such as:
 
-- Making payments.
+- Authorizing a payment
+- Capture a payment
+  - Full
+  - Partial
+  - Multi Capture
+- Refund a payment
+  - Full
 
-Check out the [features](./app/client/src/features/) directory to explore the the components and hooks that explore these features.
+Check out the [features](./app/client/src/features/) directory to explore the the components and hooks that use these features.
 
 ## Run the Showcase Application locally
 
@@ -67,4 +73,4 @@ yarn start
 
 4. Open a browser and navigate to the locally deployed app using the URL provided in the command line. Usually `localhost:3000`.
 
-You have deployed the showcase Embedded Banking app. Follow the onscreen instructions to explore the banking functionality available.
+You have deployed the showcase Online Payments app. Follow the onscreen instructions to explore the banking functionality available.
