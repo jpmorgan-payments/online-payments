@@ -1,4 +1,4 @@
-import { Button, Flex, Text } from '@mantine/core';
+import { Button, Flex, Text, Anchor } from '@mantine/core';
 import { useQueries } from '@tanstack/react-query';
 import { JsonModal, Panel, TableWithJsonDisplay } from 'components';
 import { useGetPayment } from './hooks/useGetPayment';
@@ -137,7 +137,16 @@ export const PaymentTransactionTable = ({
       apiCallType="GET"
       apiEndpoint="/payments/{id}"
     >
-      <Text>You can use this call to return a specific transaction</Text>
+      <Text c="dimmed" fs="italic">
+        This is a list of all the Payments that have been created recently. We
+        have prepopulated the table with some mocked data. To gather a list of
+        your payments you will need to make an API call for each payment. Check
+        out the API specification to find out more{' '}
+        <Anchor href="https://www.jpmorgan.com/payments" target="_blank">
+          here.
+        </Anchor>
+      </Text>
+      <br />
       <FormModal
         modalOpened={formModalOpen}
         setModalOpened={setFormModalState}

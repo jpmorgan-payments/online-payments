@@ -9,6 +9,7 @@ import {
   SimpleGrid,
   Text,
   Stack,
+  Anchor,
 } from '@mantine/core';
 import { useForm, yupResolver } from '@mantine/form';
 import { Panel, SuccessAlert } from 'components';
@@ -108,7 +109,11 @@ export const AuthorizePaymentForm = ({
           This is the Authorize a Payment API call. You can update the JSON
           request by altering the fields below. We have autofilled some fields
           for test data. Once you submit a payment it will appear in the table
-          below and allow you to perform further actions.
+          below and allow you to perform further actions. Check out the API
+          specification to find out more{' '}
+          <Anchor href="https://www.jpmorgan.com/payments" target="_blank">
+            here.
+          </Anchor>
         </Text>
         <br />
         {formState !== formStatesEnum.COMPLETE ? (
