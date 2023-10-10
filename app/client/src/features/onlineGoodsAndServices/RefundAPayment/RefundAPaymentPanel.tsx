@@ -9,9 +9,10 @@ import {
   LoadingOverlay,
 } from '@mantine/core';
 import { useState, useMemo } from 'react';
-import { MERCHANT } from 'data/constants';
+import { MERCHANT, MERCHANT_ID } from 'data/constants';
 import { useQueryClient } from '@tanstack/react-query';
 import { createRefundResponse } from 'data/createRefundResponse';
+import { useRefundPayment } from '../hooks';
 
 enum refundTypeEnum {
   FULL = 'Full',
@@ -87,6 +88,35 @@ export const RefundAPaymentPanel = ({
     [form.values],
   );
 
+  const { mutate: refundPayment } = useRefundPayment();
+
+  const submitRefund = () => {
+    refundPayment(
+      {
+        refund: refundRequest,
+        merchantId: MERCHANT_ID,
+        requestId: crypto.randomUUID(),
+      },
+      {
+        onSuccess: (data) => {
+          queryClient.setQueryData(['payments', data.transactionId], data);
+        },
+        onSettled: () => {
+          setFormState(formStatesEnum.COMPLETE);
+        },
+      },
+    );
+  };
+  const handleSubmit = () => {
+    setFormState(formStatesEnum.LOADING);
+    //As this is multi capture we need to send the request multiple times with differing sequence numbers
+    if (form.values.refundType === refundTypeEnum.MULTI_CAPTURE) {
+      //todo
+    } else {
+      submitRefund();
+    }
+  };
+
   return (
     <Panel
       title="Create a refund"
@@ -96,7 +126,7 @@ export const RefundAPaymentPanel = ({
       responseBody={refundResponse}
     >
       {formState !== formStatesEnum.COMPLETE && (
-        <form onSubmit={form.onSubmit(() => console.log('here'))}>
+        <form onSubmit={form.onSubmit(handleSubmit)}>
           <LoadingOverlay
             visible={formState === formStatesEnum.LOADING}
             overlayBlur={2}
@@ -122,8 +152,8 @@ export const RefundAPaymentPanel = ({
       )}
       {formState === formStatesEnum.COMPLETE && (
         <SuccessAlert
-          title="Capture Successful"
-          successText="You have captured your payment. Check out the table below to see updated JSON."
+          title="Refund Successful"
+          successText="You have refunded your payment. Check out the table below to see updated JSON."
           buttonText={formState}
           resetForm={resetForm}
         />
