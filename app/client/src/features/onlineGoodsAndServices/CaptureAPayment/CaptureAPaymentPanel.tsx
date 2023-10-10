@@ -18,33 +18,33 @@ import { MERCHANT_ID } from 'data/constants';
 import { useQueryClient } from '@tanstack/react-query';
 import { createCaptureResponse } from 'data/createCaptureResponse';
 
-enum formStatesEnum {
+enum FormStateEnum {
   LOADING = 'Capturing Payment',
   INITIAL = 'Capture Payment',
   COMPLETE = 'Close',
 }
 
-enum captureTypeEnum {
+enum CaptureTypeEnum {
   FULL = 'Full',
   PARTIAL = 'Partial',
   MULTI_CAPTURE = 'Multi-Capture',
 }
 
-type formValuesType = {
+type FormValuesType = {
   captureMethod?: captureMethod;
   captureType?: string;
   amount?: number;
   multiCaptureRecordCount?: number;
 };
 
-const convertToCaptureRequest = (values: formValuesType): captureRequest => {
-  if (values.captureType === captureTypeEnum.PARTIAL) {
+const convertToCaptureRequest = (values: FormValuesType): captureRequest => {
+  if (values.captureType === CaptureTypeEnum.PARTIAL) {
     return {
       captureMethod: values.captureMethod,
       amount: values.amount,
     };
   }
-  if (values.captureType === captureTypeEnum.MULTI_CAPTURE) {
+  if (values.captureType === CaptureTypeEnum.MULTI_CAPTURE) {
     return {
       captureMethod: values.captureMethod,
       amount: values.amount,
@@ -68,8 +68,8 @@ export const CaptureAPaymentPanel = ({
   data,
   setModalOpened,
 }: CaptureAPaymentPanelProps) => {
-  const [formState, setFormState] = useState<formStatesEnum>(
-    formStatesEnum.INITIAL,
+  const [formState, setFormState] = useState<FormStateEnum>(
+    FormStateEnum.INITIAL,
   );
   const queryClient = useQueryClient();
 
@@ -77,7 +77,7 @@ export const CaptureAPaymentPanel = ({
     initialValues: {
       amount: data.amount,
       captureMethod: captureMethod.NOW,
-      captureType: captureTypeEnum.FULL,
+      captureType: CaptureTypeEnum.FULL,
       multiCaptureRecordCount: 2,
     },
   });
@@ -107,15 +107,15 @@ export const CaptureAPaymentPanel = ({
           queryClient.setQueryData(['payments', data.transactionId], data);
         },
         onSettled: () => {
-          setFormState(formStatesEnum.COMPLETE);
+          setFormState(FormStateEnum.COMPLETE);
         },
       },
     );
   };
   const handleSubmit = () => {
-    setFormState(formStatesEnum.LOADING);
+    setFormState(FormStateEnum.LOADING);
     //As this is multi capture we need to send the request multiple times with differing sequence numbers
-    if (form.values.captureType === captureTypeEnum.MULTI_CAPTURE) {
+    if (form.values.captureType === CaptureTypeEnum.MULTI_CAPTURE) {
       [...Array(form.values.multiCaptureRecordCount)].forEach(
         (_, multiCaptureSequenceNumber) => {
           submitCapture(multiCaptureSequenceNumber);
@@ -128,7 +128,7 @@ export const CaptureAPaymentPanel = ({
 
   const resetForm = () => {
     form.reset();
-    setFormState(formStatesEnum.INITIAL);
+    setFormState(FormStateEnum.INITIAL);
     setModalOpened(false);
   };
   return (
@@ -139,14 +139,14 @@ export const CaptureAPaymentPanel = ({
       requestBody={captureRequest}
       responseBody={captureResponse}
     >
-      {formState !== formStatesEnum.COMPLETE && (
+      {formState !== FormStateEnum.COMPLETE && (
         <form onSubmit={form.onSubmit(handleSubmit)}>
           <LoadingOverlay
-            visible={formState === formStatesEnum.LOADING}
+            visible={formState === FormStateEnum.LOADING}
             overlayBlur={2}
           />
           <Select
-            data={Object.values(captureTypeEnum)}
+            data={Object.values(CaptureTypeEnum)}
             label="Select the capture type"
             {...form.getInputProps('captureType')}
             withAsterisk
@@ -157,7 +157,7 @@ export const CaptureAPaymentPanel = ({
             {...form.getInputProps('captureMethod')}
             readOnly
           />
-          {form.values.captureType !== captureTypeEnum.FULL && (
+          {form.values.captureType !== CaptureTypeEnum.FULL && (
             <NumberInput
               hideControls
               label="Enter capture amount"
@@ -166,7 +166,7 @@ export const CaptureAPaymentPanel = ({
             />
           )}
 
-          {form.values.captureType === captureTypeEnum.MULTI_CAPTURE && (
+          {form.values.captureType === CaptureTypeEnum.MULTI_CAPTURE && (
             <NumberInput
               hideControls
               label="Enter total number of shipments to fulfill the order"
@@ -180,7 +180,7 @@ export const CaptureAPaymentPanel = ({
           </Group>
         </form>
       )}
-      {formState === formStatesEnum.COMPLETE && (
+      {formState === FormStateEnum.COMPLETE && (
         <SuccessAlert
           title="Capture Successful"
           successText="You have captured your payment. Check out the table below to see updated JSON."

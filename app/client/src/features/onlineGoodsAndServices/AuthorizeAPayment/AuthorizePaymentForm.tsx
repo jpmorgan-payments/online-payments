@@ -17,7 +17,7 @@ import { convertToPaymentRequest } from './utils/convertToPaymentRequest';
 import { convertToPaymentResponse } from './utils/convertToPaymentResponse';
 import { useQueryClient } from '@tanstack/react-query';
 import { useCreatePayment } from '../hooks';
-import { transactionManagementType } from 'shared.types';
+import { TransactionManagement } from 'shared.types';
 import { AmountWithCurrencyInput } from './AmountWithCurrencyInput';
 import { InferType } from 'yup';
 import { captureMethod, initiatorType } from 'generated-api-models';
@@ -32,7 +32,7 @@ enum formStatesEnum {
 export const AuthorizePaymentForm = ({
   transactionIds,
   setTransactionIds,
-}: transactionManagementType) => {
+}: TransactionManagement) => {
   const queryClient = useQueryClient();
   const [formState, setFormState] = useState<formStatesEnum>(
     formStatesEnum.INITIAL,

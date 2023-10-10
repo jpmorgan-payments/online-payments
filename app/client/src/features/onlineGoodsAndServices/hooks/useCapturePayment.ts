@@ -1,7 +1,6 @@
 import type {
   captureRequest,
   multiCapture,
-  payment,
   paymentResponse,
   transactionId,
 } from 'generated-api-models';

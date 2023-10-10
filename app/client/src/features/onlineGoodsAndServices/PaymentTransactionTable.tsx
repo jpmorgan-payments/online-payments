@@ -5,18 +5,18 @@ import { useGetPayment } from './hooks/useGetPayment';
 import { paymentResponse, transactionState } from 'generated-api-models';
 import { useState } from 'react';
 import { IconEye } from '@tabler/icons';
-import { transactionManagementType } from 'shared.types';
+import { TransactionManagement } from 'shared.types';
 import { FormModal } from './FormModal';
-import { formModalType, formTypes } from './types';
+import { FormModalType, FormTypes } from './types';
 import { ActionButton } from 'components/';
 
 export const PaymentTransactionTable = ({
   transactionIds,
-}: transactionManagementType) => {
+}: TransactionManagement) => {
   const [modalOpen, setModalState] = useState<boolean>(false);
   const [formModalOpen, setFormModalState] = useState<boolean>(false);
 
-  const [formModalData, setFormModalData] = useState<formModalType>({});
+  const [formModalData, setFormModalData] = useState<FormModalType>({});
   const [jsonModalValue, setJsonModalValue] = useState({});
 
   const transactions = useQueries({
@@ -37,7 +37,7 @@ export const PaymentTransactionTable = ({
 
   const handleFormModalOpen = (
     rowData: paymentResponse,
-    formType: formTypes,
+    formType: FormTypes,
   ) => {
     setFormModalData({
       formData: rowData,
@@ -51,8 +51,8 @@ export const PaymentTransactionTable = ({
       <Flex gap="md" wrap={'wrap'}>
         <ActionButton
           disabled={rowData.transactionState !== transactionState.AUTHORIZED}
-          onClick={() => handleFormModalOpen(rowData, formTypes.CAPTURE)}
-          text={formTypes.CAPTURE}
+          onClick={() => handleFormModalOpen(rowData, FormTypes.CAPTURE)}
+          text={FormTypes.CAPTURE}
           toolTipText={
             rowData.transactionState !== transactionState.AUTHORIZED
               ? 'Capture only available on authorized requests'
@@ -61,17 +61,17 @@ export const PaymentTransactionTable = ({
         />
         <ActionButton
           disabled={true}
-          text={formTypes.VOID}
+          text={FormTypes.VOID}
           toolTipText="Feature coming soon"
         />
         <ActionButton
-          text={formTypes.REFUND}
+          text={FormTypes.REFUND}
           disabled={
             ![transactionState.CLOSED, transactionState.COMPLETED].includes(
               rowData.transactionState,
             )
           }
-          onClick={() => handleFormModalOpen(rowData, formTypes.REFUND)}
+          onClick={() => handleFormModalOpen(rowData, FormTypes.REFUND)}
           toolTipText={
             ![transactionState.CLOSED, transactionState.COMPLETED].includes(
               rowData.transactionState,

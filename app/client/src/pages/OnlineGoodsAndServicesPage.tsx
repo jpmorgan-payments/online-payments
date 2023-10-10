@@ -2,11 +2,9 @@ import { Badge } from '@mantine/core';
 import { PageWrapper } from 'components/PageWrapper/PageWrapper';
 import { GITHUB_REPO } from 'data/constants';
 import { OnlineGoodsAndServicesPanel } from 'features/onlineGoodsAndServices';
-import { transactionManagementType } from 'shared.types';
+import { TransactionManagement } from 'shared.types';
 
-export const OnlineGoodsAndServicesPage = (
-  props: transactionManagementType,
-) => {
+export const OnlineGoodsAndServicesPage = (props: TransactionManagement) => {
   return (
     <PageWrapper
       title="Online Goods and Services"
