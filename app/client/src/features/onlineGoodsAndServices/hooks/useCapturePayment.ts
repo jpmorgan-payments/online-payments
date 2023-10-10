@@ -8,7 +8,7 @@ import axios, { AxiosError } from 'axios';
 import { API_URL } from 'data/constants';
 import { useMutation, UseMutationResult } from '@tanstack/react-query';
 
-type capturePayment = {
+type CapturePayment = {
   capture: captureRequest;
   merchantId: string;
   requestId: string;
@@ -36,7 +36,7 @@ const handleMultiCapture = (
 export function useCapturePayment(): UseMutationResult<
   paymentResponse,
   AxiosError,
-  capturePayment,
+  CapturePayment,
   () => void
 > {
   return useMutation(
@@ -47,7 +47,7 @@ export function useCapturePayment(): UseMutationResult<
       requestId,
       transactionId,
       multiCaptureSequenceNumber,
-    }: capturePayment) => {
+    }: CapturePayment) => {
       if (multiCaptureSequenceNumber && capture.multiCapture) {
         capture.multiCapture = handleMultiCapture(
           multiCaptureSequenceNumber,
