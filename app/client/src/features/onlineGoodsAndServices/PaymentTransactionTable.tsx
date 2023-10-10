@@ -60,9 +60,20 @@ export const PaymentTransactionTable = ({
           }
         />
         <ActionButton
-          disabled={true}
           text={formTypes.VOID}
-          toolTipText="Feature coming soon"
+          disabled={
+            ![transactionState.CLOSED, transactionState.COMPLETED].includes(
+              rowData.transactionState,
+            )
+          }
+          onClick={() => handleFormModalOpen(rowData, formTypes.VOID)}
+          toolTipText={
+            ![transactionState.CLOSED, transactionState.COMPLETED].includes(
+              rowData.transactionState,
+            )
+              ? 'Void only available on closed or completed requests'
+              : undefined
+          }
         />
         <ActionButton
           disabled={true}
