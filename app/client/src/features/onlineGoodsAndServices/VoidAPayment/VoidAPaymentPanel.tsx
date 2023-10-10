@@ -1,7 +1,7 @@
 import { Panel, SuccessAlert } from 'components';
 import { useForm } from '@mantine/form';
 import { paymentResponse } from 'generated-api-models';
-import { Checkbox, Group, Button, LoadingOverlay } from '@mantine/core';
+import { Group, Button, LoadingOverlay } from '@mantine/core';
 import { useState, useMemo } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 import { MERCHANT_ID } from 'data/constants';
@@ -12,11 +12,6 @@ enum formStatesEnum {
   INITIAL = 'Void Payment',
   COMPLETE = 'Close',
 }
-
-type formValuesType = {
-  isVoid?: boolean;
-};
-
 type VoidAPaymentPanelProps = {
   data: paymentResponse;
   setModalOpened: (value: boolean) => void;
