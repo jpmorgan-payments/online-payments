@@ -7,6 +7,8 @@ import {
   Group,
   Button,
   LoadingOverlay,
+  Text,
+  Anchor,
 } from '@mantine/core';
 import { useState, useMemo } from 'react';
 import { MERCHANT, MERCHANT_ID } from 'data/constants';
@@ -14,18 +16,18 @@ import { useQueryClient } from '@tanstack/react-query';
 import { createRefundResponse } from 'data/createRefundResponse';
 import { useRefundPayment } from '../hooks';
 
-enum refundTypeEnum {
+enum RefundTypeEnum {
   FULL = 'Full',
   PARTIAL = 'Partial',
 }
 
-enum formStatesEnum {
+enum FormStateEnum {
   LOADING = 'Processing Refund',
   INITIAL = 'Create Refund',
   COMPLETE = 'Close',
 }
-type formValuesType = {
-  refundType?: refundTypeEnum;
+type FormValueType = {
+  refundType?: RefundTypeEnum;
   amount?: number;
 };
 
@@ -35,7 +37,7 @@ type RefundAPaymentPanelProps = {
 };
 
 const convertToRefundRequest = (
-  values: formValuesType,
+  values: FormValueType,
   data: paymentResponse,
 ): refund => {
   return {
@@ -54,14 +56,14 @@ export const RefundAPaymentPanel = ({
   data,
   setModalOpened,
 }: RefundAPaymentPanelProps) => {
-  const [formState, setFormState] = useState<formStatesEnum>(
-    formStatesEnum.INITIAL,
+  const [formState, setFormState] = useState<FormStateEnum>(
+    FormStateEnum.INITIAL,
   );
   const queryClient = useQueryClient();
 
   const form = useForm({
     initialValues: {
-      refundType: refundTypeEnum.FULL,
+      refundType: RefundTypeEnum.FULL,
       amount: data.amount,
     },
     validate: {
@@ -74,7 +76,7 @@ export const RefundAPaymentPanel = ({
 
   const resetForm = () => {
     form.reset();
-    setFormState(formStatesEnum.INITIAL);
+    setFormState(FormStateEnum.INITIAL);
     setModalOpened(false);
   };
 
@@ -101,13 +103,13 @@ export const RefundAPaymentPanel = ({
           queryClient.setQueryData(['payments', data.transactionId], data);
         },
         onSettled: () => {
-          setFormState(formStatesEnum.COMPLETE);
+          setFormState(FormStateEnum.COMPLETE);
         },
       },
     );
   };
   const handleSubmit = () => {
-    setFormState(formStatesEnum.LOADING);
+    setFormState(FormStateEnum.LOADING);
     submitRefund();
   };
 
@@ -119,19 +121,29 @@ export const RefundAPaymentPanel = ({
       requestBody={refundRequest}
       responseBody={refundResponse}
     >
-      {formState !== formStatesEnum.COMPLETE && (
+      <Text c="dimmed" fs="italic">
+        This is the Refund a Payment API call. You can used this call to test
+        out Full, Partial and Multi Refund payments. Once you submit it will
+        update the JSON in the table below. Check out the API specification to
+        find out more{' '}
+        <Anchor href="https://www.jpmorgan.com/payments" target="_blank">
+          here.
+        </Anchor>
+      </Text>
+      <br />
+      {formState !== FormStateEnum.COMPLETE && (
         <form onSubmit={form.onSubmit(handleSubmit)}>
           <LoadingOverlay
-            visible={formState === formStatesEnum.LOADING}
+            visible={formState === FormStateEnum.LOADING}
             overlayBlur={2}
           />
           <Select
-            data={Object.values(refundTypeEnum)}
+            data={Object.values(RefundTypeEnum)}
             label="Select the refund type"
             {...form.getInputProps('refundType')}
             withAsterisk
           />
-          {form.values.refundType !== refundTypeEnum.FULL && (
+          {form.values.refundType !== RefundTypeEnum.FULL && (
             <NumberInput
               label="Enter refund amount"
               withAsterisk
@@ -144,7 +156,7 @@ export const RefundAPaymentPanel = ({
           </Group>
         </form>
       )}
-      {formState === formStatesEnum.COMPLETE && (
+      {formState === FormStateEnum.COMPLETE && (
         <SuccessAlert
           title="Refund Successful"
           successText="You have refunded your payment. Check out the table below to see updated JSON."

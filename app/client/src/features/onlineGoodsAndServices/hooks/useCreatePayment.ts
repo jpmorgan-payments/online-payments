@@ -3,7 +3,7 @@ import axios, { AxiosError } from 'axios';
 import { API_URL } from 'data/constants';
 import { useMutation, UseMutationResult } from '@tanstack/react-query';
 
-type createPayment = {
+type CreatePayment = {
   payment: payment;
   merchantId: string;
   requestId: string;
@@ -12,12 +12,12 @@ type createPayment = {
 export function useCreatePayment(): UseMutationResult<
   paymentResponse,
   AxiosError,
-  createPayment,
+  CreatePayment,
   () => void
 > {
   return useMutation(
     ['createPayment'],
-    async ({ payment, merchantId, requestId }: createPayment) => {
+    async ({ payment, merchantId, requestId }: CreatePayment) => {
       const response = await axios.post<paymentResponse>(
         `${API_URL}/api/payments`,
         JSON.stringify(payment),
