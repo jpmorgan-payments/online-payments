@@ -7,7 +7,9 @@ import {
   LoadingOverlay,
   Select,
   SimpleGrid,
+  Text,
   Stack,
+  Anchor,
 } from '@mantine/core';
 import { useForm, yupResolver } from '@mantine/form';
 import { Panel, SuccessAlert } from 'components';
@@ -17,7 +19,7 @@ import { convertToPaymentRequest } from './utils/convertToPaymentRequest';
 import { convertToPaymentResponse } from './utils/convertToPaymentResponse';
 import { useQueryClient } from '@tanstack/react-query';
 import { useCreatePayment } from '../hooks';
-import { transactionManagementType } from 'shared.types';
+import { TransactionManagement } from 'shared.types';
 import { AmountWithCurrencyInput } from './AmountWithCurrencyInput';
 import { InferType } from 'yup';
 import { captureMethod, initiatorType } from 'generated-api-models';
@@ -32,7 +34,7 @@ enum formStatesEnum {
 export const AuthorizePaymentForm = ({
   transactionIds,
   setTransactionIds,
-}: transactionManagementType) => {
+}: TransactionManagement) => {
   const queryClient = useQueryClient();
   const [formState, setFormState] = useState<formStatesEnum>(
     formStatesEnum.INITIAL,
@@ -103,6 +105,17 @@ export const AuthorizePaymentForm = ({
       responseBody={paymentResponse}
     >
       <Container pos="relative">
+        <Text c="dimmed" fs="italic">
+          This is the Authorize a Payment API call. You can update the JSON
+          request by altering the fields below. We have autofilled some fields
+          for test data. Once you submit a payment it will appear in the table
+          below and allow you to perform further actions. Check out the API
+          specification to find out more{' '}
+          <Anchor href="https://www.jpmorgan.com/payments" target="_blank">
+            here.
+          </Anchor>
+        </Text>
+        <br />
         {formState !== formStatesEnum.COMPLETE ? (
           <form onSubmit={form.onSubmit(handleSubmit)}>
             <LoadingOverlay

@@ -1,13 +1,10 @@
 import { rest } from 'msw';
 import { API_URL } from 'data/constants';
-import {
-  payment,
-  paymentResponse,
-  captureRequest,
-} from '../generated-api-models/index';
+import { type payment, paymentResponse, captureRequest, refund } from '../generated-api-models';
 import { createPaymentResponse } from 'data/createPaymentResponse';
 import { paymentAuthorizeResponseListMock } from 'mocks/paymentAuthorizeResponseList.mock';
 import { createCaptureResponse } from 'data/createCaptureResponse';
+import { createRefundResponse } from 'data/createRefundResponse';
 
 const previousPaymentsMock: paymentResponse[] =
   paymentAuthorizeResponseListMock;
@@ -81,6 +78,17 @@ export const handlers = [
           responseMessage: 'Transaction was not found',
         }),
       );
+    },
+  ),
+  rest.post(
+    `${API_URL}/api/refunds`,
+    async (req, res, ctx) => {
+      const requestBody : refund= (await req.json()) as refund;
+      const previousPayment = previousPayments.get(requestBody.paymentMethodType?.transactionReference?.transactionReferenceId);
+      const response = createRefundResponse(requestBody, JSON.parse(previousPayment));
+      previousPayments.set(response.transactionId, JSON.stringify(response));
+
+      return res(ctx.json(response));
     },
   ),
 ];
