@@ -19,7 +19,7 @@ interface PanelProps extends PaperProps {
   responseBody?: object;
   isLoading?: boolean;
   title?: string;
-  apiCallType?: 'GET' | 'POST' | 'DELETE';
+  apiCallType?: 'GET' | 'POST' | 'DELETE' | 'PATCH';
   apiEndpoint?: string;
 }
 
@@ -27,6 +27,7 @@ const callTypeColor = {
   GET: 'green',
   POST: 'blue',
   DELETE: 'red',
+  PATCH: 'orange',
 };
 
 export const Panel = forwardRef<HTMLDivElement, PanelProps>(

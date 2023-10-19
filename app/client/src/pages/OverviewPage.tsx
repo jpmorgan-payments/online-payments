@@ -1,6 +1,6 @@
 import { Anchor, List, Text, Title } from '@mantine/core';
 import { PageWrapper } from 'components';
-import { GITHUB_REPO } from 'data/constants';
+import { GITHUB_REPO, ONLINE_PAYMENTS_DOC_HOME } from 'data/constants';
 
 export const OverviewPage = () => {
   return (
@@ -63,11 +63,11 @@ export const OverviewPage = () => {
         <Text>
           Learn more about Online Payments at:{' '}
           <Anchor
-            href="https://www.jpmorgan.com/payments"
+            href={ONLINE_PAYMENTS_DOC_HOME}
             target="_blank"
             color="blue"
           >
-            https://www.jpmorgan.com/payments
+            {ONLINE_PAYMENTS_DOC_HOME}
           </Anchor>
         </Text>
       </div>

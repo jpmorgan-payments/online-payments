@@ -16,7 +16,7 @@ import {
 } from '@mantine/core';
 import { useState, useMemo } from 'react';
 import { useCapturePayment } from '../hooks/useCapturePayment';
-import { MERCHANT_ID } from 'data/constants';
+import { MERCHANT_ID, PAYMENTS_CAPTURE_API } from 'data/constants';
 import { useQueryClient } from '@tanstack/react-query';
 import { createCaptureResponse } from 'data/createCaptureResponse';
 import { MultiCaptureLoader } from './MultiCaptureLoader';
@@ -151,7 +151,7 @@ export const CaptureAPaymentPanel = ({
         out Full, Partial and Multi Capture payments. Once you submit it will
         update the JSON in the table below. Check out the API specification to
         find out more{' '}
-        <Anchor href="https://www.jpmorgan.com/payments" target="_blank">
+        <Anchor href={PAYMENTS_CAPTURE_API} target="_blank">
           here.
         </Anchor>
       </Text>

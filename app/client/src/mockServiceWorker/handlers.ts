@@ -1,6 +1,6 @@
 import { rest } from 'msw';
 import { API_URL } from 'data/constants';
-import { type payment, paymentResponse, captureRequest, refund } from '../generated-api-models';
+import { type payment, paymentResponse, captureRequest, paymentPatch, refund } from '../generated-api-models/index';
 import { createPaymentResponse } from 'data/createPaymentResponse';
 import { paymentAuthorizeResponseListMock } from 'mocks/paymentAuthorizeResponseList.mock';
 import { createCaptureResponse } from 'data/createCaptureResponse';
@@ -69,6 +69,28 @@ export const handlers = [
         );
         previousPayments.set(transactionId, JSON.stringify(responseObject));
         return res(ctx.delay(), ctx.json(responseObject));
+      }
+      return res(
+        ctx.status(404),
+        ctx.json({
+          responseStatus: 'ERROR',
+          responseCode: 'NOT_FOUND',
+          responseMessage: 'Transaction was not found',
+        }),
+      );
+    },
+  ),
+  rest.patch(
+    `${API_URL}/api/payments/:transactionId`,
+    async (req, res, ctx) => {
+      const { transactionId } = req.params;
+      const requestBody = (await req.json()) as paymentPatch;
+      const response = previousPayments.get(transactionId);
+      if (response && requestBody.isVoid) {
+        const responseObject = JSON.parse(response);
+        responseObject.isVoid = true;
+        previousPayments.set(transactionId, JSON.stringify(responseObject));
+        return res(ctx.json(responseObject));
       }
       return res(
         ctx.status(404),

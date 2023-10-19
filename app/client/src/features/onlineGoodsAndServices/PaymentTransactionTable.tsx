@@ -1,4 +1,4 @@
-import { Button, Flex, Text, Anchor } from '@mantine/core';
+import { Button, Flex, Text, Anchor, useMantineTheme, Table } from '@mantine/core';
 import { useQueries } from '@tanstack/react-query';
 import { JsonModal, Panel, TableWithJsonDisplay } from 'components';
 import { useGetPayment } from './hooks/useGetPayment';
@@ -9,10 +9,13 @@ import { TransactionManagement } from 'shared.types';
 import { FormModal } from './FormModal';
 import { FormModalType, FormTypes } from './types';
 import { ActionButton } from 'components/';
+import { PAYMENTS_GET_TRANSACTION_API } from 'data/constants';
 
 export const PaymentTransactionTable = ({
   transactionIds,
 }: TransactionManagement) => {
+  const theme = useMantineTheme();
+
   const [modalOpen, setModalState] = useState<boolean>(false);
   const [formModalOpen, setFormModalState] = useState<boolean>(false);
 
@@ -47,36 +50,45 @@ export const PaymentTransactionTable = ({
   };
 
   const displayPaymentActions = (rowData: paymentResponse) => {
+
+    const isVoidAvailable = [transactionState.CLOSED, transactionState.COMPLETED].includes(
+      rowData.transactionState,
+    ) && !rowData.isVoid;
+
+    const isRefundAvailable = ([transactionState.CLOSED, transactionState.COMPLETED].includes(
+      rowData.transactionState,
+    ) &&  (rowData.remainingRefundableAmount && rowData.remainingRefundableAmount > 0));
+
+    const isCaptureAvailable = rowData.transactionState !== transactionState.AUTHORIZED
     return (
       <Flex gap="md" wrap={'wrap'}>
         <ActionButton
-          disabled={rowData.transactionState !== transactionState.AUTHORIZED}
+          disabled={isCaptureAvailable}
           onClick={() => handleFormModalOpen(rowData, FormTypes.CAPTURE)}
           text={FormTypes.CAPTURE}
           toolTipText={
-            rowData.transactionState !== transactionState.AUTHORIZED
+            isCaptureAvailable
               ? 'Capture only available on authorized requests'
               : undefined
           }
         />
         <ActionButton
-          disabled={true}
           text={FormTypes.VOID}
-          toolTipText="Feature coming soon"
+          disabled={!isVoidAvailable}
+          onClick={() => handleFormModalOpen(rowData, FormTypes.VOID)}
+          toolTipText={
+            !isVoidAvailable
+              ? 'Void action is only available on closed/completed requests that haven`t been void previously'
+              : undefined
+          }
         />
         <ActionButton
           text={FormTypes.REFUND}
-          disabled={
-            ![transactionState.CLOSED, transactionState.COMPLETED].includes(
-              rowData.transactionState,
-            )
-          }
+          disabled={!isRefundAvailable}
           onClick={() => handleFormModalOpen(rowData, FormTypes.REFUND)}
           toolTipText={
-            ![transactionState.CLOSED, transactionState.COMPLETED].includes(
-              rowData.transactionState,
-            )
-              ? 'Refund only available on closed or completed requests'
+            !isRefundAvailable
+              ? 'Refund only available on closed/completed requests that haven`t been fully refunded previously'
               : undefined
           }
         />
@@ -91,11 +103,10 @@ export const PaymentTransactionTable = ({
   const createRow = (rowData: paymentResponse) => {
     const isNew =
       rowData.transactionDate && checkIfRecentDate(rowData.transactionDate);
-
     return (
       <tr
         key={rowData.transactionId}
-        style={{ background: isNew ? '#EBFBEE' : '' }}
+        style={{ background: isNew ? theme.colors.green[0] : '' }}
       >
         <td>
           <Button
@@ -142,7 +153,7 @@ export const PaymentTransactionTable = ({
         have prepopulated the table with some mocked data. To gather a list of
         your payments you will need to make an API call for each payment. Check
         out the API specification to find out more{' '}
-        <Anchor href="https://www.jpmorgan.com/payments" target="_blank">
+        <Anchor href={PAYMENTS_GET_TRANSACTION_API} target="_blank">
           here.
         </Anchor>
       </Text>

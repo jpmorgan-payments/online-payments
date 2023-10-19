@@ -11,7 +11,7 @@ import {
   Anchor,
 } from '@mantine/core';
 import { useState, useMemo } from 'react';
-import { MERCHANT, MERCHANT_ID } from 'data/constants';
+import { MERCHANT, MERCHANT_ID, PAYMENTS_REFUND_API } from 'data/constants';
 import { useQueryClient } from '@tanstack/react-query';
 import { createRefundResponse } from 'data/createRefundResponse';
 import { useRefundPayment } from '../hooks';
@@ -126,7 +126,7 @@ export const RefundAPaymentPanel = ({
         out Full, Partial and Multi Refund payments. Once you submit it will
         update the JSON in the table below. Check out the API specification to
         find out more{' '}
-        <Anchor href="https://www.jpmorgan.com/payments" target="_blank">
+        <Anchor href={PAYMENTS_REFUND_API} target="_blank">
           here.
         </Anchor>
       </Text>

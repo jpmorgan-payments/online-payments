@@ -1,6 +1,4 @@
-import { Box, BoxProps, ScrollArea, Skeleton, Table } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
-import { JsonModal } from 'components/JsonModal/JsonModal';
+import { BoxProps, ScrollArea, Skeleton, Table } from '@mantine/core';
 
 interface TableWithJsonDisplayProps extends BoxProps {
   ths: JSX.Element;
@@ -15,7 +13,7 @@ export const TableWithJsonDisplay = ({
 }: TableWithJsonDisplayProps) => {
   return (
     <ScrollArea offsetScrollbars type="auto">
-      <Table striped withColumnBorders withBorder>
+      <Table withColumnBorders withBorder>
         <thead>{ths}</thead>
         <tbody>
           {isLoading
