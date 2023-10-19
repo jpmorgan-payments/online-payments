@@ -56,7 +56,7 @@ export const VoidAPaymentPanel = ({
       },
       {
         onSuccess: (data) => {
-          queryClient.setQueryData(['void', data.transactionId], data);
+          queryClient.setQueryData(['payments', data.transactionId], data);
         },
         onSettled: () => {
           setFormState(formStatesEnum.COMPLETE);

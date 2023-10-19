@@ -86,8 +86,11 @@ export const handlers = [
       const { transactionId } = req.params;
       const requestBody = (await req.json()) as paymentPatch;
       const response = previousPayments.get(transactionId);
-      if (response) {
-        return res(ctx.json(JSON.parse(response)));
+      if (response && requestBody.isVoid) {
+        const responseObject = JSON.parse(response);
+        responseObject.isVoid = true;
+        previousPayments.set(transactionId, JSON.stringify(responseObject));
+        return res(ctx.json(responseObject));
       }
       return res(
         ctx.status(404),

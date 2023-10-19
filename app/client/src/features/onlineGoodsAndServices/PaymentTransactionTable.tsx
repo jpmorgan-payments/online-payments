@@ -50,6 +50,10 @@ export const PaymentTransactionTable = ({
   };
 
   const displayPaymentActions = (rowData: paymentResponse) => {
+
+    const isVoidAvailable = [transactionState.CLOSED, transactionState.COMPLETED].includes(
+      rowData.transactionState,
+    ) && !rowData.isVoid
     return (
       <Flex gap="md" wrap={'wrap'}>
         <ActionButton
@@ -64,17 +68,11 @@ export const PaymentTransactionTable = ({
         />
         <ActionButton
           text={FormTypes.VOID}
-          disabled={
-            ![transactionState.CLOSED, transactionState.COMPLETED].includes(
-              rowData.transactionState,
-            )
-          }
+          disabled={!isVoidAvailable}
           onClick={() => handleFormModalOpen(rowData, FormTypes.VOID)}
           toolTipText={
-            ![transactionState.CLOSED, transactionState.COMPLETED].includes(
-              rowData.transactionState,
-            )
-              ? 'Void only available on closed or completed requests'
+            !isVoidAvailable
+              ? 'Void action is only available on closed or completed requests that haven`t been void previously'
               : undefined
           }
         />
