@@ -1,6 +1,6 @@
 import { Badge, Anchor, Text } from '@mantine/core';
 import { PageWrapper } from 'components/PageWrapper/PageWrapper';
-import { GITHUB_REPO } from 'data/constants';
+import { GITHUB_REPO, ONLINE_PAYMENTS_DOC_HOME } from 'data/constants';
 import { OnlineGoodsAndServicesPanel } from 'features/onlineGoodsAndServices';
 import { TransactionManagement } from 'shared.types';
 
@@ -17,7 +17,7 @@ export const OnlineGoodsAndServicesPage = (props: TransactionManagement) => {
         goods/services purchased online. Within this page you can Authorize a
         Payment, Capture a Payment and Refund a Payment. You can check out
         further documentation on this API{' '}
-        <Anchor href="https://www.jpmorgan.com/payments" target="_blank">
+        <Anchor href={ONLINE_PAYMENTS_DOC_HOME} target="_blank">
           here.
         </Anchor>
       </Text>

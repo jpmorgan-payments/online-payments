@@ -23,7 +23,7 @@ import { TransactionManagement } from 'shared.types';
 import { AmountWithCurrencyInput } from './AmountWithCurrencyInput';
 import { InferType } from 'yup';
 import { captureMethod, initiatorType } from 'generated-api-models';
-import { MERCHANT_ID } from 'data/constants';
+import { MERCHANT_ID, PAYMENTS_AUTHORISE_API } from 'data/constants';
 
 enum formStatesEnum {
   LOADING = 'Making a payment',
@@ -111,7 +111,7 @@ export const AuthorizePaymentForm = ({
           for test data. Once you submit a payment it will appear in the table
           below and allow you to perform further actions. Check out the API
           specification to find out more{' '}
-          <Anchor href="https://www.jpmorgan.com/payments" target="_blank">
+          <Anchor href={PAYMENTS_AUTHORISE_API} target="_blank">
             here.
           </Anchor>
         </Text>

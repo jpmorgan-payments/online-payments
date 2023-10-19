@@ -9,6 +9,7 @@ import { TransactionManagement } from 'shared.types';
 import { FormModal } from './FormModal';
 import { FormModalType, FormTypes } from './types';
 import { ActionButton } from 'components/';
+import { PAYMENTS_GET_TRANSACTION_API } from 'data/constants';
 
 export const PaymentTransactionTable = ({
   transactionIds,
@@ -153,7 +154,7 @@ export const PaymentTransactionTable = ({
         have prepopulated the table with some mocked data. To gather a list of
         your payments you will need to make an API call for each payment. Check
         out the API specification to find out more{' '}
-        <Anchor href="https://www.jpmorgan.com/payments" target="_blank">
+        <Anchor href={PAYMENTS_GET_TRANSACTION_API} target="_blank">
           here.
         </Anchor>
       </Text>

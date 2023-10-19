@@ -1,10 +1,10 @@
 import { Panel, SuccessAlert } from 'components';
 import { useForm } from '@mantine/form';
 import { paymentResponse } from 'generated-api-models';
-import { Group, Button, LoadingOverlay } from '@mantine/core';
+import { Group, Button, LoadingOverlay, Text, Anchor } from '@mantine/core';
 import { useState, useMemo } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
-import { MERCHANT_ID } from 'data/constants';
+import { MERCHANT_ID, PAYMENTS_VOID_API } from 'data/constants';
 import { useVoidPayment } from '../hooks/useVoidPayment';
 
 enum formStatesEnum {
@@ -72,6 +72,17 @@ export const VoidAPaymentPanel = ({
       apiEndpoint="/payments/{id}"
       requestBody={voidRequest}
     >
+          
+      <Text c="dimmed" fs="italic">
+        This is the Void a Payment API call. You can used this call to test
+        out vodiing any authorized payments. Once you submit it will
+        update the JSON in the table below. Check out the API specification to
+        find out more{' '}
+        <Anchor href={PAYMENTS_VOID_API} target="_blank">
+          here.
+        </Anchor>
+      </Text>
+      <br />
       {formState !== formStatesEnum.COMPLETE && (
         <form onSubmit={form.onSubmit(handleSubmit)}>
           <LoadingOverlay
@@ -85,8 +96,8 @@ export const VoidAPaymentPanel = ({
       )}
       {formState === formStatesEnum.COMPLETE && (
         <SuccessAlert
-          title="Capture Successful"
-          successText="You have captured your payment. Check out the table below to see updated JSON."
+          title="Void Successful"
+          successText="You have refunded your payment. Check out the table below to see updated JSON."
           buttonText={formState}
           resetForm={resetForm}
         />

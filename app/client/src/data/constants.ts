@@ -14,3 +14,10 @@ export const GITHUB_REPO =
     },
     merchantCategoryCode: '4899',
   }
+
+  export const PAYMENTS_AUTHORISE_API = "https://www.jpmorgan.com/payments";
+  export const PAYMENTS_GET_TRANSACTION_API = "https://www.jpmorgan.com/payments";
+  export const PAYMENTS_CAPTURE_API = "https://www.jpmorgan.com/payments";
+  export const PAYMENTS_REFUND_API = "https://www.jpmorgan.com/payments";
+  export const ONLINE_PAYMENTS_DOC_HOME = "https://www.jpmorgan.com/payments";
+  export const PAYMENTS_VOID_API = "https://www.jpmorgan.com/payments";
