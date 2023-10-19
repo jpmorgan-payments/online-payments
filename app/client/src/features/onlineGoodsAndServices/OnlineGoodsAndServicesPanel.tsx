@@ -1,11 +1,9 @@
 import { SimpleGrid } from '@mantine/core';
 import { AuthorizePaymentForm } from './AuthorizeAPayment/AuthorizePaymentForm';
 import { PaymentTransactionTable } from './PaymentTransactionTable';
-import { transactionManagementType } from 'shared.types';
+import { TransactionManagement } from 'shared.types';
 
-export const OnlineGoodsAndServicesPanel = (
-  props: transactionManagementType,
-) => {
+export const OnlineGoodsAndServicesPanel = (props: TransactionManagement) => {
   return (
     <SimpleGrid>
       <AuthorizePaymentForm {...props} />

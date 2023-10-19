@@ -1,11 +1,11 @@
 import { paymentResponse } from 'generated-api-models';
 
-export type formModalType = {
+export type FormModalType = {
   formData?: paymentResponse;
-  formType?: formTypes;
+  formType?: FormTypes;
 };
 
-export enum formTypes {
+export enum FormTypes {
   REFUND = 'Refund',
   VOID = 'Void',
   CAPTURE = 'Capture',

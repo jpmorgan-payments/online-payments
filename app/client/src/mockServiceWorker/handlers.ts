@@ -1,14 +1,17 @@
 import { rest } from 'msw';
 import { API_URL } from 'data/constants';
-import { type payment, paymentResponse, captureRequest, paymentPatch } from '../generated-api-models/index';
+import { type payment, paymentResponse, captureRequest, paymentPatch, refund } from '../generated-api-models/index';
 import { createPaymentResponse } from 'data/createPaymentResponse';
 import { paymentAuthorizeResponseListMock } from 'mocks/paymentAuthorizeResponseList.mock';
 import { createCaptureResponse } from 'data/createCaptureResponse';
+import { createRefundResponse } from 'data/createRefundResponse';
 
-
-const previousPaymentsMock: paymentResponse[] = paymentAuthorizeResponseListMock;
+const previousPaymentsMock: paymentResponse[] =
+  paymentAuthorizeResponseListMock;
 const previousPayments = new Map();
-previousPaymentsMock.map(payment => previousPayments.set(payment.transactionId, JSON.stringify(payment)));
+previousPaymentsMock.map((payment) =>
+  previousPayments.set(payment.transactionId, JSON.stringify(payment)),
+);
 export const handlers = [
   // Match create payment requests and update response to match
   rest.post(`${API_URL}/api/payments`, async (req, res, ctx) => {
@@ -60,9 +63,12 @@ export const handlers = [
       const requestBody = (await req.json()) as captureRequest;
       const response = previousPayments.get(transactionId);
       if (response) {
-        const responseObject = createCaptureResponse(JSON.parse(response), requestBody)
+        const responseObject = createCaptureResponse(
+          JSON.parse(response),
+          requestBody,
+        );
         previousPayments.set(transactionId, JSON.stringify(responseObject));
-        return res(ctx.json(responseObject));
+        return res(ctx.delay(), ctx.json(responseObject));
       }
       return res(
         ctx.status(404),
@@ -92,5 +98,16 @@ export const handlers = [
         }),
       );
     },
-  )
+  ),
+  rest.post(
+    `${API_URL}/api/refunds`,
+    async (req, res, ctx) => {
+      const requestBody : refund= (await req.json()) as refund;
+      const previousPayment = previousPayments.get(requestBody.paymentMethodType?.transactionReference?.transactionReferenceId);
+      const response = createRefundResponse(requestBody, JSON.parse(previousPayment));
+      previousPayments.set(response.transactionId, JSON.stringify(response));
+
+      return res(ctx.json(response));
+    },
+  ),
 ];
