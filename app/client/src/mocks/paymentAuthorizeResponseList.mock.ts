@@ -40,6 +40,8 @@ export const paymentAuthorizeResponseListMock: paymentResponse[] = [
     hostMessage: "Approved",
     isAmountFinal: false,
     amount: 10,
+    remainingRefundableAmount: 10,
+    totalAuthorizedAmount: 10,
     currency: "USD",
     remainingAuthAmount: 10,
     hostReferenceId: "50ONBgm2t6FSGzoC3Ncyl1",
@@ -179,6 +181,8 @@ export const paymentAuthorizeResponseListMock: paymentResponse[] = [
     amount: 10,
     currency: "USD",
     remainingAuthAmount: 10,
+    remainingRefundableAmount: 10,
+    totalAuthorizedAmount: 10,
     hostReferenceId: "rbjhZXXQ0F2RWaqdC6Bsh2",
     merchant: {
       merchantId: "000017904371",
