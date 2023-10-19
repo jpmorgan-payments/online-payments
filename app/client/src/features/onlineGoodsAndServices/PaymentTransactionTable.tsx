@@ -1,4 +1,4 @@
-import { Button, Flex, Text, Anchor } from '@mantine/core';
+import { Button, Flex, Text, Anchor, useMantineTheme, Table } from '@mantine/core';
 import { useQueries } from '@tanstack/react-query';
 import { JsonModal, Panel, TableWithJsonDisplay } from 'components';
 import { useGetPayment } from './hooks/useGetPayment';
@@ -14,6 +14,8 @@ import { PAYMENTS_GET_TRANSACTION_API } from 'data/constants';
 export const PaymentTransactionTable = ({
   transactionIds,
 }: TransactionManagement) => {
+  const theme = useMantineTheme();
+
   const [modalOpen, setModalState] = useState<boolean>(false);
   const [formModalOpen, setFormModalState] = useState<boolean>(false);
 
@@ -103,11 +105,10 @@ export const PaymentTransactionTable = ({
   const createRow = (rowData: paymentResponse) => {
     const isNew =
       rowData.transactionDate && checkIfRecentDate(rowData.transactionDate);
-
     return (
       <tr
         key={rowData.transactionId}
-        style={{ background: isNew ? '#EBFBEE' : '' }}
+        style={{ background: isNew ? theme.colors.green[0] : '' }}
       >
         <td>
           <Button
