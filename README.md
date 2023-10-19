@@ -74,3 +74,10 @@ yarn start
 4. Open a browser and navigate to the locally deployed app using the URL provided in the command line. Usually `localhost:3000`.
 
 You have deployed the showcase Online Payments app. Follow the onscreen instructions to explore the banking functionality available.
+
+## Mocked Data
+
+You will see in this showcase that we are currently mocking the server responses using [MSW](https://mswjs.io). 
+You will still be able to see the request in the network tab of your browser developer tools. 
+
+You can ignore the code stored in the data, mocks and mockServiceWorker folders as this only relates to our mocking services.
