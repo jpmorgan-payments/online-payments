@@ -53,15 +53,21 @@ export const PaymentTransactionTable = ({
 
     const isVoidAvailable = [transactionState.CLOSED, transactionState.COMPLETED].includes(
       rowData.transactionState,
-    ) && !rowData.isVoid
+    ) && !rowData.isVoid;
+
+    const isRefundAvailable = ([transactionState.CLOSED, transactionState.COMPLETED].includes(
+      rowData.transactionState,
+    ) &&  (rowData.remainingRefundableAmount && rowData.remainingRefundableAmount > 0));
+
+    const isCaptureAvailable = rowData.transactionState !== transactionState.AUTHORIZED
     return (
       <Flex gap="md" wrap={'wrap'}>
         <ActionButton
-          disabled={rowData.transactionState !== transactionState.AUTHORIZED}
+          disabled={isCaptureAvailable}
           onClick={() => handleFormModalOpen(rowData, FormTypes.CAPTURE)}
           text={FormTypes.CAPTURE}
           toolTipText={
-            rowData.transactionState !== transactionState.AUTHORIZED
+            isCaptureAvailable
               ? 'Capture only available on authorized requests'
               : undefined
           }
@@ -72,23 +78,17 @@ export const PaymentTransactionTable = ({
           onClick={() => handleFormModalOpen(rowData, FormTypes.VOID)}
           toolTipText={
             !isVoidAvailable
-              ? 'Void action is only available on closed or completed requests that haven`t been void previously'
+              ? 'Void action is only available on closed/completed requests that haven`t been void previously'
               : undefined
           }
         />
         <ActionButton
           text={FormTypes.REFUND}
-          disabled={
-            ![transactionState.CLOSED, transactionState.COMPLETED].includes(
-              rowData.transactionState,
-            )
-          }
+          disabled={!isRefundAvailable}
           onClick={() => handleFormModalOpen(rowData, FormTypes.REFUND)}
           toolTipText={
-            ![transactionState.CLOSED, transactionState.COMPLETED].includes(
-              rowData.transactionState,
-            )
-              ? 'Refund only available on closed or completed requests'
+            !isRefundAvailable
+              ? 'Refund only available on closed/completed requests that haven`t been fully refunded previously'
               : undefined
           }
         />
