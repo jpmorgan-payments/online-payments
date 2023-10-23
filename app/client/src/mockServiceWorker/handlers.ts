@@ -1,6 +1,12 @@
 import { HttpResponse, delay, http } from 'msw';
 import { API_URL } from 'data/constants';
-import { type payment, paymentResponse, captureRequest, paymentPatch, refund } from '../generated-api-models/index';
+import {
+  payment,
+  paymentResponse,
+  captureRequest,
+  paymentPatch,
+  refund,
+} from '../generated-api-models/index';
 import { createPaymentResponse } from 'data/createPaymentResponse';
 import { paymentAuthorizeResponseListMock } from 'mocks/paymentAuthorizeResponseList.mock';
 import { createCaptureResponse } from 'data/createCaptureResponse';
@@ -39,7 +45,7 @@ export const handlers = [
       initiatorType,
     });
     previousPayments.set(response.transactionId, JSON.stringify(response));
-    return HttpResponse.json(response)
+    return HttpResponse.json(response);
   }),
   http.get(`${API_URL}/api/payments/:transactionId`, async ({ params }) => {
     const { transactionId } = params;
@@ -52,7 +58,7 @@ export const handlers = [
       headers: {
         'Content-Type': 'text/plain',
       },
-    })
+    });
   }),
   http.post(
     `${API_URL}/api/payments/:transactionId/captures`,
@@ -66,17 +72,18 @@ export const handlers = [
           requestBody,
         );
         previousPayments.set(transactionId, JSON.stringify(responseObject));
-        await delay()
+        await delay();
 
-        return HttpResponse.json(responseObject)
+        return HttpResponse.json(responseObject);
       }
       return new HttpResponse('Not found', {
         status: 404,
         headers: {
           'Content-Type': 'text/plain',
         },
-      })
-    }),
+      });
+    },
+  ),
   http.patch(
     `${API_URL}/api/payments/:transactionId`,
     async ({ params, request }) => {
@@ -87,25 +94,28 @@ export const handlers = [
         const responseObject = JSON.parse(response);
         responseObject.isVoid = true;
         previousPayments.set(transactionId, JSON.stringify(responseObject));
-        return HttpResponse.json(responseObject)
+        return HttpResponse.json(responseObject);
       }
       return new HttpResponse('Not found', {
         status: 404,
         headers: {
           'Content-Type': 'text/plain',
         },
-      })
+      });
     },
   ),
-  http.post(
-    `${API_URL}/api/refunds`,
-    async ({ request }) => {
-      const requestBody: refund = (await request.json()) as refund;
-      const previousPayment = previousPayments.get(requestBody.paymentMethodType?.transactionReference?.transactionReferenceId);
-      const response = createRefundResponse(requestBody, JSON.parse(previousPayment));
-      previousPayments.set(response.transactionId, JSON.stringify(response));
+  http.post(`${API_URL}/api/refunds`, async ({ request }) => {
+    const requestBody: refund = (await request.json()) as refund;
+    const previousPayment = previousPayments.get(
+      requestBody.paymentMethodType?.transactionReference
+        ?.transactionReferenceId,
+    );
+    const response = createRefundResponse(
+      requestBody,
+      JSON.parse(previousPayment),
+    );
+    previousPayments.set(response.transactionId, JSON.stringify(response));
 
-      return HttpResponse.json(response)
-    },
-  ),
+    return HttpResponse.json(response);
+  }),
 ];
