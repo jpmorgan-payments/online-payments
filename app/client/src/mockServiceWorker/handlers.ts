@@ -68,7 +68,7 @@ export const handlers = [
         previousPayments.set(transactionId, JSON.stringify(responseObject));
         await delay()
 
-        return HttpResponse.json(responseObject )
+        return HttpResponse.json(responseObject)
       }
       return new HttpResponse('Not found', {
         status: 404,
@@ -87,7 +87,7 @@ export const handlers = [
         const responseObject = JSON.parse(response);
         responseObject.isVoid = true;
         previousPayments.set(transactionId, JSON.stringify(responseObject));
-        return HttpResponse.json(responseObject )
+        return HttpResponse.json(responseObject)
       }
       return new HttpResponse('Not found', {
         status: 404,
@@ -105,7 +105,7 @@ export const handlers = [
       const response = createRefundResponse(requestBody, JSON.parse(previousPayment));
       previousPayments.set(response.transactionId, JSON.stringify(response));
 
-      return HttpResponse.json(response )
+      return HttpResponse.json(response)
     },
   ),
 ];
