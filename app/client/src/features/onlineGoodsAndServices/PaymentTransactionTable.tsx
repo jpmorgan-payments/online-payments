@@ -59,16 +59,16 @@ export const PaymentTransactionTable = ({
       rowData.transactionState,
     ) &&  (rowData.remainingRefundableAmount && rowData.remainingRefundableAmount > 0));
 
-    const isCaptureAvailable = rowData.transactionState !== transactionState.AUTHORIZED
+    const isCaptureAvailable = rowData.transactionState === transactionState.AUTHORIZED || (rowData.remainingAuthAmount && rowData.remainingAuthAmount > 0);
     return (
       <Flex gap="md" wrap={'wrap'}>
         <ActionButton
-          disabled={isCaptureAvailable}
+          disabled={!isCaptureAvailable}
           onClick={() => handleFormModalOpen(rowData, FormTypes.CAPTURE)}
           text={FormTypes.CAPTURE}
           toolTipText={
-            isCaptureAvailable
-              ? 'Capture only available on authorized requests'
+            !isCaptureAvailable
+              ? 'Capture only available on authorized requests with `remainingAuthAmount` greater than zero'
               : undefined
           }
         />
