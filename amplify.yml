@@ -3,7 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
-        - nvm install 18.18.2
+        - nvm use 18
         - cd app
         - yarn install
     build:
