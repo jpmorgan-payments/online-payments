@@ -21,7 +21,7 @@ const queryClient = new QueryClient({
     queries: { refetchOnWindowFocus: false },
   },
 });
-
+ 
 const App = () => {
   const previousTransactionsMock: paymentResponse[] =
     paymentAuthorizeResponseListMock;

@@ -1,6 +1,12 @@
-import { rest } from 'msw';
+import { HttpResponse, delay, http } from 'msw';
 import { API_URL } from 'data/constants';
-import { type payment, paymentResponse, captureRequest, paymentPatch, refund } from '../generated-api-models/index';
+import {
+  payment,
+  paymentResponse,
+  captureRequest,
+  paymentPatch,
+  refund,
+} from '../generated-api-models/index';
 import { createPaymentResponse } from 'data/createPaymentResponse';
 import { paymentAuthorizeResponseListMock } from 'mocks/paymentAuthorizeResponseList.mock';
 import { createCaptureResponse } from 'data/createCaptureResponse';
@@ -14,7 +20,7 @@ previousPaymentsMock.map((payment) =>
 );
 export const handlers = [
   // Match create payment requests and update response to match
-  rest.post(`${API_URL}/api/payments`, async (req, res, ctx) => {
+  http.post(`${API_URL}/api/payments`, async ({ request }) => {
     const {
       amount,
       paymentMethodType,
@@ -23,9 +29,9 @@ export const handlers = [
       captureMethod,
       isAmountFinal,
       initiatorType,
-    } = (await req.json()) as payment;
-    const requestId = req.headers.get('request-id') as string;
-    const merchantId = req.headers.get('merchant-id') as string;
+    } = (await request.json()) as payment;
+    const requestId = request.headers.get('request-id') as string;
+    const merchantId = request.headers.get('merchant-id') as string;
 
     const response = createPaymentResponse({
       merchantId,
@@ -39,28 +45,26 @@ export const handlers = [
       initiatorType,
     });
     previousPayments.set(response.transactionId, JSON.stringify(response));
-    return res(ctx.json(response));
+    return HttpResponse.json(response);
   }),
-  rest.get(`${API_URL}/api/payments/:transactionId`, async (req, res, ctx) => {
-    const { transactionId } = req.params;
+  http.get(`${API_URL}/api/payments/:transactionId`, async ({ params }) => {
+    const { transactionId } = params;
     const response = previousPayments.get(transactionId);
     if (response) {
-      return res(ctx.json(JSON.parse(response)));
+      return HttpResponse.json(JSON.parse(response));
     }
-    return res(
-      ctx.status(404),
-      ctx.json({
-        responseStatus: 'ERROR',
-        responseCode: 'NOT_FOUND',
-        responseMessage: 'Transaction was not found',
-      }),
-    );
+    return new HttpResponse('Not found', {
+      status: 404,
+      headers: {
+        'Content-Type': 'text/plain',
+      },
+    });
   }),
-  rest.post(
+  http.post(
     `${API_URL}/api/payments/:transactionId/captures`,
-    async (req, res, ctx) => {
-      const { transactionId } = req.params;
-      const requestBody = (await req.json()) as captureRequest;
+    async ({ params, request }) => {
+      const { transactionId } = params;
+      const requestBody = (await request.json()) as captureRequest;
       const response = previousPayments.get(transactionId);
       if (response) {
         const responseObject = createCaptureResponse(
@@ -68,49 +72,50 @@ export const handlers = [
           requestBody,
         );
         previousPayments.set(transactionId, JSON.stringify(responseObject));
-        return res(ctx.delay(), ctx.json(responseObject));
+        await delay();
+
+        return HttpResponse.json(responseObject);
       }
-      return res(
-        ctx.status(404),
-        ctx.json({
-          responseStatus: 'ERROR',
-          responseCode: 'NOT_FOUND',
-          responseMessage: 'Transaction was not found',
-        }),
-      );
+      return new HttpResponse('Not found', {
+        status: 404,
+        headers: {
+          'Content-Type': 'text/plain',
+        },
+      });
     },
   ),
-  rest.patch(
+  http.patch(
     `${API_URL}/api/payments/:transactionId`,
-    async (req, res, ctx) => {
-      const { transactionId } = req.params;
-      const requestBody = (await req.json()) as paymentPatch;
+    async ({ params, request }) => {
+      const { transactionId } = params;
+      const requestBody = (await request.json()) as paymentPatch;
       const response = previousPayments.get(transactionId);
       if (response && requestBody.isVoid) {
         const responseObject = JSON.parse(response);
         responseObject.isVoid = true;
         previousPayments.set(transactionId, JSON.stringify(responseObject));
-        return res(ctx.json(responseObject));
+        return HttpResponse.json(responseObject);
       }
-      return res(
-        ctx.status(404),
-        ctx.json({
-          responseStatus: 'ERROR',
-          responseCode: 'NOT_FOUND',
-          responseMessage: 'Transaction was not found',
-        }),
-      );
+      return new HttpResponse('Not found', {
+        status: 404,
+        headers: {
+          'Content-Type': 'text/plain',
+        },
+      });
     },
   ),
-  rest.post(
-    `${API_URL}/api/refunds`,
-    async (req, res, ctx) => {
-      const requestBody : refund= (await req.json()) as refund;
-      const previousPayment = previousPayments.get(requestBody.paymentMethodType?.transactionReference?.transactionReferenceId);
-      const response = createRefundResponse(requestBody, JSON.parse(previousPayment));
-      previousPayments.set(response.transactionId, JSON.stringify(response));
+  http.post(`${API_URL}/api/refunds`, async ({ request }) => {
+    const requestBody: refund = (await request.json()) as refund;
+    const previousPayment = previousPayments.get(
+      requestBody.paymentMethodType?.transactionReference
+        ?.transactionReferenceId,
+    );
+    const response = createRefundResponse(
+      requestBody,
+      JSON.parse(previousPayment),
+    );
+    previousPayments.set(response.transactionId, JSON.stringify(response));
 
-      return res(ctx.json(response));
-    },
-  ),
+    return HttpResponse.json(response);
+  }),
 ];
