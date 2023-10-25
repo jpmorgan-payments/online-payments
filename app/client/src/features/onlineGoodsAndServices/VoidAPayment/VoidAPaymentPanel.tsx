@@ -72,12 +72,10 @@ export const VoidAPaymentPanel = ({
       apiEndpoint="/payments/{id}"
       requestBody={voidRequest}
     >
-          
       <Text c="dimmed" fs="italic">
-        This is the Void a Payment API call. You can used this call to test
-        out vodiing any authorized payments. Once you submit it will
-        update the JSON in the table below. Check out the API specification to
-        find out more{' '}
+        This is the Void a Payment API call. You can used this call to test out
+        vodiing any authorized payments. Once you submit it will update the JSON
+        in the table below. Check out the API specification to find out more{' '}
         <Anchor href={PAYMENTS_VOID_API} target="_blank">
           here.
         </Anchor>
@@ -97,7 +95,7 @@ export const VoidAPaymentPanel = ({
       {formState === formStatesEnum.COMPLETE && (
         <SuccessAlert
           title="Void Successful"
-          successText="You have refunded your payment. Check out the table below to see updated JSON."
+          successText="You have voided your payment. Check out the table below to see updated JSON."
           buttonText={formState}
           resetForm={resetForm}
         />
