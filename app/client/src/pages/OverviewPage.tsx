@@ -23,10 +23,10 @@ export const OverviewPage = () => {
       </div>
       <List withPadding>
         <List.Item>
-          <b>Make a payment</b> - initiate a payment request for billers or eCommerce use cases, as your clients would.
+          <b>Authorize a payment</b> - initiate a payment request for billers or eCommerce use cases, as your clients would.
         </List.Item>
         <List.Item>
-          <b>Finalize a payment</b> - complete the payment once the amount has been finalized or the order is fulfilled.
+          <b>Capture a payment</b> - complete the payment once the amount has been finalized or the order is fulfilled.
         </List.Item>
         <List.Item>
           <b>Refund a payment</b> - partially or fully refund a completed payment in support of your refund policies.
