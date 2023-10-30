@@ -37,6 +37,12 @@ export const VoidAPaymentPanel = ({
     [form.values],
   );
 
+  const voidResponse = useMemo(() => {
+    const response = data;
+    response.isVoid = true;
+    return response;
+  }, [form.values]);
+
   const resetForm = () => {
     form.reset();
     setFormState(formStatesEnum.INITIAL);
@@ -71,6 +77,7 @@ export const VoidAPaymentPanel = ({
       apiCallType="PATCH"
       apiEndpoint="/payments/{id}"
       requestBody={voidRequest}
+      responseBody={voidResponse}
     >
       <Text c="dimmed" fs="italic">
         This is the Void a Payment API call. You can used this call to test out
