@@ -21,7 +21,7 @@
     "dayjs": "^1.11.2",
     "jsdom": "^21.1.0",
     "jwt-decode": "^3.1.2",
-    "mermaid": "^9.1.2",
+    "mermaid": "10.6.1",
     "msw": "^2.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -62,7 +62,7 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^6.1.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.4.3",
     "@vitejs/plugin-react": "^3.0.1",
@@ -80,6 +80,6 @@
     "workerDirectory": "public"
   },
   "resolutions": {
-    "graphql": "16.5.0"
+    "@adobe/css-tools": "^4.3.2"
   }
 }
