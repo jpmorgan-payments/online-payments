@@ -1,4 +1,11 @@
-import { Button, Flex, Text, Anchor, useMantineTheme, Table } from '@mantine/core';
+import {
+  Button,
+  Flex,
+  Text,
+  Anchor,
+  useMantineTheme,
+  Table,
+} from '@mantine/core';
 import { useQueries } from '@tanstack/react-query';
 import { JsonModal, Panel, TableWithJsonDisplay } from 'components';
 import { useGetPayment } from './hooks/useGetPayment';
@@ -50,16 +57,21 @@ export const PaymentTransactionTable = ({
   };
 
   const displayPaymentActions = (rowData: paymentResponse) => {
+    const isVoidAvailable =
+      [transactionState.CLOSED, transactionState.COMPLETED].includes(
+        rowData.transactionState,
+      ) && !rowData.isVoid;
 
-    const isVoidAvailable = [transactionState.CLOSED, transactionState.COMPLETED].includes(
-      rowData.transactionState,
-    ) && !rowData.isVoid;
+    const isRefundAvailable =
+      [transactionState.CLOSED, transactionState.COMPLETED].includes(
+        rowData.transactionState,
+      ) &&
+      rowData.remainingRefundableAmount &&
+      rowData.remainingRefundableAmount > 0;
 
-    const isRefundAvailable = ([transactionState.CLOSED, transactionState.COMPLETED].includes(
-      rowData.transactionState,
-    ) &&  (rowData.remainingRefundableAmount && rowData.remainingRefundableAmount > 0));
-
-    const isCaptureAvailable = rowData.transactionState === transactionState.AUTHORIZED || (rowData.remainingAuthAmount && rowData.remainingAuthAmount > 0);
+    const isCaptureAvailable =
+      rowData.transactionState === transactionState.AUTHORIZED ||
+      (rowData.remainingAuthAmount && rowData.remainingAuthAmount > 0);
     return (
       <Flex gap="md" wrap={'wrap'}>
         <ActionButton
@@ -151,8 +163,8 @@ export const PaymentTransactionTable = ({
       <Text c="dimmed" fs="italic">
         This is a list of all the Payments that have been created recently. We
         have prepopulated the table with some mocked data. To gather a list of
-        your payments you will need to make an API call for each payment. Check
-        out the API specification to find out more{' '}
+        your payments you will need to make an API call for each payment.
+        <br /> Check out the API specification to find out more{' '}
         <Anchor href={PAYMENTS_GET_TRANSACTION_API} target="_blank">
           here.
         </Anchor>
