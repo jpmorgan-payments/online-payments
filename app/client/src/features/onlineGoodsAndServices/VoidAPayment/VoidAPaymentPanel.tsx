@@ -83,6 +83,7 @@ export const VoidAPaymentPanel = ({
         This is the Void a Payment API call. You can used this call to test out
         vodiing any authorized payments. Once you submit it will update the JSON
         in the table below. Check out the API specification to find out more{' '}
+        <br />
         <Anchor href={PAYMENTS_VOID_API} target="_blank">
           here.
         </Anchor>

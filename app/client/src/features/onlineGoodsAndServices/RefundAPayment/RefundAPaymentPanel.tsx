@@ -125,7 +125,7 @@ export const RefundAPaymentPanel = ({
         This is the Refund a Payment API call. You can used this call to test
         out Full, Partial and Multi Refund payments. Once you submit it will
         update the JSON in the table below. Check out the API specification to
-        find out more{' '}
+        find out more <br />
         <Anchor href={PAYMENTS_REFUND_API} target="_blank">
           here.
         </Anchor>
