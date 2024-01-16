@@ -15,6 +15,7 @@ There are two main directories for you to access:
 
 - `/app` for the showcase UI.
 - `/postman` for the Postman Collection.
+- `/docs` for documents supporting the testing and usage of the apis.
 
 ### Application (App)
 
