@@ -1,0 +1,8 @@
+BEGIN,EntityId=103310853753,Frequency=adhoc
+103310853753,SettlementSummary,adhoc,2023-10-27,2023-10-31,2023-11-29,18:01:42
+"Record Type","Entity Type Code","Entity Identifier","Fund Transfer Instruction Number","Secure Bank Account Number","Presentment Currency Code","Fund Transfer Identifier","Category","Fund Transfer Effective Date","Count","Amount","Settlement Currency Code","Foreign Exchange Rate"
+"RFIN0010T","TD","463136","3187719","XXXXX4312","USD","13771439661","Effective Funds Transfer","2023-10-27T00:00:00.000Z","0","-11.65000000","USD","1.000000000"
+"RFIN0010T","TD","463136","3187719","XXXXX4312","USD","13772297920","Effective Funds Transfer","2023-10-30T00:00:00.000Z","0","-6.96000000","USD","1.000000000"
+"RFIN0010T","TD","463136","3187719","XXXXX4312","USD","13773158439","Pending Funds Transfer","2023-10-31T00:00:00.000Z","0","-10.38000000","USD","1.000000000"
+"RFIN0010T","TD","463136","3187719","XXXXX4312","USD","13772297920","Pending Funds Transfer","2023-10-30T00:00:00.000Z","0","-25.23000000","USD","1.000000000"
+END,EntityId=103310853753,Frequency=adhoc
