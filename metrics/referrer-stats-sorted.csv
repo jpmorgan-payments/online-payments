@@ -1,9 +1,9 @@
 repository_name,site,views,unique_visitors/cloners
 online-payments,DuckDuckGo,1,1
-online-payments,Google,1,1
-online-payments,confluence.prod.aws.jpmchase.net,3,2
+online-payments,Google,2,2
+online-payments,confluence.prod.aws.jpmchase.net,4,3
 online-payments,developer-console.prod.aws.jpmchase.net,2,2
-online-payments,developer.payments.jpmorgan.com,15,4
-online-payments,github.com,77,10
-online-payments,online-payments-dev.com,57,6
+online-payments,developer.payments.jpmorgan.com,17,4
+online-payments,github.com,70,9
+online-payments,online-payments-dev.com,52,6
 online-payments,payments-preview.prod.aws.jpmchase.net,2,1
