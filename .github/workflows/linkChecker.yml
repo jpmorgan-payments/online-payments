@@ -10,12 +10,12 @@ on:
   - cron: "0 9 * * *"
 
 jobs:
-  check-links:
-    name: runner / linkspector
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Run linkspector
-        uses: umbrelladocs/action-linkspector@v1
-        with:
-          fail_on_error: true
+   markdown-link-check:
+     runs-on: ubuntu-latest
+     steps:
+     - uses: actions/checkout@v4
+     - uses: gaurav-nelson/github-action-markdown-link-check@v1
+       with:
+         use-quiet-mode: 'yes'
+         use-verbose-mode: 'yes'
+         max-depth: 0
