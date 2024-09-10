@@ -85,4 +85,4 @@ You can ignore the code stored in the data, mocks and mockServiceWorker folders 
 
 ## Accessing J.P. Morgan Sandbox environment
 
-If you would like to try out our APIs you can use our postman collection provided in this repository or follow the quick start guide [here](https://developer.payments.jpmorgan.com/quick-start).
+If you would like to try out our APIs you can use our postman collection provided in this repository or follow the quick start guide [here](https://developer.payments.jpmorgan.com/docs/quick-start).
