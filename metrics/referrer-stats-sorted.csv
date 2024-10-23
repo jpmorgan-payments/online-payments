@@ -2,9 +2,9 @@ repository_name,site,views,unique_visitors/cloners
 online-payments,Bing,1,1
 online-payments,DuckDuckGo,15,1
 online-payments,Google,28,10
-online-payments,confluence.prod.aws.jpmchase.net,5,4
+online-payments,confluence.prod.aws.jpmchase.net,7,5
 online-payments,developer-console.prod.aws.jpmchase.net,1,1
-online-payments,developer.payments.jpmorgan.com,12,7
+online-payments,developer.payments.jpmorgan.com,17,8
 online-payments,edgeservices.bing.com,1,1
 online-payments,embedded-banking-dev.com,7,1
 online-payments,gateway.zscalertwo.net,9,1
