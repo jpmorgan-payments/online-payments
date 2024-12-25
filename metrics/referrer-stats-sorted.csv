@@ -1,12 +1,12 @@
 repository_name,site,views,unique_visitors/cloners
 online-payments,Bing,8,1
 online-payments,DuckDuckGo,15,1
-online-payments,Google,36,13
+online-payments,Google,34,11
 online-payments,blackbox.ai,1,1
 online-payments,chatgpt.com,1,1
-online-payments,confluence.prod.aws.jpmchase.net,2,2
+online-payments,confluence.prod.aws.jpmchase.net,1,1
 online-payments,developer-console.prod.aws.jpmchase.net,1,1
-online-payments,developer.payments.jpmorgan.com,7,7
+online-payments,developer.payments.jpmorgan.com,6,6
 online-payments,edgeservices.bing.com,1,1
 online-payments,embedded-banking-dev.com,7,1
 online-payments,gateway.zscalertwo.net,9,1
