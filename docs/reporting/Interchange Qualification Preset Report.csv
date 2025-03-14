@@ -1,0 +1,25 @@
+BEGIN,EntityId=11223344,Frequency=adhoc,,,,,,,,,,,
+EntityId=11223344,ReportTypeName=Multiple,Frequency=adhoc,FromDate=2024-11-04,ToDate=2024-11-05,GenerationDate=2025-01-31,GenerationTime=14:17:13,,,,,,,
+Record Type,Presentment Currency Code,Settlement Currency Code,Payment Method Code,Interchange Qualification Code,Interchange Qualification Text,Fee Rate,Unit Fee Amount,Sales Count,Count %,Sales Amount,Amount %,,
+Interchange Qualification Summary,USD,USD,VI,V991,Visa Interregional Corporate Card Not Present,0.02,0,3,1,36.06,1,,
+Interchange Qualification Summary,USD,USD,MC,MM1,MasterCard Merit 1,0.0195,0.1,3,1,159.06,1,,
+Interchange Qualification Summary,USD,USD,JC,D801,Discover International Consumer Base,0.017,0.1,3,1,36.06,1,,
+Interchange Qualification Summary,USD,USD,DI,DCBL,Discover Commercial Base Submission Level,0.0305,0.1,3,1,36.06,1,,
+Interchange Qualification Summary,USD,USD,DD,D811,Discover International Commercial,0.019,0.1,3,1,330.06,1,,
+Record Type,Entity Identifier,Presentment Currency Code,Settlement Currency Code,Payment Method Code,Merchant Order Number,Interchange Qualification Code,Downgrade Reason Code,Downgrade Reason Text,Account Number,Deposit Date,Amount,Acquirer Reference Number,Card Usage Type
+Interchange Qualification Details,1234567,USD,USD,DD,DDDEPM71BU,D811,-1,Not Set - Does not Apply,XXXXXXXX,11/4/2024,110.02,6789012345,
+Interchange Qualification Details,1234567,USD,USD,DI,DIDEPM71BU,DCBL,232,No Valid AVS Data present,XXXXXXXX,11/4/2024,12.02,6789012345,
+Interchange Qualification Details,1234567,USD,USD,JC,JCDEPM71BU,D801,167,On Target - Base Submission Level,XXXXXXXX,11/4/2024,12.02,6789012345,
+Interchange Qualification Details,1234567,USD,USD,MC,MCDEPM71BU,MM1,122,On Target - Direct Marketing MCC,XXXXXXXX,11/4/2024,53.02,6789012345,1
+Interchange Qualification Details,1234567,USD,USD,VI,VIDEPM71BU,V991,175,On Target - Inter-Regional,XXXXXXXX,11/4/2024,12.02,6789012345,1
+Interchange Qualification Details,1234567,USD,USD,DD,DDDEPM41BU,D811,-1,Not Set - Does not Apply,XXXXXXXX,11/4/2024,110.02,6789012345,
+Interchange Qualification Details,1234567,USD,USD,DI,DIDEPM41BU,DCBL,232,No Valid AVS Data present,XXXXXXXX,11/4/2024,12.02,6789012345,
+Interchange Qualification Details,1234567,USD,USD,JC,JCDEPM41BU,D801,167,On Target - Base Submission Level,XXXXXXXX,11/4/2024,12.02,6789012345,
+Interchange Qualification Details,1234567,USD,USD,MC,MCDEPM41BU,MM1,122,On Target - Direct Marketing MCC,XXXXXXXX,11/4/2024,53.02,6789012345,1
+Interchange Qualification Details,1234567,USD,USD,VI,VIDEPM41BU,V991,175,On Target - Inter-Regional,XXXXXXXX,11/4/2024,12.02,6789012345,1
+Interchange Qualification Details,1234567,USD,USD,DD,DDDEPM11BU,D811,-1,Not Set - Does not Apply,XXXXXXXX,11/4/2024,110.02,6789012345,
+Interchange Qualification Details,1234567,USD,USD,DI,DIDEPM11BU,DCBL,232,No Valid AVS Data present,XXXXXXXX,11/4/2024,12.02,6789012345,
+Interchange Qualification Details,1234567,USD,USD,JC,JCDEPM11BU,D801,167,On Target - Base Submission Level,XXXXXXXX,11/4/2024,12.02,6789012345,
+Interchange Qualification Details,1234567,USD,USD,MC,MCDEPM11BU,MM1,122,On Target - Direct Marketing MCC,XXXXXXXX,11/4/2024,53.02,6789012345,1
+Interchange Qualification Details,1234567,USD,USD,VI,VIDEPM11BU,V991,175,On Target - Inter-Regional,XXXXXXXX,11/4/2024,12.02,6789012345,1
+END,EntityId=11223344,Frequency=adhoc,,,,,,,,,,,
