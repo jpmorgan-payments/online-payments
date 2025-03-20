@@ -1,7 +1,7 @@
-BEGIN,EntityId=424017,Frequency=adhoc
-EntityId=424017,ReportTypeName=Multiple,Frequency=adhoc,FromDate=2024-10-08,ToDate=2024-10-09,GenerationDate=2024-11-20,GenerationTime=14:38:06
-Record Type,Presentment Currency Code,Settlement Currency Code,Payment Method Code,Conveyed Sales Count,Conveyed Sales Amount,Conveyed Refund Count,Conveyed Refund Amount
-Conveyed Deposit Summary,USD,USD,AX,75,5837.92,5,-94.02
+BEGIN,EntityId=424017,Frequency=adhoc,,,,,,,
+EntityId=424017,ReportTypeName=Multiple,Frequency=adhoc,FromDate=2024-10-08,ToDate=2024-10-09,GenerationDate=2024-11-20,GenerationTime=14:38:06,,,
+Record Type,Presentment Currency Code,Settlement Currency Code,Payment Method Code,Conveyed Sales Count,Conveyed Sales Amount,Conveyed Refund Count,Conveyed Refund Amount,,
+Conveyed Deposit Summary,USD,USD,AX,75,5837.92,5,-94.02,,
 Record Type,Presentment Currency Code,Settlement Currency Code,Payment Method Code,Settled Sales Count,Settled Sales Amount in Presentment Currency,Settled Sales Amount in Settlement Currency,Settled Refund Count,Settled Refund Amount in Presentment Currency,Settled Refund Amount in Settlement Currency
 Settled Deposit Summary,ARS,USD,VI,112,3504,3.4,19,-660,-0.66
 Settled Deposit Summary,CLP,USD,VI,112,350400,375.96,19,-66000,-70.85
@@ -205,4 +205,4 @@ Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,110346
 Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1103466534,2024-10-08 thru 2024-10-08,00:00.0,7346.7
 Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1103466534,2024-10-08 thru 2024-10-08,00:00.0,591.72
 Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1103466534,2024-10-08 thru 2024-10-08,00:00.0,333.82
-END,EntityId=424017,Frequency=adhoc
+END,EntityId=424017,Frequency=adhoc,,,,,,,

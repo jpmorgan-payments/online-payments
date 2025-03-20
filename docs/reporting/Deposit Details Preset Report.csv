@@ -1,5 +1,5 @@
-BEGIN,EntityId=424017,Frequency=adhoc
-EntityId=424017,ReportTypeName=SubmissionDetails,Frequency=adhoc,FromDate=2024-10-08,ToDate=2024-10-09,GenerationDate=2024-11-20,GenerationTime=14:34:37
+BEGIN,EntityId=424017,Frequency=adhoc,,,,,,,,,,,,,,,,,,,,,,,,,
+EntityId=424017,ReportTypeName=SubmissionDetails,Frequency=adhoc,FromDate=2024-10-08,ToDate=2024-10-09,GenerationDate=2024-11-20,GenerationTime=14:34:37,,,,,,,,,,,,,,,,,,,,,
 Submission Date,Presentment Currency Code,Settlement Currency Code,Transaction Division External Identifier,Payment Method Code,Merchant Order Number,Account Number,Credit Card Expiration Year Month Number,Transaction Amount in Presentment Currency,Merchant Action Code,Action Type Code Text,Authorization Date,Country of Issuance,Transaction Type Code,Transaction Type Text,Merchant Category Code,Digital Token Method Code,Digital Wallet Brand,Interchange Qualification Code,Interchange Unit Fee,Fee Rate,Total Interchange Amount,Total Assessment Amount,Other Debit Passthrough Fees,Merchant Information Description,Surcharge Amount,Bank Sort Code,Card Usage Type
 10/8/2024,USD,USD,424018,VI,hFy6B4MJCbGqm7F3opyTil,411234XXXXXX4113,24-Dec,32,DP,SALE,10/8/2024,US,7,ECI Indicator - Channel Encrypted Transaction,4899,0,,VCEB,0.1,0.018,-0.676,-0.0738,0,N,,,1
 10/8/2024,USD,USD,424018,VI,llEeqSJG9spJgsKzYPx9nm,411234XXXXXX4113,24-Dec,32,DP,SALE,10/8/2024,US,7,ECI Indicator - Channel Encrypted Transaction,4899,0,,VCEB,0.1,0.018,-0.676,-0.0738,0,N,,,1
@@ -1131,4 +1131,4 @@ Submission Date,Presentment Currency Code,Settlement Currency Code,Transaction D
 10/8/2024,MXN,USD,425289,MC,J6prgXBRpVAhfO1f064tZa,510148XXXXXX0019,24-Dec,22,DP,SALE,10/8/2024,MX,2,MOTO Indicator - Recurring Transaction,4899,0,,MHB2,0,0.016,-0.0176,-0.023534,0,N,,,1
 10/8/2024,MXN,USD,425289,MC,0F6nai2QEF5gxmhWH1NzXU,510148XXXXXX0019,24-Dec,26.2,DP,SALE,10/8/2024,MX,7,ECI Indicator - Channel Encrypted Transaction,4899,0,,MHB2,0,0.016,-0.02096,-0.0277214,0,N,,,1
 10/8/2024,MXN,USD,425289,MC,TEDloD4vcS4Gjt3rTfWpDz,510148XXXXXX0019,24-Dec,22,DP,SALE,10/8/2024,MX,7,ECI Indicator - Channel Encrypted Transaction,4899,0,,MHB2,0,0.016,-0.0176,-0.023534,0,N,,,1
-END,EntityId=424017,Frequency=adhoc
+END,EntityId=424017,Frequency=adhoc,,,,,,,,,,,,,,,,,,,,,,,,,

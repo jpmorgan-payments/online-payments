@@ -1,5 +1,5 @@
-BEGIN,EntityId=424017,Frequency=adhoc
-EntityId=424017,ReportTypeName=Multiple,Frequency=adhoc,FromDate=2024-10-08,ToDate=2024-10-09,GenerationDate=2024-11-20,GenerationTime=14:36:34
+BEGIN,EntityId=424017,Frequency=adhoc,,,,,,,,,,,,,,,,
+EntityId=424017,ReportTypeName=Multiple,Frequency=adhoc,FromDate=2024-10-08,ToDate=2024-10-09,GenerationDate=2024-11-20,GenerationTime=14:36:34,,,,,,,,,,,,
 Record Type,Presentment Currency Code,Settlement Currency Code,Payment Method Code,Charge Category Text,Charge Subcategory Text,Action Type Code Text,Merchant Service Fee Schedule Identifier,Fee Text,Interchange Qualification Code,Unit Quantity,Unit Fee Amount,Transaction Amount,Fee Rate,Total Charge,Sales Tax,Federal Tax,Provincial Tax,Total Charge after Tax
 Charge Summary,USD,USD,AX,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,59,0.0175,4216.5,0,-1.06000002,0,0,0,-1.06000002
 Charge Summary,USD,USD,AX,Processing Fees,Authorization Fees,SALE,29281072,CPU Authorization,NONE,75,0.0175,5837.92,0,-1.34999997,0,0,0,-1.34999997
@@ -454,12 +454,12 @@ Charge Summary,COP,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29
 Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,V105,64,0.1,2408,0.0315,-82.25000013,0,0,0,-82.25000013
 Charge Summary,COP,USD,VI,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,V995,24,0,-0.15,-0.01,0,0,0,0,0
 Charge Summary,USD,USD,,Processing Fees,Funds Transfer Fees,OTHER,null,ACH Transfer Fee,,1,2.5,,,-2.5,0,0,0,-2.5
-Record Type,Transaction Division External Identifier,Acquirer Codice Fiscale,Acquirer Legal Entity,CPSI GST Registration Number,CPSI QST Registration Number,Merchant Codice Fiscale,Recipient Address,Recipient Legal Entity
-Tax Information,425262,,,,,,"7526 main st,SKOKIE,IL,60016,US",UPG_Auto_Testing 5
-Tax Information,425289,,,,,,"7456 K St,FRISO,TX,75206,US",UPG_Auto_Testing_MXN
-Tax Information,425266,,,,,,"2356 J ST,DALLAS,TX,75289,US",UPG_Auto_Testing 8
-Tax Information,424018,,,,,,"3642 Mills Ave,PLANO,TX,75024,US",UPG_Auto_Testing1
-Tax Information,425265,,,,,,"4213 F St,DES PLAINES,IL,60018,US",UPG_Auto_Testing 7
-Tax Information,425263,,,,,,"4752 Jade ave,PLANO,TX,75024,US",UPG_Auto_Testing 6
-Tax Information,424708,,,,,,"3642 Mills Ave,PLANO,TX,75024,US",UPG_Auto_Testing4
-END,EntityId=424017,Frequency=adhoc
+Record Type,Transaction Division External Identifier,Acquirer Codice Fiscale,Acquirer Legal Entity,CPSI GST Registration Number,CPSI QST Registration Number,Merchant Codice Fiscale,Recipient Address,Recipient Legal Entity,,,,,,,,,,
+Tax Information,425262,,,,,,"7526 main st,SKOKIE,IL,60016,US",UPG_Auto_Testing 5,,,,,,,,,,
+Tax Information,425289,,,,,,"7456 K St,FRISO,TX,75206,US",UPG_Auto_Testing_MXN,,,,,,,,,,
+Tax Information,425266,,,,,,"2356 J ST,DALLAS,TX,75289,US",UPG_Auto_Testing 8,,,,,,,,,,
+Tax Information,424018,,,,,,"3642 Mills Ave,PLANO,TX,75024,US",UPG_Auto_Testing1,,,,,,,,,,
+Tax Information,425265,,,,,,"4213 F St,DES PLAINES,IL,60018,US",UPG_Auto_Testing 7,,,,,,,,,,
+Tax Information,425263,,,,,,"4752 Jade ave,PLANO,TX,75024,US",UPG_Auto_Testing 6,,,,,,,,,,
+Tax Information,424708,,,,,,"3642 Mills Ave,PLANO,TX,75024,US",UPG_Auto_Testing4,,,,,,,,,,
+END,EntityId=424017,Frequency=adhoc,,,,,,,,,,,,,,,,
