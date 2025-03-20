@@ -1,5 +1,5 @@
-﻿BEGIN,EntityId=11223344,Frequency=adhoc,,,,,,,,,,,,,,,,
-EntityId=11223344,ReportTypeName=SettlementSummary,Frequency=adhoc,FromDate=2025-02-01,ToDate=2025-02-28,GenerationDate=2025-03-06,GenerationTime=15:40:57,,,,,,,,,,,,
+﻿BEGIN,EntityId=11223344,Frequency=adhoc
+EntityId=11223344,ReportTypeName=SettlementSummary,Frequency=adhoc,FromDate=2025-02-01,ToDate=2025-02-28,GenerationDate=2025-03-06,GenerationTime=15:40:57
 Presentment Currency Code,Settlement Currency Code,Reporting Date,Net Conveyed Deposits,Net Settled Deposits,Foreign Exchange Rate,Net Settled Deposits in Settlement Currency,Chargeback/ECPReturns/Debit Adjustments,Interchange & Assessment Fees,Processing Fees,Other Adjustments,Backup With Holding Adjustments,Reserve Adjustments,Net Financial Activity,Rejected Transfers,Pending Transfers,Effective Transfers,Daily Ending Balance,Reserve Balance
 USD,USD,1/31/2025,0,228798.86,1,228798.86,-13716.88,0,-10.45,0,0,0,215071.53,0,462755.28,126188.15,215066.14,
 USD,USD,2/1/2025,0,344776.17,1,344776.17,0,0,-3.05,0,0,0,344773.12,0,807528.4,0,559839.26,
@@ -29,4 +29,4 @@ USD,USD,2/24/2025,0,0,1,0,-2378.75,0,-5.85,0,0,0,-2384.6,0,237721.07,22328.31,82
 USD,USD,2/25/2025,0,52036.45,1,52036.45,-36270.65,0,-29.1,0,0,0,15736.7,0,97971.98,155485.79,15731.31,
 USD,USD,2/26/2025,0,151313.77,1,151313.77,0,0,-5.8,0,0,0,151307.97,0,167044.42,82235.53,151302.58,
 USD,USD,2/27/2025,0,56825.81,1,56825.81,0,0,-4.95,0,0,0,56820.86,0,208128.58,15736.7,56815.47,
-END,EntityId=11223344,Frequency=adhoc,,,,,,,,,,,,,,,,
+END,EntityId=11223344,Frequency=adhoc
