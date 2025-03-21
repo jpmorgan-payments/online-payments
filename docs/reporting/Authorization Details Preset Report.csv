@@ -1,12 +1,12 @@
-BEGIN,EntityId=425318,Frequency=adhoc,,,,,,,,,,,,,,,,,,,,,,,,
-EntityId=425318,ReportTypeName=Multiple,Frequency=adhoc,FromDate=2024-11-28,ToDate=2024-11-29,GenerationDate=2024-12-13,GenerationTime=19:47:17,,,,,,,,,,,,,,,,,,,,
-Record Type,Presentment Currency Code,Settlement Currency Code,MOP Type,Response Code,Response Description,Firm Authorization Approval Code,Total Transaction Count,Amount,Count of Declined Transactions,Authorization Total Count %,Authorization Status %,Transaction Decline %,,,,,,,,,,,,,,
-Authorization Summary,USD,USD,American Express  (AX),100,Approved,Approved,2,50,0,1,1,0,,,,,,,,,,,,,,
-Authorization Summary,USD,USD,Discover  (DI),100,Approved,Approved,5,130,0,1,1,0,,,,,,,,,,,,,,
-Authorization Summary,USD,USD,Discover Diners (DD),100,Approved,Approved,5,120,0,1,1,0,,,,,,,,,,,,,,
-Authorization Summary,USD,USD,JCB  (JC),100,Approved,Approved,5,135,0,1,1,0,,,,,,,,,,,,,,
-Authorization Summary,USD,USD,MasterCard  (MC) - Credit,100,Approved,Approved,5,260,0,1,1,0,,,,,,,,,,,,,,
-Authorization Summary,USD,USD,Visa  (VI) - Credit,100,Approved,Approved,5,255,0,1,1,0,,,,,,,,,,,,,,
+BEGIN,EntityId=425318,Frequency=adhoc
+EntityId=425318,ReportTypeName=Multiple,Frequency=adhoc,FromDate=2024-11-28,ToDate=2024-11-29,GenerationDate=2024-12-13,GenerationTime=19:47:17
+Record Type,Presentment Currency Code,Settlement Currency Code,MOP Type,Response Code,Response Description,Firm Authorization Approval Code,Total Transaction Count,Amount,Count of Declined Transactions,Authorization Total Count %,Authorization Status %,Transaction Decline %
+Authorization Summary,USD,USD,American Express  (AX),100,Approved,Approved,2,50,0,1,1,0
+Authorization Summary,USD,USD,Discover  (DI),100,Approved,Approved,5,130,0,1,1,0
+Authorization Summary,USD,USD,Discover Diners (DD),100,Approved,Approved,5,120,0,1,1,0
+Authorization Summary,USD,USD,JCB  (JC),100,Approved,Approved,5,135,0,1,1,0
+Authorization Summary,USD,USD,MasterCard  (MC) - Credit,100,Approved,Approved,5,260,0,1,1,0
+Authorization Summary,USD,USD,Visa  (VI) - Credit,100,Approved,Approved,5,255,0,1,1,0
 Record Type,Entity Identifier,Presentment Currency Code,Settlement Currency Code,Payment Method Code,Merchant Order Number,Merchant Action Code Text,Authorization Amount,Account Number,Credit Card Expiration Year Month Number,Transaction Type Text,Authorization Timestamp,Authorization Code,Payment Brand Auth Response,Payment Brand Response Code Category,PTI Authorization Response Code,Authorization Initiator,Authorization Source Code,POS Authentication Source,Merchant Category Code,Country Of Issuance,Digital Token Method Text,Prepaid Card Type Code,Commercial Card Code,Card Usage Type,Payment Transaction Identifier,Terminal Identifier
 Authorization Details,425319,USD,USD,AX,4S51aiQuAtbooUopHQmfER,AUTHORIZATIONS,25,371144XXXXX4376,24-Dec,ECI Indicator - Channel Encrypted Transaction,33:41.0,tst629,0,X,100,Merchant,V,5,4899,,,,,,5e0b32ef-dc83-4728-9841-255cca570301,
 Authorization Details,425319,USD,USD,AX,4S51aiQuAtbooUopHQmfER,DEPOSITS,25,371144XXXXX4376,24-Dec,ECI Indicator - Channel Encrypted Transaction,33:41.0,tst629,0,,100,Merchant,M,5,4899,,,,,,5e0b32ef-dc83-4728-9841-255cca570301,
@@ -56,4 +56,4 @@ Authorization Details,425319,USD,USD,VI,UNoVspZiNEddLqp4R2GpFJ,DEPOSITS,51,41123
 Authorization Details,425319,USD,USD,VI,paMjxE1dvHgVz4Jmi2YHt3,AUTHORIZATIONS,51,411234XXXXXX4113,24-Dec,ECI Indicator - Channel Encrypted Transaction,34:01.0,tst693,0,A,100,Merchant,V,3,4899,US,,X,Y,1,85ebd791-be3b-4937-a21e-2f46d46564e4,
 Authorization Details,425319,USD,USD,VI,paMjxE1dvHgVz4Jmi2YHt3,DEPOSITS,51,411234XXXXXX4113,24-Dec,ECI Indicator - Channel Encrypted Transaction,00:00.0,tst693,,,100,Merchant,M,,4899,US,,,,1,85ebd791-be3b-4937-a21e-2f46d46564e4,
 Authorization Details,425319,USD,USD,VI,us4lMfJirRSkNbpQuX9YO1,AUTHORIZATIONS,51,411234XXXXXX4113,24-Dec,ECI Indicator - Channel Encrypted Transaction,33:38.0,tst553,0,A,100,Merchant,V,3,4899,US,,X,Y,1,a4f2dbee-1b3d-4432-bdcf-16a2fea7c6cc,
-END,EntityId=425318,Frequency=adhoc,,,,,,,,,,,,,,,,,,,,,,,,
+END,EntityId=425318,Frequency=adhoc

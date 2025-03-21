@@ -1,5 +1,5 @@
-BEGIN,EntityId=424017,Frequency=adhoc,,,,,,,,,,,,,,,,,,,
-EntityId=424017,ReportTypeName=SubmissionDetails,Frequency=adhoc,FromDate=2024-10-08,ToDate=2024-10-09,GenerationDate=2024-11-20,GenerationTime=14:35:24,,,,,,,,,,,,,,,
+BEGIN,EntityId=424017,Frequency=adhoc
+EntityId=424017,ReportTypeName=SubmissionDetails,Frequency=adhoc,FromDate=2024-10-08,ToDate=2024-10-09,GenerationDate=2024-11-20,GenerationTime=14:35:24
 Activity Date,Entity Type Code,Entity Identifier,Merchant Order Number,Payment Method Code,Presentment Currency Code,Settlement Currency Code,Foreign Exchange Rate,Fund Transfer Instruction Number,Transaction Amount in Presentment Currency,Transaction Amount in Settlement Currency,Net Settled Sales Amount,Interchange & Assessment Fees,Back Up Withholding Adjustments,Chargeback Adjustments,Discount Fees,ECP Return Adjustments,Other Adjustments,Processing Fees,Reserve Adjustments,Others,Net Financial Activity
 10/8/2024,BU,1289824,,,USD,USD,1,4385280,0,0,0,0,0,0,0,0,0,-2.5,0,0,-2.5
 10/8/2024,TD,424018,hFy6B4MJCbGqm7F3opyTil,VI,USD,USD,1,4385280,32,32,32,-0.7693,0,0,0,0,0,-0.0525,0,0,31.1782
@@ -1218,4 +1218,4 @@ Activity Date,Entity Type Code,Entity Identifier,Merchant Order Number,Payment M
 10/8/2024,TD,425289,byE3fHe4K5Roa2n4B081oN,MC,MXN,USD,0.050033214,4385280,22,1.1,1.1,-0.092234,0,0,0,0,0,-0.035,0,0,0.972766
 10/8/2024,TD,425289,KcLrvfxflbwMHvbCG7fEi4,MC,MXN,USD,0.050033214,4385280,35,1.75,1.75,-0.115595,0,0,0,0,0,-0.035,0,0,1.599405
 10/8/2024,TD,425289,9cxwaRUQZ7SD7tCcpDrDxN,MC,MXN,USD,0.050033214,4385280,0,0,0,-0.103255,0,0,0,0,0,-0.0525,0,0,-0.155755
-END,EntityId=424017,Frequency=adhoc,,,,,,,,,,,,,,,,,,,
+END,EntityId=424017,Frequency=adhoc
