@@ -1,341 +1,465 @@
-﻿BEGIN,EntityId=418553,Frequency=adhoc
-EntityId=418553,ReportTypeName=Multiple,Frequency=adhoc,FromDate=2025-03-03,ToDate=2025-03-04,GenerationDate=2025-03-13,GenerationTime=19:15:41
+BEGIN,EntityId=424017,Frequency=adhoc
+EntityId=424017,ReportTypeName=Multiple,Frequency=adhoc,FromDate=2024-10-08,ToDate=2024-10-09,GenerationDate=2024-11-20,GenerationTime=14:36:34
 Record Type,Presentment Currency Code,Settlement Currency Code,Payment Method Code,Charge Category Text,Charge Subcategory Text,Action Type Code Text,Merchant Service Fee Schedule Identifier,Fee Text,Interchange Qualification Code,Unit Quantity,Unit Fee Amount,Transaction Amount,Fee Rate,Total Charge,Sales Tax,Federal Tax,Provincial Tax,Total Charge after Tax
-Charge Summary,EUR,EUR,AX,Processing Fees,Deposit Fees,REFUND,29281513,Conveyed Dep. Fee,NONE,1,0,-100,0,0,0,0,0,0
-Charge Summary,EUR,EUR,AX,Processing Fees,Other Fees,REFUND,29281513,Gateway Transaction Fee,NONE,1,0,-100,0,0,0,0,0,0
-Charge Summary,EUR,EUR,AX,Processing Fees,Other Fees,AUTH,29281481,Gateway Transaction Fee,NONE,5,0.014,0,0,-0.05999999,0,0,0,-0.05999999
-Charge Summary,EUR,EUR,ED,Processing Fees,Authorization Fees,AUTH,29281481,eCheck Validation,NONE,133,0.06,0,0,-7.98,0,0,0,-7.98
-Charge Summary,EUR,EUR,ED,Processing Fees,Authorization Fees,SALE,null,eCheck Reject Fee,,4,0.12,0,,-0.48,0,0,0,-0.48
-Charge Summary,EUR,EUR,ED,Processing Fees,Deposit Fees,SALE,29281481,eCheck Deposit (ACH),NONE,77,0.12,116049.84,0,-9.24,0,0,0,-9.24
-Charge Summary,EUR,EUR,ED,Processing Fees,Other Fees,AUTH,29281481,Gateway Transaction Fee,NONE,133,0.014,0,0,-1.80999975,0,0,0,-1.80999975
-Charge Summary,EUR,EUR,MC,Processing Fees,Deposit Fees,SALE,29281513,Settled Dep. Fee,MX29,3,0,300,0,0,0,0,0,0
-Charge Summary,EUR,EUR,MC,Processing Fees,Other Fees,AUTH,29281513,Gateway Transaction Fee,NONE,4,0,400,0,0,0,0,0,0
-Charge Summary,EUR,EUR,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281513,MC Connectivity Fee,MX29,3,0.0017,300,0,0,0,0,0,0
-Charge Summary,EUR,EUR,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281513,MC Connectivity Fee,NONE,4,0.0017,400,0,0,0,0,0,0
-Charge Summary,EUR,EUR,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281513,MC EU Volume Fee,MX29,3,0,300,0.00034,-0.1,0,0,0,-0.1
-Charge Summary,EUR,EUR,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281513,MC/IM EEA Auth =<10K EUR,NONE,4,0,400,0.00009,-0.04,0,0,0,-0.04
-Charge Summary,EUR,EUR,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281513,International Scheme Fee,MX29,3,0,300,0,0,0,0,0,0
-Charge Summary,EUR,EUR,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281513,MC/IM Rprt Tran Scheme Fee - Dom/Intra,MX29,3,0,300,0,0,0,0,0,0
-Charge Summary,EUR,EUR,MC,Interchange & Assessment Fees,Interchange Fees,SALE,29281513,Interchange,MX29,3,0,300,0.0165,-4.95,0,0,0,-4.95
-Charge Summary,EUR,EUR,VI,Processing Fees,Deposit Fees,SALE,29281513,Settled Dep. Fee,V5FI,1,0,100,0,0,0,0,0,0
-Charge Summary,EUR,EUR,VI,Processing Fees,Other Fees,AUTH,29281513,Gateway Transaction Fee,NONE,4,0,400,0,0,0,0,0,0
-Charge Summary,EUR,EUR,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281513,Visa EU CNP Interregional Fee,V5FI,1,0,100,0.0055,-0.55,0,0,0,-0.55
-Charge Summary,EUR,EUR,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281513,International Scheme Fee,V5FI,1,0,100,0,0,0,0,0,0
-Charge Summary,EUR,EUR,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281513,Visa EU Cross Border Inter-Regional Fee,V5FI,1,0,100,0.0045,-0.45,0,0,0,-0.45
-Charge Summary,EUR,EUR,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281513,Visa EU Clearing Proc Inter,V5FI,1,0.065,100,0,-0.07,0,0,0,-0.07
-Charge Summary,EUR,EUR,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281513,Visa Innovation Fee Credit,V5FI,1,0,100,0,0,0,0,0,0
-Charge Summary,EUR,EUR,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281513,VI EU Process Fee Cr,V5FI,1,0,100,0.00033,-0.03,0,0,0,-0.03
-Charge Summary,EUR,EUR,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281513,Interchange,V5FI,1,0,100,0.015,-1.5,0,0,0,-1.5
-Charge Summary,GBP,GBP,AX,Processing Fees,Authorization Fees,SALE,null,Rejected Transact,,3,0.05,37.02,,-0.15,0,0,0,-0.15
-Charge Summary,GBP,GBP,AX,Processing Fees,Authorization Fees,AUTH,29281650,Online Authorization,NONE,1,0.05,12.34,0,-0.05,0,0,0,-0.05
-Charge Summary,AED,GBP,AX,Processing Fees,Deposit Fees,REFUND,29281650,Conveyed Dep. Fee,NONE,1,0.25,-20.06,0,-0.25,0,0,0,-0.25
-Charge Summary,AZN,GBP,AX,Processing Fees,Deposit Fees,REFUND,29281650,Conveyed Dep. Fee,NONE,2,0.25,-87.32,0,-0.5,0,0,0,-0.5
-Charge Summary,AZN,GBP,AX,Processing Fees,Other Fees,REFUND,29281650,Gateway Transaction Fee,NONE,1,0,-43.66,0,0,0,0,0,0
-Charge Summary,GBP,GBP,AX,Processing Fees,Other Fees,AUTH,29281650,Gateway Transaction Fee,NONE,1,0,12.34,0,0,0,0,0,0
-Charge Summary,AZN,GBP,MC,Processing Fees,Authorization Fees,AUTH,29281650,Full Authorization Reversal,NONE,2,0.05,4.36,0,-0.1,0,0,0,-0.1
-Charge Summary,GBP,GBP,MC,Processing Fees,Authorization Fees,AUTH,29281650,Online Authorization,NONE,4,0.05,312.34,0,-0.2,0,0,0,-0.2
-Charge Summary,GBP,GBP,MC,Processing Fees,Authorization Fees,SALE,null,Rejected Transact,,2,0.05,24.68,,-0.1,0,0,0,-0.1
-Charge Summary,AZN,GBP,MC,Processing Fees,Authorization Fees,AUTH,29281650,Online Authorization,NONE,6,0.05,148.44,0,-0.3,0,0,0,-0.3
-Charge Summary,AZN,GBP,MC,Processing Fees,Deposit Fees,SALE,29281650,Settled Dep. Fee,MX29,4,0.25,96.06,0,-1,0,0,0,-1
-Charge Summary,AZN,GBP,MC,Processing Fees,Other Fees,AUTH,29281650,Gateway Transaction Fee,NONE,8,0,152.8,0,0,0,0,0,0
-Charge Summary,GBP,GBP,MC,Processing Fees,Other Fees,AUTH,29281650,Gateway Transaction Fee,NONE,4,0,312.34,0,0,0,0,0,0
-Charge Summary,AZN,GBP,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281650,MC/IM Rprt Tran Scheme Fee - Dom/Intra,MX29,4,0.00163922,96.06,0,0,0,0,0,0
-Charge Summary,AZN,GBP,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281650,MC/IM EEA Auth =<10K EUR,NONE,6,0,148.44,0.00009,-0.01,0,0,0,-0.01
-Charge Summary,GBP,GBP,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281650,MC/IM EEA Auth =<10K EUR,NONE,3,0,212.34,0.00009,-0.02,0,0,0,-0.02
-Charge Summary,AZN,GBP,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281650,MasterCard EU Domestic/Intra-Regional Cross Currency Fee (Settle Curr Not Avail),MX29,4,0,96.06,0.0003,-0.02,0,0,0,-0.02
-Charge Summary,AZN,GBP,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281650,International Scheme Fee,MX29,4,0,96.06,0.00022,-0.02,0,0,0,-0.02
-Charge Summary,AZN,GBP,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281650,MC EU Volume Fee,MX29,4,0,96.06,0.0002,-0.02,0,0,0,-0.02
-Charge Summary,AZN,GBP,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281650,MC EU Mkt Dev Fee-UK/IE,MX29,4,0,96.06,0.00005,0,0,0,0,0
-Charge Summary,GBP,GBP,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281650,MC Auth Access Fee - AVS EU,NONE,1,0.00819608,100,0,-0.01,0,0,0,-0.01
-Charge Summary,AZN,GBP,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281650,MC EU Intra-European CNP Fee,MX29,4,0,96.06,0.00025,-0.02,0,0,0,-0.02
-Charge Summary,AZN,GBP,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281650,MC/IM EEA AuthRev =<10K EUR,NONE,2,0,4.36,0.00009,0,0,0,0,0
-Charge Summary,AZN,GBP,MC,Interchange & Assessment Fees,Interchange Fees,SALE,29281650,Interchange,MX29,4,0,96.06,0.0165,-1.58,0,0,0,-1.58
-Charge Summary,AED,GBP,VI,Processing Fees,Authorization Fees,AUTH,29281650,Online Authorization,NONE,5,0.05,100.3,0,-0.25,0,0,0,-0.25
-Charge Summary,GBP,GBP,VI,Processing Fees,Authorization Fees,AUTH,29281650,Online Authorization,NONE,4,0.05,296.34,0,-0.2,0,0,0,-0.2
-Charge Summary,GBP,GBP,VI,Processing Fees,Authorization Fees,SALE,null,Rejected Transact,,3,0.05,37.02,,-0.15,0,0,0,-0.15
-Charge Summary,AZN,GBP,VI,Processing Fees,Authorization Fees,AUTH,29281650,Online Authorization,NONE,4,0.05,174.64,0,-0.2,0,0,0,-0.2
-Charge Summary,AED,GBP,VI,Processing Fees,Deposit Fees,SALE,29281650,Settled Dep. Fee,V5FI,3,0.25,60.18,0,-0.75,0,0,0,-0.75
-Charge Summary,AZN,GBP,VI,Processing Fees,Deposit Fees,SALE,29281650,Settled Dep. Fee,V5FI,2,0.25,87.32,0,-0.5,0,0,0,-0.5
-Charge Summary,AZN,GBP,VI,Processing Fees,Other Fees,AUTH,29281650,Gateway Transaction Fee,NONE,4,0,174.64,0,0,0,0,0,0
-Charge Summary,GBP,GBP,VI,Processing Fees,Other Fees,AUTH,29281650,Gateway Transaction Fee,NONE,4,0,296.34,0,0,0,0,0,0
-Charge Summary,AED,GBP,VI,Processing Fees,Other Fees,AUTH,29281650,Gateway Transaction Fee,NONE,5,0,100.3,0,0,0,0,0,0
-Charge Summary,AED,GBP,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281650,Visa EU CNP Interregional Fee,V5FI,3,0,60.18,0.0055,-0.33,0,0,0,-0.33
-Charge Summary,AZN,GBP,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281650,International Scheme Fee,V5FI,2,0,87.32,0.000121,-0.02,0,0,0,-0.02
-Charge Summary,AED,GBP,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281650,Visa EU Cross Border Inter-Regional Fee,V5FI,3,0,60.18,0.0045,-0.27,0,0,0,-0.27
-Charge Summary,AZN,GBP,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281650,Visa EU CNP Interregional Fee,V5FI,2,0,87.32,0.0055,-0.48,0,0,0,-0.48
-Charge Summary,AZN,GBP,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281650,Visa EU Cross Border Inter-Regional Fee,V5FI,2,0,87.32,0.0045,-0.4,0,0,0,-0.4
-Charge Summary,AZN,GBP,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281650,Visa EU Clearing Proc Inter,V5FI,2,0.0532745,87.32,0,-0.1,0,0,0,-0.1
-Charge Summary,AED,GBP,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281650,Visa EU Clearing Proc Inter,V5FI,3,0.0532745,60.18,0,-0.15,0,0,0,-0.15
-Charge Summary,AED,GBP,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281650,International Scheme Fee,V5FI,3,0,60.18,0.000121,0,0,0,0,0
-Charge Summary,AZN,GBP,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281650,Interchange,V5FI,2,0,87.32,0.015,-1.3,0,0,0,-1.3
-Charge Summary,AED,GBP,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281650,Interchange,V5FI,3,0,60.18,0.015,-0.9,0,0,0,-0.9
-Charge Summary,USD,USD,CZ,Processing Fees,Other Fees,AUTH,29281211,Gateway Transaction Fee,NONE,36,0.05,1680,0,-1.8,0,0,0,-1.8
-Charge Summary,USD,USD,CZ,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Chase Merchant Discount Rate,CNCR,1,0.1975,12.34,0.0168,-0.4,0,0,0,-0.4
-Charge Summary,USD,USD,CZ,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Chase Merchant Discount Rate,CATE,8,0.1975,320,0.0168,-6.96,0,0,0,-6.96
-Charge Summary,USD,USD,DD,Processing Fees,Authorization Fees,REFUND,29281211,Network Token per tran fee,DCA1,1,0.03,-6.02,0,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,DD,Processing Fees,Authorization Fees,REFUND,29281211,CPU Authorization,DCA1,1,0,-6.02,0,0,0,0,0,0
-Charge Summary,USD,USD,DD,Processing Fees,Deposit Fees,REFUND,29281211,Settled Dep. Fee,DCA1,1,0.0142,-6.02,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Disc ntwrk Authorization Fee,DCA1,1,0,-6.02,0,0,0,0,0,0
-Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Discover Data Usage,DCA1,1,-0.0025,-6.02,0,0,0,0,0,0
-Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Assessment,DCA1,,0,-6.02,0,0,0,0,0,0
-Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Interchange Fees,REFUND,29281211,Interchange,DCA1,1,0,-6.02,-0.0225,0.14,0,0,0,0.14
-Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,SALE,29281211,CPU Authorization,D361,1,0.0095,5.02,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,REFUND,29281211,Network Token per tran fee,DCV1,16,0.03,-288,0,-0.48,0,0,0,-0.48
-Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,SALE,29281211,Network Token per tran fee,D460,24,0.03,608,0,-0.72,0,0,0,-0.72
-Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,REFUND,29281211,CPU Authorization,DDV1,1,0,-6.01,0,0,0,0,0,0
-Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,REFUND,29281211,Network Token per tran fee,DDV1,1,0.03,-6.01,0,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,SALE,29281211,Network Token per tran fee,DDEM,1,0.03,5.04,0,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,SALE,29281211,CPU Authorization,DCED,1,0.0095,5.03,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,AUTH,29281211,Online Authorization,NONE,60,0.0095,1956,0,-0.6,0,0,0,-0.6
-Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,SALE,29281211,CPU Authorization,DCEC,1,0.0095,5.01,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,SALE,29281211,Network Token per tran fee,D361,1,0.03,5.02,0,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,SALE,29281211,Network Token per tran fee,DCED,1,0.03,5.03,0,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,AUTH,29281211,Full Authorization Reversal,NONE,4,0.0095,200,0,-0.04,0,0,0,-0.04
-Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,SALE,29281211,Network Token per tran fee,DCEC,1,0.03,5.01,0,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,AUTH,29281211,Online Authorization,NONE,16,0,-288,0,0,0,0,0,0
-Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,SALE,29281211,CPU Authorization,DDEM,1,0.0095,5.04,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,DI,Processing Fees,Deposit Fees,SALE,29281211,Settled Dep. Fee,DCEC,1,0.0142,5.01,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,DI,Processing Fees,Deposit Fees,SALE,29281211,Settled Dep. Fee,DDEM,1,0.0142,5.04,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,DI,Processing Fees,Deposit Fees,REFUND,29281211,Settled Dep. Fee,DDV1,1,0.0142,-6.01,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,DI,Processing Fees,Deposit Fees,SALE,29281211,Settled Dep. Fee,DCED,1,0.0142,5.03,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,DI,Processing Fees,Deposit Fees,REFUND,29281211,Settled Dep. Fee,DCV1,16,0.0142,-288,0,-0.24,0,0,0,-0.24
-Charge Summary,USD,USD,DI,Processing Fees,Deposit Fees,SALE,29281211,Settled Dep. Fee,D361,1,0.0142,5.02,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,DI,Processing Fees,Deposit Fees,SALE,29281211,Settled Dep. Fee,D460,24,0.0142,608,0,-0.36,0,0,0,-0.36
-Charge Summary,USD,USD,DI,Processing Fees,Other Fees,AUTH,29281211,Gateway Transaction Fee,NONE,80,0.05,1868,0,-4,0,0,0,-4
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281211,DI AVS Fee,NONE,60,0.005,1956,0,-0.37000006,0,0,0,-0.37000006
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Disc ntwrk Authorization Fee,DDEM,1,0.019,5.04,0,-0.02,0,0,0,-0.02
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Discover Data Usage,DDV1,1,-0.0025,-6.01,0,0,0,0,0,0
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,DI Digital Investment Fee,DCEC,1,0,5.01,0.0001,0,0,0,0,0
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Discover Data Usage,DCEC,1,0.0025,5.01,0,0,0,0,0,0
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Assessment,DDV1,,0,-6.01,0,0,0,0,0,0
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Discover Data Usage,D460,24,0.0025,608,0,-0.07999998,0,0,0,-0.07999998
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,DI Digital Investment Fee,DCED,1,0,5.03,0.0001,0,0,0,0,0
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Disc ntwrk Authorization Fee,DDV1,1,0,-6.01,0,0,0,0,0,0
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,DI Digital Investment Fee,D460,24,0,608,0.0001,-0.07999998,0,0,0,-0.07999998
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Disc ntwrk Authorization Fee,D361,1,0.019,5.02,0,-0.02,0,0,0,-0.02
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Disc ntwrk Authorization Fee,DCEC,1,0.019,5.01,0,-0.02,0,0,0,-0.02
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Discover Data Usage,DDEM,1,0.0025,5.04,0,0,0,0,0,0
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Assessment,DCEC,,0,5.01,0.0014,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Disc ntwrk Authorization Fee,DCED,1,0.019,5.03,0,-0.02,0,0,0,-0.02
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Assessment,DDEM,,0,5.04,0.0014,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Discover Data Usage,DCV1,16,-0.0025,-288,0,0.04,0,0,0,0.04
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281211,Disc ntwrk Authorization Fee,NONE,60,0.019,1956,0,-1.17999996,0,0,0,-1.17999996
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Assessment,DCED,,0,5.03,0.0014,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Discover Data Usage,D361,1,0.0025,5.02,0,0,0,0,0,0
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Discover Data Usage,DCED,1,0.0025,5.03,0,0,0,0,0,0
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,DI Digital Investment Fee,D361,1,0,5.02,0.0001,0,0,0,0,0
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Assessment,DCV1,,0,-288,0,0,0,0,0,0
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,DI Digital Investment Fee,DDEM,1,0,5.04,0.0001,0,0,0,0,0
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Assessment,D361,,0,5.02,0.0014,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Assessment,D460,,0,608,0.0014,-0.84,0,0,0,-0.84
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Interchange,D361,1,0.1,5.02,0.0265,-0.23,0,0,0,-0.23
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Interchange,DDEM,1,0.2,5.04,0.009,-0.25,0,0,0,-0.25
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Interchange,DCEC,1,0.1,5.01,0.0203,-0.2,0,0,0,-0.2
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Interchange,D460,24,0.1,608,0.0203,-14.73,0,0,0,-14.73
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Interchange Fees,REFUND,29281211,Interchange,DCV1,16,0,-288,-0.0207,5.96,0,0,0,5.96
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Interchange,DCED,1,0.15,5.03,0.0245,-0.27,0,0,0,-0.27
-Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Interchange Fees,REFUND,29281211,Interchange,DDV1,1,0,-6.01,-0.018,0.11,0,0,0,0.11
-Charge Summary,USD,USD,JC,Processing Fees,Authorization Fees,REFUND,29281211,CPU Authorization,D356,1,0,-8.01,0,0,0,0,0,0
-Charge Summary,USD,USD,JC,Processing Fees,Authorization Fees,REFUND,29281211,Network Token per tran fee,D356,1,0.03,-8.01,0,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,JC,Processing Fees,Authorization Fees,SALE,29281211,Network Token per tran fee,DPEC,3,0.03,21.06,0,-0.09,0,0,0,-0.09
-Charge Summary,USD,USD,JC,Processing Fees,Authorization Fees,SALE,29281211,CPU Authorization,DPEC,3,0.0095,21.06,0,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,JC,Processing Fees,Authorization Fees,AUTH,29281211,Online Authorization,NONE,12,0.0095,308,0,-0.12,0,0,0,-0.12
-Charge Summary,USD,USD,JC,Processing Fees,Deposit Fees,REFUND,29281211,Settled Dep. Fee,D356,1,0.0142,-8.01,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,JC,Processing Fees,Deposit Fees,SALE,29281211,Settled Dep. Fee,DPEC,3,0.0142,21.06,0,-0.03999999,0,0,0,-0.03999999
-Charge Summary,USD,USD,JC,Processing Fees,Other Fees,AUTH,29281211,Gateway Transaction Fee,NONE,12,0.05,308,0,-0.6,0,0,0,-0.6
-Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,DI Digital Investment Fee,DPEC,3,0,21.06,0.0001,0,0,0,0,0
-Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Discover Data Usage,DPEC,3,0.0025,21.06,0,-0.00999999,0,0,0,-0.00999999
-Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Assessment,DPEC,,0,21.06,0.0014,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281211,DI AVS Fee,NONE,12,0.005,308,0,-0.11,0,0,0,-0.11
-Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Disc ntwrk Authorization Fee,DPEC,3,0.019,21.06,0,-0.06,0,0,0,-0.06
-Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Discover Data Usage,D356,1,-0.0025,-8.01,0,0,0,0,0,0
-Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Assessment,D356,,0,-8.01,0,0,0,0,0,0
-Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Disc ntwrk Authorization Fee,D356,1,0,-8.01,0,0,0,0,0,0
-Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281211,Disc ntwrk Authorization Fee,NONE,12,0.019,308,0,-0.24,0,0,0,-0.24
-Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Interchange Fees,REFUND,29281211,Interchange,D356,1,0,-8.01,0,0,0,0,0,0
-Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Interchange,DPEC,3,0.1,21.06,0.0205,-0.72999999,0,0,0,-0.72999999
-Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,SALE,29281211,Network Token per tran fee,MHB4,1,0.03,2.03,0,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,SALE,29281211,Network Token per tran fee,MIP,16,0.03,240,0,-0.48,0,0,0,-0.48
-Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,SALE,29281211,Network Token per tran fee,MHB2,1,0.03,2.01,0,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,REFUND,29281211,CPU Authorization,MHB2,2,0,-8.03,0,0,0,0,0,0
-Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,AUTH,29281211,Online Authorization,NONE,22,0,-354,0,0,0,0,0,0
-Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,SALE,29281211,Network Token per tran fee,MM1,50,0.03,1202,0,-1.5,0,0,0,-1.5
-Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,REFUND,29281211,Network Token per tran fee,MRC7,16,0.03,-240,0,-0.48,0,0,0,-0.48
-Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,SALE,29281211,CPU Authorization,MHB2,1,0.0095,2.01,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,SALE,29281211,Network Token per tran fee,MIC,2,0.03,4.06,0,-0.06,0,0,0,-0.06
-Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,SALE,29281211,CPU Authorization,MIC,2,0.0095,4.06,0,-0.02,0,0,0,-0.02
-Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,AUTH,29281211,Online Authorization,NONE,147,0.0095,4055,0,-1.46000001,0,0,0,-1.46000001
-Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,SALE,29281211,CPU Authorization,MHB4,1,0.0095,2.03,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,REFUND,29281211,Network Token per tran fee,MRC2,6,0.03,-114,0,-0.18,0,0,0,-0.18
-Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,AUTH,29281211,Full Authorization Reversal,NONE,8,0.0095,276,0,-0.08,0,0,0,-0.08
-Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,REFUND,29281211,Network Token per tran fee,MHB2,2,0.03,-8.03,0,-0.06,0,0,0,-0.06
-Charge Summary,USD,USD,MC,Processing Fees,Deposit Fees,SALE,29281211,Settled Dep. Fee,MIP,16,0.0142,240,0,-0.24,0,0,0,-0.24
-Charge Summary,USD,USD,MC,Processing Fees,Deposit Fees,SALE,29281211,Settled Dep. Fee,MHB2,1,0.0142,2.01,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,MC,Processing Fees,Deposit Fees,REFUND,29281211,Settled Dep. Fee,MRC2,6,0.0142,-114,0,-0.06,0,0,0,-0.06
-Charge Summary,USD,USD,MC,Processing Fees,Deposit Fees,REFUND,29281211,Settled Dep. Fee,MRC7,16,0.0142,-240,0,-0.24,0,0,0,-0.24
-Charge Summary,USD,USD,MC,Processing Fees,Deposit Fees,SALE,29281211,Settled Dep. Fee,MM1,50,0.0142,1202,0,-0.7199999,0,0,0,-0.7199999
-Charge Summary,USD,USD,MC,Processing Fees,Deposit Fees,SALE,29281211,Settled Dep. Fee,MIC,2,0.0142,4.06,0,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,MC,Processing Fees,Deposit Fees,SALE,29281211,Settled Dep. Fee,MHB4,1,0.0142,2.03,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,MC,Processing Fees,Deposit Fees,REFUND,29281211,Settled Dep. Fee,MHB2,2,0.0142,-8.03,0,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,MC,Processing Fees,Other Fees,AUTH,29281211,Gateway Transaction Fee,NONE,177,0.05,3977,0,-8.85,0,0,0,-8.85
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC Reporting&Infrastructure,MM1,50,0.0004,1202,0,0,0,0,0,0
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Assessment,MM1,,0,1202,0.0014,-1.7000001,0,0,0,-1.7000001
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC Digital Enablement,MHB4,1,0.02,2.03,0,-0.02,0,0,0,-0.02
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC Acquiring License Fee,MM1,50,0,1202,0.00004,-0.04000002,0,0,0,-0.04000002
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC Acquiring License Fee,MHB4,1,0,2.03,0.00004,0,0,0,0,0
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC Connectivity Fee,MHB4,1,0.0016,2.03,0,0,0,0,0,0
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC Acquiring License Fee,MHB2,1,0,2.01,0.00004,0,0,0,0,0
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,MC Digital Enablement,MHB2,2,0.02,-8.03,0,-0.04,0,0,0,-0.04
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC NABU Fee-Non Domestic,MIC,2,0.0295,4.06,0,-0.06,0,0,0,-0.06
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Cross Border Assessment Fee,MIC,2,0,4.06,0.006,-0.02,0,0,0,-0.02
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC Connectivity Fee,MHB2,1,0.0016,2.01,0,0,0,0,0,0
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Cross Border Assessment Fee,MIP,16,0,240,0.006,-1.44,0,0,0,-1.44
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC Connectivity Fee,MIC,2,0.0016,4.06,0,0,0,0,0,0
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Assessment,MIC,,0,4.06,0.0014,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,MC Connectivity Fee,MHB2,2,0.0016,-8.03,0,0,0,0,0,0
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Assessment,MHB2,,0,-8.03,0,0,0,0,0,0
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Assessment,MHB4,,0,2.03,0.0014,0,0,0,0,0
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC Acquiring License Fee,MIP,16,0,240,0.00004,0,0,0,0,0
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281211,MC AVS Card Not Present Fee,NONE,146,0,3654,0,0,0,0,0,0
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281211,MC Digital Enablement,NONE,1,0,401,0.0002,-0.08,0,0,0,-0.08
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC International Support Fee,MIP,16,0,240,0.0085,-2.04,0,0,0,-2.04
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Cross Border Assessment Fee,MRC7,16,0,-240,0,0,0,0,0,0
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281211,MC Connectivity Fee,NONE,177,0.0016,3977,0,-0.12999999,0,0,0,-0.12999999
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC NABU Fee-Non Domestic,MHB4,1,0.0295,2.03,0,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC International Support Fee,MIC,2,0,4.06,0.0085,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Assessment,MHB2,,0,2.01,0.0014,0,0,0,0,0
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,MC Connectivity Fee,MRC7,16,0.0016,-240,0,-0.04,0,0,0,-0.04
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281211,MC Digital Enablement,NONE,176,0.02,3576,0,-3.52,0,0,0,-3.52
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,MC NABU Fee-Non Domestic,MRC7,16,0.0295,-240,0,-0.48,0,0,0,-0.48
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,MasterCard NABU Fee,MRC2,6,0.0195,-114,0,-0.12,0,0,0,-0.12
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Assessment,MRC2,,0,-114,0,0,0,0,0,0
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Assessment,MIP,,0,240,0.0014,-0.32,0,0,0,-0.32
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC International Support Fee,MHB2,1,0,2.01,0.0085,-0.02,0,0,0,-0.02
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC Connectivity Fee,MIP,16,0.0016,240,0,-0.04,0,0,0,-0.04
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Cross Border Assessment Fee,MHB2,2,0,-8.03,0,0,0,0,0,0
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC Acquiring License Fee,MIC,2,0,4.06,0.00004,0,0,0,0,0
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC International Support Fee,MHB4,1,0,2.03,0.0085,-0.02,0,0,0,-0.02
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Cross Border Assessment Fee,MHB4,1,0,2.03,0.006,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281211,MasterCard NABU Fee,NONE,130,0.0195,3414,0,-2.59000001,0,0,0,-2.59000001
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,MC Connectivity Fee,MRC2,6,0.0016,-114,0,0,0,0,0,0
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281211,MC NABU Fee-Non Domestic,NONE,17,0.0295,641,0,-0.51,0,0,0,-0.51
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Cross Border Assessment Fee,MHB2,1,0,2.01,0.006,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC Digital Enablement,MIC,2,0.02,4.06,0,-0.04,0,0,0,-0.04
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC Digital Enablement,MHB2,1,0.02,2.01,0,-0.02,0,0,0,-0.02
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC Connectivity Fee,MM1,50,0.0016,1202,0,-0.07000002,0,0,0,-0.07000002
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,MC NABU Fee-Non Domestic,MHB2,1,0.0295,2.01,0,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Assessment,MRC7,,0,-240,0,0,0,0,0,0
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Interchange,MIP,16,0,240,0.02,-4.8,0,0,0,-4.8
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Interchange Fees,REFUND,29281211,Interchange,MHB2,2,0,-8.03,-0.01,0.08,0,0,0,0.08
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Interchange,MHB4,1,0,2.03,0.0198,-0.04,0,0,0,-0.04
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Interchange Fees,REFUND,29281211,Interchange,MRC2,6,0,-114,-0.0175,1.98,0,0,0,1.98
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Interchange,MIC,2,0,4.06,0.02,-0.08,0,0,0,-0.08
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Interchange Fees,REFUND,29281211,Interchange,MRC7,16,0,-240,-0.018,4.32,0,0,0,4.32
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Interchange,MHB2,1,0,2.01,0.016,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Interchange,MM1,50,0.1,1202,0.0195,-28.46000008,0,0,0,-28.46000008
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,SALE,29281211,CPU Authorization,V987,4,0.0095,4.1,0,-0.04,0,0,0,-0.04
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,OTHER,29281211,CPU Authorization,NONE,2,0.0095,,0,-0.02,0,0,0,-0.02
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,REFUND,29281211,Network Token per tran fee,VRCM,29,0.03,-145,0,-0.87,0,0,0,-0.87
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,SALE,29281211,Network Token per tran fee,V105,168,0.03,21491,0,-5.04,0,0,0,-5.04
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,OTHER,29281211,Online Authorization,NONE,25,0.0095,,0,-0.24,0,0,0,-0.24
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,SALE,29281211,Network Token per tran fee,VCEB,108,0.03,2336,0,-3.24,0,0,0,-3.24
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,REFUND,29281211,Network Token per tran fee,VRCN,22,0.03,-437.31,0,-0.66,0,0,0,-0.66
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,SALE,29281211,Network Token per tran fee,VPDM,19,0.03,418,0,-0.57,0,0,0,-0.57
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,AUTH,29281211,Online Authorization,NONE,945,0.0095,243082.2,0,-9.05999979,0,0,0,-9.05999979
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,SALE,29281211,Network Token per tran fee,V987,4,0.03,4.1,0,-0.12,0,0,0,-0.12
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,SALE,29281211,Reauthorization,V148,1,0.0095,10,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,SALE,29281211,Network Token per tran fee,VSDD,2,0.03,2.12,0,-0.06,0,0,0,-0.06
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,AUTH,29281211,CPU Authorization,NONE,93,0.0095,0,0,-0.93,0,0,0,-0.93
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,REFUND,29281211,CPU Authorization,V995,2,0,-6.03,0,0,0,0,0,0
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,AUTH,29281211,Online Authorization,NONE,60,0,-3610.31,0,0,0,0,0,0
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,OTHER,29281211,Full Authorization Reversal,NONE,1,0.0095,,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,SALE,29281211,Network Token per tran fee,VBL2,8,0.03,320,0,-0.24,0,0,0,-0.24
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,OTHER,29281211,Online Authorization,NONE,1,0,,0,0,0,0,0,0
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,REFUND,29281211,Network Token per tran fee,V995,2,0.03,-6.03,0,-0.06,0,0,0,-0.06
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,AUTH,29281211,Network Token per tran fee,NONE,93,0.03,0,0,-2.79,0,0,0,-2.79
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,OTHER,29281211,Network Token per tran fee,NONE,2,0.03,,0,-0.06,0,0,0,-0.06
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,AUTH,29281211,Full Authorization Reversal,NONE,28,0.0095,2262,0,-0.28,0,0,0,-0.28
-Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,SALE,29281211,Network Token per tran fee,V148,363,0.03,194796.6,0,-10.89,0,0,0,-10.89
-Charge Summary,USD,USD,VI,Processing Fees,Deposit Fees,REFUND,29281211,Settled Dep. Fee,V995,2,0.0142,-6.03,0,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,VI,Processing Fees,Deposit Fees,SALE,29281211,Settled Dep. Fee,VPDM,19,0.0142,418,0,-0.25999995,0,0,0,-0.25999995
-Charge Summary,USD,USD,VI,Processing Fees,Deposit Fees,SALE,29281211,Settled Dep. Fee,VSDD,2,0.0142,2.12,0,-0.02,0,0,0,-0.02
-Charge Summary,USD,USD,VI,Processing Fees,Deposit Fees,SALE,29281211,Settled Dep. Fee,VBL2,8,0.0142,320,0,-0.12,0,0,0,-0.12
-Charge Summary,USD,USD,VI,Processing Fees,Deposit Fees,SALE,29281211,Settled Dep. Fee,V105,168,0.0142,21491,0,-2.39999994,0,0,0,-2.39999994
-Charge Summary,USD,USD,VI,Processing Fees,Deposit Fees,REFUND,29281211,Settled Dep. Fee,VRCN,22,0.0142,-437.31,0,-0.3,0,0,0,-0.3
-Charge Summary,USD,USD,VI,Processing Fees,Deposit Fees,SALE,29281211,Settled Dep. Fee,V148,363,0.0142,194796.6,0,-5.10999952,0,0,0,-5.10999952
-Charge Summary,USD,USD,VI,Processing Fees,Deposit Fees,SALE,29281211,Settled Dep. Fee,VCEB,108,0.0142,2336,0,-1.53999988,0,0,0,-1.53999988
-Charge Summary,USD,USD,VI,Processing Fees,Deposit Fees,REFUND,29281211,Settled Dep. Fee,VRCM,29,0.0142,-145,0,-0.39999993,0,0,0,-0.39999993
-Charge Summary,USD,USD,VI,Processing Fees,Deposit Fees,SALE,29281211,Settled Dep. Fee,V987,4,0.0142,4.1,0,-0.06,0,0,0,-0.06
-Charge Summary,USD,USD,VI,Processing Fees,Other Fees,OTHER,29281211,Gateway Transaction Fee,NONE,29,0.05,,0,-1.45,0,0,0,-1.45
-Charge Summary,USD,USD,VI,Processing Fees,Other Fees,AUTH,29281211,Gateway Transaction Fee,NONE,1126,0.05,241733.89,0,-56.3,0,0,0,-56.3
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,VI Digital Comm Fee,V987,4,0.0075,4.1,0,-0.03,0,0,0,-0.03
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281211,VI Digital Comm Fee,NONE,964,0.0075,27400.6,0,-7.56000043,0,0,0,-7.56000043
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,VI Financial Transaction Fee,VCEB,108,0.0025,2336,0,-0.2799999,0,0,0,-0.2799999
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,International Svc Assessment,V987,4,0,4.1,0.01,-0.04,0,0,0,-0.04
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281211,VI Dom Verification-CR,NONE,93,0.035,0,0,-3.38000015,0,0,0,-3.38000015
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Trans Integrity-Debit/PP,VSDD,2,0.1,2.12,0,-0.2,0,0,0,-0.2
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Trans Integrity Fee - CR,V105,168,0.1,21491,0,-16.8,0,0,0,-16.8
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,VI Digital Comm Fee,V148,1,0.0075,10,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Assessment,VRCM,,0,-145,0,0,0,0,0,0
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,VI Dom Refund Trx APF Credit,VRCN,22,0.0195,-437.31,0,-0.44,0,0,0,-0.44
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Assessment,V995,,0,-6.03,0,0,0,0,0,0
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,VI Reporting & Data Transfer,V148,363,0.0004,194796.6,0,-0.16000021,0,0,0,-0.16000021
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,VI Financial Transaction Fee,V105,168,0.0025,21491,0,-0.45999993,0,0,0,-0.45999993
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,VI Financial Transaction Fee,VPDM,19,0.0025,418,0,-0.06999995,0,0,0,-0.06999995
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281211,VISA Estimated Auth Fee,NONE,56,0,2000,0.0002,-0.41000005,0,0,0,-0.41000005
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,VI Reporting & Data Transfer,VCEB,108,0.0004,2336,0,-0.05000036,0,0,0,-0.05000036
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281211,VI Dom Sales Auth APF Debit,NONE,2,0.0155,2.12,0,-0.04,0,0,0,-0.04
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,OTHER,29281211,VI Digital Comm Fee,NONE,24,0.0075,,0,-0.19,0,0,0,-0.19
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,VI Interregional IAF fee ST,V987,4,0,4.1,0.0045,-0.02,0,0,0,-0.02
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,VI Dom Refund Trx APF Credit,VRCM,29,0.0195,-145,0,-0.58,0,0,0,-0.58
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,VI Financial Transaction Fee,V148,363,0.0025,194796.6,0,-0.91999974,0,0,0,-0.91999974
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,VI Financial Transaction Fee,V995,2,0.0025,-6.03,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,OTHER,29281211,Verification,NONE,2,0.025,,0,-0.05,0,0,0,-0.05
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,VI Financial Transaction Fee,V987,4,0.0025,4.1,0,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,VI Reporting & Data Transfer,V105,168,0.0004,21491,0,-0.02999994,0,0,0,-0.02999994
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Assessment,V987,,0,4.1,0.0014,-0.01,0,0,0,-0.01
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,VI Interregional IAF fee ST,V995,2,0,-6.03,0,0,0,0,0,0
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,VI Financial Transaction Fee,VBL2,8,0.0025,320,0,-0.04,0,0,0,-0.04
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,VI Intl SalesAuth APF Credit,V987,4,0.0395,4.1,0,-0.16,0,0,0,-0.16
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Assessment,V148,,0,194796.6,0.0014,-272.7000001,0,0,0,-272.7000001
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Trans Integrity Fee - CR,V148,363,0.1,194796.6,0,-36.3,0,0,0,-36.3
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,VI Financial Transaction Fee,VSDD,2,0.0025,2.12,0,0,0,0,0,0
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Assessment,VCEB,,0,2336,0.0014,-3.29000012,0,0,0,-3.29000012
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,VI Financial Transaction Fee,VRCM,29,0.0025,-145,0,-0.09999993,0,0,0,-0.09999993
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,VI Reporting & Data Transfer,VBL2,8,0.0004,320,0,0,0,0,0,0
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,VI Dom Sales Auth APF Credit,V148,1,0.0195,10,0,-0.02,0,0,0,-0.02
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,International Svc Assessment,V995,2,0,-6.03,0,0,0,0,0,0
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,VI Reporting & Data Transfer,VSDD,2,0.0004,2.12,0,0,0,0,0,0
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281211,Verification,NONE,93,0.025,0,0,-2.45000015,0,0,0,-2.45000015
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Assessment,VBL2,,0,320,0.0014,-0.44,0,0,0,-0.44
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,VI Intl Refund Trx APF Debit,V995,2,0.0355,-6.03,0,-0.07,0,0,0,-0.07
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,OTHER,29281211,VI Dom Verification-CR,NONE,2,0.035,,0,-0.07,0,0,0,-0.07
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281211,VI Dom Sales Auth APF Credit,NONE,971,0.0195,245342.08,0,-19.02999979,0,0,0,-19.02999979
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,VI Digital Comm Fee,V995,2,0.0075,-6.03,0,-0.02,0,0,0,-0.02
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,OTHER,29281211,VI Dom Sales Auth APF Credit,NONE,26,0.0195,,0,-0.51,0,0,0,-0.51
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,VI Reporting & Data Transfer,VPDM,19,0.0004,418,0,0,0,0,0,0
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,Assessment,VRCN,,0,-437.31,0,0,0,0,0,0
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Assessment,V105,,0,21491,0.0014,-30.10000014,0,0,0,-30.10000014
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,OTHER,29281211,VI Digital Comm Fee,NONE,5,0,,0.000075,-0.07,0,0,0,-0.07
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281211,VI Digital Comm Fee,NONE,162,0,214333.29,0.000075,-16.53000012,0,0,0,-16.53000012
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Assessment,VPDM,,0,418,0.0014,-0.57,0,0,0,-0.57
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281211,VI Financial Transaction Fee,VRCN,22,0.0025,-437.31,0,-0.04,0,0,0,-0.04
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281211,Assessment,VSDD,,0,2.12,0.0013,0,0,0,0,0
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Interchange,VBL2,8,0.1,320,0.019,-6.88,0,0,0,-6.88
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Interchange,V987,4,0,4.1,0.016,-0.07,0,0,0,-0.07
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,REFUND,29281211,Interchange,VRCM,29,0,-145,-0.0235,3.40000007,0,0,0,3.40000007
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Interchange,VPDM,19,0.1,418,0.018,-9.43000005,0,0,0,-9.43000005
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Interchange,VCEB,108,0.1,2336,0.018,-52.84000008,0,0,0,-52.84000008
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,REFUND,29281211,Interchange,VRCN,22,0,-437.31,-0.0205,8.99,0,0,0,8.99
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,REFUND,29281211,Interchange,V995,2,0,-6.03,-0.01,0.06,0,0,0,0.06
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Interchange,V148,363,0.2,194796.6,0.0315,-6208.69,0,0,0,-6208.69
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Interchange,VSDD,2,0.25,2.12,0.019,-0.54,0,0,0,-0.54
-Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281211,Interchange,V105,168,0.1,21491,0.0315,-693.76,0,0,0,-693.76
-Record Type,Transaction Division External Identifier,Acquirer Codice Fiscale,Acquirer Legal Entity,CPSI GST Registration Number,CPSI QST Registration Number,Merchant Codice Fiscale,Recipient Address,Recipient Legal Entity,,,,,,,,,,
-Tax Information,441455,97911380158,"Chase Paymentech Europe, Ltd",,,,"PORTUGAL,PT",Cosentino Portugal EUR,,,,,,,,,,
-Tax Information,441334,97911380158,"Chase Paymentech Europe, Ltd",,,,"1520 main st,LONDON,A9 9AA,GB",UK Migration GBP GBP -2,,,,,,,,,,
-Tax Information,441284,97911380158,"Chase Paymentech Europe, Ltd",,,,"1520 main st,LONDON,A9 9AA,GB",UK Migration GBP AED,,,,,,,,,,
-Tax Information,441298,97911380158,"Chase Paymentech Europe, Ltd",,,,"1520 main st,LONDON,A9 9AA,GB",UK Migration GBP AZN,,,,,,,,,,
-Tax Information,418555,97911380158,"Chase Paymentech Europe, Ltd",,,,"1520 main st,LONDON,IE",upg eur,,,,,,,,,,
-Tax Information,441421,97911380158,"Chase Paymentech Europe, Ltd",,,,"1520 main st,LONDON,A9 9AA,GB",UK Migration GBP GBP - 9,,,,,,,,,,
-END,EntityId=418553,Frequency=adhoc
+Charge Summary,USD,USD,AX,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,59,0.0175,4216.5,0,-1.06000002,0,0,0,-1.06000002
+Charge Summary,USD,USD,AX,Processing Fees,Authorization Fees,SALE,29281072,CPU Authorization,NONE,75,0.0175,5837.92,0,-1.34999997,0,0,0,-1.34999997
+Charge Summary,USD,USD,AX,Processing Fees,Deposit Fees,REFUND,29281072,Conveyed Dep. Fee,NONE,5,0.0175,-94.02,0,-0.1,0,0,0,-0.1
+Charge Summary,USD,USD,AX,Processing Fees,Deposit Fees,SALE,29281072,Conveyed Dep. Fee,NONE,75,0.0175,5837.92,0,-1.34999997,0,0,0,-1.34999997
+Charge Summary,USD,USD,AX,Processing Fees,Other Fees,AUTH,29281072,Gateway Transaction Fee,NONE,68,0,4216.5,0,0,0,0,0,0
+Charge Summary,USD,USD,DD,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,2,0,-42,0,0,0,0,0,0
+Charge Summary,USD,USD,DD,Processing Fees,Authorization Fees,AUTH,29281072,CPU Authorization,NONE,8,0.0175,0,0,-0.16,0,0,0,-0.16
+Charge Summary,USD,USD,DD,Processing Fees,Authorization Fees,REFUND,29281072,CPU Authorization,DCA1,1,0,-12.02,0,0,0,0,0,0
+Charge Summary,USD,USD,DD,Processing Fees,Authorization Fees,SALE,29281072,CPU Authorization,DCSL,1,0.0175,11.02,0,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,DD,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,35,0.0175,1074.1,0,-0.64000004,0,0,0,-0.64000004
+Charge Summary,USD,USD,DD,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,DCSL,1,0.0175,11.02,0,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,DD,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,DNON,4,0.0175,-84,0,-0.08,0,0,0,-0.08
+Charge Summary,USD,USD,DD,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,DCA1,1,0.0175,-12.02,0,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,DD,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,D811,34,0.0175,957.5,0,-0.62000001,0,0,0,-0.62000001
+Charge Summary,USD,USD,DD,Processing Fees,Other Fees,AUTH,29281072,Gateway Transaction Fee,NONE,45,0,1032.1,0,0,0,0,0,0
+Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Disc ntwrk Authorization Fee,DCSL,1,0.019,11.02,0,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Discover Data Usage,DCA1,1,-0.0025,-12.02,0,0,0,0,0,0
+Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,D811,,0,957.5,0.0014,-1.33999997,0,0,0,-1.33999997
+Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Discover Data Usage,DCSL,1,0.0025,11.02,0,0,0,0,0,0
+Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,DI Digital Investment Fee,DCSL,1,0,11.02,0.0001,0,0,0,0,0
+Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,DCA1,,0,-12.02,0,0,0,0,0,0
+Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Disc INTL Service Fee,D811,34,0,957.5,0.008,-7.67000001,0,0,0,-7.67000001
+Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Discover Data Usage,DNON,4,-0.0025,-84,0,0,0,0,0,0
+Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Discover Intl Processing Fee,D811,34,0,957.5,0.005,-4.78999997,0,0,0,-4.78999997
+Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,DNON,,0,-84,0,0,0,0,0,0
+Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,DCSL,,0,11.02,0.0014,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Disc ntwrk Authorization Fee,DCA1,1,0,-12.02,0,0,0,0,0,0
+Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Discover Data Usage,D811,34,0.0025,957.5,0,-0.11999995,0,0,0,-0.11999995
+Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,Disc ntwrk Authorization Fee,NONE,35,0.019,1074.1,0,-0.69000001,0,0,0,-0.69000001
+Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,DCSL,1,0.15,11.02,0.0245,-0.42,0,0,0,-0.42
+Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,D811,34,0.1,957.5,0.019,-21.61000001,0,0,0,-21.61000001
+Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,DCA1,1,0,-12.02,-0.0225,0.27,0,0,0,0.27
+Charge Summary,USD,USD,DD,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,DNON,4,0,-84,0,0,0,0,0,0
+Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,AUTH,29281072,CPU Authorization,NONE,3,0.0175,0,0,-0.06,0,0,0,-0.06
+Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,36,0.0175,3394.5,0,-0.67000005,0,0,0,-0.67000005
+Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,3,0,-54,0,0,0,0,0,0
+Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,REFUND,29281072,CPU Authorization,DDV3,1,0,-6.02,0,0,0,0,0,0
+Charge Summary,USD,USD,DI,Processing Fees,Authorization Fees,SALE,29281072,CPU Authorization,DCRP,1,0.0175,5.02,0,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,DI,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,DBSC,4,0.0175,72,0,-0.08,0,0,0,-0.08
+Charge Summary,USD,USD,DI,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,DCRP,1,0.0175,5.02,0,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,DI,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,DCV3,4,0.0175,-72,0,-0.08,0,0,0,-0.08
+Charge Summary,USD,USD,DI,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,DDV3,1,0.0175,-6.02,0,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,DI,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,D171,29,0.0175,900.3,0,-0.53000003,0,0,0,-0.53000003
+Charge Summary,USD,USD,DI,Processing Fees,Other Fees,AUTH,29281072,Gateway Transaction Fee,NONE,42,0,3340.5,0,0,0,0,0,0
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,DI Program Integrity Fee,D171,29,0.1,900.3,0,-2.9,0,0,0,-2.9
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,D171,,0,900.3,0.0014,-1.28000003,0,0,0,-1.28000003
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,DI AVS Fee,NONE,36,0.005,3394.5,0,-0.23000006,0,0,0,-0.23000006
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Discover Data Usage,D171,29,0.0025,900.3,0,-0.08999997,0,0,0,-0.08999997
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,DBSC,,0,72,0.0014,-0.11,0,0,0,-0.11
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,DI Program Integrity Fee,DBSC,4,0.1,72,0,-0.4,0,0,0,-0.4
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Discover Data Usage,DCV3,4,-0.0025,-72,0,0,0,0,0,0
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Discover Data Usage,DBSC,4,0.0025,72,0,-0.01,0,0,0,-0.01
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Discover Data Usage,DDV3,1,-0.0025,-6.02,0,0,0,0,0,0
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Discover Data Usage,DCRP,1,0.0025,5.02,0,0,0,0,0,0
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,DDV3,,0,-6.02,0,0,0,0,0,0
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,DI Digital Investment Fee,DCRP,1,0,5.02,0.0001,0,0,0,0,0
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,Disc ntwrk Authorization Fee,NONE,36,0.019,3394.5,0,-0.71000001,0,0,0,-0.71000001
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,DCRP,,0,5.02,0.0014,-0.01,0,0,0,-0.01
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,DI Account Verification,NONE,3,0.02,0,0,-0.06,0,0,0,-0.06
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Disc ntwrk Authorization Fee,DDV3,1,0,-6.02,0,0,0,0,0,0
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Disc ntwrk Authorization Fee,DCRP,1,0.019,5.02,0,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,DCV3,,0,-72,0,0,0,0,0,0
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,DCV3,4,0,-72,-0.0175,1.28,0,0,0,1.28
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,DCRP,1,0.05,5.02,0.0135,-0.12,0,0,0,-0.12
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,DBSC,4,0.1,72,0.0315,-2.67,0,0,0,-2.67
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,D171,29,0.1,900.3,0.0315,-31.24999999,0,0,0,-31.24999999
+Charge Summary,USD,USD,DI,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,DDV3,1,0,-6.02,-0.0135,0.08,0,0,0,0.08
+Charge Summary,USD,USD,JC,Processing Fees,Authorization Fees,SALE,29281072,CPU Authorization,DPRP,1,0.0175,7.02,0,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,JC,Processing Fees,Authorization Fees,REFUND,29281072,CPU Authorization,D358,1,0,-8.02,0,0,0,0,0,0
+Charge Summary,USD,USD,JC,Processing Fees,Authorization Fees,AUTH,29281072,CPU Authorization,NONE,3,0.0175,0,0,-0.06,0,0,0,-0.06
+Charge Summary,USD,USD,JC,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,31,0.0175,1081.6,0,-0.56000003,0,0,0,-0.56000003
+Charge Summary,USD,USD,JC,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,3,0,-63,0,0,0,0,0,0
+Charge Summary,USD,USD,JC,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,DPV3,4,0.0175,-84,0,-0.08,0,0,0,-0.08
+Charge Summary,USD,USD,JC,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,D358,1,0.0175,-8.02,0,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,JC,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,DBSP,33,0.0175,1015.4,0,-0.60000002,0,0,0,-0.60000002
+Charge Summary,USD,USD,JC,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,DPRP,1,0.0175,7.02,0,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,JC,Processing Fees,Other Fees,AUTH,29281072,Gateway Transaction Fee,NONE,37,0,1018.6,0,0,0,0,0,0
+Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,DBSP,,0,1015.4,0.0014,-1.41999999,0,0,0,-1.41999999
+Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,DPV3,,0,-84,0,0,0,0,0,0
+Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Discover Data Usage,DPV3,4,-0.0025,-84,0,0,0,0,0,0
+Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,DPRP,,0,7.02,0.0014,-0.01,0,0,0,-0.01
+Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,Disc ntwrk Authorization Fee,NONE,31,0.019,1081.6,0,-0.61,0,0,0,-0.61
+Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Disc ntwrk Authorization Fee,D358,1,0,-8.02,0,0,0,0,0,0
+Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,DI Digital Investment Fee,DPRP,1,0,7.02,0.0001,0,0,0,0,0
+Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,D358,,0,-8.02,0,0,0,0,0,0
+Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Discover Data Usage,DBSP,33,0.0025,1015.4,0,-0.09999998,0,0,0,-0.09999998
+Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,DI Account Verification,NONE,3,0.02,0,0,-0.06,0,0,0,-0.06
+Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,DI AVS Fee,NONE,31,0.005,1081.6,0,-0.21000003,0,0,0,-0.21000003
+Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Discover Data Usage,D358,1,-0.0025,-8.02,0,0,0,0,0,0
+Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Discover Data Usage,DPRP,1,0.0025,7.02,0,0,0,0,0,0
+Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Disc ntwrk Authorization Fee,DPRP,1,0.019,7.02,0,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,DPRP,1,0.05,7.02,0.0145,-0.15,0,0,0,-0.15
+Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,D358,1,0,-8.02,0,0,0,0,0,0
+Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,DPV3,4,0,-84,-0.0175,1.48,0,0,0,1.48
+Charge Summary,USD,USD,JC,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,DBSP,33,0.1,1015.4,0.0315,-35.28000001,0,0,0,-35.28000001
+Charge Summary,CLP,USD,MC,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,11,0,-38.64,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,SALE,29281072,CPU Authorization,MHB2,1,0.0175,3.02,0,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,REFUND,29281072,CPU Authorization,MHB2,1,0,-4.02,0,0,0,0,0,0
+Charge Summary,CLP,USD,MC,Processing Fees,Authorization Fees,AUTH,29281072,CPU Authorization,NONE,4,0.0175,0,0,-0.08,0,0,0,-0.08
+Charge Summary,ARS,USD,MC,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,15,0,-0.5,0,0,0,0,0,0
+Charge Summary,CLP,USD,MC,Processing Fees,Authorization Fees,SALE,null,Rejected Transact,,3,0.0175,150600000,,-0.06,0,0,0,-0.06
+Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,12,0,-430,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,SALE,29281072,CPU Authorization,MM1,54,0.0175,1375,0,-0.97,0,0,0,-0.97
+Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,AUTH,29281072,CPU Authorization,NONE,3,0.0175,0,0,-0.06,0,0,0,-0.06
+Charge Summary,MXN,USD,MC,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,105,0.0175,246.79,0,-1.88000008,0,0,0,-1.88000008
+Charge Summary,COP,USD,MC,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,114,0.0175,1.39,0,-2.02000006,0,0,0,-2.02000006
+Charge Summary,MXN,USD,MC,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,13,0,-21.5,0,0,0,0,0,0
+Charge Summary,PEN,USD,MC,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,14,0,-133.75,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,97,0.0175,4074,0,-1.78999999,0,0,0,-1.78999999
+Charge Summary,PEN,USD,MC,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,79,0.0175,3316.72,0,-1.44999996,0,0,0,-1.44999996
+Charge Summary,USD,USD,MC,Processing Fees,Authorization Fees,SALE,29281072,CPU Authorization,MSI,16,0.0175,352,0,-0.28000002,0,0,0,-0.28000002
+Charge Summary,CLP,USD,MC,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,70,0.0175,314.43,0,-1.27000003,0,0,0,-1.27000003
+Charge Summary,COP,USD,MC,Processing Fees,Authorization Fees,AUTH,29281072,CPU Authorization,NONE,4,0.0175,0,0,-0.08,0,0,0,-0.08
+Charge Summary,COP,USD,MC,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,18,0,-0.11,0,0,0,0,0,0
+Charge Summary,PEN,USD,MC,Processing Fees,Authorization Fees,AUTH,29281072,CPU Authorization,NONE,3,0.0175,0,0,-0.06,0,0,0,-0.06
+Charge Summary,ARS,USD,MC,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,79,0.0175,3.6,0,-1.42000011,0,0,0,-1.42000011
+Charge Summary,ARS,USD,MC,Processing Fees,Authorization Fees,AUTH,29281072,CPU Authorization,NONE,3,0.0175,0,0,-0.06,0,0,0,-0.06
+Charge Summary,MXN,USD,MC,Processing Fees,Authorization Fees,AUTH,29281072,CPU Authorization,NONE,2,0.0175,0,0,-0.04,0,0,0,-0.04
+Charge Summary,COP,USD,MC,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,MHB2,150,0.0175,1.3,0,-2.63999991,0,0,0,-2.63999991
+Charge Summary,PEN,USD,MC,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,MHB2,124,0.0175,4300.12,0,-2.17000002,0,0,0,-2.17000002
+Charge Summary,CLP,USD,MC,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,MRC7,19,0.0175,-68.69,0,-0.33999998,0,0,0,-0.33999998
+Charge Summary,USD,USD,MC,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,MM1,54,0.0175,1375,0,-0.97,0,0,0,-0.97
+Charge Summary,USD,USD,MC,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,MSI,16,0.0175,352,0,-0.28000002,0,0,0,-0.28000002
+Charge Summary,USD,USD,MC,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,MHB2,1,0.0175,3.02,0,-0.02,0,0,0,-0.02
+Charge Summary,ARS,USD,MC,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,MHB2,120,0.0175,3.6,0,-2.12000012,0,0,0,-2.12000012
+Charge Summary,PEN,USD,MC,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,MHB2,19,0.0175,-166.21,0,-0.33999999,0,0,0,-0.33999999
+Charge Summary,MXN,USD,MC,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,MHB2,152,0.0175,236.6,0,-2.67000003,0,0,0,-2.67000003
+Charge Summary,MXN,USD,MC,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,MHB2,19,0.0175,-32,0,-0.35000001,0,0,0,-0.35000001
+Charge Summary,USD,USD,MC,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,MRD1,15,0.0175,-580,0,-0.28000001,0,0,0,-0.28000001
+Charge Summary,USD,USD,MC,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,MHB2,1,0.0175,-4.02,0,-0.02,0,0,0,-0.02
+Charge Summary,COP,USD,MC,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,MHB2,24,0.0175,-0.15,0,-0.42000005,0,0,0,-0.42000005
+Charge Summary,USD,USD,MC,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,MSDD,60,0.0175,2328,0,-1.07000005,0,0,0,-1.07000005
+Charge Summary,USD,USD,MC,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,MRC7,4,0.0175,-60,0,-0.08,0,0,0,-0.08
+Charge Summary,USD,USD,MC,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,MIP,4,0.0175,60,0,-0.08,0,0,0,-0.08
+Charge Summary,ARS,USD,MC,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,MHB2,19,0.0175,-0.66,0,-0.35000001,0,0,0,-0.35000001
+Charge Summary,CLP,USD,MC,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,MIPU,120,0.0175,399.16,0,-2.10000009,0,0,0,-2.10000009
+Charge Summary,CLP,USD,MC,Processing Fees,Other Fees,AUTH,29281072,Gateway Transaction Fee,NONE,85,0,275.79,0,0,0,0,0,0
+Charge Summary,COP,USD,MC,Processing Fees,Other Fees,AUTH,29281072,Gateway Transaction Fee,NONE,136,0,1.28,0,0,0,0,0,0
+Charge Summary,PEN,USD,MC,Processing Fees,Other Fees,AUTH,29281072,Gateway Transaction Fee,NONE,96,0,3182.97,0,0,0,0,0,0
+Charge Summary,ARS,USD,MC,Processing Fees,Other Fees,AUTH,29281072,Gateway Transaction Fee,NONE,97,0,3.1,0,0,0,0,0,0
+Charge Summary,MXN,USD,MC,Processing Fees,Other Fees,AUTH,29281072,Gateway Transaction Fee,NONE,120,0,225.29,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Processing Fees,Other Fees,AUTH,29281072,Gateway Transaction Fee,NONE,112,0,3644,0,0,0,0,0,0
+Charge Summary,PEN,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Cross Border Assessment Fee,MHB2,124,0,4300.12,0.01,-42.99999998,0,0,0,-42.99999998
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Connectivity Fee,MM1,54,0.0016,1375,0,-0.07000006,0,0,0,-0.07000006
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MasterCard NABU Fee,MM1,54,0.0195,1375,0,-1.07000004,0,0,0,-1.07000004
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MasterCard NABU Fee,MSI,16,0.0195,352,0,-0.32,0,0,0,-0.32
+Charge Summary,COP,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Cross Border Assessment Fee,MHB2,150,0,1.3,0.01,0,0,0,0,0
+Charge Summary,ARS,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Acquiring License Fee,MHB2,120,0,3.6,0.00004,0,0,0,0,0
+Charge Summary,ARS,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC AVS Card Not Present Fee,NONE,79,0,3.6,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Acquiring License Fee,MSDD,60,0,2328,0.00004,-0.08999997,0,0,0,-0.08999997
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC NABU Fee-Non Domestic,MHB2,1,0.0295,3.02,0,-0.03,0,0,0,-0.03
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Acquiring License Fee,MHB2,1,0,3.02,0.00004,0,0,0,0,0
+Charge Summary,ARS,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC Connectivity Fee,NONE,94,0.0016,3.1,0,-0.07999997,0,0,0,-0.07999997
+Charge Summary,PEN,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,MC Connectivity Fee,MHB2,19,0.0016,-166.21,0,-0.03000002,0,0,0,-0.03000002
+Charge Summary,MXN,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,MC Connectivity Fee,MHB2,19,0.0016,-32,0,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Cross Border Assessment Fee,MHB2,1,0,3.02,0.006,-0.02,0,0,0,-0.02
+Charge Summary,PEN,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC NABU Fee-Non Domestic,NONE,79,0.0295,3316.72,0,-2.36000004,0,0,0,-2.36000004
+Charge Summary,CLP,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC International Support Fee,MIPU,120,0,399.16,0.0085,-3.38999979,0,0,0,-3.38999979
+Charge Summary,COP,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC International Support Fee,MHB2,150,0,1.3,0.0085,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,MRD1,,0,-580,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Acquiring License Fee,MM1,54,0,1375,0.00004,-0.02999998,0,0,0,-0.02999998
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,MHB2,,0,-4.02,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,MHB2,,0,3.02,0.0014,0,0,0,0,0
+Charge Summary,PEN,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Cross Border Assessment Fee,MHB2,19,0,-166.21,0,0,0,0,0,0
+Charge Summary,PEN,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Connectivity Fee,MHB2,124,0.0016,4300.12,0,-0.18999995,0,0,0,-0.18999995
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Acquiring License Fee,MIP,4,0,60,0.00004,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC Digital Enablement,NONE,17,0,2108,0.0002,-0.42,0,0,0,-0.42
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Cross Border Assessment Fee,MRC7,4,0,-60,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Digital Enablement,MM1,54,0.02,1375,0,-1.08,0,0,0,-1.08
+Charge Summary,MXN,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Cross Border Assessment Fee,MHB2,19,0,-32,0,0,0,0,0,0
+Charge Summary,COP,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC Connectivity Fee,NONE,132,0.0016,1.28,0,-0.1700002,0,0,0,-0.1700002
+Charge Summary,MXN,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Cross Border Assessment Fee,MHB2,152,0,236.6,0.01,-2.36999973,0,0,0,-2.36999973
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Connectivity Fee,MHB2,1,0.0016,3.02,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC International Support Fee,MHB2,1,0,3.02,0.0085,-0.03,0,0,0,-0.03
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Connectivity Fee,MSI,16,0.0016,352,0,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,MasterCard NABU Fee,MRD1,15,0.0195,-580,0,-0.3,0,0,0,-0.3
+Charge Summary,PEN,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC Digital Enablement,NONE,96,0.02,3182.97,0,-1.92,0,0,0,-1.92
+Charge Summary,MXN,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,MC NABU Fee-Non Domestic,MHB2,19,0.0295,-32,0,-0.57,0,0,0,-0.57
+Charge Summary,MXN,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,MHB2,,0,236.6,0.0014,-0.33000002,0,0,0,-0.33000002
+Charge Summary,MXN,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC Digital Enablement,NONE,120,0.02,225.29,0,-2.4,0,0,0,-2.4
+Charge Summary,CLP,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC AVS Card Not Present Fee,NONE,70,0,314.43,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,MC Digital Enablement,MHB2,1,0.02,-4.02,0,-0.02,0,0,0,-0.02
+Charge Summary,COP,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC AVS Card Not Present Fee,NONE,114,0,1.39,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Reporting&Infrastructure,MM1,54,0.0004,1375,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,MSDD,,0,2328,0.0014,-3.26,0,0,0,-3.26
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,MC Connectivity Fee,MRD1,15,0.0016,-580,0,-0.01,0,0,0,-0.01
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Cross Border Assessment Fee,MIP,4,0,60,0.006,-0.36,0,0,0,-0.36
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,MIP,,0,60,0.0014,-0.08,0,0,0,-0.08
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,MC Connectivity Fee,MRC7,4,0.0016,-60,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC NABU Fee-Non Domestic,NONE,5,0.0295,653,0,-0.15,0,0,0,-0.15
+Charge Summary,CLP,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Cross Border Assessment Fee,MRC7,19,0,-68.69,0,0,0,0,0,0
+Charge Summary,CLP,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC Connectivity Fee,NONE,81,0.0016,275.79,0,-0.08000001,0,0,0,-0.08000001
+Charge Summary,MXN,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC AVS Card Not Present Fee,NONE,105,0,246.79,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Cross Border Assessment Fee,MHB2,1,0,-4.02,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC Connectivity Fee,NONE,109,0.0016,3644,0,-0.07999996,0,0,0,-0.07999996
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,MSI,,0,352,0.0014,-0.48,0,0,0,-0.48
+Charge Summary,COP,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,MHB2,,0,-0.15,0,0,0,0,0,0
+Charge Summary,CLP,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC Digital Enablement,NONE,85,0.02,275.79,0,-1.7,0,0,0,-1.7
+Charge Summary,ARS,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,MC NABU Fee-Non Domestic,MHB2,19,0.0295,-0.66,0,-0.57,0,0,0,-0.57
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,MM1,,0,1375,0.0014,-1.92000002,0,0,0,-1.92000002
+Charge Summary,ARS,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC Digital Enablement,NONE,97,0.02,3.1,0,-1.94,0,0,0,-1.94
+Charge Summary,MXN,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC International Support Fee,MHB2,152,0,236.6,0.0085,-1.99999976,0,0,0,-1.99999976
+Charge Summary,CLP,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,MRC7,,0,-68.69,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,MC Connectivity Fee,MHB2,1,0.0016,-4.02,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Connectivity Fee,MIP,4,0.0016,60,0,0,0,0,0,0
+Charge Summary,COP,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Cross Border Assessment Fee,MHB2,24,0,-0.15,0,0,0,0,0,0
+Charge Summary,ARS,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Cross Border Assessment Fee,MHB2,19,0,-0.66,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Reporting&Infrastructure,MSDD,60,0.0004,2328,0,-0.02000007,0,0,0,-0.02000007
+Charge Summary,CLP,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,MIPU,,0,399.16,0.0014,-0.57000002,0,0,0,-0.57000002
+Charge Summary,COP,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,MC Connectivity Fee,MHB2,24,0.0016,-0.15,0,-0.01999999,0,0,0,-0.01999999
+Charge Summary,CLP,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Cross Border Assessment Fee,MIPU,120,0,399.16,0.01,-3.98999988,0,0,0,-3.98999988
+Charge Summary,ARS,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC International Support Fee,MHB2,120,0,3.6,0.0085,-0.0200002,0,0,0,-0.0200002
+Charge Summary,MXN,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC Connectivity Fee,NONE,118,0.0016,225.29,0,-0.14,0,0,0,-0.14
+Charge Summary,ARS,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Cross Border Assessment Fee,MHB2,120,0,3.6,0.01,-0.0300002,0,0,0,-0.0300002
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Digital Enablement,MHB2,1,0.02,3.02,0,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MasterCard NABU Fee,NONE,92,0.0195,3421,0,-1.82999995,0,0,0,-1.82999995
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Acquiring License Fee,MSI,16,0,352,0.00004,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,MC NABU Fee-Non Domestic,MRC7,4,0.0295,-60,0,-0.12,0,0,0,-0.12
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC International Support Fee,MIP,4,0,60,0.0085,-0.52,0,0,0,-0.52
+Charge Summary,PEN,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC AVS Card Not Present Fee,NONE,76,0,3145.33,0,0,0,0,0,0
+Charge Summary,COP,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,MHB2,,0,1.3,0.0014,0,0,0,0,0
+Charge Summary,MXN,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,MHB2,,0,-32,0,0,0,0,0,0
+Charge Summary,PEN,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,MHB2,,0,-166.21,0,0,0,0,0,0
+Charge Summary,ARS,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,MHB2,,0,3.6,0.0014,0,0,0,0,0
+Charge Summary,CLP,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,MC NABU Fee-Non Domestic,MRC7,19,0.0295,-68.69,0,-0.57,0,0,0,-0.57
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,MRC7,,0,-60,0,0,0,0,0,0
+Charge Summary,ARS,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,MHB2,,0,-0.66,0,0,0,0,0,0
+Charge Summary,ARS,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC NABU Fee-Non Domestic,NONE,79,0.0295,3.6,0,-2.37,0,0,0,-2.37
+Charge Summary,MXN,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Acquiring License Fee,MHB2,152,0,236.6,0.00004,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Reporting&Infrastructure,MSI,16,0.0004,352,0,0,0,0,0,0
+Charge Summary,PEN,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC International Support Fee,MHB2,124,0,4300.12,0.0085,-36.54000008,0,0,0,-36.54000008
+Charge Summary,ARS,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Connectivity Fee,MHB2,120,0.0016,3.6,0,-0.19000001,0,0,0,-0.19000001
+Charge Summary,CLP,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Acquiring License Fee,MIPU,120,0,399.16,0.00004,0,0,0,0,0
+Charge Summary,ARS,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,MC Connectivity Fee,MHB2,19,0.0016,-0.66,0,-0.01,0,0,0,-0.01
+Charge Summary,MXN,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC NABU Fee-Non Domestic,NONE,105,0.0295,246.79,0,-3.11999994,0,0,0,-3.11999994
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Connectivity Fee,MSDD,60,0.0016,2328,0,-0.10000006,0,0,0,-0.10000006
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC AVS Card Not Present Fee,MSI,16,0,352,0,0,0,0,0,0
+Charge Summary,CLP,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC NABU Fee-Non Domestic,NONE,70,0.0295,314.43,0,-2.1,0,0,0,-2.1
+Charge Summary,COP,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,MC NABU Fee-Non Domestic,MHB2,24,0.0295,-0.15,0,-0.72,0,0,0,-0.72
+Charge Summary,CLP,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,MC Connectivity Fee,MRC7,19,0.0016,-68.69,0,-0.04000002,0,0,0,-0.04000002
+Charge Summary,PEN,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Acquiring License Fee,MHB2,124,0,4300.12,0.00004,-0.16999987,0,0,0,-0.16999987
+Charge Summary,PEN,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC Connectivity Fee,NONE,93,0.0016,3182.97,0,-0.11000008,0,0,0,-0.11000008
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Digital Enablement,MSI,16,0.02,352,0,-0.32,0,0,0,-0.32
+Charge Summary,PEN,USD,MC,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,MC NABU Fee-Non Domestic,MHB2,19,0.0295,-166.21,0,-0.57,0,0,0,-0.57
+Charge Summary,COP,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Connectivity Fee,MHB2,150,0.0016,1.3,0,-0.25000005,0,0,0,-0.25000005
+Charge Summary,COP,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Acquiring License Fee,MHB2,150,0,1.3,0.00004,0,0,0,0,0
+Charge Summary,COP,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC Digital Enablement,NONE,136,0.02,1.28,0,-2.72,0,0,0,-2.72
+Charge Summary,COP,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC NABU Fee-Non Domestic,NONE,114,0.0295,1.39,0,-3.37999988,0,0,0,-3.37999988
+Charge Summary,MXN,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Connectivity Fee,MHB2,152,0.0016,236.6,0,-0.24000014,0,0,0,-0.24000014
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC Digital Enablement,NONE,95,0.02,1536,0,-1.9,0,0,0,-1.9
+Charge Summary,CLP,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC Connectivity Fee,MIPU,120,0.0016,399.16,0,-0.19000003,0,0,0,-0.19000003
+Charge Summary,PEN,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,MHB2,,0,4300.12,0.0014,-6.02000012,0,0,0,-6.02000012
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,MC AVS Card Not Present Fee,MM1,54,0,1375,0,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,MC AVS Card Not Present Fee,NONE,97,0,4074,0,0,0,0,0,0
+Charge Summary,MXN,USD,MC,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,MHB2,19,0,-32,-0.01,0.32999999,0,0,0,0.32999999
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,MHB2,1,0,-4.02,-0.01,0.04,0,0,0,0.04
+Charge Summary,COP,USD,MC,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,MHB2,150,0,1.3,0.016,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,MRD1,15,0,-580,0,0,0,0,0,0
+Charge Summary,PEN,USD,MC,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,MHB2,124,0,4300.12,0.016,-68.78999987,0,0,0,-68.78999987
+Charge Summary,ARS,USD,MC,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,MHB2,19,0,-0.66,-0.01,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,MIP,4,0,60,0.02,-1.2,0,0,0,-1.2
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,MSI,16,0.05,352,0.0115,-4.84999998,0,0,0,-4.84999998
+Charge Summary,PEN,USD,MC,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,MHB2,19,0,-166.21,-0.01,1.67,0,0,0,1.67
+Charge Summary,CLP,USD,MC,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,MIPU,120,0,399.16,0.02,-7.98999996,0,0,0,-7.98999996
+Charge Summary,CLP,USD,MC,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,MRC7,19,0,-68.69,-0.018,1.24000002,0,0,0,1.24000002
+Charge Summary,ARS,USD,MC,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,MHB2,120,0,3.6,0.016,-0.06000028,0,0,0,-0.06000028
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,MSDD,60,0.25,2328,0.019,-59.22999999,0,0,0,-59.22999999
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,MHB2,1,0,3.02,0.016,-0.05,0,0,0,-0.05
+Charge Summary,COP,USD,MC,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,MHB2,24,0,-0.15,-0.01,0,0,0,0,0
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,MRC7,4,0,-60,-0.018,1.08,0,0,0,1.08
+Charge Summary,USD,USD,MC,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,MM1,54,0.1,1375,0.0195,-32.22000002,0,0,0,-32.22000002
+Charge Summary,MXN,USD,MC,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,MHB2,152,0,236.6,0.016,-3.78999986,0,0,0,-3.78999986
+Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,SALE,29281072,Reauthorization,VPDM,24,0.0175,528,0,-0.43000002,0,0,0,-0.43000002
+Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,86,0.0175,4117,0,-1.56000005,0,0,0,-1.56000005
+Charge Summary,MXN,USD,VI,Processing Fees,Authorization Fees,AUTH,29281072,CPU Authorization,NONE,2,0.0175,0,0,-0.04,0,0,0,-0.04
+Charge Summary,MXN,USD,VI,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,81,0.0175,155.65,0,-1.48,0,0,0,-1.48
+Charge Summary,PEN,USD,VI,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,75,0.0175,2789.28,0,-1.3600001,0,0,0,-1.3600001
+Charge Summary,CLP,USD,VI,Processing Fees,Authorization Fees,AUTH,29281072,CPU Authorization,NONE,3,0.0175,0,0,-0.06,0,0,0,-0.06
+Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,REFUND,29281072,CPU Authorization,V995,1,0,-2.02,0,0,0,0,0,0
+Charge Summary,CLP,USD,VI,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,13,0,-48.3,0,0,0,0,0,0
+Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,SALE,29281072,CPU Authorization,V237,3,0.0175,47.06,0,-0.05000001,0,0,0,-0.05000001
+Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,SALE,29281072,CPU Authorization,V987,2,0.0175,18.04,0,-0.04,0,0,0,-0.04
+Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,12,0,-420,0,0,0,0,0,0
+Charge Summary,ARS,USD,VI,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,78,0.0175,3.15,0,-1.39000005,0,0,0,-1.39000005
+Charge Summary,ARS,USD,VI,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,10,0,-0.38,0,0,0,0,0,0
+Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,SALE,29281072,Reauthorization,VCEB,44,0.0175,1048,0,-0.78999998,0,0,0,-0.78999998
+Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,SALE,29281072,CPU Authorization,V991,2,0.0175,31.04,0,-0.04,0,0,0,-0.04
+Charge Summary,ARS,USD,VI,Processing Fees,Authorization Fees,AUTH,29281072,CPU Authorization,NONE,3,0.0175,0,0,-0.06,0,0,0,-0.06
+Charge Summary,COP,USD,VI,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,91,0.0175,1.04,0,-1.65000008,0,0,0,-1.65000008
+Charge Summary,USD,USD,VI,Processing Fees,Authorization Fees,AUTH,29281072,CPU Authorization,NONE,2,0.0175,0,0,-0.04,0,0,0,-0.04
+Charge Summary,PEN,USD,VI,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,16,0,-145.41,0,0,0,0,0,0
+Charge Summary,CLP,USD,VI,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,67,0.0175,307.61,0,-1.21000006,0,0,0,-1.21000006
+Charge Summary,COP,USD,VI,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,19,0,-0.12,0,0,0,0,0,0
+Charge Summary,COP,USD,VI,Processing Fees,Authorization Fees,AUTH,29281072,CPU Authorization,NONE,3,0.0175,0,0,-0.06,0,0,0,-0.06
+Charge Summary,PEN,USD,VI,Processing Fees,Authorization Fees,AUTH,29281072,CPU Authorization,NONE,2,0.0175,0,0,-0.04,0,0,0,-0.04
+Charge Summary,MXN,USD,VI,Processing Fees,Authorization Fees,AUTH,29281072,Online Authorization,NONE,14,0,-25.5,0,0,0,0,0,0
+Charge Summary,USD,USD,VI,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,V237,3,0.0175,47.06,0,-0.05000001,0,0,0,-0.05000001
+Charge Summary,COP,USD,VI,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,V995,24,0.0175,-0.15,0,-0.43000002,0,0,0,-0.43000002
+Charge Summary,ARS,USD,VI,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,V987,112,0.0175,3.4,0,-1.97,0,0,0,-1.97
+Charge Summary,USD,USD,VI,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,V105,64,0.0175,2408,0,-1.13000008,0,0,0,-1.13000008
+Charge Summary,PEN,USD,VI,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,V989,116,0.0175,3699.96,0,-2.03000001,0,0,0,-2.03000001
+Charge Summary,CLP,USD,VI,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,V987,112,0.0175,375.96,0,-1.96999985,0,0,0,-1.96999985
+Charge Summary,PEN,USD,VI,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,V996,19,0.0175,-171.37,0,-0.34999999,0,0,0,-0.34999999
+Charge Summary,ARS,USD,VI,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,V995,19,0.0175,-0.66,0,-0.34000001,0,0,0,-0.34000001
+Charge Summary,MXN,USD,VI,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,V989,128,0.0175,198,0,-2.2499999,0,0,0,-2.2499999
+Charge Summary,CLP,USD,VI,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,V995,19,0.0175,-70.85,0,-0.33999999,0,0,0,-0.33999999
+Charge Summary,MXN,USD,VI,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,V996,19,0.0175,-33,0,-0.34999999,0,0,0,-0.34999999
+Charge Summary,USD,USD,VI,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,VCEB,44,0.0175,1048,0,-0.78999998,0,0,0,-0.78999998
+Charge Summary,USD,USD,VI,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,VPDM,24,0.0175,528,0,-0.43000002,0,0,0,-0.43000002
+Charge Summary,USD,USD,VI,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,VRCN,19,0.0175,-660,0,-0.35000001,0,0,0,-0.35000001
+Charge Summary,COP,USD,VI,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,V987,140,0.0175,1.15,0,-2.46000011,0,0,0,-2.46000011
+Charge Summary,USD,USD,VI,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,V987,2,0.0175,18.04,0,-0.04,0,0,0,-0.04
+Charge Summary,USD,USD,VI,Processing Fees,Deposit Fees,REFUND,29281072,Settled Dep. Fee,V995,1,0.0175,-2.02,0,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,VI,Processing Fees,Deposit Fees,SALE,29281072,Settled Dep. Fee,V991,2,0.0175,31.04,0,-0.04,0,0,0,-0.04
+Charge Summary,COP,USD,VI,Processing Fees,Other Fees,AUTH,29281072,Gateway Transaction Fee,NONE,113,0,0.92,0,0,0,0,0,0
+Charge Summary,USD,USD,VI,Processing Fees,Other Fees,AUTH,29281072,Gateway Transaction Fee,NONE,100,0,3697,0,0,0,0,0,0
+Charge Summary,CLP,USD,VI,Processing Fees,Other Fees,AUTH,29281072,Gateway Transaction Fee,NONE,83,0,259.31,0,0,0,0,0,0
+Charge Summary,ARS,USD,VI,Processing Fees,Other Fees,AUTH,29281072,Gateway Transaction Fee,NONE,91,0,2.77,0,0,0,0,0,0
+Charge Summary,MXN,USD,VI,Processing Fees,Other Fees,AUTH,29281072,Gateway Transaction Fee,NONE,97,0,130.15,0,0,0,0,0,0
+Charge Summary,PEN,USD,VI,Processing Fees,Other Fees,AUTH,29281072,Gateway Transaction Fee,NONE,93,0,2643.87,0,0,0,0,0,0
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,VRCN,,0,-660,0,0,0,0,0,0
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Financial Transaction Fee,V987,2,0.0018,18.04,0,0,0,0,0,0
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,V237,,0,47.06,0.0014,-0.06999999,0,0,0,-0.06999999
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Financial Transaction Fee,V995,1,0.0018,-2.02,0,0,0,0,0,0
+Charge Summary,PEN,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,VI Intl SalesAuth APF Credit,NONE,75,0.0395,2789.28,0,-3,0,0,0,-3
+Charge Summary,PEN,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Financial Transaction Fee,V989,116,0.0018,3699.96,0,-0.20999998,0,0,0,-0.20999998
+Charge Summary,CLP,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,VI Intl Verification-CR DB,NONE,3,0.07,0,0,-0.21,0,0,0,-0.21
+Charge Summary,PEN,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,V989,,0,3699.96,0.0014,-5.17000017,0,0,0,-5.17000017
+Charge Summary,PEN,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Interregional IAF fee ST,V989,116,0,3699.96,0.0045,-16.65000013,0,0,0,-16.65000013
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Digital Comm Fee,VCEB,44,0.0075,1048,0,-0.34999998,0,0,0,-0.34999998
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,VPDM,,0,528,0.0014,-0.72999999,0,0,0,-0.72999999
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Reporting & Data Transfer,V105,64,0.0002,2408,0,0,0,0,0,0
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,VISA Estimated Auth Fee,NONE,11,0,295,0.0002,-0.05,0,0,0,-0.05
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Financial Transaction Fee,V237,3,0.0018,47.06,0,-0.00999999,0,0,0,-0.00999999
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Digital Comm Fee,V991,2,0.0075,31.04,0,-0.02,0,0,0,-0.02
+Charge Summary,PEN,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,VI Intl Verification-CR DB,NONE,2,0.07,0,0,-0.14,0,0,0,-0.14
+Charge Summary,CLP,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Digital Comm Fee,V987,112,0.0075,375.96,0,-0.84999985,0,0,0,-0.84999985
+Charge Summary,ARS,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,Verification,NONE,3,0.025,0,0,-0.09,0,0,0,-0.09
+Charge Summary,ARS,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Interregional IAF fee ST,V995,19,0,-0.66,0,0,0,0,0,0
+Charge Summary,MXN,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Financial Transaction Fee,V989,128,0.0018,198,0,-0.23999999,0,0,0,-0.23999999
+Charge Summary,MXN,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,International Svc Assessment,V996,19,0,-33,0,0,0,0,0,0
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Digital Comm Fee,V987,2,0.0075,18.04,0,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Digital Comm Fee,V237,3,0.0075,47.06,0,-0.02000001,0,0,0,-0.02000001
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,International Svc Assessment,V987,2,0,18.04,0.01,-0.18,0,0,0,-0.18
+Charge Summary,COP,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Financial Transaction Fee,V987,140,0.0018,1.15,0,-0.26000012,0,0,0,-0.26000012
+Charge Summary,COP,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,VISA Estimated Auth Fee,NONE,14,0,0.08,0.0002,0,0,0,0,0
+Charge Summary,MXN,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Financial Transaction Fee,V996,19,0.0018,-33,0,-0.03000001,0,0,0,-0.03000001
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,Verification,NONE,2,0.025,0,0,-0.06,0,0,0,-0.06
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Dom Sales Auth APF Credit,V237,3,0.0195,47.06,0,-0.06,0,0,0,-0.06
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Intl SalesAuth APF Credit,V987,2,0.0395,18.04,0,-0.08,0,0,0,-0.08
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Financial Transaction Fee,VRCN,19,0.0018,-660,0,-0.02999999,0,0,0,-0.02999999
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Dom Sales Auth APF Credit,VPDM,24,0.0195,528,0,-0.48,0,0,0,-0.48
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Trans Integrity Fee - CR,V105,64,0.1,2408,0,-6.4,0,0,0,-6.4
+Charge Summary,PEN,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,VISA Estimated Auth Fee,NONE,13,0,245.41,0.0002,-0.04000001,0,0,0,-0.04000001
+Charge Summary,CLP,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Financial Transaction Fee,V987,112,0.0018,375.96,0,-0.20999992,0,0,0,-0.20999992
+Charge Summary,MXN,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,Verification,NONE,2,0.025,0,0,-0.06,0,0,0,-0.06
+Charge Summary,CLP,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Financial Transaction Fee,V995,19,0.0018,-70.85,0,-0.04000001,0,0,0,-0.04000001
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,V987,,0,18.04,0.0014,-0.02,0,0,0,-0.02
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Digital Comm Fee,V105,64,0.0075,2408,0,-0.49000008,0,0,0,-0.49000008
+Charge Summary,ARS,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Financial Transaction Fee,V995,19,0.0018,-0.66,0,-0.03999999,0,0,0,-0.03999999
+Charge Summary,CLP,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,VISA Estimated Auth Fee,NONE,9,0,28.44,0.0002,0,0,0,0,0
+Charge Summary,MXN,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,V989,,0,198,0.0013,-0.25999987,0,0,0,-0.25999987
+Charge Summary,MXN,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,VI Intl Verification-CR DB,NONE,2,0.07,0,0,-0.14,0,0,0,-0.14
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Dom Sales Auth APF Credit,VCEB,44,0.0195,1048,0,-0.87000004,0,0,0,-0.87000004
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Reporting & Data Transfer,VCEB,44,0.0002,1048,0,0,0,0,0,0
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Digital Comm Fee,VPDM,24,0.0075,528,0,-0.19000002,0,0,0,-0.19000002
+Charge Summary,CLP,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,International Svc Assessment,V995,19,0,-70.85,0,0,0,0,0,0
+Charge Summary,MXN,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,VI Intl Sales Auth APF Debit,NONE,81,0.0355,155.65,0,-2.93000004,0,0,0,-2.93000004
+Charge Summary,ARS,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,VI Intl SalesAuth APF Credit,NONE,78,0.0395,3.15,0,-3.11,0,0,0,-3.11
+Charge Summary,MXN,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Interregional IAF fee ST,V989,128,0,198,0.0045,-0.89999979,0,0,0,-0.89999979
+Charge Summary,CLP,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Intl Refund Trx APF Debit,V995,19,0.0355,-70.85,0,-0.67000001,0,0,0,-0.67000001
+Charge Summary,CLP,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,Verification,NONE,3,0.025,0,0,-0.09,0,0,0,-0.09
+Charge Summary,CLP,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,International Svc Assessment,V987,112,0,375.96,0.014,-5.25000016,0,0,0,-5.25000016
+Charge Summary,MXN,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Interregional IAF fee ST,V996,19,0,-33,0,0,0,0,0,0
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Financial Transaction Fee,V991,2,0.0018,31.04,0,0,0,0,0,0
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Financial Transaction Fee,V105,64,0.0018,2408,0,-0.12000004,0,0,0,-0.12000004
+Charge Summary,PEN,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,International Svc Assessment,V996,19,0,-171.37,0,0,0,0,0,0
+Charge Summary,PEN,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,Verification,NONE,2,0.025,0,0,-0.06,0,0,0,-0.06
+Charge Summary,ARS,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Financial Transaction Fee,V987,112,0.0018,3.4,0,-0.20000013,0,0,0,-0.20000013
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Interregional IAF fee ST,V995,1,0,-2.02,0,0,0,0,0,0
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Reporting & Data Transfer,V237,3,0.0002,47.06,0,0,0,0,0,0
+Charge Summary,ARS,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,International Svc Assessment,V987,112,0,3.4,0.014,-0.05000016,0,0,0,-0.05000016
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Reporting & Data Transfer,VPDM,24,0.0002,528,0,0,0,0,0,0
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,V105,,0,2408,0.0014,-3.36999997,0,0,0,-3.36999997
+Charge Summary,CLP,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,VI Intl Sales Auth APF Debit,NONE,67,0.0355,307.61,0,-2.44000008,0,0,0,-2.44000008
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,International Svc Assessment,V995,1,0,-2.02,0,0,0,0,0,0
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Intl Refund Trx APF Debit,V995,1,0.0355,-2.02,0,-0.04,0,0,0,-0.04
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Financial Transaction Fee,VPDM,24,0.0018,528,0,-0.03999999,0,0,0,-0.03999999
+Charge Summary,COP,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Interregional IAF fee ST,V995,24,0,-0.15,0,0,0,0,0,0
+Charge Summary,ARS,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Digital Comm Fee,V987,112,0.0075,3.4,0,-0.85,0,0,0,-0.85
+Charge Summary,ARS,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,V987,,0,3.4,0.0014,0,0,0,0,0
+Charge Summary,ARS,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,V995,,0,-0.66,0,0,0,0,0,0
+Charge Summary,COP,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,V995,,0,-0.15,0,0,0,0,0,0
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,V991,,0,31.04,0.0014,-0.04,0,0,0,-0.04
+Charge Summary,COP,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Intl RefundTrx APF Credit,V995,24,0.0395,-0.15,0,-0.96,0,0,0,-0.96
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Dom Refund Trx APF Credit,VRCN,19,0.0195,-660,0,-0.38,0,0,0,-0.38
+Charge Summary,CLP,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Interregional IAF fee ST,V987,112,0,375.96,0.0045,-1.68999997,0,0,0,-1.68999997
+Charge Summary,MXN,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Intl Refund Trx APF Debit,V996,19,0.0355,-33,0,-0.67000001,0,0,0,-0.67000001
+Charge Summary,COP,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,International Svc Assessment,V987,140,0,1.15,0.014,0,0,0,0,0
+Charge Summary,COP,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,V987,,0,1.15,0.0014,0,0,0,0,0
+Charge Summary,COP,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,International Svc Assessment,V995,24,0,-0.15,0,0,0,0,0,0
+Charge Summary,PEN,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Interregional IAF fee ST,V996,19,0,-171.37,0,0,0,0,0,0
+Charge Summary,ARS,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,VI Intl Verification-CR DB,NONE,3,0.07,0,0,-0.21,0,0,0,-0.21
+Charge Summary,ARS,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Interregional IAF fee ST,V987,112,0,3.4,0.0045,0,0,0,0,0
+Charge Summary,COP,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,VI Intl Verification-CR DB,NONE,3,0.07,0,0,-0.21,0,0,0,-0.21
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,International Svc Assessment,V991,2,0,31.04,0.01,-0.31,0,0,0,-0.31
+Charge Summary,MXN,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,International Svc Assessment,V989,128,0,198,0.014,-2.77000011,0,0,0,-2.77000011
+Charge Summary,PEN,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Digital Comm Fee,V989,116,0.0075,3699.96,0,-0.87000001,0,0,0,-0.87000001
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Intl SalesAuth APF Credit,V991,2,0.0395,31.04,0,-0.08,0,0,0,-0.08
+Charge Summary,COP,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Interregional IAF fee ST,V987,140,0,1.15,0.0045,0,0,0,0,0
+Charge Summary,PEN,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,International Svc Assessment,V989,116,0,3699.96,0.014,-51.79999987,0,0,0,-51.79999987
+Charge Summary,PEN,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Financial Transaction Fee,V996,19,0.0018,-171.37,0,-0.03000001,0,0,0,-0.03000001
+Charge Summary,ARS,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,VISA Estimated Auth Fee,NONE,10,0,0.28,0.0002,0,0,0,0,0
+Charge Summary,MXN,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Digital Comm Fee,V989,128,0.0075,198,0,-0.9699999,0,0,0,-0.9699999
+Charge Summary,ARS,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,International Svc Assessment,V995,19,0,-0.66,0,0,0,0,0,0
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Financial Transaction Fee,VCEB,44,0.0018,1048,0,-0.08000006,0,0,0,-0.08000006
+Charge Summary,CLP,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Interregional IAF fee ST,V995,19,0,-70.85,0,0,0,0,0,0
+Charge Summary,COP,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Digital Comm Fee,V987,140,0.0075,1.15,0,-1.06000011,0,0,0,-1.06000011
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Interregional IAF fee ST,V991,2,0,31.04,0.0045,-0.14,0,0,0,-0.14
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,VI Dom Sales Auth APF Credit,NONE,86,0.0195,4117,0,-1.72,0,0,0,-1.72
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,VI Dom Verification-CR,NONE,2,0.035,0,0,-0.08,0,0,0,-0.08
+Charge Summary,PEN,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Intl RefundTrx APF Credit,V996,19,0.0395,-171.37,0,-0.76,0,0,0,-0.76
+Charge Summary,MXN,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,V996,,0,-33,0,0,0,0,0,0
+Charge Summary,CLP,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,V995,,0,-70.85,0,0,0,0,0,0
+Charge Summary,PEN,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,V996,,0,-171.37,0,0,0,0,0,0
+Charge Summary,CLP,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,V987,,0,375.96,0.0013,-0.49000007,0,0,0,-0.49000007
+Charge Summary,COP,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,VI Intl SalesAuth APF Credit,NONE,91,0.0395,1.04,0,-3.63000001,0,0,0,-3.63000001
+Charge Summary,COP,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Financial Transaction Fee,V995,24,0.0018,-0.15,0,-0.04999998,0,0,0,-0.04999998
+Charge Summary,ARS,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,VI Intl RefundTrx APF Credit,V995,19,0.0395,-0.66,0,-0.76,0,0,0,-0.76
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,Assessment,VCEB,,0,1048,0.0014,-1.46000001,0,0,0,-1.46000001
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,SALE,29281072,VI Interregional IAF fee ST,V987,1,0,1.02,0.0045,0,0,0,0,0
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Assessment Fees,REFUND,29281072,Assessment,V995,,0,-2.02,0,0,0,0,0,0
+Charge Summary,COP,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,Verification,NONE,3,0.025,0,0,-0.09,0,0,0,-0.09
+Charge Summary,MXN,USD,VI,Interchange & Assessment Fees,Assessment Fees,AUTH,29281072,VISA Estimated Auth Fee,NONE,11,0,15.25,0.0002,0,0,0,0,0
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,V991,2,0,31.04,0.02,-0.62,0,0,0,-0.62
+Charge Summary,PEN,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,V989,116,0,3699.96,0.02,-73.98999969,0,0,0,-73.98999969
+Charge Summary,MXN,USD,VI,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,V996,19,0,-33,-0.018,0.60000002,0,0,0,0.60000002
+Charge Summary,CLP,USD,VI,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,V995,19,0,-70.85,-0.01,0.69999999,0,0,0,0.69999999
+Charge Summary,MXN,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,V989,128,0,198,0.02,-3.96000009,0,0,0,-3.96000009
+Charge Summary,ARS,USD,VI,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,V995,19,0,-0.66,-0.01,0,0,0,0,0
+Charge Summary,ARS,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,V987,112,0,3.4,0.016,-0.05000016,0,0,0,-0.05000016
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,V987,2,0,18.04,0.016,-0.29,0,0,0,-0.29
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,VPDM,24,0.1,528,0.018,-11.89000003,0,0,0,-11.89000003
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,V237,3,0.1,47.06,0.027,-1.56999999,0,0,0,-1.56999999
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,V995,1,0,-2.02,-0.01,0.02,0,0,0,0.02
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,VRCN,19,0,-660,-0.0205,13.53999999,0,0,0,13.53999999
+Charge Summary,CLP,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,V987,112,0,375.96,0.016,-6.01999995,0,0,0,-6.01999995
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,VCEB,44,0.1,1048,0.018,-23.28000002,0,0,0,-23.28000002
+Charge Summary,PEN,USD,VI,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,V996,19,0,-171.37,-0.018,3.07999999,0,0,0,3.07999999
+Charge Summary,COP,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,V987,140,0,1.15,0.016,0,0,0,0,0
+Charge Summary,USD,USD,VI,Interchange & Assessment Fees,Interchange Fees,SALE,29281072,Interchange,V105,64,0.1,2408,0.0315,-82.25000013,0,0,0,-82.25000013
+Charge Summary,COP,USD,VI,Interchange & Assessment Fees,Interchange Fees,REFUND,29281072,Interchange,V995,24,0,-0.15,-0.01,0,0,0,0,0
+Charge Summary,USD,USD,,Processing Fees,Funds Transfer Fees,OTHER,null,ACH Transfer Fee,,1,2.5,,,-2.5,0,0,0,-2.5
+Record Type,Transaction Division External Identifier,Acquirer Codice Fiscale,Acquirer Legal Entity,CPSI GST Registration Number,CPSI QST Registration Number,Merchant Codice Fiscale,Recipient Address,Recipient Legal Entity
+Tax Information,425262,,,,,,"7526 main st,SKOKIE,IL,60016,US",UPG_Auto_Testing 5
+Tax Information,425289,,,,,,"7456 K St,FRISO,TX,75206,US",UPG_Auto_Testing_MXN
+Tax Information,425266,,,,,,"2356 J ST,DALLAS,TX,75289,US",UPG_Auto_Testing 8
+Tax Information,424018,,,,,,"3642 Mills Ave,PLANO,TX,75024,US",UPG_Auto_Testing1
+Tax Information,425265,,,,,,"4213 F St,DES PLAINES,IL,60018,US",UPG_Auto_Testing 7
+Tax Information,425263,,,,,,"4752 Jade ave,PLANO,TX,75024,US",UPG_Auto_Testing 6
+Tax Information,424708,,,,,,"3642 Mills Ave,PLANO,TX,75024,US",UPG_Auto_Testing4
+END,EntityId=424017,Frequency=adhoc
