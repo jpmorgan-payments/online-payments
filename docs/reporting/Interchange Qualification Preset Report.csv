@@ -1,25 +1,814 @@
-BEGIN,EntityId=11223344,Frequency=adhoc
-EntityId=11223344,ReportTypeName=Multiple,Frequency=adhoc,FromDate=2024-11-04,ToDate=2024-11-05,GenerationDate=2025-01-31,GenerationTime=14:17:13
+﻿BEGIN,EntityId=418553,Frequency=adhoc
+EntityId=418553,ReportTypeName=Multiple,Frequency=adhoc,FromDate=2025-03-03,ToDate=2025-03-04,GenerationDate=2025-03-13,GenerationTime=19:38:46
 Record Type,Presentment Currency Code,Settlement Currency Code,Payment Method Code,Interchange Qualification Code,Interchange Qualification Text,Fee Rate,Unit Fee Amount,Sales Count,Count %,Sales Amount,Amount %,,
-Interchange Qualification Summary,USD,USD,VI,V991,Visa Interregional Corporate Card Not Present,0.02,0,3,1,36.06,1,,
-Interchange Qualification Summary,USD,USD,MC,MM1,MasterCard Merit 1,0.0195,0.1,3,1,159.06,1,,
-Interchange Qualification Summary,USD,USD,JC,D801,Discover International Consumer Base,0.017,0.1,3,1,36.06,1,,
-Interchange Qualification Summary,USD,USD,DI,DCBL,Discover Commercial Base Submission Level,0.0305,0.1,3,1,36.06,1,,
-Interchange Qualification Summary,USD,USD,DD,D811,Discover International Commercial,0.019,0.1,3,1,330.06,1,,
+Interchange Qualification Summary,USD,USD,VI,V105,Visa Non-Qualified Consumer Credit,0.0315,0.1,168,0.25,21491,0.097967879,,
+Interchange Qualification Summary,USD,USD,VI,V148,Visa Non-Qualified Business Credit,0.0315,0.2,363,0.540178571,194796.6,0.887990773,,
+Interchange Qualification Summary,AED,GBP,VI,V5FI,Visa EU InterRegional Card-Not Present/Other-Credit,0.015,0,3,0.6,60.18,0.408,,
+Interchange Qualification Summary,AZN,GBP,VI,V5FI,Visa EU InterRegional Card-Not Present/Other-Credit,0.015,0,2,0.4,87.32,0.592,,
+Interchange Qualification Summary,EUR,EUR,VI,V5FI,Visa EU InterRegional Card-Not Present/Other-Credit,0.015,0,1,1,100,1,,
+Interchange Qualification Summary,USD,USD,VI,V987,Visa Interregional Non-Premium Card Not Present,0.016,0,4,0.005952381,4.1,1.87E-05,,
+Interchange Qualification Summary,USD,USD,VI,VBL2,Visa Business Tier 1 - Level 2,0.019,0.1,8,0.011904762,320,0.001458737,,
+Interchange Qualification Summary,USD,USD,VI,VCEB,Visa CPS E-Commerce Basic,0.018,0.1,108,0.160714286,2336,0.010648782,,
+Interchange Qualification Summary,USD,USD,VI,VPDM,Visa CPS Card Not Present,0.018,0.1,19,0.02827381,418,0.001905475,,
+Interchange Qualification Summary,USD,USD,VI,VSDD,Visa Standard Debit,0.019,0.25,2,0.00297619,2.12,9.66E-06,,
+Interchange Qualification Summary,USD,USD,MC,MHB2,MCInterregional Consumer Rate 3 Base - Core,0.016,0,1,0.014285714,2.01,0.001386111,,
+Interchange Qualification Summary,USD,USD,MC,MHB4,MC Interregional Consumer Rate 3 Card Present Super Premium,0.0198,0,1,0.014285714,2.03,0.001399903,,
+Interchange Qualification Summary,USD,USD,MC,MIC,MasterCard International Commercial,0.02,0,2,0.028571429,4.06,0.002799807,,
+Interchange Qualification Summary,USD,USD,MC,MIP,MasterCard International Commercial Purchasing,0.02,0,16,0.228571429,240,0.165505827,,
+Interchange Qualification Summary,USD,USD,MC,MM1,MasterCard Merit 1,0.0195,0.1,50,0.714285714,1202,0.828908351,,
+Interchange Qualification Summary,AZN,GBP,MC,MX29,Master Card Intra-EEA Fleet Base,0.0165,0,4,1,96.06,1,,
+Interchange Qualification Summary,EUR,EUR,MC,MX29,Master Card Intra-EEA Fleet Base,0.0165,0,3,1,300,1,,
+Interchange Qualification Summary,USD,USD,JC,DPEC,Discover Prime Submission Level Card Not Present - Premium,0.0205,0.1,3,1,21.06,1,,
+Interchange Qualification Summary,USD,USD,DI,D361,Discover Commercial Electronic Prepaid,0.0265,0.1,1,0.035714286,5.02,0.007992358,,
+Interchange Qualification Summary,USD,USD,DI,D460,Discover Prime Submission Level E-commerce - Rewards,0.0203,0.1,24,0.857142857,608,0.967998726,,
+Interchange Qualification Summary,USD,USD,DI,DCEC,Discover Prime Submission Level Card Not Present - Rewards,0.0203,0.1,1,0.035714286,5.01,0.007976437,,
+Interchange Qualification Summary,USD,USD,DI,DCED,Discover Commercial Electronic Debit,0.0245,0.15,1,0.035714286,5.03,0.008008279,,
+Interchange Qualification Summary,USD,USD,DI,DDEM,Discover Prime Submission Level Emerging Markets - Debit,0.009,0.2,1,0.035714286,5.04,0.0080242,,
 Record Type,Entity Identifier,Presentment Currency Code,Settlement Currency Code,Payment Method Code,Merchant Order Number,Interchange Qualification Code,Downgrade Reason Code,Downgrade Reason Text,Account Number,Deposit Date,Amount,Acquirer Reference Number,Card Usage Type
-Interchange Qualification Details,1234567,USD,USD,DD,DDDEPM71BU,D811,-1,Not Set - Does not Apply,XXXXXXXX,11/4/2024,110.02,6789012345,
-Interchange Qualification Details,1234567,USD,USD,DI,DIDEPM71BU,DCBL,232,No Valid AVS Data present,XXXXXXXX,11/4/2024,12.02,6789012345,
-Interchange Qualification Details,1234567,USD,USD,JC,JCDEPM71BU,D801,167,On Target - Base Submission Level,XXXXXXXX,11/4/2024,12.02,6789012345,
-Interchange Qualification Details,1234567,USD,USD,MC,MCDEPM71BU,MM1,122,On Target - Direct Marketing MCC,XXXXXXXX,11/4/2024,53.02,6789012345,1
-Interchange Qualification Details,1234567,USD,USD,VI,VIDEPM71BU,V991,175,On Target - Inter-Regional,XXXXXXXX,11/4/2024,12.02,6789012345,1
-Interchange Qualification Details,1234567,USD,USD,DD,DDDEPM41BU,D811,-1,Not Set - Does not Apply,XXXXXXXX,11/4/2024,110.02,6789012345,
-Interchange Qualification Details,1234567,USD,USD,DI,DIDEPM41BU,DCBL,232,No Valid AVS Data present,XXXXXXXX,11/4/2024,12.02,6789012345,
-Interchange Qualification Details,1234567,USD,USD,JC,JCDEPM41BU,D801,167,On Target - Base Submission Level,XXXXXXXX,11/4/2024,12.02,6789012345,
-Interchange Qualification Details,1234567,USD,USD,MC,MCDEPM41BU,MM1,122,On Target - Direct Marketing MCC,XXXXXXXX,11/4/2024,53.02,6789012345,1
-Interchange Qualification Details,1234567,USD,USD,VI,VIDEPM41BU,V991,175,On Target - Inter-Regional,XXXXXXXX,11/4/2024,12.02,6789012345,1
-Interchange Qualification Details,1234567,USD,USD,DD,DDDEPM11BU,D811,-1,Not Set - Does not Apply,XXXXXXXX,11/4/2024,110.02,6789012345,
-Interchange Qualification Details,1234567,USD,USD,DI,DIDEPM11BU,DCBL,232,No Valid AVS Data present,XXXXXXXX,11/4/2024,12.02,6789012345,
-Interchange Qualification Details,1234567,USD,USD,JC,JCDEPM11BU,D801,167,On Target - Base Submission Level,XXXXXXXX,11/4/2024,12.02,6789012345,
-Interchange Qualification Details,1234567,USD,USD,MC,MCDEPM11BU,MM1,122,On Target - Direct Marketing MCC,XXXXXXXX,11/4/2024,53.02,6789012345,1
-Interchange Qualification Details,1234567,USD,USD,VI,VIDEPM11BU,V991,175,On Target - Inter-Regional,XXXXXXXX,11/4/2024,12.02,6789012345,1
-END,EntityId=11223344,Frequency=adhoc
+Interchange Qualification Details,418554,USD,USD,DI,NtfxPOC 418554 DPDI2,D361,168,On Target - Commercial Electronic Submission,601121XXXXXX1104,3/3/2025,5.02,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,c0Iapcvrrga12erOAj9z04,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,70,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,b0APqw8UwKcHhhJIkNy7B7,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,18,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,fWFhHgrVcgeMsWYIFlaKs6,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,10,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,S07L1zO1sgBgaX70Galem,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,10,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,NjKRn6Vr7aNrcbY1qhZ5kO,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,18,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,OBdT50fmWr7MBpYAsjxbMc,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,18,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,Z2d2XBC4tgAflcFxcfeu4,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,18,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,Conm8rNGg352CnGZwfUAq5,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,18,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,InqIxSFhNc8DM9VpIQf8k5,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,10,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,jVRsD8hpRDjZSNgM50TBUe,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,18,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,C6uIdwphpdEEzWLsDG35e3,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,18,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,cjBQCE9crMORCFJSZcoeyU,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,18,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,nN2rK3IIvblNElk47jDPr3,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,18,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,5LtrypjLTcshJpADHIoBq1,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,70,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,UzY1GEaa2l2Se1y86bwEFw,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,18,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,4wuNTOkMAyESv5Y3sPniP4,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,10,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,A2O5v5DaltjscRsaBSOBjf,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,18,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,7HvqfeRMeYJBc9EzOM0xU2,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,18,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,0MCNZfcftLonjurCgqxKJ4,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,70,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,0JR2IcsykDaGZIFxPL5wjg,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,18,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,zg72azrOxyeZ0EYZhS0aet,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,18,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,1qcMc6KOPcdQezTSRFW7H,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,18,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,j2W1IpKvAOQuxb4CzHQ2T5,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,70,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,6K51D854g7Fjem8BjbPj61,D460,136,On Target - E-Commerce Txn,601100XXXXXX6667,3/3/2025,18,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,NtfxPOC 418554 DPDI1,DCEC,136,On Target - E-Commerce Txn,601100XXXXXX1114,3/3/2025,5.01,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,NtfxPOC 418554 DPDI3,DCED,168,On Target - Commercial Electronic Submission,601121XXXXXX1102,3/3/2025,5.03,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,DI,NtfxPOC 418554 DPDI4,DDEM,146,On Target - Emerging Market MCC,601121XXXXXX1108,3/3/2025,5.04,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,JC,NtfxPOC 418554 DPJC3,DPEC,136,On Target - E-Commerce Txn,356600XXXXXX0000,3/3/2025,7.03,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,JC,NtfxPOC 418554 DPJC1,DPEC,136,On Target - E-Commerce Txn,356600XXXXXX0000,3/3/2025,7.01,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,JC,NtfxPOC 418554 DPJC2,DPEC,136,On Target - E-Commerce Txn,356600XXXXXX0000,3/3/2025,7.02,2.62014E+22,
+Interchange Qualification Details,418554,USD,USD,MC,NtfxPOC 418554 DPMC1,MHB2,155,On Target - Card Type,512083XXXXXX0018,3/3/2025,2.01,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,NtfxPOC 418554 DPMC3,MHB4,155,On Target - Card Type,513149XXXXXX0000,3/3/2025,2.03,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,NtfxPOC 418554 DPMC2,MIC,103,On Target - Corporate Card,512955XXXXXX1103,3/3/2025,2.02,5.54329E+22,5
+Interchange Qualification Details,418554,USD,USD,MC,NtfxPOC 418554 DPMC4,MIC,103,On Target - Corporate Card,535640XXXXXX1007,3/3/2025,2.04,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,t0YxIfLPGKICa6bMZWNaHR,MIP,104,On Target - Purchasing Card,511100XXXXXX1128,3/3/2025,15,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,88cBuSaXtKpS5zm3akXEZ4,MIP,104,On Target - Purchasing Card,511100XXXXXX1128,3/3/2025,15,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,NkPmR7FlRAyDd1rKZRijQ7,MIP,104,On Target - Purchasing Card,511100XXXXXX1128,3/3/2025,15,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,IZAMQ1xTHYvnb66hoUXMd1,MIP,104,On Target - Purchasing Card,511100XXXXXX1128,3/3/2025,15,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,1Ed3g2n1AR9ggZ5jij1Zy6,MIP,104,On Target - Purchasing Card,511100XXXXXX1128,3/3/2025,15,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,4FnlpJDrtuhOguMRQ6fk5,MIP,104,On Target - Purchasing Card,511100XXXXXX1128,3/3/2025,15,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,XXpZJ5kHVPdM7FvDA0njUA,MIP,104,On Target - Purchasing Card,511100XXXXXX1128,3/3/2025,15,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,CGOhlcJyprMt38W0cjTZiG,MIP,104,On Target - Purchasing Card,511100XXXXXX1128,3/3/2025,15,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,Q31jRE0cTfK6xq4aLKYdwU,MIP,104,On Target - Purchasing Card,511100XXXXXX1128,3/3/2025,15,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,tRfQKysi3bPqwFog8azSZ5,MIP,104,On Target - Purchasing Card,511100XXXXXX1128,3/3/2025,15,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,Ocyr70cnjMZspgEBDqPJl5,MIP,104,On Target - Purchasing Card,511100XXXXXX1128,3/3/2025,15,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,rcITOeySwL46BA0okKMrld,MIP,104,On Target - Purchasing Card,511100XXXXXX1128,3/3/2025,15,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,k2Tun8lz56elE0OWErTPw6,MIP,104,On Target - Purchasing Card,511100XXXXXX1128,3/3/2025,15,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,E5rOOsbpCftWKfVtWsDeb6,MIP,104,On Target - Purchasing Card,511100XXXXXX1128,3/3/2025,15,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,JaGuOx2w3T0kOCdW0cQjG6,MIP,104,On Target - Purchasing Card,511100XXXXXX1128,3/3/2025,15,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,hIiI9s6fdxYFYCERe74J31,MIP,104,On Target - Purchasing Card,511100XXXXXX1128,3/3/2025,15,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,jtLaVr0MazEGIurodcrEs,MM1,122,On Target - Direct Marketing MCC,520473XXXXXX0439,3/3/2025,19,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,Ny6BM0cizWJ1uFTxWiNXX2,MM1,122,On Target - Direct Marketing MCC,520473XXXXXX0439,3/3/2025,19,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,UvpjLMNIoQU0UKduJlshz5,MM1,122,On Target - Direct Marketing MCC,520473XXXXXX0439,3/3/2025,19,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,CDtO0iDigmaXSbRtDdBtq1,MM1,122,On Target - Direct Marketing MCC,520473XXXXXX0439,3/3/2025,19,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,1CzRZgXbjtUGslQLgagp94,MM1,122,On Target - Direct Marketing MCC,520473XXXXXX0439,3/3/2025,19,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,SyENG3Et9zxfrRYNMM2YI5,MM1,122,On Target - Direct Marketing MCC,520473XXXXXX0439,3/3/2025,19,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,jhpswbTOB4IZHiN65d2IG3,MM1,122,On Target - Direct Marketing MCC,520473XXXXXX0439,3/3/2025,19,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,ZFe2DoF4ZDFaGqjoP1Ia76,MM1,122,On Target - Direct Marketing MCC,555555XXXXXX5565,3/3/2025,70,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,PtYRLnWFCNCTnEfjFDPF12,MM1,122,On Target - Direct Marketing MCC,520473XXXXXX0439,3/3/2025,19,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,BH9DRYKy9GvQl9lfFJkII6,MM1,122,On Target - Direct Marketing MCC,520473XXXXXX0439,3/3/2025,19,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,erMQrBBu4wWXz3lxXvq792,MM1,122,On Target - Direct Marketing MCC,555555XXXXXX5565,3/3/2025,70,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,K5XBs6YpgerO0WvLxpsr66,MM1,122,On Target - Direct Marketing MCC,555555XXXXXX5565,3/3/2025,10,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,o0xqrYu8y7DQL5S88Abuq,MM1,122,On Target - Direct Marketing MCC,555555XXXXXX5565,3/3/2025,10,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,i2bWV8efV9RzJ3plICS1Y3,MM1,122,On Target - Direct Marketing MCC,555555XXXXXX5565,3/3/2025,10,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,kHkW3JN1kWdTQYZSX4JN15,MM1,122,On Target - Direct Marketing MCC,555555XXXXXX5565,3/3/2025,70,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,WsMCyjFVUn8OhbV8oV4lU5,MM1,122,On Target - Direct Marketing MCC,520473XXXXXX0439,3/3/2025,19,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,CG1qEbwzNhJ7woC5ukk0O2,MM1,122,On Target - Direct Marketing MCC,520473XXXXXX0439,3/3/2025,19,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,dSMQ2VFBsvmDxJvSgsAGw4,MM1,122,On Target - Direct Marketing MCC,555555XXXXXX5565,3/3/2025,10,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,af2OL1dWQu1W0gJ77wnwN6,MM1,122,On Target - Direct Marketing MCC,555555XXXXXX5565,3/3/2025,70,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,TfPaPnzWbzv6SVlAbSsIl,MM1,122,On Target - Direct Marketing MCC,520473XXXXXX0439,3/3/2025,19,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,mIC2NkVKroRS7eQ93sBj57,MM1,122,On Target - Direct Marketing MCC,520473XXXXXX0439,3/3/2025,19,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,merchantOrderNumber-15,MM1,122,On Target - Direct Marketing MCC,511234XXXXXX5114,3/3/2025,22,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,MC,MW7uPzRzuUsoT9q8u19OM1,MM1,122,On Target - Direct Marketing MCC,520473XXXXXX0439,3/3/2025,19,5.54329E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1005115122,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004557236,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1005918045,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1007142272,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1003714314,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008794819,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1007627702,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1003939134,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1927.8,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004399338,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000066343,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1003465636,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008765047,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008664362,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1006345150,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1006671286,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008454369,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1006283825,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000253654,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1002798325,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1001016803,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1005158434,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004187953,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1940,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1005159806,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1002056835,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1002549278,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1940,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004200093,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008540229,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1007299192,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1001464686,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000424611,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1003958261,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1940,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1006875745,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004539327,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1006753624,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004600915,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1003923030,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1007146567,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004081624,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1893.29,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,smblocal181398,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1001883657,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000851840,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1001606403,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1001787231,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1003888940,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004901013,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1005302513,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000722679,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1002598586,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008101868,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008656801,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008858484,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004027594,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1006933184,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000107421,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1927.8,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008181261,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1006020600,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000172413,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1005097960,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1005627540,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,intent-8tj80hk,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1002797880,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1003041280,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004374679,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1007064288,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1940,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1005297587,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1005713349,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,LVOJOteMKVESZQKGKQPzg3,V105,633,No PS2000 Data - PODB Match - No AVS,411234XXXXXX4113,3/3/2025,12.34,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1003569977,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008583032,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1001195714,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1001727677,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000186707,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000452988,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1003565835,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1007239171,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1003181134,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000243968,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,smblocal712141,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004181095,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1005612322,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1927.8,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1001475793,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1007951162,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1002550940,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1002446537,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1006382424,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1006411365,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1001191210,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1006922159,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008840616,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008525202,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008282415,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1006704901,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1001692237,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1003426155,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1003606770,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1007123163,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1006231358,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008658851,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1001957742,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008454687,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004055799,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1001823953,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1001248039,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1002425348,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000214764,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1007869987,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004811608,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004964520,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000178442,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000136061,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1005128994,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1002685605,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000829326,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1007172622,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004507919,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1002438903,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008779082,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1002002760,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1006162636,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1003718678,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1005592502,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1001281427,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000519290,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1940,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,7tqyxl94EEKBycYRzh0Bp6,V105,221,No Customer Service Phone Number,411234XXXXXX4113,3/3/2025,12.34,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1001635017,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000314969,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004632566,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004889749,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000080244,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004456335,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1007524801,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,10.63,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1007487962,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1001970744,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1002283245,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1005738031,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1003554176,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1001543736,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004981739,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004452503,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000137547,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1001960569,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1006451474,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004315690,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1005919703,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1940,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004129823,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1002779275,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1005158659,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000408085,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1002755341,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1007171742,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000178974,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,intent-7szxr2h,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004526523,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004359398,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1005673108,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1002025587,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000480142,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1006821988,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008169758,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008273299,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1005282419,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000722885,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1008591655,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1006526237,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1940,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1000365850,V105,121,On Target - High Risk MCC,424242XXXXXX4242,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1002196479,V105,121,On Target - High Risk MCC,411234XXXXXX4113,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1005987279,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1004732705,V105,155,On Target - Card Type,491699XXXXXX2017,3/3/2025,1.06,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,jaVxPA8jQbyMXNiQZHK4jg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,0IAuwhUKQbqQi5T4tfMPcA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,IWQsedT5ScGtkvMaafz4QQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,6XnQcPg4RGayYwRyGVARBw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,5GCGznKjpCjt8h9SUqhUhA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Sgw2GWspTNeGJpvOPCMHIw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,q4XXlwAwRTqiY7mcLYBImA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,500,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,QwyNNPscRHDCuPPfCPZT3Q,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,b4sC9GfFCiIhy13Gk8bRdn,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,86VCfhUwxa0ThxHwgGgA38,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,WtMeSFbISRuimFsMo5ULAg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,130,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,RNOBwV23RAKUgEtgRRvwwQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,eXGEirHT18eKMndcR1LU95,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,gmbv4yioTJqTgECJjG47tg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,2tEKTVbzRNqYprsXDKhP3w,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,axMga98LK9bxLEKHCTa067,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,pn85HM725Jdyqc72tJ0Ldo,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,ois9VzLj64cpWO8ZLY4KkN,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,CpDgbbTQ5RdYyHvvbjD6UI,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,uKNyG5XySDiECASO5FJN3w,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,JKQ1c601SxuNpNeM6MSRrw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,qnY2oXazRS6M9GgpeBt8VA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,r4JzmXXhT6O2eXn6fxXV5Q,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,xn9zSkpbT76LpsUVLqeZxw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,21000.2,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,PCvVYmwiSNip9Lqeq5syIQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,JgFsfdHBdd6o44Dw8uBiN3,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Q6tlwEX3TVG8x2dF3EpAcg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,130,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,w6RagRj3rd8suwP9xXy3Sd,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Ta5kPiJ7QZenI0wataOTSg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,tkdlmaqWTZOInM4OAdWXbg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,4CcnGDzdTLe0UY7xb0XlZA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,G1AqAS6atc2iLF39JcGh8u,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,wxbmEfuaqedIT9eIZEg3ev,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,fXY3A4Z3T4iMcxtYxghlqw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,4JjsbYKTT7XYrrW8drVrdg,V148,669,Level 2 Data Invalid for Purchasing Level II,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Hn9Re44NQHuDSTeSxhnXYw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,aN0GjjibRj2tWYKhPir8ew,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,SbmAG8d7TEqXYedFkTjesQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,gr07nvw61LOojXaFc9bzHz,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,WyseLBm1SYK1dmxkl9wCAA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,uTEHlgm7TnWRDLPd4UcFAQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,aydN7Z3hEONXkuIjBUhiaM,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,P6JMJjO6QkGGJy4ziGr70A,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Oo4MetRJqQMj1PPHGDaJkF,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,B4hC4jCxS2SQLWdbcXyriA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,115,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,2H6hLIfpdDpCPD7zCw836w,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,EvjtNe52T0CXFufLaJ6TqQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Du40kXrCT5qm0x0vMlqOXA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,ooBRVY6bTd6AAYjEFoQihQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,zWMvLLUe61eX781Lxv3V0a,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,gQMNoYyLamJwiIYCsYKOgd,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,UH641TUGT0agFcHpizX1sQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,500,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,VjTnbFgsQoWbyR0rmgLbow,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Md41qb13S6uqzwicmjpu8w,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,115,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,7sf9Xb2fTZXryrUN7huwUw,V148,669,Level 2 Data Invalid for Purchasing Level II,444442XXXXXX4440,3/3/2025,15,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,LxSanUXoXS4sMX0sXgJ6VW,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,rhkvzebhsUIyup8ftcR2mJ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,YoLXT5sbTL6rhV8N2ibzGA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,5hYP8DUcRpmq1qn25xpqsQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Zb90gGxBQumfYrBmBZbFkQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,ZZTFA0HGPKBDPXbObkMFqJ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Q7Tl3tSMTxGBsYCo90QaUA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,kkMkzQ7XRaaFA2uS7hXuEA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,qPOXY20kQCmURWn2eRYyjA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,21000.2,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1aUnblssRDqXKi8N9wm7XQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,21000.2,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,195X7YjpQXCjapnJPXcN7g,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,co9bfdFqTLy7B9zfdl6fVg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,H1kd6Qh3Qdaw5SZbZtYObg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,HPUVMCoGjvfLkpT3P0BgUZ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,MQUfWE32AnA8JIi4BRm6PA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,gGmJKi6wQoCIhgKNRF6sDQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,xQ1AmA0OicNZwtTMN6ypKi,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,YtyQTS35LVia9rCtxYsXgo,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,xaZHtAYrS0OY3ZWJ6Gn9cA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,fEYn2vyb8vpjk1poRpxBTv,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Ook0mLGnSuCjDILe4WyHGA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,CrYsdMCPSfSONfbHRcZ17Q,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,115,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,WZyapZprSXacbjpYJWY7XQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,y5b7YGpfSKeplJjOcGMF1w,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,m2HE4qaSTbXNNz4whjscgg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,YxDrXtrgQuGEi8KG5oCG1A,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Znm2PP2vQy2X1eyVh3ljCg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,cVsY8vmHR8O4LsherntXJQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,zRytYhK2QYXiwbU3DLNgIg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,JwmisUOhHPz8RpN1CqQg8U,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,AfwVCdBHQTSHppt7XlfyHA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,dCZH0p7XSJmyugYYpdfWNA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,130,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,ksTz9KXYQ5WkRgJG3buzUQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,3fYYtAtiRXeOMEuZbPAzAg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,prXRwdqtNBy0AI11DggD2P,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,QhjDJwuMFLUKT04dba0ZMs,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,KZZmPkCvi4gi0UwfvJtLJ5,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,cDI9zNXtRi2lyCx8iRjFBg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,w4QpX2wxNrEYsgosrpdKVD,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,bs5rhSSgcLVIqhPvF4N7vm,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,isfcAPtZRGCl7KkExv1tpA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Vjggeep2TQ61K9ql2nTxJg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,cWFawXRqSGGDC0kESRB1XQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,OVaFoR9oS7CcYHYOlXxeIg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,jwhY8jWWTtGxbqryci8LSw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,8MYXctxcRHK46kyhkO3Y0w,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,QXqvUP9RRdCZnLbvIe0GSw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,ZW4BkYzG7MBvIB0h60mr8r,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,NONyc8S6TH66FipXZoJjjw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,kYaz9GMVQjSfmiOP5XoYHw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,2xgCKwPWx4jIQrs519gaK1,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Uyd5CYtmSKGVcpXqR0uKSw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,RTQMy6VQFP0QjtJ7xkKVcf,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,XqzRAiWjQ6Sz2AkXTDGhjg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,XL7K5maFRFibRhWlidsZsQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,130,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,yr3F99wmROSUl3k5aJ8YJQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,21000.2,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,j0bqK0YTR6CcyGDeJZWw6Q,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,500,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,4RuY8DRk2CqNoIue1SE8i9,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,zktZ20MnABna19dDsdVobV,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,sdndvsxsxbXH9dEq5xtHBp,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,YITjirsZQmm88XzuauMthA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,B9ptDk6VRBOf78B7wQNyvg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,rq6PMaFtX20tWxgTW6iO5v,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,w6kIBqHNSVidKVRYU39feA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,bQv0FmlxRwGKDe4TsXsEyg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,oGZTlYOBSiu0LG819Qling,V148,669,Level 2 Data Invalid for Purchasing Level II,444442XXXXXX4440,3/3/2025,15,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,CcRg17chRLX5MxFggjOWsg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,hc0zr3HnQK6U0BGnGUaDUw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,TafmRzQIQ7yByeLbP15Yxw,V148,669,Level 2 Data Invalid for Purchasing Level II,444442XXXXXX4440,3/3/2025,15,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,f7l2dMGAQYS26UhLVLSm3w,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,tHfOWCpTqKYqSrMYL05vgu,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,IMKFZhGUVso4YvFTNVtv2G,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,sbFPtlngSiCbC7Y7UNzzQg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,3sBANQOERwmmFrH1bitrig,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,pIANM5KBmLNMhq4UfZdVSy,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,X96rMzUmShifv6npM9cWAg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,IJ9mgkR6TQaNBfqxgHmMcw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,eYObJIxVSwixYOvfqS1FWg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,500,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,nTvfIDJBTw23qqL1EcK86A,V148,669,Level 2 Data Invalid for Purchasing Level II,444442XXXXXX4440,3/3/2025,15,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,wV37LgnOSbuVfSP7XJe3UQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,VI1WtyQ7Jrq2hHWrx2XfAR,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,E8mGa3knFoqK1QWJw3OqGJ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,JcR8Ijau1aQZSnEsz1k2M4,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,MiarikD1QwO9HnwxJaIpZg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,pAXyRNs8aZmk7mjHAkGGQ6,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,PVE2H18sRXK78IPJcrvWqA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1GZM1s1hRV6QuRAH7Y6xwA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,115,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,9LKe69kKTJeE1SA7Rl1mZw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,130,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,pSVugZouQy69H3f14ueQaA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,OEtfjiS1ROqLgdfhXjVoaw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,rMLLLp7bt5UOtA3Ua0iM6T,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,0KIp6B71RXyVSiYaxdGl3g,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,kKmPP2RVRTWbXL7RLodHHQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,H5vnSm3puuqZCVV3faHaiX,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,vrXSbfxeSFOo8BnTafMYlg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,cf7tk0ZSLdoNgYJR2YwvfU,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Seql5l6sQxiXnFyKxPl80Q,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,0IxZb81rRsCFGqGlyv0MwQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,T4qcYp6kQYmU5F35AJYPIQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,3zWmNVOROaqR188TPMsina,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,CdRBeWTATw6sMXw8x3ohMQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,sfafZw8XQHqdMPfIJgw9RA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,e4DHYQEhT325ErVMyS9bXw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,XYL5ROiRRzKMW23OqbNn4w,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,W7vjynlWT3yy4AmyzVVnbg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,115,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,sgx4a2FWOaDpTUjdxYIALs,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,C8Wiea6UMtaig2pm5iL66T,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Q1ejdDqJdHD70y8twv55CF,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,jQS3IvszSVyrxaDJOxTqXA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,yYRtu2kFQHK5EjOiesdYJA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,A4mp8MQdTWSZAFnq1DTZqA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,500,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,ghcS6PEeR3mnSWkVLV166Q,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,YNc9L9tvRdGlI4ElF2i7MQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,130,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,shO35dByxIYjCTVIrf7noX,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1fp5iQ12pD29CfYykqjJ0B,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,415euo58SFmSXYJ8ghC3Eg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,ClohGmGsRRC2HRHz1D3qig,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,vQpBQOmqT9Xk6drggyjGFA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,C4j721M6ZzhkBPBqn5wKbL,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,upV4zddKT52Ay8Mn4NytxT,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,HvfXJJKYQWOXrBkrlbjKtw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,9iSjLV5YS2a5vGPvin1EFQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,c2eCqyEnuyCheGoiGEORJp,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,4nBCq3fiMfHYtXU7dIy1BO,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,dzc0IyBn1gKsc34NRSxI3x,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,jOupiRkEQnCLnSrRFk1Vpg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,wezNPKeLTducdrFXSAa8NA,V148,669,Level 2 Data Invalid for Purchasing Level II,444442XXXXXX4440,3/3/2025,15,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,bll2ipaLTiXWwkCi6FusMg,V148,669,Level 2 Data Invalid for Purchasing Level II,444442XXXXXX4440,3/3/2025,15,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,oX3GCuQDQeGYBBGzqcRKcg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,kl66AegaS9y0PQbdvK0fmg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,ktIOnH6YSiG7b2z7ZqcO2A,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,W8L6RIYHTBS0toIKzYbBQw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,B9e8TZBQSl2e15eAlcqW8A,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,UdjB6nWNdQXJqtfHjJbeVc,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,j4hv9PSsQMGiZN7Pb9EVZQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,jHwBMkp9WEz8CvFvnWW4Yv,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,t2hzngQvBwhgaSpXfsHGyE,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,H8GyGuYxS9SdvTGOBGdCaw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,PgMzKaqnD4dwb4grbxz16Z,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,2oJsoVQKTd2JuIODf0UXfw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,LhaEKdGhTKyShtSpRrlyRw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,500,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1TEnS1o7FZrshTR3G7I8cM,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,29EXA4UQXU1IAIwrWJgWZF,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,lJL4h2nAT72HXzgtNKzDIQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,8LGRulpFQsizPEnMJFB50Q,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Upl5A7fQSZGwRIM2Mh1CyA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,2tG2MkutRCavUESbskYVng,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,VxtajFXYSwifHBYK2ESxYQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,5pYW5646Cz8p8ngpPkt6oP,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,nyXEf35bSriDiokYLK5J2w,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,5bYaFoC4QMXCtHDG8HyJYA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,MbZaKsgaQtuDBVPXHpPBCA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,VLo8RwoLSgSea7vWdCiSXQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,fsrv7vOP8ym0mWejkP8C8E,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,U6mn1APaRLqRvI7cU8UUiw,V148,669,Level 2 Data Invalid for Purchasing Level II,444442XXXXXX4440,3/3/2025,15,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,UBEwcXSLS7WTV2yC5XiIgw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,8tn0EW51REOITcZbb2GPfg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,21000.2,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,f4yPYKAVQkXBYsojBrTfjw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,115,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,gIoXvYW2RgmBErQ1ZJJ9yA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,8XgGb2u4QLq9qNkbPw9w5w,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,130,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,dPEerbWXTeKtk7szfKu7rQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,ZQqPyXrPTbCc1OpBSBJQUA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,q9udViRpOZfNAyU7qQQwp2,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,mW1dR0tQtrAxGRZEsOH6CL,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,HCSILTShSJygoMLwidWLnw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,RYYVBtMBS0uZ6jAA1NYh4w,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,mvCuGva6RoKxDEK0ZskS2A,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,tIScRpHuQH6vcFfFjhkAYQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,I1Q2yqEnRkXc0bhXfSsRhA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,115,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,n0JA1vGio3DM8df4AdGo5s,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,JRqjvDQtdk3ObZEWPbHDZe,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,S3oN43CdT9u5gDfYah0xIQ,V148,669,Level 2 Data Invalid for Purchasing Level II,444442XXXXXX4440,3/3/2025,15,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,A46TYYXOQOGcLw7oQMKVXg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,dtCA46afSh6crhYsbH1ECA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,130,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,X2aJSFcEStuUaIlFVFlMAw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,21000.2,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,81ffSNU4M3vvieq780Jcvt,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,2NYa068CTpWwZRUGprXVKQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,B9q14W05TlumY6eYqu4igQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,sL3gKrpFQGXmfEdi0Ns9yQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,s0b3rkPXV8uQ9N7EWe7RDJ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,WYCbuW1uJAIMHzybGSHyia,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,bZvDT4rjTgOkJRqBS9Nb6w,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,f4EDjJWuiDAZYbLgp4P6YO,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,ydv9OXVeRkOCgprKGE4m7w,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,fnUR29FoSliVVc0S8XIfKA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,wdwQZJgtRFKB40xtZjbMfg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,pf4qlWxWRk2uVhENXk78Ng,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,NpKrS53kQYCz06T3PxwmUw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,b6lP1HCpRDCYojvvm6VqdA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,hFvz2nvKyAH1FxUXaxUxcU,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,g6XcducJTiu3UnyfeOLkAw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,xSlj3f1OTGutzgWEWNsluQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,fT0f32LKQa68UkF9YGTn8g,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,ZLUOcC74uh0QK58ksZWgqm,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,AgHRP0OixhJaC11JjOIDf0,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,IWyWk4TrQnC0Acl1gMJ0vg,V148,669,Level 2 Data Invalid for Purchasing Level II,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,SJSOLEWnQ2a3MuLcQBzJEw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,V7udfIzBTS6tm3QkVcK4LA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,130,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,KVawzEjA3jgYMkQoxfLqsK,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,eZF1EJOFS3iUrbMUtco0zw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,34Y28OCK9Ab05zLkduwtUN,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,9TpaNzhzRq6JgLvYhHTuIw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,YEjFCHE7SpmuXYKYzX7Byw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,dE0DbechWycSsavdXTCpdw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,ScatClC1Qly64TwhqGc1Xw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,7OhnphdhSLKCXSE4DijDMg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,vC30YVaPTX28DkKMf4hTag,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,hVSxUrq4SUekbY69jLT1Bw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,115,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,MV0EtxwHSzI8CNESM6SNTx,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,ZR3O0t7tAPuEzV5y84WxcE,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,PBKbN1FTTjuPty9vh6OQ2A,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,E9EsJCG6RGu4UbHz6G35zA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,ZC1cA2NARJHV2qWA5qzyoD,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,DG0YqfaNSOuqdxc9NkIeRw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Wow2PXTlQTmF28oz2sygAA,V148,669,Level 2 Data Invalid for Purchasing Level II,444442XXXXXX4440,3/3/2025,15,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,VstpxJffQOu0f6UBTSDbEA,V148,669,Level 2 Data Invalid for Purchasing Level II,444442XXXXXX4440,3/3/2025,15,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,DarGRxVjSErgS3w1PNIrbc,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,0j9Zaq5eEUJOdACO2Q6fsL,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,PZsHhNajHdW6RKV4brK8L7,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,zSHsaeuvWqoq14JBm0rKw6,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,gaG6yqHiIXdHR33xs9Z8hN,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,3OZIO4tFSCe0xnnYXNZTfQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1xteKa0hRmWF45GwQB0hOw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,HfXp25nuS3yYUTUqd5Ngok,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,I1aFN8t8RXmvcy6YaZ8RYA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Aeypcqks0vd5gzRt15bSKU,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,y9hZPn0V82pO43BZe7LirA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,V7WSNmhLTFe9tuIMEYLYXA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1EX9CYvhdOqhXOIRTnhoj4,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,wP4mCmUJgVd2Cb5DeT1x2S,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,r0WRNaueK85YDDqJoyF0BE,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,IFJOZF1uCBzyGc9wJTBaIT,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,hzFJM7v3ToqxUvLQhKJidg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,frnbmRxWKOSU3deagXkBF0,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,ifwTAWYNSNyNT06z7RAIrg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,58YzIFDkHOyfGBQuvgKDC2,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,6VYyFGVKRYiVHKGy4E3Q3Q,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,jd7EOr1tRX239kwC1gQrQA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,SLu0AmH6Rh6LCyQLsC8eQA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,nsg7G43nSp6rHp0aQYoYag,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,21000.2,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,QiCcnbUAQeaoRc85R0YYOA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Lh6UyY06KPRB39unBkW7AM,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,BfwsQOgAzE2iuOU0czZy7v,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,P1XpnUHWQqXIBwThRUXXoA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,130,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,7OGCDCBVQwXZG8UmUqFaXw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,XOvc3bnQTk6lByoomb5Jjw,V148,669,Level 2 Data Invalid for Purchasing Level II,444442XXXXXX4440,3/3/2025,15,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,bXyFkBTFQqGr9aF5wEwjHQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,500,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,0Nmj8p3tRkGCzUYamOD3zQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,yKI5tk2YB6JZu7z7hiiQqD,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,IAhDw6LqcJKoz3eLE2xBIW,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,oNavfxXJRP6hmabKjRXWzA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,a830ttQEOqak1hBjE6TIar,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,OLPUqmSrRJaiDIglp6XLTg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,qUJd0pvrSAerlebl4Z1WQg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,115,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,wNyZ81G8dIfhgO36sb9oqX,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,dtD4bcmGo1iznMsheUgLJd,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,9bEPZbmYQOmLNA4l6K3LPA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,rNenW65270DK3awdifG1Yr,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,T6agRThdVX8xpKVuW9jG8V,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,HjZ5zRyOWXZDNFc4R4E85M,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,joDBRwTtTMezjYIztTkqDA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,QaHzTunpQaa4pcI2D7vbIA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,130,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,2YKEOHBjLRs5ZXB7PTIgk4,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,kz44Y3AMSzy4Xw06ZhR4GQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,5BFfMFJ4mKWCggKGP1xIKT,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,S4vGNhrCQXCE4A8XCuUD8Q,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,500,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,UP2FzublQaKMxtPE1XnRYA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,DCddSyqNTUmTYFRHA29rWg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,BL7KMNB6TLebYewLeD93hw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,115,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,9AtGtoAZvsSuwA1av8Ti4m,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,wwRKaI0RRlm1uXfd1WgoJQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,5,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,0Xqp8IJbTKeYWWEVt5SHbQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,JEhCD9FPTNWU8LpbOZ3PqQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,NQcOImuwRd2Qk1Uk1ADYnA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,21000.2,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,rjEd7pNS2GW03VV9i89Rd7,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,mm81ijOBQpWXAVB4TvNyFQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,115,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,AxkOLghy9nicMKm2etiU6V,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,hjrQeVk2Ld6CWL037NI2UI,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,VJgXn41kTt2V20oSKihv5w,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,130,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,XxffKRPsQ6qPEPUC082tTg,V148,669,Level 2 Data Invalid for Purchasing Level II,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,jMB35MByd0HHjyg0TWeSyv,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,5wQNRVP85oOTpFqeVLO2GP,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,CjXhNZvUSs6CohuWwawQ0Q,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,yue07emeRlXkKPYuxlgxnw,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,LaQp8eqRhqPRg9AerghIJy,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,tBnRRdYOZ8gUzb0qVTUUuk,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,g0i87Mt4bKGxALiFEA3r98,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,r8kH8M0jhMWuoiIq0oDgTL,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,o14JuPebzQJHOvYPJI4FPp,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,kLF0XGr2Kf7teDFnW3GUCd,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,b8BYQiTBT5Sl0zxPHQ9i5w,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,z4mXKnZm30vwpTZexD7NBy,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,yPlAITtWQXqGRWwblTZg4Q,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,500,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Emjg9YkWSBeENLor2vsmrQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,115,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,p8BOZAQMAZICyux3dsq2O7,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,axQhCmuFR8XG3u0BBqwc4g,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,2qx2s6qzR0ed9O2EXP8Kng,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Kt8nCoEARGXcYG4Mv0DuiQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,155,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,rijCwmwVYbKC1ILYaD9qKX,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,9qjUda45CAU4eeArwc3Uz5,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,2WMRnrcgTqOuG5AxeKAzcQ,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,500,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,RrhBUjvHQ8GXaDdfaXu3Bg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,zdX1SGCKQXOxjYnBUy0EtA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,MQl5rjFOTlOGepzXECUpNg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,3ueUGwPpSWChC2YPTOeHNA,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,3LkAsh9oSEXXBeSGHmzEeg,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Qj7minRFCnTaQrnyVY2UhX,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Wfdp2wJeAqPyHjsDHhWqI7,V148,651,No Level 2 Data,444442XXXXXX4440,3/3/2025,100,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,NtfxPOC 418554 DPVI1,V987,175,On Target - Inter-Regional,403252XXXXXX0007,3/3/2025,1.01,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,NtfxPOC 418554 DPVI2,V987,175,On Target - Inter-Regional,401068XXXXXX0005,3/3/2025,1.02,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,NtfxPOC 418554 DPVI3,V987,175,On Target - Inter-Regional,403252XXXXXX0007,3/3/2025,1.03,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,NtfxPOC 418554 DPVI4,V987,175,On Target - Inter-Regional,401068XXXXXX0005,3/3/2025,1.04,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Vai1FEQvBeI2HAUcEEL59,VBL2,145,On Target - Visa Non-T&E MCC,444444XXXXXX4455,3/3/2025,70,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,DNEb4U1YsB75ihpBoBSD13,VBL2,145,On Target - Visa Non-T&E MCC,444444XXXXXX4455,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,2VM3azlj1QXZhpgbVs4wP5,VBL2,145,On Target - Visa Non-T&E MCC,444444XXXXXX4455,3/3/2025,70,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,I3hqQsUFx2M6PBDAIv8Da2,VBL2,145,On Target - Visa Non-T&E MCC,444444XXXXXX4455,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,bxPc7yhpWLdfdBtNEzLTY,VBL2,145,On Target - Visa Non-T&E MCC,444444XXXXXX4455,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,D6gB9j6fqPFsM6eRITWAD4,VBL2,145,On Target - Visa Non-T&E MCC,444444XXXXXX4455,3/3/2025,10,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,JZGCd0a91DtpGQNIIQhOY5,VBL2,145,On Target - Visa Non-T&E MCC,444444XXXXXX4455,3/3/2025,70,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,GkiXX7dlejwSlsuVAHqL32,VBL2,145,On Target - Visa Non-T&E MCC,444444XXXXXX4455,3/3/2025,70,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,7L6Xz6vxhNCocjsIvIjHQ,VCEB,136,On Target - E-Commerce Txn,476134XXXXXX0050,3/3/2025,20,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,3KWFHBvqnuKGV8pW7IrDP5,VCEB,136,On Target - E-Commerce Txn,489537XXXXXX1988,3/3/2025,18,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,7n6nHDGvUX5x52rP0E3bV6,VCEB,136,On Target - E-Commerce Txn,489537XXXXXX1988,3/3/2025,18,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,vkfCcJ4I0ZUI3nhWPQ0p77,VCEB,136,On Target - E-Commerce Txn,489537XXXXXX1988,3/3/2025,18,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,sMgworIOYbW67mCiy2kio,VCEB,136,On Target - E-Commerce Txn,476134XXXXXX0050,3/3/2025,30,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,LwDbwXAwpTQqkn65iTRryk,VCEB,136,On Target - E-Commerce Txn,476134XXXXXX0050,3/3/2025,20,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,c4kLuNMbfSz9e8JfbpBLc5,VCEB,136,On Target - E-Commerce Txn,476134XXXXXX0050,3/3/2025,20,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,ae4lUHZuuYdb5wlwoOVZbG,VCEB,136,On Target - E-Commerce Txn,476134XXXXXX0050,3/3/2025,20,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,pDFIqaV3X6qmzX5d5vxVK1,VCEB,136,On Target - E-Commerce Txn,476134XXXXXX0050,3/3/2025,20,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,9naXVlqBG8kLNnekZd3dI5,VCEB,136,On Target - E-Commerce Txn,476134XXXXXX0050,3/3/2025,30,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,OzWtyzVuCiJI71gonq0Jy4,VCEB,136,On Target - E-Commerce Txn,489537XXXXXX1988,3/3/2025,18,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,4NgHoECUUfzVu8qStEmCG3,VCEB,136,On Target - E-Commerce Txn,476134XXXXXX0050,3/3/2025,20,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,Yz2KC97KmNJmx70TO60W66,VCEB,136,On Target - E-Commerce Txn,476134XXXXXX0050,3/3/2025,20,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,MtpqRNz6asvtftKgjsE11J,VCEB,136,On Target - E-Commerce Txn,476134XXXXXX0050,3/3/2025,20,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,u65UYhOKtlHCKRau2xuLE1,VCEB,136,On Target - E-Commerce Txn,489537XXXXXX1988,3/3/2025,18,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,DxjC0ZeFams8exvDi3LWa3,VCEB,136,On Target - E-Commerce Txn,476134XXXXXX0050,3/3/2025,30,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,kMk280mg2UOSHmmQG31Hv3,VCEB,136,On Target - E-Commerce Txn,489537XXXXXX1988,3/3/2025,18,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,ReLhlZt0Ld9TQVxV8QjSD6,VCEB,136,On Target - E-Commerce Txn,489537XXXXXX1988,3/3/2025,18,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,yzzrjtn6GWkajygiFGJF1s,VCEB,136,On Target - E-Commerce Txn,476134XXXXXX0050,3/3/2025,20,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,ZcnGAnIaEepQWEPSvb4Dw6,VCEB,136,On Target - E-Commerce Txn,489537XXXXXX1988,3/3/2025,18,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,idQwt7v8X0BwM1vEsN1aV,VCEB,136,On Target - E-Commerce Txn,489537XXXXXX1988,3/3/2025,18,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,8SM9IifurjkGeAFnUMM3e5,VCEB,136,On Target - E-Commerce Txn,489537XXXXXX1988,3/3/2025,18,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,LB7ZB4Q3S33gviZR6eM2GD,VCEB,136,On Target - E-Commerce Txn,476134XXXXXX0050,3/3/2025,20,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,uVwNVSP4ps4CWgzlpY2jLk,VCEB,136,On Target - E-Commerce Txn,476134XXXXXX0050,3/3/2025,20,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,XBTjvjq8XZZbdDESYElSD2,VCEB,136,On Target - E-Commerce Txn,476134XXXXXX0050,3/3/2025,30,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,33x1w3dDOvFYpE6kLcSch3,VCEB,136,On Target - E-Commerce Txn,489537XXXXXX1988,3/3/2025,18,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,t2UYrK99Q2mzQO7Oexphi2,VCEB,136,On Target - E-Commerce Txn,489537XXXXXX1988,3/3/2025,18,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,kTGumx1a6cdOtRygFS5tI3,VCEB,136,On Target - E-Commerce Txn,476134XXXXXX0050,3/3/2025,20,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VCEB,136,On Target - E-Commerce Txn,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,merchantOrderNumber-15,VPDM,122,On Target - Direct Marketing MCC,411234XXXXXX4113,3/3/2025,22,2.46922E+22,1
+Interchange Qualification Details,418554,USD,USD,VI,1006381609,VSDD,121,On Target - High Risk MCC,447005XXXXXXXXX0003,3/3/2025,1.06,2.46922E+22,3
+Interchange Qualification Details,418554,USD,USD,VI,1006353472,VSDD,121,On Target - High Risk MCC,447005XXXXXXXXX0003,3/3/2025,1.06,2.46922E+22,3
+Interchange Qualification Details,441284,AED,GBP,VI,RPTTSTORD4,V5FI,175,On Target - Inter-Regional,411234XXXXXX4113,3/4/2025,20.06,7.40834E+22,1
+Interchange Qualification Details,441284,AED,GBP,VI,RPTTSTORD2,V5FI,175,On Target - Inter-Regional,411234XXXXXX4113,3/3/2025,20.06,7.40834E+22,1
+Interchange Qualification Details,441284,AED,GBP,VI,RPTTSTORD2,V5FI,175,On Target - Inter-Regional,411234XXXXXX4113,3/3/2025,20.06,7.40834E+22,1
+Interchange Qualification Details,441298,AZN,GBP,MC,UATRPTTET4,MX29,702,Not SecureCode enabled at Authorization,511100XXXXXX1128,3/3/2025,13.1,5.52047E+22,1
+Interchange Qualification Details,441298,AZN,GBP,MC,UATRPTTET4,MX29,702,Not SecureCode enabled at Authorization,511100XXXXXX1128,3/3/2025,34.93,5.52047E+22,1
+Interchange Qualification Details,441298,AZN,GBP,MC,UATRPTTET4,MX29,702,Not SecureCode enabled at Authorization,511100XXXXXX1128,3/3/2025,13.1,5.52047E+22,1
+Interchange Qualification Details,441298,AZN,GBP,MC,UATRPTTET4,MX29,702,Not SecureCode enabled at Authorization,511100XXXXXX1128,3/3/2025,34.93,5.52047E+22,1
+Interchange Qualification Details,441298,AZN,GBP,VI,UATRPTTET1,V5FI,175,On Target - Inter-Regional,411234XXXXXX4113,3/3/2025,43.66,7.43132E+22,1
+Interchange Qualification Details,441298,AZN,GBP,VI,UATRPTTET1,V5FI,175,On Target - Inter-Regional,411234XXXXXX4113,3/3/2025,43.66,7.43132E+22,1
+Interchange Qualification Details,441455,EUR,EUR,MC,UAT-RSW-07,MX29,702,Not SecureCode enabled at Authorization,511100XXXXXX1128,3/3/2025,100,5.52047E+22,1
+Interchange Qualification Details,441455,EUR,EUR,MC,UAT-RSW-06,MX29,702,Not SecureCode enabled at Authorization,511100XXXXXX1128,3/3/2025,100,5.52047E+22,1
+Interchange Qualification Details,441455,EUR,EUR,MC,UAT-RSW-07,MX29,702,Not SecureCode enabled at Authorization,511100XXXXXX1128,3/3/2025,100,5.52047E+22,1
+Interchange Qualification Details,441455,EUR,EUR,VI,UAT-RSW-03,V5FI,175,On Target - Inter-Regional,411234XXXXXX4113,3/3/2025,100,7.43133E+22,1
+END,EntityId=418553,Frequency=adhoc

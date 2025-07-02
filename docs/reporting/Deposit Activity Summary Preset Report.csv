@@ -1,208 +1,99 @@
-BEGIN,EntityId=424017,Frequency=adhoc
-EntityId=424017,ReportTypeName=Multiple,Frequency=adhoc,FromDate=2024-10-08,ToDate=2024-10-09,GenerationDate=2024-11-20,GenerationTime=14:38:06
-Record Type,Presentment Currency Code,Settlement Currency Code,Payment Method Code,Conveyed Sales Count,Conveyed Sales Amount,Conveyed Refund Count,Conveyed Refund Amount
-Conveyed Deposit Summary,USD,USD,AX,75,5837.92,5,-94.02
+﻿BEGIN,EntityId=418553,Frequency=adhoc
+EntityId=418553,ReportTypeName=Multiple,Frequency=adhoc,FromDate=2025-03-03,ToDate=2025-03-04,GenerationDate=2025-03-13,GenerationTime=19:22:13
+Record Type,Presentment Currency Code,Settlement Currency Code,Payment Method Code,Conveyed Sales Count,Conveyed Sales Amount,Conveyed Refund Count,Conveyed Refund Amount,,
+Conveyed Deposit Summary,AED,GBP,AX,0,0,1,-100,,
+Conveyed Deposit Summary,AZN,GBP,AX,0,0,2,-200,,
+Conveyed Deposit Summary,EUR,EUR,AX,0,0,1,-100,,
 Record Type,Presentment Currency Code,Settlement Currency Code,Payment Method Code,Settled Sales Count,Settled Sales Amount in Presentment Currency,Settled Sales Amount in Settlement Currency,Settled Refund Count,Settled Refund Amount in Presentment Currency,Settled Refund Amount in Settlement Currency
-Settled Deposit Summary,ARS,USD,VI,112,3504,3.4,19,-660,-0.66
-Settled Deposit Summary,CLP,USD,VI,112,350400,375.96,19,-66000,-70.85
-Settled Deposit Summary,COP,USD,VI,140,4380,1.15,24,-830,-0.15
-Settled Deposit Summary,MXN,USD,VI,128,3960,198,19,-660,-33
-Settled Deposit Summary,PEN,USD,VI,116,14248,3699.96,19,-660,-171.37
-Settled Deposit Summary,USD,USD,VI,139,4080.14,4080.14,20,-662.02,-662.02
-Settled Deposit Summary,ARS,USD,MC,120,3720,3.6,19,-640,-0.66
-Settled Deposit Summary,CLP,USD,MC,120,372000,399.16,19,-64000,-68.69
-Settled Deposit Summary,COP,USD,MC,150,4650,1.3,24,-805,-0.15
-Settled Deposit Summary,MXN,USD,MC,152,4732,236.6,19,-640,-32
-Settled Deposit Summary,PEN,USD,MC,124,16559.2,4300.12,19,-640,-166.21
-Settled Deposit Summary,USD,USD,MC,135,4118.02,4118.02,20,-644.02,-644.02
-Settled Deposit Summary,USD,USD,JC,34,1022.42,1022.42,5,-92.02,-92.02
-Settled Deposit Summary,USD,USD,DI,34,977.32,977.32,5,-78.02,-78.02
-Settled Deposit Summary,USD,USD,DD,35,968.52,968.52,5,-96.02,-96.02
+Settled Deposit Summary,AED,GBP,VI,3,300,60.18,0,0,0
+Settled Deposit Summary,AZN,GBP,VI,2,200,87.32,0,0,0
+Settled Deposit Summary,EUR,EUR,VI,1,100,100,0,0,0
+Settled Deposit Summary,USD,USD,VI,672,219367.82,219367.82,53,-588.34,-588.34
+Settled Deposit Summary,AZN,GBP,MC,4,220,96.06,0,0,0
+Settled Deposit Summary,EUR,EUR,MC,3,300,300,0,0,0
+Settled Deposit Summary,USD,USD,MC,70,1450.1,1450.1,24,-362.03,-362.03
+Settled Deposit Summary,USD,USD,JC,3,21.06,21.06,1,-8.01,-8.01
+Settled Deposit Summary,EUR,EUR,ED,77,116049.84,116049.84,0,0,0
+Settled Deposit Summary,USD,USD,DI,28,628.1,628.1,17,-294.01,-294.01
+Settled Deposit Summary,USD,USD,DD,0,0,0,1,-6.02,-6.02
+Settled Deposit Summary,USD,USD,CZ,9,332.34,332.34,0,0,0
 Record Type,Presentment Currency Code,Settlement Currency Code,Net Settled Deposits Amount,Interchange & Assessment Fees,Processing Fees,Chargeback Adjustments,Other Fees & Adjustments,Net Financial Activity,Foreign Exchange Rate
-Fees & Adjustments Summary,ARS,USD,5.68,-10.6300011,-7.7100003,0,0,-12.6600014,0.001012487
-Fees & Adjustments Summary,CLP,USD,635.58,-36.63999972,-7.43,0,0,591.5100003,0.001073267
-Fees & Adjustments Summary,COP,USD,2.15,-13.52000034,-9.76000023,0,0,-21.13000057,0.000236747
-Fees & Adjustments Summary,MXN,USD,369.6,-26.97999925,-9.06000001,0,0,333.5600007,0.050033214
-Fees & Adjustments Summary,PEN,USD,7662.5,-307.6699999,-7.80000007,0,0,7347.03,0.25967158
-Fees & Adjustments Summary,USD,USD,9594.32,-346.7200004,-22.48000039,0,0,9225.119999,1
+Fees & Adjustments Summary,AED,GBP,40.12,-1.1,-1,0,0,38.02,0.200618529
+Fees & Adjustments Summary,AED,GBP,20.06,-0.55,-0.25,0,0,19.26,1
+Fees & Adjustments Summary,AZN,GBP,183.38,-3.97,-2.6,0,0,176.81,0.436618775
+Fees & Adjustments Summary,EUR,EUR,116449.84,-7.69,-19.56999974,0,0,116422.58,1
+Fees & Adjustments Summary,GBP,GBP,0,-0.03,-0.85,0,0,-0.88,1
+Fees & Adjustments Summary,USD,USD,220541.01,-7435.170001,-127.2099989,0,0,212978.63,1
 Record Type,Activity Date,Presentment Currency Code,Settlement Currency Code,Funds Transfer Category Description,Fund Transfer Instruction Number,Fund Transfer Identifier,Merchant Activity Date Range,Fund Transfer Effective Date,Funds Transfer Amount
-Deposit Transfer Summary,10/9/2024,PEN,USD,Effective Funds Transfer,4385280,1103424039,2024-09-20 thru 2024-10-04,00:00.0,18675.72
-Deposit Transfer Summary,10/9/2024,CLP,USD,Effective Funds Transfer,4385280,1103424039,2024-09-20 thru 2024-10-04,00:00.0,1644.22
-Deposit Transfer Summary,10/9/2024,ARS,USD,Effective Funds Transfer,4385280,1103424039,2024-09-20 thru 2024-10-04,00:00.0,28.24
-Deposit Transfer Summary,10/9/2024,USD,USD,Effective Funds Transfer,4385280,1103424039,2024-09-20 thru 2024-10-04,00:00.0,21524.79
-Deposit Transfer Summary,10/9/2024,MXN,USD,Effective Funds Transfer,4385280,1103424039,2024-09-20 thru 2024-10-04,00:00.0,796.55
-Deposit Transfer Summary,10/9/2024,COP,USD,Effective Funds Transfer,4385280,1103424039,2024-09-20 thru 2024-10-04,00:00.0,-67
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1078287056,2023-09-19 thru 2023-09-19,00:00.0,106.88
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1082390231,2023-12-29 thru 2024-01-01,00:00.0,-1.82
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1082421149,2024-01-02 thru 2024-01-04,00:00.0,-10.65
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1082452949,2024-01-05 thru 2024-01-05,00:00.0,737.46
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1082498303,2024-01-06 thru 2024-01-08,00:00.0,1559.34
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1082511328,2024-01-09 thru 2024-01-09,00:00.0,1013.3
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1082530208,2024-01-10 thru 2024-01-10,00:00.0,590.52
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1082546009,2024-01-11 thru 2024-01-11,00:00.0,316.55
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1082560189,2024-01-12 thru 2024-01-12,00:00.0,527.66
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1082604452,2024-01-13 thru 2024-01-15,00:00.0,422.02
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1082622297,2024-01-16 thru 2024-01-16,00:00.0,1138.92
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1082636719,2024-01-17 thru 2024-01-17,00:00.0,715.31
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1082649644,2024-01-18 thru 2024-01-18,00:00.0,1303.7
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1082667427,2024-01-19 thru 2024-01-19,00:00.0,800.97
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1082713871,2024-01-20 thru 2024-01-23,00:00.0,-10.84
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1082833683,2024-01-30 thru 2024-01-30,00:00.0,624.95
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1083377887,2024-02-02 thru 2024-02-02,00:00.0,1847.69
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1083423973,2024-02-04 thru 2024-02-05,00:00.0,1590.36
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1083440540,2024-02-06 thru 2024-02-06,00:00.0,2164.42
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1083456061,2024-02-07 thru 2024-02-07,00:00.0,1161.44
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1083468482,2024-02-08 thru 2024-02-08,00:00.0,1593.19
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1083486549,2024-02-09 thru 2024-02-09,00:00.0,1962.59
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1083532123,2024-02-11 thru 2024-02-12,00:00.0,1188.5
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1083547651,2024-02-01 thru 2024-02-13,00:00.0,2511.9
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1083562061,2024-02-14 thru 2024-02-14,00:00.0,1406.57
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1083578117,2024-02-15 thru 2024-02-15,00:00.0,403.4
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1083593180,2024-02-16 thru 2024-02-16,00:00.0,1702.03
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1083639921,2024-02-18 thru 2024-02-19,00:00.0,997.69
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1083654213,2024-02-20 thru 2024-02-20,00:00.0,2016.29
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1083668857,2024-02-21 thru 2024-02-21,00:00.0,2008.62
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1083685631,2024-02-22 thru 2024-02-22,00:00.0,1783.59
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1083699649,2024-02-23 thru 2024-02-23,00:00.0,1019.39
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1083742377,2024-02-24 thru 2024-02-26,00:00.0,2324.41
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1084256198,2024-02-27 thru 2024-03-01,00:00.0,117.79
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1084514620,2024-03-06 thru 2024-03-06,00:00.0,12476.68
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1084566996,2024-03-07 thru 2024-03-07,00:00.0,7275.24
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1085191392,2024-03-19 thru 2024-03-19,00:00.0,3552.84
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1085653400,2024-03-28 thru 2024-03-28,00:00.0,14926.02
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1086238739,2024-03-30 thru 2024-04-01,00:00.0,29677.19
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1086283282,2024-04-04 thru 2024-04-04,00:00.0,2827.1
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1086481865,2024-04-18 thru 2024-04-18,00:00.0,2836.24
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1086567475,2024-04-23 thru 2024-04-24,00:00.0,4476.79
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1086580104,2024-04-25 thru 2024-04-25,00:00.0,2811.82
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1086634600,2024-04-27 thru 2024-04-29,00:00.0,5533.6
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1087114924,2024-05-03 thru 2024-05-03,00:00.0,1613.27
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1087156159,2024-05-04 thru 2024-05-06,00:00.0,2932.06
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1087185594,2024-05-08 thru 2024-05-08,00:00.0,3017.91
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1087198669,2024-05-09 thru 2024-05-09,00:00.0,2.03
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1087198669,2024-05-09 thru 2024-05-09,00:00.0,-2.89
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1087198669,2024-05-09 thru 2024-05-09,00:00.0,25.65
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1087198669,2024-05-09 thru 2024-05-09,00:00.0,362.46
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1087198669,2024-05-09 thru 2024-05-09,00:00.0,114.65
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1087198669,2024-05-09 thru 2024-05-09,00:00.0,2817.2
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1087396001,2024-05-23 thru 2024-05-23,00:00.0,-22.87
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1087396001,2024-05-23 thru 2024-05-23,00:00.0,-8.67
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1087396001,2024-05-23 thru 2024-05-23,00:00.0,-15.32
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1087396001,2024-05-23 thru 2024-05-23,00:00.0,-9.23
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1087396001,2024-05-23 thru 2024-05-23,00:00.0,-14.26
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1087396001,2024-05-23 thru 2024-05-23,00:00.0,-68.65
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1087409414,2024-05-24 thru 2024-05-24,00:00.0,-3.58
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1087409414,2024-05-24 thru 2024-05-24,00:00.0,-10.36
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1087409414,2024-05-24 thru 2024-05-24,00:00.0,-3.64
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1087409414,2024-05-24 thru 2024-05-24,00:00.0,-3.66
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1087409414,2024-05-24 thru 2024-05-24,00:00.0,-3.66
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1087409414,2024-05-24 thru 2024-05-24,00:00.0,-4.33
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1093992435,2024-06-21 thru 2024-06-21,00:00.0,-49.54
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1093992435,2024-06-21 thru 2024-06-21,00:00.0,-11.53
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1093992435,2024-06-21 thru 2024-06-21,00:00.0,-13.83
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1093992435,2024-06-21 thru 2024-06-21,00:00.0,-17.29
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1093992435,2024-06-21 thru 2024-06-21,00:00.0,-17.63
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1093992435,2024-06-21 thru 2024-06-21,00:00.0,94.56
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1098012487,2024-06-27 thru 2024-06-27,00:00.0,-3.63
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1098012487,2024-06-27 thru 2024-06-27,00:00.0,-4.32
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1098012487,2024-06-27 thru 2024-06-27,00:00.0,4753.36
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1098012487,2024-06-27 thru 2024-06-27,00:00.0,-3.59
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1098012487,2024-06-27 thru 2024-06-27,00:00.0,3759.68
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1098012487,2024-06-27 thru 2024-06-27,00:00.0,-3.66
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1101070227,2024-07-04 thru 2024-07-04,00:00.0,172.58
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1101070227,2024-07-04 thru 2024-07-04,00:00.0,8.42
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1101070227,2024-07-04 thru 2024-07-04,00:00.0,56.66
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1101070227,2024-07-04 thru 2024-07-04,00:00.0,5709
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1101070227,2024-07-04 thru 2024-07-04,00:00.0,-5.03
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1101070227,2024-07-04 thru 2024-07-04,00:00.0,5582.54
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1101085381,2024-07-05 thru 2024-07-05,00:00.0,7.05
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1101085381,2024-07-05 thru 2024-07-05,00:00.0,3997.51
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1101085381,2024-07-05 thru 2024-07-05,00:00.0,-3.54
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1101085381,2024-07-05 thru 2024-07-05,00:00.0,-11.65
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1101085381,2024-07-05 thru 2024-07-05,00:00.0,230.78
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1101085381,2024-07-05 thru 2024-07-05,00:00.0,4920.81
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1101145249,2024-07-09 thru 2024-07-24,00:00.0,-26.6
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1101145249,2024-07-09 thru 2024-07-24,00:00.0,167.96
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1101145249,2024-07-09 thru 2024-07-24,00:00.0,51.78
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1101145249,2024-07-09 thru 2024-07-24,00:00.0,-7.66
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1101145249,2024-07-09 thru 2024-07-24,00:00.0,1962.98
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1101145249,2024-07-09 thru 2024-07-24,00:00.0,1886.56
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1101978287,2024-08-09 thru 2024-08-09,00:00.0,4304.22
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1101978287,2024-08-09 thru 2024-08-09,00:00.0,159.83
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1101978287,2024-08-09 thru 2024-08-09,00:00.0,-15.44
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1101978287,2024-08-09 thru 2024-08-09,00:00.0,3806.06
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1101978287,2024-08-09 thru 2024-08-09,00:00.0,20.92
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1101978287,2024-08-09 thru 2024-08-09,00:00.0,367.9
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1102046293,2024-08-15 thru 2024-08-15,00:00.0,885.22
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1102046293,2024-08-15 thru 2024-08-15,00:00.0,11311.18
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1102046293,2024-08-15 thru 2024-08-15,00:00.0,382.98
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1102046293,2024-08-15 thru 2024-08-15,00:00.0,-32.59
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1102046293,2024-08-15 thru 2024-08-15,00:00.0,8654.64
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1102046293,2024-08-15 thru 2024-08-15,00:00.0,49.23
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1102112195,2024-08-21 thru 2024-08-21,00:00.0,-35.46
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1102112195,2024-08-21 thru 2024-08-21,00:00.0,449.85
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1102112195,2024-08-21 thru 2024-08-21,00:00.0,10404.52
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1102112195,2024-08-21 thru 2024-08-21,00:00.0,10516.35
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1102112195,2024-08-21 thru 2024-08-21,00:00.0,57.56
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1102112195,2024-08-21 thru 2024-08-21,00:00.0,1053.18
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1102122113,2024-08-22 thru 2024-08-22,00:00.0,1116.08
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1102122113,2024-08-22 thru 2024-08-22,00:00.0,497.57
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1102122113,2024-08-22 thru 2024-08-22,00:00.0,-43.07
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1102122113,2024-08-22 thru 2024-08-22,00:00.0,12302.27
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1102122113,2024-08-22 thru 2024-08-22,00:00.0,12345.82
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1102122113,2024-08-22 thru 2024-08-22,00:00.0,69.41
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1102131936,2024-08-23 thru 2024-08-23,00:00.0,234.4
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1102131936,2024-08-23 thru 2024-08-23,00:00.0,19.45
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1102131936,2024-08-23 thru 2024-08-23,00:00.0,358.11
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1102131936,2024-08-23 thru 2024-08-23,00:00.0,-14.77
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1102131936,2024-08-23 thru 2024-08-23,00:00.0,5517.55
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1102131936,2024-08-23 thru 2024-08-23,00:00.0,1903.01
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1102159875,2024-08-14 thru 2024-08-26,00:00.0,17436.59
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1102159875,2024-08-14 thru 2024-08-26,00:00.0,401.85
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1102159875,2024-08-14 thru 2024-08-26,00:00.0,-68.47
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1102159875,2024-08-14 thru 2024-08-26,00:00.0,937.1
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1102159875,2024-08-14 thru 2024-08-26,00:00.0,9580.34
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1102159875,2024-08-14 thru 2024-08-26,00:00.0,26.23
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1102691073,2024-09-06 thru 2024-09-06,00:00.0,-10.36
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1102691073,2024-09-06 thru 2024-09-06,00:00.0,73.41
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1102691073,2024-09-06 thru 2024-09-06,00:00.0,-7.12
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1102691073,2024-09-06 thru 2024-09-06,00:00.0,-6.9
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1102691073,2024-09-06 thru 2024-09-06,00:00.0,-8.15
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1102691073,2024-09-06 thru 2024-09-06,00:00.0,-7.45
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1102758796,2024-09-12 thru 2024-09-12,00:00.0,-35.4
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1102758796,2024-09-12 thru 2024-09-12,00:00.0,11354.97
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1102758796,2024-09-12 thru 2024-09-12,00:00.0,19815.71
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1102758796,2024-09-12 thru 2024-09-12,00:00.0,460.67
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1102758796,2024-09-12 thru 2024-09-12,00:00.0,62.81
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1102758796,2024-09-12 thru 2024-09-12,00:00.0,1100.08
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1103388528,2024-10-01 thru 2024-10-01,00:00.0,1832.89
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1103388528,2024-10-01 thru 2024-10-01,00:00.0,81.6
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1103388528,2024-10-01 thru 2024-10-01,00:00.0,145.59
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1103388528,2024-10-01 thru 2024-10-01,00:00.0,-4.14
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1103388528,2024-10-01 thru 2024-10-01,00:00.0,1362.88
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1103388528,2024-10-01 thru 2024-10-01,00:00.0,-10.33
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1103399142,2024-09-19 thru 2024-10-02,00:00.0,20771.97
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1103399142,2024-09-19 thru 2024-10-02,00:00.0,1943.56
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1103399142,2024-09-19 thru 2024-10-02,00:00.0,878.48
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1103399142,2024-09-19 thru 2024-10-02,00:00.0,-70.43
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1103399142,2024-09-19 thru 2024-10-02,00:00.0,24683.44
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1103399142,2024-09-19 thru 2024-10-02,00:00.0,82.35
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1103410778,2024-10-03 thru 2024-10-03,00:00.0,326.65
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1103410778,2024-10-03 thru 2024-10-03,00:00.0,582.54
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1103410778,2024-10-03 thru 2024-10-03,00:00.0,7331.63
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1103410778,2024-10-03 thru 2024-10-03,00:00.0,-25.87
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1103410778,2024-10-03 thru 2024-10-03,00:00.0,7415.02
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1103410778,2024-10-03 thru 2024-10-03,00:00.0,-16.46
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1103455965,2024-08-29 thru 2024-10-07,00:00.0,43470.47
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1103455965,2024-08-29 thru 2024-10-07,00:00.0,3434.14
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1103455965,2024-08-29 thru 2024-10-07,00:00.0,38925
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1103455965,2024-08-29 thru 2024-10-07,00:00.0,-160.51
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1103455965,2024-08-29 thru 2024-10-07,00:00.0,99.56
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1103455965,2024-08-29 thru 2024-10-07,00:00.0,1618.06
-Deposit Transfer Summary,10/9/2024,USD,USD,Pending Funds Transfer,4385280,1103466534,2024-10-08 thru 2024-10-08,00:00.0,9225.12
-Deposit Transfer Summary,10/9/2024,ARS,USD,Pending Funds Transfer,4385280,1103466534,2024-10-08 thru 2024-10-08,00:00.0,-12.34
-Deposit Transfer Summary,10/9/2024,COP,USD,Pending Funds Transfer,4385280,1103466534,2024-10-08 thru 2024-10-08,00:00.0,-21.5
-Deposit Transfer Summary,10/9/2024,PEN,USD,Pending Funds Transfer,4385280,1103466534,2024-10-08 thru 2024-10-08,00:00.0,7346.7
-Deposit Transfer Summary,10/9/2024,CLP,USD,Pending Funds Transfer,4385280,1103466534,2024-10-08 thru 2024-10-08,00:00.0,591.72
-Deposit Transfer Summary,10/9/2024,MXN,USD,Pending Funds Transfer,4385280,1103466534,2024-10-08 thru 2024-10-08,00:00.0,333.82
-END,EntityId=424017,Frequency=adhoc
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1117906725,2025-02-03 thru 2025-02-03,2/5/2025,1681.28
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4387587,1117906619,2025-02-03 thru 2025-02-03,2/6/2025,-0.03
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1117923306,2025-02-04 thru 2025-02-04,2/6/2025,2404.39
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4384338,1117923336,2025-02-04 thru 2025-02-04,2/6/2025,233.43
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1117924175,2025-02-04 thru 2025-02-04,2/7/2025,17778.63
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1117940532,2025-02-05 thru 2025-02-05,2/7/2025,299.24
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4384338,1117940546,2025-02-05 thru 2025-02-05,2/7/2025,76.46
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1117940237,2025-02-05 thru 2025-02-05,2/10/2025,47367.42
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1117959201,2025-02-06 thru 2025-02-06,2/10/2025,3918.04
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1117958695,2025-02-06 thru 2025-02-06,2/11/2025,82198.47
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1117976629,2025-02-07 thru 2025-02-07,2/11/2025,1077.59
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1117974625,2025-02-07 thru 2025-02-07,2/12/2025,2160.35
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1118026901,2025-02-08 thru 2025-02-09,2/12/2025,7178.78
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1118045098,2025-02-10 thru 2025-02-10,2/12/2025,2058.56
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1118026102,2025-02-09 thru 2025-02-09,2/13/2025,31.52
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1118044353,2025-02-10 thru 2025-02-10,2/13/2025,2828.97
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1118080091,2025-02-11 thru 2025-02-11,2/13/2025,2657.02
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1118078802,2025-02-11 thru 2025-02-11,2/14/2025,14980.71
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1118097632,2025-02-12 thru 2025-02-12,2/14/2025,2393.44
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1118096217,2025-02-12 thru 2025-02-12,2/17/2025,15300.24
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4387584,1118114973,2025-02-13 thru 2025-02-13,2/18/2025,-0.03
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1118114999,2025-02-13 thru 2025-02-13,2/18/2025,4309.07
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4387587,1118115015,2025-02-13 thru 2025-02-13,2/18/2025,-0.03
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1118115119,2025-02-13 thru 2025-02-13,2/18/2025,146.36
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4387612,1118115198,2025-02-11 thru 2025-02-13,2/18/2025,5162.57
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1118131448,2025-02-14 thru 2025-02-14,2/19/2025,4893.33
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1118131714,2025-02-14 thru 2025-02-14,2/19/2025,151.4
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4387612,1118131787,2025-02-14 thru 2025-02-14,2/19/2025,8077.31
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1118167102,2025-02-15 thru 2025-02-16,2/20/2025,2552.38
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1118184621,2025-02-17 thru 2025-02-17,2/20/2025,2949.2
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1118202158,2025-02-18 thru 2025-02-18,2/20/2025,479.85
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1118201887,2025-02-16 thru 2025-02-18,2/21/2025,203.17
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4387612,1118201963,2025-02-18 thru 2025-02-18,2/21/2025,4247.35
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1118219705,2025-02-19 thru 2025-02-19,2/21/2025,4602.55
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1118219436,2025-02-19 thru 2025-02-19,2/24/2025,20007.94
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4387612,1118219573,2025-02-19 thru 2025-02-19,2/24/2025,4052.91
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1118237063,2025-02-20 thru 2025-02-20,2/24/2025,3759.57
+Deposit Transfer Summary,3/4/2025,JPY,GBP,Pending Funds Transfer,4383845,1118237066,2025-02-20 thru 2025-02-20,2/25/2025,1490.31
+Deposit Transfer Summary,3/4/2025,AZN,GBP,Pending Funds Transfer,4383845,1118237066,2025-02-20 thru 2025-02-20,2/25/2025,3044.48
+Deposit Transfer Summary,3/4/2025,AED,GBP,Pending Funds Transfer,4383845,1118237066,2025-02-20 thru 2025-02-20,2/25/2025,596.19
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1118237196,2025-02-20 thru 2025-02-20,2/25/2025,25721.95
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4387612,1118237266,2025-02-20 thru 2025-02-20,2/25/2025,252.41
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1118288834,2025-02-20 thru 2025-02-23,2/26/2025,3304.1
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1118304695,2025-02-24 thru 2025-02-24,2/26/2025,5520.32
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1118288097,2025-02-20 thru 2025-02-23,2/27/2025,6065.41
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4387612,1118288245,2025-02-20 thru 2025-02-21,2/27/2025,2444.91
+Deposit Transfer Summary,3/4/2025,AED,GBP,Pending Funds Transfer,4383845,1118288837,2025-02-20 thru 2025-02-24,2/27/2025,240.97
+Deposit Transfer Summary,3/4/2025,JPY,GBP,Pending Funds Transfer,4383845,1118288837,2025-02-20 thru 2025-02-24,2/27/2025,709.7
+Deposit Transfer Summary,3/4/2025,KRW,GBP,Pending Funds Transfer,4383845,1118288837,2025-02-20 thru 2025-02-24,2/27/2025,-0.1
+Deposit Transfer Summary,3/4/2025,AZN,GBP,Pending Funds Transfer,4383845,1118288837,2025-02-20 thru 2025-02-24,2/27/2025,686.95
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1118305609,2025-02-24 thru 2025-02-24,2/27/2025,3098.89
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1118322278,2025-02-25 thru 2025-02-25,2/27/2025,3542.85
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4384338,1118322283,2025-02-25 thru 2025-02-25,2/27/2025,233.25
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1118321962,2025-02-25 thru 2025-02-25,2/28/2025,103693.44
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1118346312,2025-02-26 thru 2025-02-26,2/28/2025,319409.07
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Effective Funds Transfer,4383832,1118345113,2025-02-26 thru 2025-02-26,3/3/2025,44156.79
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4387612,1118345247,2025-02-24 thru 2025-02-26,3/3/2025,194.71
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1118368502,2025-02-27 thru 2025-02-27,3/3/2025,319467.22
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1118368131,2025-02-27 thru 2025-02-27,3/4/2025,109617.64
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4387612,1118368271,2025-02-27 thru 2025-02-27,3/4/2025,5255.79
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1118385516,2025-02-28 thru 2025-02-28,3/4/2025,26290.65
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1118385337,2025-02-28 thru 2025-03-01,3/5/2025,63199.11
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4387612,1118385440,2025-02-28 thru 2025-02-28,3/5/2025,2922.86
+Deposit Transfer Summary,3/4/2025,GBP,GBP,Pending Funds Transfer,4383845,1118385518,2025-02-25 thru 2025-02-28,3/5/2025,18.81
+Deposit Transfer Summary,3/4/2025,JPY,GBP,Pending Funds Transfer,4383845,1118385518,2025-02-25 thru 2025-02-28,3/5/2025,0
+Deposit Transfer Summary,3/4/2025,USD,USD,Pending Funds Transfer,4383826,1118865835,2025-03-03 thru 2025-03-03,3/5/2025,212978.63
+Deposit Transfer Summary,3/4/2025,GBP,GBP,Pending Funds Transfer,4383845,1118865840,2025-03-03 thru 2025-03-03,3/6/2025,-0.88
+Deposit Transfer Summary,3/4/2025,AZN,GBP,Pending Funds Transfer,4383845,1118865840,2025-03-03 thru 2025-03-03,3/6/2025,176.81
+Deposit Transfer Summary,3/4/2025,AED,GBP,Pending Funds Transfer,4383845,1118865840,2025-03-03 thru 2025-03-03,3/6/2025,38.02
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4383832,1118866766,2025-03-03 thru 2025-03-03,3/6/2025,116030.57
+Deposit Transfer Summary,3/4/2025,EUR,EUR,Pending Funds Transfer,4387612,1118866838,2025-03-03 thru 2025-03-03,3/6/2025,392.31
+END,EntityId=418553,Frequency=adhoc
