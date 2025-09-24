@@ -1,0 +1,11 @@
+BEGIN,EntityId=992184712844,Frequency=adhoc
+ProcessingEntityID=992184712844,ReportType=Multiple,Frequency=adhoc,FromDate=2025-07-01,ToDate=2025-07-31,GenerationDate=2025-09-05,GenerationTime=10:11:38,
+Token Provisioning & Cryptogram Details
+Method of Payment,Tokens Provisioned,Total Tokens Requested,Token Provision Success Ratio,Token Provision Success Rate (%),Cryptograms Provisioned,Total Cryptograms Requested,Token Cryptogram Request Success Ratio
+MC,28,28,1,1,0,0,0
+VI,25,25,1,1,0,0,0
+Token Lifecycle Details
+State Change Update,Active Tokens,Inactive or Suspended Tokens,Deleted Tokens
+10,7,3,0
+END,EntityId=992184712844,Frequency=adhoc
+NB: Aggregated state changes reported for Processing entities enabled for network tokenization at the profile level.
