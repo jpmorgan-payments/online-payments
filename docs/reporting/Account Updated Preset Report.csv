@@ -1,0 +1,147 @@
+BEGIN,ProcessingEntityId=995844752188,Frequency=adhoc
+ProcessingEntityId=995844752188,ReportTypeName=Multiple,Frequency=adhoc,FromDate=2025-03-17,ToDate=2025-03-31,GenerationDate=2025-04-01,GenerationTime=01:56:02
+Record Type,Reason Message,Response Message,Method,Method of Payment,Total
+ACP-01 ,Account Update provided for Account Expiry,NEW_EXPIRY,RTAU,VI,4
+ACP-01 ,Account Update provided for Account Expiry,NEW_EXPIRY,TOKENIZATION,VI,81
+ACP-01 ,Account Update provided for Account Number,NEW_ACCOUNT,RTAU,VI,22
+ACP-01 ,Account Update provided for Account Number,NEW_ACCOUNT,TOKENIZATION,VI,3
+ACP-01 ,Account Update provided for both account number and expiry,NEW_ACCOUNT_AND_EXPIRY,RTAU,VI,12
+ACP-01 ,Account has been closed,CLOSED_ACCOUNT,RTAU,VI,1
+ACP-01 ,Account has been closed,CLOSED_ACCOUNT,TOKENIZATION,VI,4
+ACP-01 ,Contact Cardholder,CONTACT_CARDHOLDER,RTAU,VI,3
+ACP-01 ,Contact Cardholder,CONTACT_CARDHOLDER,TOKENIZATION,VI,3
+Record Type,ProfileID,Processor Profile ID ,Payment Method Id,Submitted Date ,Method,Card Account Action,Sub Merchant ID,Response ID,Payment Brand,Payment Brand Change,Merchant Record Identifier ,Submitted Account Number,Submitted Expiry,New Masked Account,New Expiry,Reason Message,Network Response,Request Status
+ACP-02 ,,,,3/17/2025,RTAU,One-time inquiry,,40a413ee-e27d-4f45-96cf-9eb4438b3704,VI,N,,411234******4113,1040,411234******0007,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/17/2025,RTAU,One-time inquiry,,e5d5af9a-7a21-4848-a6bc-7c581e78c64c,VI,N,,411234******4113,1040,411234******0007,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/17/2025,RTAU,One-time inquiry,,7a623330-6fc0-4922-b6d9-361a0f454e39,VI,N,,411234******4113,1040,411234******0007,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/17/2025,RTAU,One-time inquiry,,e5492bc5-c1d0-496b-bfe5-281532c77239,VI,N,,411014******4115,1040,,329,Account Update provided for Account Expiry,E
+ACP-02 ,,,,3/17/2025,RTAU,One-time inquiry,,8672a040-6066-4221-9ee4-83424b8840cd,VI,N,,411436******6785,1040,411436******0003,327,Account Update provided for both account number and expiry,A
+ACP-02 ,,,,3/17/2025,RTAU,One-time inquiry,,49f81160-54d6-468d-8145-22d198095879,VI,N,,406172******4061,1040,,,Contact Cardholder,Q
+ACP-02 ,,,,3/17/2025,RTAU,One-time inquiry,,1f49c39b-8663-4f04-8a17-c010a48d8dcc,VI,N,,411234******4113,1040,411234******0007,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/26/2025,RTAU,One-time inquiry,,3547fd74-c341-46d7-8145-50915969cebb,VI,N,,411234******4113,1040,411234******0007,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/26/2025,RTAU,One-time inquiry,,e2c0cb7e-23c5-43d2-97f6-c186cf8b47f4,VI,N,,411234******4113,1040,411234******0007,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,b9b0aac4-a6b3-460a-a655-e45edb63c5cc,VI,N,,411436******6785,335,411436******0003,327,Account Update provided for both account number and expiry,A
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,e65cd026-dd00-42b4-89bb-7992f172fb0c,VI,N,,452901******8404,335,452901******0004,327,Account Update provided for both account number and expiry,A
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,189fb563-ab9b-434f-a2f8-d8013ad08503,VI,N,,406172******4061,335,,,Contact Cardholder,Q
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,f1532fc1-a903-4d29-b114-75416e72fa97,VI,N,,452901******8404,335,452901******0004,327,Account Update provided for both account number and expiry,A
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,8dd22135-78fe-4d74-beda-441b9113af00,VI,N,,406091******6097,335,406091******0001,327,Account Update provided for both account number and expiry,A
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,9c0115d1-7c31-4a65-8a56-8e354ee63dd0,VI,N,,472409******1114,335,,,Account has been closed,C
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,246e6092-710f-43dd-8081-31f02be4ef3c,VI,N,,406091******4075,335,406091******0003,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,b5587a5f-8a08-4e01-b51d-9c601b3f9c73,VI,N,,403075******3374,335,403075******0000,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,f8a2eee0-bf1b-4e30-97fe-f25f33fd93dc,VI,N,,452901******8404,335,452901******0004,327,Account Update provided for both account number and expiry,A
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,d6d237c8-74d7-41cd-8f08-4295a3bd906a,VI,N,,406091******6097,335,406091******0001,327,Account Update provided for both account number and expiry,A
+ACP-02 ,,,,3/27/2025,RTAU,One-time inquiry,,fcfabb47-9a84-4a22-a42f-4898b73b04df,VI,N,,411234******4113,1040,411234******0007,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/27/2025,RTAU,One-time inquiry,,5b53b83b-e0b2-4194-a37f-2b4be8744e2f,VI,N,,411234******4113,1040,411234******0007,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/28/2025,RTAU,One-time inquiry,,9d7929a6-7738-48f4-b43a-d913c8960835,VI,N,,411436******0003,327,411436******0003,327,Account Update provided for both account number and expiry,A
+ACP-02 ,,,,3/28/2025,RTAU,One-time inquiry,,68041cab-2e8b-4efc-b4ad-3ff166870528,VI,N,,411234******4113,1040,411234******0007,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/28/2025,RTAU,One-time inquiry,,84f98408-9522-48cf-9b91-e4312e90b753,VI,N,,411234******4113,1040,411234******0007,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/29/2025,RTAU,One-time inquiry,,4661c97e-122d-414e-8cbf-1fa7b13a13ee,VI,N,,411014******4115,1235,,329,Account Update provided for Account Expiry,E
+ACP-02 ,,,,3/29/2025,RTAU,One-time inquiry,,f8d80664-3fff-4d82-95c1-94b5fd51d395,VI,N,,411234******4113,1235,411234******0007,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/29/2025,RTAU,One-time inquiry,,09575e92-3a7d-4446-858d-39a4b9d87e27,VI,N,,452901******3749,1235,452901******0000,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/29/2025,RTAU,One-time inquiry,,16027e8e-d613-446c-8144-39cbfc5841d8,VI,N,,406091******4075,1235,406091******0003,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/29/2025,RTAU,One-time inquiry,,4653854a-b3c0-4057-a99c-b12c9283123b,VI,N,,411436******6785,1225,411436******0003,327,Account Update provided for both account number and expiry,A
+ACP-02 ,,,,3/29/2025,RTAU,One-time inquiry,,32c9644f-1fed-48f1-9aba-3140470a6bd0,VI,N,,411436******0003,327,411436******0003,327,Account Update provided for both account number and expiry,A
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,c3b23dce-3d34-4947-add9-4da39a052e96,VI,N,,489537******4402,1290,489537******4402,1295,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,9ed71ad9-7447-43c0-a087-19f272783193,VI,N,,489537******4402,1290,489537******4402,1295,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,249512ce-7b1a-47d8-ae36-45786e9865f6,VI,N,,489537******4402,1295,489537******4402,1200,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,812685f6-20e1-45e4-af7e-908856ac7c78,VI,N,,489537******4402,290,489537******4402,295,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,a1504d61-8bbd-4c4c-9fac-376bc7645857,VI,N,,489537******4402,295,489537******4402,200,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,3b7097d6-05ee-43d0-b284-5674b8c69c4b,VI,N,,489537******4402,295,489537******4402,200,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,a504cd0c-2d61-46f9-82f4-93433544f54b,VI,N,,489537******4402,1290,489537******4402,1295,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,3c92f8e2-4cb3-48fa-925f-ae2cdeec83b3,VI,N,,489537******4402,1295,489537******4402,1200,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,0760d80b-f5f6-4731-b26d-d187efef1e69,VI,N,,411234******0007,235,411234******0007,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,9554df02-734b-4086-a569-3acfc5bc44dd,VI,N,,411436******0003,327,411436******0003,327,Account Update provided for both account number and expiry,A
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,16151e9a-7136-464f-8bd0-6b656442302d,VI,N,,411234******0007,235,411234******0007,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,055fe87b-74d5-46b4-8d8b-ae35c2eb0ca8,VI,N,,411234******0007,235,411234******0007,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,401d4b94-c70c-47b2-929e-a97bff3003d8,VI,N,,411014******4115,235,,329,Account Update provided for Account Expiry,E
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,127759c2-c602-42ca-9c4f-8e58c3e3894f,VI,N,,489537******4402,265,489537******4402,270,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,37688442-8d4c-4fb2-8fcc-ee9551eb1973,VI,N,,489537******4402,270,489537******4402,275,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,c6f0e94e-2e22-4b00-b880-264d56f15435,VI,N,,489537******4402,275,489537******4402,280,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,be42e816-a576-465e-9e8a-6b6f3a550011,VI,N,,489537******4402,270,489537******4402,275,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,7e992ee1-3a05-4980-a087-e7c5960839ad,VI,N,,489537******4402,275,489537******4402,280,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,a7994c39-aa94-4a52-b869-53974bfe1714,VI,N,,489537******4402,280,489537******4402,285,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,e9a7188a-30c3-4df1-8c6e-affd8a0e2c66,VI,N,,489537******4402,285,489537******4402,290,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,9a3ae99d-7d4a-4729-a660-43d32b196e49,VI,N,,489537******4402,290,489537******4402,295,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,f428ce5e-477c-42f4-8a16-c4c68a1e6aea,VI,N,,489537******4402,295,489537******4402,200,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,2947ac65-18cf-413a-be85-442fd167bcaa,VI,N,,489537******4402,290,489537******4402,295,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,c87c2154-65d7-40f7-9b15-8dfb89c87e4a,VI,N,,489537******4402,295,489537******4402,200,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,9b91e0c5-7771-4e30-9f05-93702f588a7e,VI,N,,489537******4402,285,489537******4402,290,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,990b1275-13e7-4d9b-8bdb-eb674f0c8f1e,VI,N,,489537******4402,290,489537******4402,295,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,f053b1ae-393c-4af6-835e-76be140d2336,VI,N,,489537******4402,290,489537******4402,295,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,0468f0e8-82f8-4406-ba08-6adb0646ddbc,VI,N,,489537******4402,290,489537******4402,295,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,66e51817-05b9-4124-a336-f2118081a030,VI,N,,489537******4402,260,489537******4402,265,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,95f3dd5e-df4f-4e99-a973-7872216cc83a,VI,N,,489537******4402,290,489537******4402,295,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,3917f092-f6d0-4d74-ac61-4edf19f89641,VI,N,,489537******4402,295,489537******4402,200,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,f77165a6-b14c-49f4-b6ab-92401df74621,VI,N,,489537******4402,295,489537******4402,200,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,eed0f416-a193-4b6b-a213-ed5889c89dd9,VI,N,,489537******4402,1245,489537******4402,1250,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,3309902f-fb32-4810-8f36-86269074ba76,VI,N,,489537******4402,1250,489537******4402,1255,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,18bcf9d9-75f5-4064-ac58-827f7e9019ff,VI,N,,489537******4402,1295,489537******4402,1200,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,a3d02223-ccd3-48e2-ab64-d9bf0d7fe590,VI,N,,489537******4402,1270,489537******4402,1275,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,9321bfc1-944d-4b83-acb1-d8c53f9cbc99,VI,N,,489537******4402,1275,489537******4402,1280,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,031ede0c-634f-41b7-8eea-f8ef86359016,VI,N,,489537******4402,1280,489537******4402,1285,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,d8a9035b-307d-4e57-9732-6a48b4d28712,VI,N,,489537******4402,1285,489537******4402,1290,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,15464ebd-3f22-4ee9-b7c8-5a7887d7ee7a,VI,N,,489537******4402,1265,489537******4402,1270,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,80c28d0c-2a5e-49ad-9207-ae1a579d6ee9,VI,N,,489537******4402,1270,489537******4402,1275,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,08a993d3-99a6-4c72-8091-4149930f20f7,VI,N,,489537******4402,1275,489537******4402,1280,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,1f101251-ba01-4bcf-89b8-d591ef81a614,VI,N,,489537******4402,1280,489537******4402,1285,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,41cff3e4-6014-4c92-9644-74171ee8c6c4,VI,N,,489537******4402,1285,489537******4402,1290,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,eb743a54-6810-4699-85f8-5d73223007ec,VI,N,,489537******4402,1280,489537******4402,1285,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,46f8a670-4ff8-44f2-b646-512689d54191,VI,N,,489537******4402,1285,489537******4402,1290,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,6da39f76-99a7-41a0-bfbd-77a079c50ea1,VI,N,,489537******4402,1290,489537******4402,1295,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,da6255d4-b7ca-48ee-a537-af10632f72af,VI,N,,489537******4402,1290,489537******4402,1295,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,71c48578-281e-4cfa-92bd-018610f7323d,VI,N,,489537******4402,1295,489537******4402,1200,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,52072fee-f654-4ac9-8f4b-f857d5dc09b6,VI,N,,489537******4402,1295,489537******4402,1200,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,17747550-5af5-41e7-a7bc-5bb62396cc5a,VI,N,,489537******4402,280,489537******4402,285,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,aeb941ba-78bd-42f9-9da4-c0aae1530568,VI,N,,489537******4402,285,489537******4402,290,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-SPQNLXVGYMNIAPVR,JPMCW-SPQNLXVGYMNIAPVR,,3/30/2025,TOKENIZATION,,,49074db5-91c2-4b47-b451-ff27a57b1b85,VI,N,,476134******4404,235,,,Account has been closed,C,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,002a9af5-5bfd-49b1-ab6e-b8706a53a790,VI,N,,476134******4404,1025,,,Account has been closed,C,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,24748eff-2f16-47ec-b431-758dfd07a14d,VI,N,,476134******4405,1125,,,Contact Cardholder,Q,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,a0eedb66-f0d3-4003-b2ac-18e36960e5cd,VI,N,,489537******4402,1225,489537******4402,1230,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,ff0ebd74-e516-43ad-8272-9777c3473d3e,VI,N,,489537******4402,1230,489537******4402,1235,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,186d27cf-7451-4071-8fbe-e64c4c736e27,VI,N,,489537******4402,1235,489537******4402,1240,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,1fa3ad07-3325-49a5-b55a-2a61703dd0b0,VI,N,,489537******4402,1240,489537******4402,1245,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,1e43da92-65fc-45e4-9acd-e0a89189dcb7,VI,N,,489537******4402,1245,489537******4402,1250,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,f37a3634-bcd6-4779-b0aa-29798b54d722,VI,N,,489537******4401,925,489537******3151,925,Account Update provided for Account Number,A,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,47491c7f-c0aa-415e-b96e-374a1dc85f27,VI,N,,489537******4402,1250,489537******4402,1255,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,b538d9b3-bbc7-43b3-aab8-0a9089bfa236,VI,N,,489537******4402,1255,489537******4402,1260,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,7d8cc02f-1eb8-4231-983e-51ead7f97362,VI,N,,489537******4402,1260,489537******4402,1265,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,afef20f5-65f3-4626-a306-89f5e3ed1a81,VI,N,,489537******4402,1265,489537******4402,1270,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,a38f5120-75d2-4889-9916-d0b452dde5a4,VI,N,,489537******4402,295,489537******4402,200,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,e7124763-6dc7-404f-87b7-dbb5938490c2,VI,N,,476134******4404,235,,,Account has been closed,C,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,833437be-dcf3-47ed-8c3c-8406e343c403,VI,N,,476134******4405,235,,,Contact Cardholder,Q,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,52c9f163-e9d2-49a1-999a-0545207619cc,VI,N,,489537******4402,235,489537******4402,240,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,658a28e1-04c5-4c9d-be6f-251d772d4c89,VI,N,,489537******4402,240,489537******4402,245,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,b9a3310e-9633-4b00-9858-5cfd44fbaa9c,VI,N,,489537******4401,235,489537******3795,235,Account Update provided for Account Number,A,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,67e650a2-fe2e-4b6a-8a50-138e379a5c50,VI,N,,489537******4402,245,489537******4402,250,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,12b150d9-8ada-4738-b682-6e14f25fe3a7,VI,N,,489537******4402,250,489537******4402,255,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,73be8cfa-7880-4099-801c-5ce238a8856b,VI,N,,489537******4402,255,489537******4402,260,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,a8783a9a-3ab8-40c9-a64b-0d5fbb56652c,VI,N,,489537******4402,260,489537******4402,265,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,0bba2cf9-9268-4713-882d-239b050170e9,VI,N,,489537******4402,265,489537******4402,270,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,100a9d43-ff98-4465-9c03-07b6864ec85b,VI,N,,489537******4402,270,489537******4402,275,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,b7e0db5b-c406-4b55-b9b5-7db6475f1e34,VI,N,,489537******4402,275,489537******4402,280,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,e6ca77db-eca5-4f61-a8d7-2826a830d202,VI,N,,489537******4402,280,489537******4402,285,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,cb5a5391-43c5-457f-ac4f-de85bbb0d072,VI,N,,489537******4402,285,489537******4402,290,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,523f6049-5aad-49eb-819a-679c0e1b38fe,VI,N,,489537******4402,290,489537******4402,295,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,de6f0353-3786-4c9c-adbe-cdb7d2ab24f7,VI,N,,489537******4402,290,489537******4402,295,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,e1da2735-5475-4007-b31f-8e90a8a88242,VI,N,,489537******4402,295,489537******4402,200,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,TOKENIZATION,,,a186cec5-a072-4cac-8192-10e9877e2a3b,VI,N,,489537******4402,295,489537******4402,200,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,77ca5b73-b1a3-4b70-83ef-d6c37b125164,VI,N,,411234******4113,1040,411234******0007,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,bcc51bf9-e842-4a5c-ab34-5d99f5ae9b00,VI,N,,411014******4115,1040,,329,Account Update provided for Account Expiry,E
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,1577b329-1014-4ce8-a937-c1f119d6f429,VI,N,,406172******4061,1040,,,Contact Cardholder,Q
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,eb779c54-0f78-4809-9949-cf076f4cab2d,VI,N,,411234******4113,1040,411234******0007,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,50531bdc-d123-428a-a154-0f4823fc65ba,VI,N,,411234******4113,1040,411234******0007,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,079f5275-13da-4319-9fb1-2130bcbb358d,VI,N,,411234******4113,1040,411234******0007,,Account Update provided for Account Number,A
+ACP-02 ,,,,3/30/2025,RTAU,One-time inquiry,,971a404d-c81e-420b-bc01-b0820a7a8541,VI,N,,411436******6785,1040,411436******0003,327,Account Update provided for both account number and expiry,A
+ACP-02 ,JPMCW-LBTBIS1V6885PHR0,JPMCW-LBTBIS1V6885PHR0,,3/30/2025,TOKENIZATION,,,e57ba1e1-88ab-414c-8ad9-9e2f421c933c,VI,N,,476134******4405,235,,,Contact Cardholder,Q,REGISTER
+ACP-02 ,JPMCW-DBJ9JOPHHXDYJCPI,JPMCW-DBJ9JOPHHXDYJCPI,,3/30/2025,TOKENIZATION,,,78cf6ab6-d2be-479c-9890-b64db562b715,VI,N,,476134******4404,235,,,Account has been closed,C,REGISTER
+ACP-02 ,JPMCW-WU9GHWK06O54GXAH,JPMCW-WU9GHWK06O54GXAH,,3/30/2025,TOKENIZATION,,,6b2ae587-d845-4a99-a9d5-52b05f20ec81,VI,N,,489537******4401,235,489537******5238,235,Account Update provided for Account Number,A,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,ac7afe94-263c-4bc2-9453-21c65a61cd09,VI,N,,489537******4402,235,489537******4402,240,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,28007340-6f3a-434a-8a55-f8416b8cef1a,VI,N,,489537******4402,240,489537******4402,245,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,f3f81bd4-46a2-4ffe-8075-d3d948fe43b3,VI,N,,489537******4402,245,489537******4402,250,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,d45a9032-5b8c-402a-9b73-172e30e8b13d,VI,N,,489537******4402,245,489537******4402,250,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,4e2253ca-3a59-459c-a9d7-a921539eaf73,VI,N,,489537******4402,250,489537******4402,255,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,3cd2a3d2-f490-4547-8df2-eec23b9c71ba,VI,N,,489537******4402,255,489537******4402,260,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,67f1fb1d-75d8-4a5b-8d41-47a11d048683,VI,N,,489537******4402,255,489537******4402,260,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,716b5e72-ede4-4574-aba1-81283efebc03,VI,N,,489537******4402,260,489537******4402,265,Account Update provided for Account Expiry,E,REGISTER
+ACP-02 ,JPMCW-N0NYKLWW1K26EKMD,JPMCW-N0NYKLWW1K26EKMD,,3/30/2025,TOKENIZATION,,,319cea72-ebb1-4a26-9346-c26e6bd3fba8,VI,N,,489537******4402,265,489537******4402,270,Account Update provided for Account Expiry,E,REGISTER
+END,ProcessingEntityId=995844752188,Frequency=adhoc
