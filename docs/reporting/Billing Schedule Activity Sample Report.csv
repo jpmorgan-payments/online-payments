@@ -1,0 +1,9 @@
+BEGIN,EntityId=995009115060,Frequency=adhoc,,,,,,,,,,,,,,,,,,,,,,,,,,,
+9.95009E+11,Multiple,adhoc,3/18/2025,3/26/2025,4/4/2025,GenerationTime=19:21:39,,,,,,,,,,,,,,,,,,,,,,,
+Record Type,Plan Name,Plan ID,Billing Cycle Status,Number of Unique Profiles,Number of Unique Recurring Programs,Currency,Total Billing Amount,,,,,,,,,,,,,,,,,,,,,,
+MBR0020,PLANNAME_Gold,mOpFvlmqkl,FAILED,1,1,EUR,10,,,,,,,,,,,,,,,,,,,,,,
+MBR0020,PLANNAME_Gold,z12xjZ5PEm,SUCCESS,1,1,EUR,10,,,,,,,,,,,,,,,,,,,,,,
+Record Type,Transaction Processing Entity Identifier,Consumer Profile ID,Processor Profile ID,Payment Method ID,Payment Method Code,Payment Account Number,Recurring Program ID,Recurring Program Description,Merchant Order Number,Plan Name,Plan ID,Recurring Program Status,Billing Cycle Sequence,Billing Date,Billing Cycle Start Date,Billing Cycle End Date,Billing Cycle Status,Currency Code,First Payment Attempt Date,Number of Retries Attempted,Number of Retries Remaining,Latest Payment Attempt Date,Next Billing Date,Firm Authorization Response Category Code,Firm Authorization Response Code,Firm Authorization Response Description,Payment Brand Auth Response,Payment Brand Response Code Category,Authorization Code
+MBR0020,9.95009E+11,JPMCW-03FISV5FFI2QGS0U,,e98f26c4-96a4-48ed-aab6-b14322e3d721,,,HgU2kNAwcp,myRecurringProgram0003,,PLANNAME_Gold,mOpFvlmqkl,ACTIVE,,3/21/2025,3/21/2025,3/21/2025,FAILED,EUR,,0,0,,3/21/2025,,,,,,
+MBR0020,9.95009E+11,JPMCW-T7Y0280KNRGS5WRB,JPMCW-T7Y0280KNRGS5WRB,b3ad1f26-a981-4b42-b212-01b969de35af,,,kJCyzypL5p,myRecurringProgram0003,,PLANNAME_Gold,z12xjZ5PEm,ACTIVE,,3/25/2025,3/25/2025,3/25/2025,SUCCESS,EUR,,0,0,,3/26/2025,,,,,,
+END,EntityId=995009115060,Frequency=adhoc,,,,,,,,,,,,,,,,,,,,,,,,,,,
