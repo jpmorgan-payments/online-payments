@@ -1,0 +1,21 @@
+BEGIN,EntityId=123456,Frequency=daily,,,,,,,,,,,,,,,,,,,
+123456,Multiple,daily,1/22/2026,1/23/2026,1/23/2026,GenerationTime=10:05:38,,,,,,,,,,,,,,,
+Record Type,Plan Name,Plan ID,Recurring Program Status,Number of Unique Profiles,Number of Unique Recurring Programs,Currency,Total Billing Amount,,,,,,,,,,,,,,
+MBR0010,Plan_1_Month,PLXYZABC,ACTIVE,1,1,EUR,176.73,,,,,,,,,,,,,,
+MBR0010,Plan_1_Month,PLABCABC,ACTIVE,5,5,EUR,2075.08,,,,,,,,,,,,,,
+MBR0010,Plan_1_Month,PLABCABC,CANCELLED,1,2,EUR,1274,,,,,,,,,,,,,,
+MBR0010,Plan_3_Month,PLXYZXYZ,SCHEDULED,1,1,EUR,991,,,,,,,,,,,,,,
+MBR0010,Plan_1_Month,PLPQRPQR,ACTIVE,2,2,USD,503,,,,,,,,,,,,,,
+Record Type,Transaction Processing Entity Identifier,Consumer Profile ID,Processor Profile ID,Consumer Profile Status,Customer Name,Customer Email,Customer Address,Payment Method ID,Payment Method Code,Payment Account Number,Payment Method Status,Card Expiration Date,Recurring Program ID,Merchant Recurring Program ID,Recurring Program Status Code,Plan Name,Plan ID,Next Billing Date,Currency,Next Billing Amount,Card Expire Indicator
+MBR0010,1234567890,Consumer Profile ID,JPMCW-HSJKDHSKJDHSDKJHS,ACTIVE,NotProvided NotProvided,test@test.com,Street 1111,8ac66cff-dt0b-48cc-9ak8-e0a2aksjkdsfc7b,DIRECT DEBIT,D1234XXXXXXXXXXXX1234,ACTIVE,,RECPROG1,,ACTIVE,Plan_1_Month,PLXYZABC,1/29/2026,EUR,176.73,N
+MBR0010,1234567890,CPID1,,,,,,765f841fe-d233c-4ddfd38-ac7e-991914dc3,DIRECT DEBIT,DE1234XXXXXXXXXXXX1234,,,RECPROG2,,ACTIVE,Plan_1_Month,PLABCABC,1/29/2026,EUR,111.67,N
+MBR0010,1234567890,CPID2,JPMCW-MUYUJDGBDHELJNFE,ACTIVE,NotProvided NotProvided,,Street 3333,udyfude3a0b-195c-4d6fd-a019-b445a9b2a,DIRECT DEBIT,IE123XXXXXXXXXXXX1234,ACTIVE,,RECPROG3,,ACTIVE,Plan_1_Month,PLABCABC,1/29/2026,EUR,374.85,N
+MBR0010,1234567890,CPID3,JPMCW-MDJHDHYGHSHDHTE,ACTIVE,NotProvided NotProvided,,Street 5555,ced47af5-038d-4d87-a96b-939dd9310448,DIRECT DEBIT,DE1234XXXXXXXXXXXX1234,ACTIVE,,RECPROG4,,ACTIVE,Plan_1_Month,PLABCABC,1/29/2026,EUR,1010,N
+MBR0010,1234567890,CPID4,,,,,,kjfdkfd5f-7654-jdhy-jduy-8437473yhjhjshf,DIRECT DEBIT,DE1234XXXXXXXXXXXX1234,,,RECPROG5,,ACTIVE,Plan_1_Month,PLABCABC,1/29/2026,EUR,160.77,N
+MBR0010,1234567890,CPID5,JPMCW-YGDVSHDT6MDJHDDS,ACTIVE,NotProvided NotProvided,,1 Dummy  Address,6353daafe-hddd-vfff-9873-dfdkfjdkfjdjkdjj,DIRECT DEBIT,FR123XXXXXXXXXXXXXXXXX1234,ACTIVE,,RECPROG6,,ACTIVE,Plan_1_Month,PLABCABC,1/29/2026,EUR,417.79,N
+MBR0010,1234567890,CPID6,,,,,,60b59ec5-3f11-416f-8aee-e1d2f9c090cc,DIRECT DEBIT,DE1234XXXXXXXXXXXX1234,,,RECPROG7,,CANCELLED,Plan_1_Month,PLABCABC,1/29/2026,EUR,637,N
+MBR0010,1234567890,CPID6,,,,,,60b59ec5-3f11-416f-8aee-e1d2f9c090cc,DIRECT DEBIT,DE1234XXXXXXXXXXXX1234,,,RECPROG8,,CANCELLED,Plan_1_Month,PLABCABC,1/29/2026,EUR,637,N
+MBR0010,1234567890,CPID7,JPMCW-NSHSTYJDWDDSD,ACTIVE,NotProvided NotProvided,,2 Dummy  Address,jdhfjdfdfd-jhfd-kdjf-fdkjfkd-fjkdkfdkdjf,MC,XXXXXXXXXXXX9999,ACTIVE,29-Jan,RECPROG9,,SCHEDULED,Plan_3_Month,PLXYZXYZ,1/29/2026,EUR,991,N
+MBR0010,1234567890,CPID8,,,,,,djhfjdffd-uyfd-fdfd-fdfdf-kdhfdjdhjdfhdf,VI,XXXXXXXXXXXX8888,,,RECPROG10,,ACTIVE,Plan_1_Month,PLPQRPQR,1/29/2026,USD,66,N
+MBR0010,1234567890,CPID9,JPMCW-JKDHDHKD7HDGD,ACTIVE,John Doe,,154 Dummy  Address,fdkjfdhd-ifud-ffff-dddd-ueyureryuerrre,VI,XXXXXXXXXXXX7777,ACTIVE,27-Jan,RECPROG11,,ACTIVE,Plan_1_Month,PLPQRPQR,1/29/2026,USD,437,N
+END,EntityId=123456,Frequency=daily,,,,,,,,,,,,,,,,,,,
